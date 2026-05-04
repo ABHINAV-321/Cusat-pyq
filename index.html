@@ -284,7 +284,7 @@ async function startExam(){
   const btn=document.getElementById('btn-start'), err=document.getElementById('err-msg');
   btn.disabled=true; btn.textContent='Loading…'; err.style.display='none';
   try{
-    const r=await fetch('./Cusat-pyq/'+file);
+    const r=await fetch('https://abhinav-321.github.io/Cusat-pyq/2025s1.json');
     if(!r.ok) throw 0;
     const data=await r.json();
     init(data);
