@@ -284,15 +284,18 @@ async function startExam(){
   const btn=document.getElementById('btn-start'), err=document.getElementById('err-msg');
   btn.disabled=true; btn.textContent='Loading…'; err.style.display='none';
   try{
-    const r=await fetch('https://raw.githubusercontent.com/ABHINAV-321/Cusat-pyq/master/2025s1.json');
+    const r=await fetch('https://raw.githubusercontent.com/ABHINAV-321/Cusat-pyq/refs/heads/master/2025s1.json');
+    console.log('Fetch response:', r.status, r.ok);
     if(!r.ok) throw 0;
     const data=await r.json();
+    console.log('Data loaded:', data);
     init(data);
   }catch(e){
+    console.error('Fetch failed:', e);
+    console.log('Response status:', e?.status);
     err.style.display='block';
     btn.disabled=false; btn.textContent='Start Exam →';
   }
-}
 
 function init(data){
   QS=data.questions; ANS=data.answers; SOLS=data.solutions||{};
