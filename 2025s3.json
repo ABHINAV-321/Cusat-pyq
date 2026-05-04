@@ -1,5 +1,5 @@
 [
-  {
+  { 
     "id": 1,
     "subject": "physics",
     "difficulty": "medium",
@@ -61,7 +61,7 @@
     "correct": 1,
     "answer": "mv",
     "explanation": "For elastic collision with wall at angle, impulse = change in momentum = 2mvcosθ. For normal incidence, impulse = 2mv. Based on figure (60°), impulse = 2mvcos60° = mv.",
-    "image_url": null
+    "image_url": "https://i.postimg.cc/YqMZLkWX/S3-4.png"
   },
   {
     "id": 5,
@@ -413,7 +413,7 @@
     "correct": 3,
     "answer": "K₂ > K₁",
     "explanation": "From Bernoulli's principle and continuity equation, as cross-section decreases, velocity increases and pressure decreases. KE per unit volume increases.",
-    "image_url": null
+    "image_url": "https://i.postimg.cc/hPc6QgdH/S3-26.png"
   },
   {
     "id": 27,
@@ -461,7 +461,13 @@
     "correct": 2,
     "answer": "Graph C (Extension vs Load, straight line through origin)",
     "explanation": "Hooke's law states that extension is directly proportional to load, giving a straight line through origin.",
-    "image_url": null
+    "image_url": null,
+    "option_images": {
+      "A": "https://i.postimg.cc/rFM3RcrZ/S3-29A.png",
+      "B": "https://i.postimg.cc/yYst3BZt/S3-29B.png",
+      "C": "https://i.postimg.cc/9FCKwV95/S3-29C.png",
+      "D": "https://i.postimg.cc/zX86H5hm/S3-29D.png"
+    }
   },
   {
     "id": 30,
@@ -589,7 +595,7 @@
     "correct": 3,
     "answer": "A=0, B=1, C=1",
     "explanation": "The circuit is Y = (A+B)·C. For Y=1, C=1 and (A+B)=1. Option D gives (0+1)·1 = 1.",
-    "image_url": null
+    "image_url": "https://i.postimg.cc/65tg4wv1/S3-37.png"
   },
   {
     "id": 38,
@@ -605,7 +611,7 @@
     "correct": 0,
     "answer": "AND gate",
     "explanation": "Two NOT gates feeding into NOR gate: Y = (A' + B')' = A·B (De Morgan's law), which is AND gate.",
-    "image_url": null
+    "image_url": "https://i.postimg.cc/9FCKwV9j/S3-38.png"
   },
   {
     "id": 39,
@@ -781,7 +787,7 @@
     "correct": 2,
     "answer": "1 mA",
     "explanation": "I_c = V/R = 0.8/800 = 0.001 A = 1 mA.",
-    "image_url": null
+    "image_url": "https://i.postimg.cc/zX86H5hq/S3-49.png"
   },
   {
     "id": 50,
@@ -813,7 +819,7 @@
     "correct": 0,
     "answer": "OR gate",
     "explanation": "From the waveform analysis, output C is high when either A or B is high, characteristic of OR gate.",
-    "image_url": null
+    "image_url": "https://i.postimg.cc/rFM3Rc4T/S3-51.png"
   },
   {
     "id": 52,
@@ -989,7 +995,7 @@
     "correct": 2,
     "answer": "0.69×10⁻⁴ s",
     "explanation": "V = V₀(1-e^(-t/RC)). For V = V₀/2: t = RC×ln2 = 100×10⁻⁶×0.69 = 0.69×10⁻⁴ s.",
-    "image_url": null
+    "image_url": "https://i.postimg.cc/pXR45xjH/S3-62.png"
   },
   {
     "id": 63,
@@ -1005,7 +1011,7 @@
     "correct": 0,
     "answer": "0.02 V/cm",
     "explanation": "Potential gradient = E₂/(100-49) = 1.02/51 = 0.02 V/cm.",
-    "image_url": null
+    "image_url": "https://i.postimg.cc/xTnhNYmT/S3-63.png"
   },
   {
     "id": 64,
@@ -1581,7 +1587,7 @@
     "correct": 3,
     "answer": "Option D (anti-Markovnikov addition product)",
     "explanation": "Hydroboration-oxidation gives anti-Markovnikov addition of water across double bond with syn stereochemistry. OH adds to less substituted carbon.",
-    "image_url": "https://i.imgur.com/placeholder_q99.png"
+    "image_url": "https://i.postimg.cc/WbTCqjZp/S3-99.png"
   },
   {
     "id": 100,
@@ -1613,7 +1619,7 @@
     "correct": 2,
     "answer": "H₂, Pd/BaSO₄",
     "explanation": "PhCOOH + SOCl₂ → PhCOCl (Q). PhCOCl is reduced to PhCHO using Rosenmund reduction (H₂, Pd/BaSO₄).",
-    "image_url": null
+    "image_url": "https://i.postimg.cc/RV4yJ9tM/S3-101.png"
   },
   {
     "id": 102,
