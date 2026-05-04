@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUSAT CAT PYQ Quiz</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .header {
+            background: rgba(255,255,255,0.95);
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            color: #667eea;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header .subtitle {
+            color: #764ba2;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Year/Session Selector Styles */
+        .selector-container {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .selector-container h2 {
+            color: #667eea;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .year-tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .year-tab {
+            padding: 0.8rem 2rem;
+            border: 2px solid #667eea;
+            background: white;
+            color: #667eea;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .year-tab:hover, .year-tab.active {
+            background: #667eea;
+            color: white;
+        }
+
+        .session-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .session-btn {
+            padding: 1rem;
+            border: 2px solid #e0e0e0;
+            background: white;
+            color: #667eea;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .session-btn:hover {
+            border-color: #667eea;
+            background: #f5f5ff;
+            transform: translateY(-2px);
+        }
+
+        .session-btn.active {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+
+        .session-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .current-selection {
+            text-align: center;
+            margin-top: 1rem;
+            padding: 0.5rem;
+            background: #e8eaf6;
+            border-radius: 10px;
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        /* Quiz Info & Stats */
+        .quiz-info {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .quiz-info h2 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .quiz-info p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .stat-box {
+            text-align: center;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 10px;
+            min-width: 120px;
+        }
+
+        .stat-box .number {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .stat-box .label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 1rem;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+
+        /* Subject Filter */
+        .filter-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1.5rem;
+            border: 2px solid #667eea;
+            background: white;
+            color: #667eea;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: #667eea;
+            color: white;
+        }
+
+        /* Question Navigation */
+        .question-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            justify-content: center;
+        }
+
+        .q-btn {
+            width: 40px;
+            height: 40px;
+            border: 2px solid #667eea;
+            background: white;
+            color: #667eea;
+            border-radius: 50%;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .q-btn:hover, .q-btn.active {
+            background: #667eea;
+            color: white;
+        }
+
+        .q-btn.answered {
+            background: #4CAF50;
+            border-color: #4CAF50;
+            color: white;
+        }
+
+        .q-btn.correct {
+            background: #4CAF50;
+            border-color: #4CAF50;
+            color: white;
+        }
+
+        .q-btn.wrong {
+            background: #f44336;
+            border-color: #f44336;
+            color: white;
+        }
+
+        /* Question Cards */
+        .question-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            display: none;
+        }
+
+        .question-card.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .question-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .subject-tag {
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .subject-tag.physics { background: #e3f2fd; color: #1976d2; }
+        .subject-tag.chemistry { background: #f3e5f5; color: #7b1fa2; }
+        .subject-tag.mathematics { background: #e8f5e9; color: #388e3c; }
+
+        .difficulty-tag {
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .difficulty-tag.easy { background: #c8e6c9; color: #2e7d32; }
+        .difficulty-tag.medium { background: #fff3e0; color: #ef6c00; }
+        .difficulty-tag.hard { background: #ffcdd2; color: #c62828; }
+
+        .question-number {
+            font-size: 1.1rem;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .question-text {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .option {
+            padding: 1rem 1.5rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .option:hover {
+            border-color: #667eea;
+            background: #f5f5ff;
+        }
+
+        .option.selected {
+            border-color: #667eea;
+            background: #e8eaf6;
+        }
+
+        .option.correct {
+            border-color: #4CAF50;
+            background: #e8f5e9;
+        }
+
+        .option.wrong {
+            border-color: #f44336;
+            background: #ffebee;
+        }
+
+        .option-letter {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #667eea;
+            flex-shrink: 0;
+        }
+
+        .option.selected .option-letter {
+            background: #667eea;
+            color: white;
+        }
+
+        .option.correct .option-letter {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .option.wrong .option-letter {
+            background: #f44336;
+            color: white;
+        }
+
+        .explanation {
+            margin-top: 1.5rem;
+            padding: 1.5rem;
+            background: #f5f5f5;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+            display: none;
+        }
+
+        .explanation.show {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        .explanation h4 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .explanation p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .answer-reveal {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: #e8f5e9;
+            border-radius: 10px;
+            color: #2e7d32;
+            font-weight: bold;
+            display: none;
+        }
+
+        .answer-reveal.show {
+            display: block;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .btn-secondary:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* Results */
+        .result-card {
+            background: white;
+            border-radius: 15px;
+            padding: 3rem;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            display: none;
+        }
+
+        .result-card.show {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        .result-icon {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+        }
+
+        .result-score {
+            font-size: 3rem;
+            color: #667eea;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .result-message {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .error {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            color: #f44336;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: #667eea;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 600px) {
+            .header h1 { font-size: 1.8rem; }
+            .question-text { font-size: 1rem; }
+            .container { padding: 1rem; }
+            .session-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>CUSAT CAT PYQ Quiz</h1>
+        <div class="subtitle">Previous Year Questions Collection</div>
+    </div>
+
+    <div class="container">
+        <!-- Year & Session Selector -->
+        <div class="selector-container">
+            <h2>Select Year & Session</h2>
+
+            <div class="year-tabs">
+                <button class="year-tab active" onclick="selectYear('2025')">2025</button>
+                <button class="year-tab" onclick="selectYear('2024')">2024</button>
+                <button class="year-tab" onclick="selectYear('2023')">2023</button>
+            </div>
+
+            <div class="session-grid" id="sessionGrid">
+                <button class="session-btn" onclick="loadSession('s1')">Session 1</button>
+                <button class="session-btn" onclick="loadSession('s2')">Session 2</button>
+                <button class="session-btn" onclick="loadSession('s3')">Session 3</button>
+                <button class="session-btn" onclick="loadSession('s4')">Session 4</button>
+            </div>
+
+            <div class="current-selection" id="currentSelection">
+                Selected: 2025 - Session 1
+            </div>
+        </div>
+
+        <!-- Quiz Info -->
+        <div class="quiz-info">
+            <h2 id="quizTitle">CUSAT CAT 2025 S1 — PYQ Quiz</h2>
+            <p id="quizDesc">Practice with previous year questions. Select answers and view explanations.</p>
+
+            <div class="stats">
+                <div class="stat-box">
+                    <div class="number" id="totalQ">0</div>
+                    <div class="label">Questions</div>
+                </div>
+                <div class="stat-box">
+                    <div class="number" id="correctCount">0</div>
+                    <div class="label">Correct</div>
+                </div>
+                <div class="stat-box">
+                    <div class="number" id="wrongCount">0</div>
+                    <div class="label">Wrong</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress -->
+        <div class="progress-container">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+                <span>Progress</span>
+                <span id="progressPercent">0%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+
+        <!-- Subject Filter -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" onclick="filterSubject('all')">All</button>
+            <button class="filter-btn" onclick="filterSubject('physics')">Physics</button>
+            <button class="filter-btn" onclick="filterSubject('chemistry')">Chemistry</button>
+            <button class="filter-btn" onclick="filterSubject('mathematics')">Mathematics</button>
+        </div>
+
+        <!-- Question Navigation -->
+        <div class="question-nav" id="questionNav"></div>
+
+        <!-- Questions Container -->
+        <div id="questionsContainer">
+            <div class="loading">Select a year and session to load questions</div>
+        </div>
+
+        <!-- Results Card -->
+        <div class="result-card" id="resultCard">
+            <div class="result-icon">🎉</div>
+            <div class="result-score" id="finalScore">0/0</div>
+            <div class="result-message" id="resultMessage">Great effort!</div>
+            <button class="btn btn-primary" onclick="restartQuiz()">Restart Quiz</button>
+        </div>
+    </div>
+
+    <script>
+
+// CUSAT CAT PYQ Quiz - Dynamic JSON Loader
+// Supports multiple years and sessions
+
+let questionsData = [];
+let currentQuestion = 0;
+let filteredQuestions = [];
+let userAnswers = {};
+let correctAnswers = 0;
+let wrongAnswers = 0;
+let currentYear = '2025';
+let currentSession = 's1';
+
+// Configuration: Add more years and sessions here as needed
+const availableYears = ['2025', '2024', '2023'];
+const availableSessions = ['s1', 's2', 's3', 's4'];
+
+// Initialize on load
+window.onload = function() {
+    updateSelectionDisplay();
+    loadQuestions();
+};
+
+// Select year tab
+function selectYear(year) {
+    currentYear = year;
+
+    // Update UI
+    document.querySelectorAll('.year-tab').forEach(tab => {
+        tab.classList.toggle('active', tab.textContent === year);
+    });
+
+    updateSelectionDisplay();
+    resetQuiz();
+    loadQuestions();
+}
+
+// Load session
+function loadSession(session) {
+    currentSession = session;
+
+    // Update UI
+    document.querySelectorAll('.session-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.toLowerCase().includes(session));
+    });
+
+    updateSelectionDisplay();
+    resetQuiz();
+    loadQuestions();
+}
+
+// Update the selection display text
+function updateSelectionDisplay() {
+    const display = document.getElementById('currentSelection');
+    display.textContent = `Selected: ${currentYear} - Session ${currentSession.charAt(1)}`;
+
+    // Update quiz title
+    const title = document.getElementById('quizTitle');
+    title.textContent = `CUSAT CAT ${currentYear} ${currentSession.toUpperCase()} — PYQ Quiz`;
+}
+
+// Generate JSON filename based on year and session
+function getJsonFilename() {
+    return `${currentYear}${currentSession}.json`;
+}
+
+// Load questions from JSON file
+async function loadQuestions() {
+    const container = document.getElementById('questionsContainer');
+    container.innerHTML = '<div class="loading">Loading questions...</div>';
+
+    const filename = getJsonFilename();
+
+    try {
+        const response = await fetch(filename);
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        questionsData = await response.json();
+        filteredQuestions = [...questionsData];
+
+        // Initialize quiz with loaded questions
+        renderQuestionNav();
+        renderQuestions();
+        showQuestion(0);
+        updateStats();
+
+    } catch (error) {
+        console.error('Error loading questions:', error);
+        container.innerHTML = `
+            <div class="error">
+                <strong>Failed to load ${filename}</strong><br><br>
+                Make sure the file exists in the same folder.<br>
+                Expected file: <code>${filename}</code><br><br>
+                <small>Error: ${error.message}</small>
+            </div>
+        `;
+        questionsData = [];
+        filteredQuestions = [];
+        updateStats();
+    }
+}
+
+// Reset quiz state
+function resetQuiz() {
+    userAnswers = {};
+    correctAnswers = 0;
+    wrongAnswers = 0;
+    currentQuestion = 0;
+
+    document.getElementById('resultCard').classList.remove('show');
+    document.getElementById('questionsContain
