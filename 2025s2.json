@@ -589,7 +589,7 @@
     "correct": 1,
     "answer": "10⁻² A",
     "explanation": "The diode is forward biased (4V > 1V). Net voltage across resistor = 4 - 1 = 3V (assuming ideal diode). Current I = V/R = 3/300 = 0.01 A = 10⁻² A.",
-    "image_url": "PLACEHOLDER_UPLOAD_IMAGE"
+    "image_url": "https://i.postimg.cc/Kc3V2PzL/S237.png"
   },
   {
     "id": 38,
@@ -1085,7 +1085,7 @@
     "correct": 0,
     "answer": "1.33×10³ s",
     "explanation": "Using Kepler's third law: T² ∝ r³. r_A = 6400+600 = 7000 km, r_B = 6400+1600 = 8000 km. T = 2π√(r³/GM). T_A = 2π√((7×10⁶)³/(6.67×10⁻¹¹×6×10²⁴)) ≈ 5800 s. T_B = 2π√((8×10⁶)³/(6.67×10⁻¹¹×6×10²⁴)) ≈ 7100 s. T_B - T_A ≈ 1300 s ≈ 1.33×10³ s.",
-    "image_url": "PLACEHOLDER_UPLOAD_IMAGE"
+    "image_url": "https://i.postimg.cc/Y2LVH69Q/S268.png"
   },
   {
     "id": 69,
@@ -1149,7 +1149,7 @@
     "correct": 0,
     "answer": "√30",
     "explanation": "Using energy conservation: mg(L/2)sin(30°) = ½Iω². I = mL²/3. mgL/4 = ½ × mL²/3 × ω². ω² = 3g/(2L) = 3×10/(2×0.5) = 30. ω = √30 rad/s.",
-    "image_url": "PLACEHOLDER_UPLOAD_IMAGE"
+    "image_url": "https://i.postimg.cc/nV95J4zB/S272.png"
   },
   {
     "id": 73,
@@ -1549,7 +1549,7 @@
     "correct": 1,
     "answer": "4,4-dimethyl-cycloheptene",
     "explanation": "Numbering starts from double bond to give lowest locants. The two methyl groups are on carbon 4 (counting from the double bond).",
-    "image_url": "PLACEHOLDER_UPLOAD_IMAGE"
+    "image_url": "https://i.postimg.cc/XNBhbfJ5/S297.png"
   },
   {
     "id": 98,
@@ -1805,7 +1805,7 @@
     "correct": 1,
     "answer": "an optically inactive compound",
     "explanation": "Poisoned Pd catalyst (Lindlar's catalyst) selectively hydrogenates alkyne to cis-alkene. But with the specific stereochemistry shown, the product becomes achiral/optically inactive due to symmetry.",
-    "image_url": "PLACEHOLDER_UPLOAD_IMAGE"
+    "image_url": "https://i.postimg.cc/WzZfwvCp/S2113.png"
   },
   {
     "id": 114,
