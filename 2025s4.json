@@ -6,9 +6,9 @@
     "question": "An electron and a proton are associated with the same de Broglie wavelength. Then the ratio of their kinetic energy is",
     "options": [
       "$1:1836$",
-      "$1:\frac{2}{1836}$",
+      "$1:\\frac{2}{1836}$",
       "$1:\\sqrt{1836}$",
-      "$1:\frac{1}{\\sqrt{1836}}$"
+      "$1:\\frac{1}{\\sqrt{1836}}$"
     ],
     "correct": 0,
     "answer": "$1:1836$",
