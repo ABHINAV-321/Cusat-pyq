@@ -265,6 +265,28 @@ select:focus{border-color:var(--accent)}
 .toast{position:fixed;bottom:70px;left:50%;transform:translateX(-50%) translateY(16px);background:var(--surface2);border:1px solid var(--border);color:var(--text);padding:8px 18px;border-radius:7px;font-size:13px;opacity:0;pointer-events:none;transition:all .3s;z-index:9999;white-space:nowrap}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
+/* ── REPORT ── */
+.btn-report{background:none;border:none;cursor:pointer;color:var(--text3);font-size:13px;padding:3px 5px;border-radius:4px;transition:all .2s;flex-shrink:0;line-height:1}
+.btn-report:hover{color:var(--red);background:rgba(240,90,90,.12)}
+.report-modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:700;align-items:center;justify-content:center;padding:20px}
+.report-modal-bg.show{display:flex}
+.report-modal{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:24px;width:100%;max-width:400px;display:flex;flex-direction:column;gap:14px}
+.report-modal h3{font-size:15px;font-weight:700;color:var(--red);display:flex;align-items:center;gap:7px}
+.report-qref{font-size:11px;color:var(--text3);background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:8px 10px;font-family:'JetBrains Mono',monospace;line-height:1.8}
+.report-lbl{font-size:10px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--text3)}
+.report-types{display:flex;flex-direction:column;gap:6px}
+.report-type-opt{display:flex;align-items:center;gap:9px;cursor:pointer;padding:9px 11px;border-radius:7px;border:1px solid var(--border);background:var(--surface2);transition:border-color .15s,background .15s;font-size:13px;user-select:none}
+.report-type-opt:hover{border-color:rgba(79,142,247,.5);background:rgba(79,142,247,.06)}
+.report-type-opt input[type=radio]{accent-color:var(--accent);cursor:pointer}
+textarea.report-extra{background:var(--surface2);border:1px solid var(--border);color:var(--text);padding:10px 12px;border-radius:8px;font-family:'Outfit',sans-serif;font-size:13px;width:100%;resize:vertical;min-height:68px;outline:none;transition:border-color .15s}
+textarea.report-extra:focus{border-color:var(--accent)}
+.report-modal-btns{display:flex;gap:8px;margin-top:2px}
+.btn-send-report{flex:1;background:var(--red);color:#fff;border:none;padding:11px;border-radius:7px;font-family:'Outfit',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:opacity .2s;display:flex;align-items:center;justify-content:center;gap:6px}
+.btn-send-report:hover{opacity:.85}
+.btn-send-report:disabled{opacity:.4;cursor:not-allowed}
+.btn-cancel-report{background:none;color:var(--text2);border:1px solid var(--border);padding:11px 18px;border-radius:7px;font-family:'Outfit',sans-serif;font-size:13px;font-weight:600;cursor:pointer;transition:all .2s}
+.btn-cancel-report:hover{border-color:var(--text2);color:var(--text)}
+
 /* ── RESPONSIVE ── */
 @media(max-width:800px){
   .sb{display:none}
@@ -526,6 +548,28 @@ select:focus{border-color:var(--accent)}
   </div>
 </div>
 
+<!-- REPORT MODAL -->
+<div class="report-modal-bg" id="report-modal-bg">
+  <div class="report-modal">
+    <h3>⚑ Report Question</h3>
+    <div class="report-qref" id="report-qref">—</div>
+    <div class="report-lbl">Issue Type</div>
+    <div class="report-types">
+      <label class="report-type-opt"><input type="radio" name="rtype" value="Wrong answer key"> Wrong answer key</label>
+      <label class="report-type-opt"><input type="radio" name="rtype" value="Incorrect question text"> Incorrect question text</label>
+      <label class="report-type-opt"><input type="radio" name="rtype" value="Wrong/missing options"> Wrong or missing options</label>
+      <label class="report-type-opt"><input type="radio" name="rtype" value="Image not loading"> Image not loading</label>
+      <label class="report-type-opt"><input type="radio" name="rtype" value="Other"> Other</label>
+    </div>
+    <div class="report-lbl">Additional Details (optional)</div>
+    <textarea class="report-extra" id="report-extra" placeholder="Describe the issue…"></textarea>
+    <div class="report-modal-btns">
+      <button class="btn-cancel-report" onclick="closeReport()">Cancel</button>
+      <button class="btn-send-report" id="btn-send-report" onclick="sendReport()">📧 Send Report</button>
+    </div>
+  </div>
+</div>
+
 <!-- DISCARD CONFIRMATION MODAL -->
 <div class="mbg" id="discard-modal">
   <div class="modal">
@@ -740,6 +784,7 @@ function mkCard(q){
     <div class="qhdr">
       <span class="qnum">Q${q.id}</span>
       <span class="qtext">${q.question}</span>
+      <button class="btn-report" onclick="openReport(${q.id})" title="Report this question">⚑</button>
       <div class="qbadge" id="badge-${q.id}"></div>
     </div>
     ${imgHtml}
@@ -1107,7 +1152,69 @@ function toast(msg){
   setTimeout(()=>t.classList.remove('show'),2800);
 }
 
-// Close palette sheet on outside tap
+// ── REPORT ──
+let reportQid = null;
+
+function openReport(id){
+  reportQid = id;
+  const q = QS.find(q=>q.id===id);
+  const qtext = q ? q.question.replace(/<[^>]*>/g,'').slice(0,80) : '';
+  document.getElementById('report-qref').innerHTML =
+    `<b>Q${id}</b> · ${sessLabel}<br><span style="color:var(--text2)">${qtext}${qtext.length>=80?'…':''}</span>`;
+  // Reset form
+  document.querySelectorAll('input[name="rtype"]').forEach(r=>r.checked=false);
+  document.getElementById('report-extra').value='';
+  const btn=document.getElementById('btn-send-report');
+  btn.disabled=false; btn.innerHTML='📧 Send Report';
+  document.getElementById('report-modal-bg').classList.add('show');
+}
+
+function closeReport(){
+  document.getElementById('report-modal-bg').classList.remove('show');
+  reportQid=null;
+}
+
+function sendReport(){
+  const rtype = document.querySelector('input[name="rtype"]:checked')?.value;
+  if(!rtype){toast('Please select an issue type');return;}
+  const extra = document.getElementById('report-extra').value.trim();
+  const q = QS.find(q=>q.id===reportQid);
+  const qtext = q ? q.question.replace(/<[^>]*>/g,'').slice(0,200) : 'N/A';
+  const answered = sel[reportQid] || 'Not answered';
+
+  const subject = encodeURIComponent(`[CUSAT Report] Q${reportQid} — ${rtype}`);
+  const body = encodeURIComponent(
+`Question Report — CUSAT CAT Exam Portal
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+Session   : ${sessLabel}
+Question  : Q${reportQid}
+Issue     : ${rtype}
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Question Text:
+${qtext}
+
+Student's Selected Answer: ${answered}
+
+Additional Details:
+${extra||'(none)'}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+Reported at: ${new Date().toLocaleString()}
+`);
+
+  const btn = document.getElementById('btn-send-report');
+  btn.disabled=true;
+  btn.innerHTML='✅ Opening Mail…';
+
+  window.location.href=`mailto:abhi@zenvx.in?subject=${subject}&body=${body}`;
+
+  setTimeout(()=>{
+    closeReport();
+    toast('📧 Report ready in your mail app');
+  }, 900);
+}
 document.addEventListener('click',e=>{
   const sheet=document.getElementById('pal-sheet');
   const fab=document.querySelector('.fab-pal');
