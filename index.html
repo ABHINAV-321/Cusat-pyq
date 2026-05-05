@@ -526,6 +526,18 @@ select:focus{border-color:var(--accent)}
   </div>
 </div>
 
+<!-- DISCARD CONFIRMATION MODAL -->
+<div class="mbg" id="discard-modal">
+  <div class="modal">
+    <h3>Discard Saved Session?</h3>
+    <p>This will permanently delete your saved progress, answers, and remaining time. This cannot be undone.</p>
+    <div class="mbtns">
+      <button class="mcancel" onclick="cancelDiscard()">Cancel</button>
+      <button style="background:var(--red);color:#fff;flex:1;padding:10px;border-radius:7px;font-family:'Outfit',sans-serif;font-size:13px;font-weight:600;cursor:pointer;border:none" onclick="confirmDiscard()">Yes, Discard</button>
+    </div>
+  </div>
+</div>
+
 <!-- MODAL -->
 <div class="mbg" id="modal">
   <div class="modal">
@@ -609,9 +621,16 @@ async function resumeSavedExam(){
 }
 
 function discardSave(){
+  document.getElementById('discard-modal').classList.add('show');
+}
+function confirmDiscard(){
   deleteCookie('cusat_progress');
   document.getElementById('resume-banner').classList.remove('show');
+  document.getElementById('discard-modal').classList.remove('show');
   toast('Saved session discarded');
+}
+function cancelDiscard(){
+  document.getElementById('discard-modal').classList.remove('show');
 }
 
 // ── LANDING ──
