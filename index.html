@@ -96,8 +96,8 @@ select:focus{border-color:var(--accent)}
 .qhdr{display:flex;align-items:flex-start;gap:10px;padding:13px 15px}
 .qnum{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;color:var(--text3);min-width:24px;padding-top:2px}
 .qtext{font-size:13.5px;color:var(--text);line-height:1.65;flex:1;word-break:break-word}
-.qbadge{flex-shrink:0;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;margin-top:1px}
-.qbadge.ok{background:rgba(34,199,122,.2);color:#22c77a}.qbadge.bad{background:rgba(240,90,90,.2);color:#f05a5a}
+.qbadge{flex-shrink:0;width:20px;height:20px;border-radius:50%;display:none;align-items:center;justify-content:center;font-size:11px;margin-top:1px}
+.qbadge.ok{display:flex;background:rgba(34,199,122,.2);color:#22c77a}.qbadge.bad{display:flex;background:rgba(240,90,90,.2);color:#f05a5a}
 .qopts{padding:0 15px 12px 49px;display:grid;gap:6px}
 .opt{display:flex;align-items:flex-start;gap:8px;padding:9px 11px;border-radius:7px;border:1px solid var(--border);cursor:pointer;transition:all .15s;font-size:13px;color:var(--text2);background:var(--surface2);-webkit-tap-highlight-color:transparent}
 .opt:hover:not(.locked){border-color:#3a4055;color:var(--text);background:#222635}
@@ -315,8 +315,8 @@ select:focus{border-color:var(--accent)}
     <div class="hdr-right">
       <div class="hdr-stats">
         <span>Ans: <span class="sv" id="s-ans">0</span></span>
-        <span><span class="sv g" id="s-cor">0</span>✓</span>
-        <span><span class="sv r" id="s-wrg">0</span>✗</span>
+        <span id="hdr-cor-wrap" style="display:none"><span class="sv g" id="s-cor">0</span>✓</span>
+        <span id="hdr-wrg-wrap" style="display:none"><span class="sv r" id="s-wrg">0</span>✗</span>
         <span>Score: <span class="sv gold" id="s-score">—</span></span>
       </div>
       <div class="timer" id="timer">03:00:00</div>
@@ -799,6 +799,11 @@ function submitExam(){
   submitted=true;
   QS.forEach(q=>render(q.id));
   updateStats(); updatePalette();
+  // reveal correct/wrong counts in header
+  const cw=document.getElementById('hdr-cor-wrap');
+  const ww=document.getElementById('hdr-wrg-wrap');
+  if(cw) cw.style.display='';
+  if(ww) ww.style.display='';
   showAnalysis();
 }
 
