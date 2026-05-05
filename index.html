@@ -53,6 +53,30 @@ select:focus{border-color:var(--accent)}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
 .btn-sub{background:var(--green);color:#000;border:none;padding:6px 14px;border-radius:6px;font-family:'Outfit',sans-serif;font-size:12px;font-weight:700;cursor:pointer;white-space:nowrap;flex-shrink:0}
 .btn-sub:hover{opacity:.85}
+.btn-pause{background:var(--surface2);color:var(--text2);border:1px solid var(--border);padding:4px 9px;border-radius:6px;font-family:'JetBrains Mono',monospace;font-size:13px;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:all .2s;line-height:1}
+.btn-pause:hover{border-color:var(--gold);color:var(--gold)}
+.btn-pause.paused{border-color:var(--gold);color:var(--gold);animation:pulse 1.4s infinite}
+
+/* PAUSE OVERLAY */
+.pause-overlay{display:none;position:fixed;inset:0;background:rgba(13,15,20,.93);z-index:500;flex-direction:column;align-items:center;justify-content:center;gap:20px;backdrop-filter:blur(6px)}
+.pause-overlay.show{display:flex}
+.pause-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:36px 40px;text-align:center;display:flex;flex-direction:column;gap:16px;min-width:260px}
+.pause-title{font-size:22px;font-weight:700;color:var(--gold)}
+.pause-sub{font-size:13px;color:var(--text2)}
+.pause-timer{font-family:'JetBrains Mono',monospace;font-size:36px;font-weight:700;color:var(--text);letter-spacing:2px}
+.btn-resume{background:var(--accent);color:#fff;border:none;padding:12px 28px;border-radius:8px;font-family:'Outfit',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:opacity .2s}
+.btn-resume:hover{opacity:.85}
+
+/* RESUME BANNER on landing */
+.resume-banner{background:rgba(79,142,247,.08);border:1px solid rgba(79,142,247,.3);border-radius:10px;padding:14px 16px;display:none;flex-direction:column;gap:10px;width:100%;max-width:440px}
+.resume-banner.show{display:flex}
+.resume-banner-title{font-size:13px;font-weight:600;color:var(--accent)}
+.resume-banner-info{font-size:12px;color:var(--text2);line-height:1.7}
+.resume-banner-btns{display:flex;gap:8px}
+.btn-resume-save{flex:1;background:var(--accent);color:#fff;border:none;padding:10px;border-radius:7px;font-family:'Outfit',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:opacity .2s}
+.btn-resume-save:hover{opacity:.85}
+.btn-discard{flex:1;background:none;color:var(--red);border:1px solid rgba(240,90,90,.3);padding:10px;border-radius:7px;font-family:'Outfit',sans-serif;font-size:13px;font-weight:600;cursor:pointer;transition:all .2s}
+.btn-discard:hover{border-color:var(--red);background:rgba(240,90,90,.06)}
 
 /* BODY LAYOUT */
 .body{display:flex;flex:1;min-height:0}
@@ -278,6 +302,17 @@ select:focus{border-color:var(--accent)}
 <!-- LANDING -->
 <div id="landing">
   <div class="brand">CUSAT<span>·CAT</span></div>
+
+  <!-- RESUME BANNER (shown if saved session exists) -->
+  <div class="resume-banner" id="resume-banner">
+    <div class="resume-banner-title">📂 Saved Session Found</div>
+    <div class="resume-banner-info" id="resume-banner-info">Loading…</div>
+    <div class="resume-banner-btns">
+      <button class="btn-resume-save" onclick="resumeSavedExam()">▶ Resume</button>
+      <button class="btn-discard" onclick="discardSave()">🗑 Discard</button>
+    </div>
+  </div>
+
   <div class="lcard">
     <h2>Select Exam Session</h2>
     <div class="frow">
@@ -320,6 +355,7 @@ select:focus{border-color:var(--accent)}
         <span>Score: <span class="sv gold" id="s-score">—</span></span>
       </div>
       <div class="timer" id="timer">03:00:00</div>
+      <button class="btn-pause" id="btn-pause" onclick="togglePause()" title="Pause / Resume">⏸</button>
       <button class="btn-sub" onclick="confirmSubmit()">Submit</button>
     </div>
   </header>
@@ -480,6 +516,16 @@ select:focus{border-color:var(--accent)}
   </div>
 </div>
 
+<!-- PAUSE OVERLAY -->
+<div class="pause-overlay" id="pause-overlay">
+  <div class="pause-card">
+    <div class="pause-title">⏸ Exam Paused</div>
+    <div class="pause-timer" id="pause-timer-display">00:00:00</div>
+    <div class="pause-sub">Your progress is auto-saved.<br>Click Resume to continue.</div>
+    <button class="btn-resume" onclick="togglePause()">▶ Resume Exam</button>
+  </div>
+</div>
+
 <!-- MODAL -->
 <div class="mbg" id="modal">
   <div class="modal">
@@ -497,10 +543,76 @@ select:focus{border-color:var(--accent)}
 <script>
 // ── STATE ──
 let QS=[], ANS={}, SOLS={}, SUBS={};
-let sel={}, submitted=false, timerID=null, secsLeft=10800, sessLabel='';
-let timeUsed=0;
+let sel={}, submitted=false, timerID=null, secsLeft=10800, sessLabel='', sessKey='';
+let timeUsed=0, paused=false;
 const OL=['A','B','C','D'];
 const SCOL={physics:'#4f8ef7',chemistry:'#22c77a',maths:'#f0b429'};
+
+// ── COOKIE HELPERS ──
+function setCookie(name,value,days=30){
+  const d=new Date(); d.setTime(d.getTime()+(days*864e5));
+  document.cookie=`${name}=${encodeURIComponent(value)};expires=${d.toUTCString()};path=/;SameSite=Lax`;
+}
+function getCookie(name){
+  const m=document.cookie.match('(?:^|; )'+name.replace(/([.$?*|{}()[\]\\/+^])/g,'\\$1')+'=([^;]*)');
+  return m?decodeURIComponent(m[1]):null;
+}
+function deleteCookie(name){
+  document.cookie=`${name}=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;SameSite=Lax`;
+}
+
+// ── SAVE / LOAD PROGRESS ──
+function saveProgress(){
+  if(!sessKey||submitted) return;
+  const state={sessKey,sessLabel,sel,secsLeft,timeUsed,ts:Date.now()};
+  try{setCookie('cusat_progress',JSON.stringify(state),2);}catch(e){}
+}
+
+function loadSavedState(){
+  try{
+    const raw=getCookie('cusat_progress');
+    if(!raw) return null;
+    return JSON.parse(raw);
+  }catch(e){return null;}
+}
+
+function checkResumeBanner(){
+  const saved=loadSavedState();
+  if(!saved) return;
+  const age=Math.round((Date.now()-saved.ts)/60000);
+  const h=Math.floor(saved.secsLeft/3600),m=Math.floor((saved.secsLeft%3600)/60),s=saved.secsLeft%60;
+  const tstr=`${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+  const answered=Object.keys(saved.sel||{}).length;
+  document.getElementById('resume-banner-info').innerHTML=
+    `<b>${saved.sessLabel}</b><br>Time left: <b>${tstr}</b> · Answered: <b>${answered} Qs</b><br><span style="color:var(--text3);font-size:11px">Saved ${age<2?'just now':age+'m ago'}</span>`;
+  document.getElementById('resume-banner').classList.add('show');
+}
+
+async function resumeSavedExam(){
+  const saved=loadSavedState();
+  if(!saved){toast('No saved session found');return;}
+  const parts=saved.sessKey.match(/^(\d{4})(s\d)$/);
+  if(!parts){toast('Cannot parse saved session key');return;}
+  const [,y,s]=parts;
+  sessLabel=saved.sessLabel;
+  const btn=document.getElementById('btn-start'), err=document.getElementById('err-msg');
+  btn.disabled=true; btn.textContent='Loading…'; err.style.display='none';
+  try{
+    const r=await fetch(`https://raw.githubusercontent.com/ABHINAV-321/Cusat-pyq/refs/heads/master/${y}${s}.json`);
+    if(!r.ok) throw 0;
+    const data=await r.json();
+    init(data, saved);
+  }catch(e){
+    err.style.display='block';
+    btn.disabled=false; btn.textContent='Start Exam →';
+  }
+}
+
+function discardSave(){
+  deleteCookie('cusat_progress');
+  document.getElementById('resume-banner').classList.remove('show');
+  toast('Saved session discarded');
+}
 
 // ── LANDING ──
 function updatePreview(){
@@ -512,6 +624,7 @@ async function startExam(){
   const y=document.getElementById('sel-year').value, s=document.getElementById('sel-sess').value;
   if(!y||!s){toast('Please select year and session');return;}
   sessLabel=`CUSAT CAT ${y} — Session ${s.replace('s','').toUpperCase()}`;
+  sessKey=`${y}${s}`;
   const btn=document.getElementById('btn-start'), err=document.getElementById('err-msg');
   btn.disabled=true; btn.textContent='Loading…'; err.style.display='none';
   try{
@@ -525,7 +638,7 @@ async function startExam(){
   }
 }
 
-function init(data){
+function init(data, saved){
   QS=data;
   ANS=Object.fromEntries(data.map(q=>[q.id, OL[q.correct]]));
   SOLS=Object.fromEntries(data.map(q=>[q.id, q.explanation||'']));
@@ -534,6 +647,18 @@ function init(data){
     if(!SUBS[q.subject]) SUBS[q.subject]={start:q.id,end:q.id,count:0};
     SUBS[q.subject].end=q.id; SUBS[q.subject].count++;
   });
+  // Restore saved state if resuming
+  if(saved){
+    sel=saved.sel||{};
+    secsLeft=saved.secsLeft||10800;
+    timeUsed=saved.timeUsed||0;
+    sessKey=saved.sessKey||sessKey;
+    sessLabel=saved.sessLabel||sessLabel;
+  } else {
+    sel={};
+    secsLeft=10800;
+    timeUsed=0;
+  }
   const map={physics:['ph','rng-ph','cnt-ph','nav-physics','mcnt-ph'],chemistry:['ch','rng-ch','cnt-ch','nav-chemistry','mcnt-ch'],maths:['ma','rng-ma','cnt-ma','nav-maths','mcnt-ma']};
   Object.entries(map).forEach(([sub,[cls,rng,cnt,nav,mcnt]])=>{
     const info=SUBS[sub];
@@ -548,12 +673,16 @@ function init(data){
   });
   document.getElementById('hdr-sess').textContent=sessLabel;
   buildAllQs();
+  // Re-render saved selections
+  if(saved) QS.forEach(q=>render(q.id));
   buildPalette();
+  updateStats(); updatePalette(); updateProgress(); updateMobCounts();
   const first=QS[0]?.subject||'physics';
   showSec(first);
   document.getElementById('landing').style.display='none';
   document.getElementById('exam').style.display='flex';
   startTimer();
+  if(saved) toast('✅ Session restored!');
 }
 
 // ── BUILD QUESTIONS ──
@@ -611,15 +740,17 @@ function mkCard(q){
 
 // ── INTERACTIONS ──
 function pick(id,lbl){
-  if(submitted) return;
+  if(submitted||paused) return;
   sel[id]=lbl;
   render(id); updateStats(); updatePalette(); updateProgress(); updateMobCounts();
+  saveProgress();
 }
 
 function clr(id){
-  if(submitted) return;
+  if(submitted||paused) return;
   delete sel[id];
   render(id); updateStats(); updatePalette(); updateProgress(); updateMobCounts();
+  saveProgress();
 }
 
 function toggleSol(id){
@@ -763,11 +894,14 @@ function closePalSheet(){
 
 // ── TIMER ──
 function startTimer(){
-  secsLeft=10800; renderTimer();
+  renderTimer();
   timerID=setInterval(()=>{
+    if(paused) return;
     secsLeft--;
     timeUsed++;
     renderTimer();
+    // Auto-save every 15 seconds
+    if(timeUsed%15===0) saveProgress();
     if(secsLeft<=0){clearInterval(timerID);toast('⏰ Time Up!');setTimeout(submitExam,1000);}
   },1000);
 }
@@ -778,9 +912,32 @@ function renderTimer(){
   const el=document.getElementById('timer');
   el.textContent=str;
   el.className='timer'+(secsLeft<=300?' danger':secsLeft<=900?' warn':'');
+  // Keep pause overlay timer in sync
+  const pd=document.getElementById('pause-timer-display');
+  if(pd) pd.textContent=str;
 }
 
 function pad(n){return String(n).padStart(2,'0');}
+
+// ── PAUSE ──
+function togglePause(){
+  if(submitted) return;
+  paused=!paused;
+  const btn=document.getElementById('btn-pause');
+  const overlay=document.getElementById('pause-overlay');
+  if(paused){
+    btn.textContent='▶';
+    btn.classList.add('paused');
+    btn.title='Resume';
+    overlay.classList.add('show');
+    saveProgress();
+  } else {
+    btn.textContent='⏸';
+    btn.classList.remove('paused');
+    btn.title='Pause';
+    overlay.classList.remove('show');
+  }
+}
 
 // ── SUBMIT ──
 function confirmSubmit(){
@@ -797,6 +954,10 @@ function submitExam(){
   closeModal(); clearInterval(timerID);
   timeUsed=10800-secsLeft;
   submitted=true;
+  paused=false;
+  document.getElementById('pause-overlay').classList.remove('show');
+  // Clear saved progress — exam done
+  deleteCookie('cusat_progress');
   QS.forEach(q=>render(q.id));
   updateStats(); updatePalette();
   // reveal correct/wrong counts in header
@@ -935,6 +1096,13 @@ document.addEventListener('click',e=>{
     closePalSheet();
   }
 });
+
+// Save on page hide/unload
+window.addEventListener('pagehide', ()=>{ if(!submitted) saveProgress(); });
+window.addEventListener('beforeunload', ()=>{ if(!submitted) saveProgress(); });
+
+// Check for saved session on load
+checkResumeBanner();
 </script>
 </body>
 </html>
