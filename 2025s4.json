@@ -1,4 +1,4 @@
-[
+[ 
   {
     "id": 1,
     "subject": "physics",
@@ -2161,7 +2161,7 @@
   },
   {
     "id": 136,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "Let $f: [0, \\infty) \\to \\mathbb{R}$ be defined by $f(x) = \\sqrt{x}$. Then",
     "options": [
@@ -2177,7 +2177,7 @@
   },
   {
     "id": 137,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "The number of asymptotes of $y = \\frac{1}{\\tan x - 1}$ is",
     "options": [
@@ -2193,7 +2193,7 @@
   },
   {
     "id": 138,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "The number of possible orders of a matrix with 10 elements is",
     "options": [
@@ -2209,7 +2209,7 @@
   },
   {
     "id": 139,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "The possible values of $x$ that satisfies the equation $\\begin{vmatrix} x & 0 & 3 \\ 3 & x & 0 \\ 0 & 5 & x \\end{vmatrix} = 0$ are",
     "options": [
@@ -2225,7 +2225,7 @@
   },
   {
     "id": 140,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "Let $f: \\mathbb{R} \\to \\mathbb{R}$ be defined by $f(x) = \\frac{x}{|x|}$, $x \\neq 0$. Then",
     "options": [
@@ -2241,7 +2241,7 @@
   },
   {
     "id": 141,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "If a die shows an even number, then the probability of getting 4 is",
     "options": [
@@ -2257,7 +2257,7 @@
   },
   {
     "id": 142,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "$\\frac{d}{dx}\\left(\\frac{2}{\\pi}\\sin x^\\circ\\right) =$",
     "options": [
@@ -2273,7 +2273,7 @@
   },
   {
     "id": 143,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "The local minimum of the function $f(x) = x^3 - 18x$ is attained at $x =$",
     "options": [
@@ -2289,7 +2289,7 @@
   },
   {
     "id": 144,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "Let $S = \\{x \\in \\mathbb{R} : \\tan x = x\\}$. Then $S$ is",
     "options": [
@@ -2305,7 +2305,7 @@
   },
   {
     "id": 145,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "The value of $\\int_0^8 \\frac{1}{\\sqrt{1+x}} dx$ is",
     "options": [
@@ -2321,7 +2321,7 @@
   },
   {
     "id": 146,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "The last digit of $M = 1! + 2! + 3! + ... + 2025!$ is",
     "options": [
@@ -2337,7 +2337,7 @@
   },
   {
     "id": 147,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "Let $M$ denote set of all matrices of form $\\begin{pmatrix} x & x \\ 0 & x \\end{pmatrix}$, $x \\in \\mathbb{R} \\setminus \\{0\\}$. Then the identity element of $M$ under matrix multiplication is",
     "options": [
@@ -2353,7 +2353,7 @@
   },
   {
     "id": 148,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "The number of strings which can be formed using the letters of the word 'MATRIX' either starts with A or ends with R, is",
     "options": [
@@ -2369,7 +2369,7 @@
   },
   {
     "id": 149,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "In a cricket squad of 15 members, only 5 can bowl. From this, a team of 11 members with 4 bowlers has to be selected. The probability for this selection is",
     "options": [
@@ -2385,7 +2385,7 @@
   },
   {
     "id": 150,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "The number of ways of arranging the letters of the name EULER is",
     "options": [
@@ -2401,7 +2401,7 @@
   },
   {
     "id": 151,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "For real numbers $a$ and $b$, define $a \\diamond b = (a-b)^2$. Then $(x-y)^2 \\diamond ((y-x)^2)$ is equal to",
     "options": [
@@ -2417,7 +2417,7 @@
   },
   {
     "id": 152,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "A number is palindrome if it remains same when its digits are reversed. A palindrome between 100 and 1000 is chosen at random. The probability that it is divisible by 2 is",
     "options": [
@@ -2433,7 +2433,7 @@
   },
   {
     "id": 153,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "The number of values of '$a$' such that the equation $x^2 + y^2 + 4ax - 2ay + a^2 = 0$ represents a real circle is",
     "options": [
@@ -2449,7 +2449,7 @@
   },
   {
     "id": 154,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "The first three terms of a geometric progression are $\\frac{3}{2}$, $\\frac{3}{2}\\sqrt{2}$ and $3$. Then the next term is",
     "options": [
@@ -2465,7 +2465,7 @@
   },
   {
     "id": 155,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "Which of the following is TRUE?",
     "options": [
@@ -2481,7 +2481,7 @@
   },
   {
     "id": 156,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "The angle made by the vector $2\\hat{i} + \\hat{j} + \\sqrt{2}\\hat{k}$ with z-axis is",
     "options": [
@@ -2497,7 +2497,7 @@
   },
   {
     "id": 157,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "Let $S$ be the set of all points at which the function $f(x) = \\begin{cases} x & \\text{if } x \\text{ is rational} \\ -x & \\text{if } x \\text{ is irrational} \\end{cases}$ is continuous. Then $S$ is equal to",
     "options": [
@@ -2513,7 +2513,7 @@
   },
   {
     "id": 158,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "The number of subsets of $\\{2, 3, 4, 5, 6, 7, 8, 9\\}$ that contains at least one composite number is",
     "options": [
@@ -2529,7 +2529,7 @@
   },
   {
     "id": 159,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "A straight line through the point $(2, 2)$ intersects the lines $3x + y = 0$ and $3x - y = 0$ at the points $A$ and $B$. The equation of the line $AB$ so that the $\\triangle OAB$ is equilateral, is",
     "options": [
@@ -2545,7 +2545,7 @@
   },
   {
     "id": 160,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "The slopes of the lines represented by $x^2 + 6hxy + 3y^2 = 0$ are two tangents to a circle. Then the radius of the circle is",
     "options": [
@@ -2561,7 +2561,7 @@
   },
   {
     "id": 161,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "Suppose a circle passes through $(0, 2)$ and $(3, 5)$ and touches the y-axis at $Q$. If $O$ is the origin, then $OQ$ is equal to",
     "options": [
@@ -2577,7 +2577,7 @@
   },
   {
     "id": 162,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "Which of the following is TRUE?",
     "options": [
@@ -2593,7 +2593,7 @@
   },
   {
     "id": 163,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "If $\\alpha, \\beta$ are the roots of the equation $x^2 - 2x + 2 = 0$, then the value of $\\alpha^5 + \\beta^5$ is",
     "options": [
@@ -2609,7 +2609,7 @@
   },
   {
     "id": 164,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "If $\\text{Im}\\left(\\frac{2}{z} + i\\right) = 0$, then $z$ lies on the curve",
     "options": [
@@ -2625,7 +2625,7 @@
   },
   {
     "id": 165,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "The equation $z\\overline{z} + (1-4i)z + (1+4i)\\overline{z} + 1 = 0$ represents a circle of radius",
     "options": [
@@ -2641,7 +2641,7 @@
   },
   {
     "id": 166,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "$\\log 2$, $\\log_3 2$, $\\log_6 2$ are in",
     "options": [
@@ -2657,7 +2657,7 @@
   },
   {
     "id": 167,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "The sum of the series $(1+3) + (1+3+3^2) + (1+3+3^2+3^3) + ...$ up to $n$ terms is",
     "options": [
@@ -2673,7 +2673,7 @@
   },
   {
     "id": 168,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "If $x = 3 + \\frac{3}{3} + \\frac{3}{3^2} + ...$, then the value of $x^3 - 9x^2 + 18x$ is",
     "options": [
@@ -2689,7 +2689,7 @@
   },
   {
     "id": 169,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "Number of divisors of the form $4n+2$ ($n \\geq 0$) of the integer 280 is",
     "options": [
@@ -2705,7 +2705,7 @@
   },
   {
     "id": 170,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "If the coefficient of $x^3$ and $x^4$ in the expansion of $(4+kx)^7$ are equal, then the value of $k$ is",
     "options": [
@@ -2721,7 +2721,7 @@
   },
   {
     "id": 171,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "The system of linear equations $x + 2y + z = 4$, $4x + 3y + 2z = 7$, $5x + 5y + 3z = 8$ has",
     "options": [
@@ -2737,7 +2737,7 @@
   },
   {
     "id": 172,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "The value of $\\begin{vmatrix} 1 & 1 & 1 \\ bc & ca & ab \\ b+c & c+a & a+b \\end{vmatrix}$ is",
     "options": [
@@ -2753,7 +2753,7 @@
   },
   {
     "id": 173,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "$\\sum_{m=1}^\\infty \\sum_{n=1}^\\infty \\frac{1}{m! n!}$ is equal to",
     "options": [
@@ -2769,7 +2769,7 @@
   },
   {
     "id": 174,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "Let $f: \\mathbb{R} \\to \\mathbb{R}$ be a mapping defined by $f(x) = x^3 + 4$. Then $f$ is",
     "options": [
@@ -2785,7 +2785,7 @@
   },
   {
     "id": 175,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "Let $A$ and $B$ be the sets of all positive divisors of 400 and 1000 respectively including 1. Then the number of elements in $A \\cap B$ is",
     "options": [
@@ -2801,7 +2801,7 @@
   },
   {
     "id": 176,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "If the probability of a defective bolt is 0.1, then the mean and the standard deviation of the distribution of bolts in a total of 400 are respectively",
     "options": [
@@ -2817,7 +2817,7 @@
   },
   {
     "id": 177,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "The probability that an even number appears on all when throwing three dice simultaneously, is",
     "options": [
@@ -2833,7 +2833,7 @@
   },
   {
     "id": 178,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "An example of a rational number is",
     "options": [
@@ -2849,7 +2849,7 @@
   },
   {
     "id": 179,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "The quadratic equation whose roots are $\\sin^2 18°$ and $\\cos^2 36°$ is",
     "options": [
@@ -2865,7 +2865,7 @@
   },
   {
     "id": 180,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "In a triangle ABC, if $\\angle B = \\frac{\\pi}{2}$, then $\\cos^2 A + \\cos^2 C$ is equal to",
     "options": [
@@ -2881,7 +2881,7 @@
   },
   {
     "id": 181,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "The two points on the line $x + y = 4$ that lie at a unit distance from the line $4x + 3y = 10$ are",
     "options": [
@@ -2897,7 +2897,7 @@
   },
   {
     "id": 182,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "The shortest distance between the line $y = x - 1$ and the curve $x = y^2$ is",
     "options": [
@@ -2913,7 +2913,7 @@
   },
   {
     "id": 183,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "If $x^x y^y z^z = c$, then $\\frac{\\partial z}{\\partial x}$ is equal to",
     "options": [
@@ -2929,7 +2929,7 @@
   },
   {
     "id": 184,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "$\\lim_{x \\to 0} \\frac{e^x + e^{-x} + 2\\cos x - 4}{x^4}$ is equal to",
     "options": [
@@ -2945,7 +2945,7 @@
   },
   {
     "id": 185,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "In the interval $(-3, 3)$, the function $f(x) = \\frac{x}{3} + \\frac{3}{x}$, $x \\neq 0$ is",
     "options": [
@@ -2961,7 +2961,7 @@
   },
   {
     "id": 186,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "$\\int_0^{\\pi/2} \\frac{\\cos x - \\sin x}{1 + \\cos x \\sin x} dx$ is equal to",
     "options": [
@@ -2977,7 +2977,7 @@
   },
   {
     "id": 187,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "The solution of the differential equation $x\\frac{dy}{dx} = 2y + x^3 e^x$, where $y = 0$ when $x = 1$ is",
     "options": [
@@ -2993,7 +2993,7 @@
   },
   {
     "id": 188,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "The number of distinct real values of $\\lambda$, for which the vectors $\\hat{i} - \\lambda^2\\hat{j} + \\hat{k}$, $\\hat{i} + \\hat{j} - \\lambda^2\\hat{k}$ and $\\hat{i} + \\lambda^2\\hat{j} + \\hat{k}$ are coplanar, is",
     "options": [
@@ -3009,7 +3009,7 @@
   },
   {
     "id": 189,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "If $z$ is a point on the argand plane such that $\\left|\\frac{z-1}{z}\\right| = 1$, then $\\frac{z-1}{z}$ is equal to",
     "options": [
@@ -3025,7 +3025,7 @@
   },
   {
     "id": 190,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "If $-2i$ is a root of the equation $ax^2 + bx + 12 = 0$ (where $a$ and $b$ are real), then the value of $ab$ is equal to",
     "options": [
@@ -3041,7 +3041,7 @@
   },
   {
     "id": 191,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "For $a, b \\in \\mathbb{R}$, the equation $x^2 + (a-b)x + (1-a) = 0$ has unequal roots for all values of $b$. Then",
     "options": [
@@ -3057,7 +3057,7 @@
   },
   {
     "id": 192,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "The sum of the last ten coefficients in the expansion of $(1+x)^{19}$ when expanded in ascending powers of $x$, is",
     "options": [
@@ -3073,7 +3073,7 @@
   },
   {
     "id": 193,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "A parents has two children. If one of them is boy, then the probability that the other is, also a boy is",
     "options": [
@@ -3089,7 +3089,7 @@
   },
   {
     "id": 194,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "A function $f$ is such that $f'(a) = f''(a) = ... = f^{2n}(a) = 0$ and $f$ has a local maximum value $b$ at $x = a$. If $f(x)$ is",
     "options": [
@@ -3105,7 +3105,7 @@
   },
   {
     "id": 195,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "The minimum value of $e^{x^4 - x^3 + x^2}$ is",
     "options": [
@@ -3121,7 +3121,7 @@
   },
   {
     "id": 196,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "The solution of the differential equation $2x\\frac{dy}{dx} - y = 3$ represents",
     "options": [
@@ -3137,7 +3137,7 @@
   },
   {
     "id": 197,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "A gentleman has 6 friends to invite. In how many ways can he send invitation cards to them, if he has three servants to carry the cards?",
     "options": [
@@ -3153,7 +3153,7 @@
   },
   {
     "id": 198,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "Define $x \\diamond y$ to be $|x - y|$ for all real numbers $x$ and $y$. The value of $(1 \\diamond (2 \\diamond 3)) - ((1 \\diamond 2) \\diamond 3)$ is",
     "options": [
@@ -3169,7 +3169,7 @@
   },
   {
     "id": 199,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "The number of solutions of $\\log_{10}(3-x) + \\log_{10}(9-x^2) = 0$ is",
     "options": [
@@ -3185,7 +3185,7 @@
   },
   {
     "id": 200,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "If $a, b, c$ are distinct positive real numbers and $a^2 + b^2 + c^2 = 1$, then $ab + bc + ca$ is",
     "options": [
@@ -3201,7 +3201,7 @@
   },
   {
     "id": 201,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "The number of solutions of the equation $\\sin\\left(\\frac{\\pi x}{2\\sqrt{3}}\\right) = x^2 - 2\\sqrt{3}x + 4$ is",
     "options": [
@@ -3217,7 +3217,7 @@
   },
   {
     "id": 202,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "For all integers $n \\geq 9$, the value of $\\frac{(n+2)! - (n+1)!}{n!}$ is always a",
     "options": [
@@ -3233,7 +3233,7 @@
   },
   {
     "id": 203,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "In the value of 100!, the number of zeros at the end, is",
     "options": [
@@ -3249,7 +3249,7 @@
   },
   {
     "id": 204,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "$\\lim_{n \\to \\infty} \\frac{1}{n} \\sqrt{\\frac{2n^2 + ...}{...}}$ is equal to",
     "options": [
@@ -3265,7 +3265,7 @@
   },
   {
     "id": 205,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "$\\int \\frac{(x + \\sqrt{1+x^2})^{15}}{\\sqrt{1+x^2}} dx =$",
     "options": [
@@ -3281,7 +3281,7 @@
   },
   {
     "id": 206,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "The remainder left when $8^{2n} - (62)^{2n+1}$ is divided by 9 is",
     "options": [
@@ -3297,7 +3297,7 @@
   },
   {
     "id": 207,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "Let $f: \\mathbb{R} \\to \\mathbb{R}$ be defined by $f(x) = \\frac{x}{1+x^2}$, $x \\in \\mathbb{R}$. Then the range of $f$ is",
     "options": [
@@ -3313,7 +3313,7 @@
   },
   {
     "id": 208,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "If $z^{1/3} = p + iq$ and $z = x - iy$, then $\\frac{x/p + y/q}{p^2 + q^2}$ is",
     "options": [
@@ -3329,7 +3329,7 @@
   },
   {
     "id": 209,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "If $\\alpha$ and $\\beta$ are the coefficients of $x^4$ and $x^2$ respectively in the expansion of $(x + \\sqrt{x^2 - 1})^6 + (x - \\sqrt{x^2 - 1})^6$, then",
     "options": [
@@ -3345,7 +3345,7 @@
   },
   {
     "id": 210,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "If the circle $x^2 + y^2 - 6x - 8y + (25 - a^2) = 0$ touches the axis of $x$, then $a$ equals to",
     "options": [
@@ -3361,7 +3361,7 @@
   },
   {
     "id": 211,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "The value of $\\tan^{-1}\\left(\\sin\\left(\\cos^{-1}\\left(\\sqrt{\\frac{2}{3}}\\right)\\right)\\right)$ is",
     "options": [
@@ -3377,7 +3377,7 @@
   },
   {
     "id": 212,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "The integral $\\int \\sec^{2/3} x \\csc^{4/3} x \\; dx =$",
     "options": [
@@ -3393,7 +3393,7 @@
   },
   {
     "id": 213,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "If a set $A$ has 2 elements and a set $B$ has 3 elements, then how many relations from $A$ to $B$ are possible?",
     "options": [
@@ -3409,7 +3409,7 @@
   },
   {
     "id": 214,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "The number of real roots of the equation $x^2 + 5^{6x} + 0 = 0$ is",
     "options": [
@@ -3425,7 +3425,7 @@
   },
   {
     "id": 215,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "The distance between the straight lines $2x + y + 4 = 0$ and $2x + y + 8 = 0$ is",
     "options": [
@@ -3441,7 +3441,7 @@
   },
   {
     "id": 216,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "The ratio in which the line joining $(1, 2, 3)$ and $(4, 5, 6)$ divide $xy$ plane is",
     "options": [
@@ -3457,7 +3457,7 @@
   },
   {
     "id": 217,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "The domain of the function $\\cos^{-1}(2x - 1)$ is",
     "options": [
@@ -3473,7 +3473,7 @@
   },
   {
     "id": 218,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "The maximum value of $\\left(\\frac{1}{x}\\right)^x$ is",
     "options": [
@@ -3489,7 +3489,7 @@
   },
   {
     "id": 219,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "If $|\\vec{a}| = 10$, $|\\vec{b}| = 2$ and $\\vec{a} \\cdot \\vec{b} = 12$, then the value of $|\\vec{a} \\times \\vec{b}|$ is",
     "options": [
@@ -3505,7 +3505,7 @@
   },
   {
     "id": 220,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "$\\left(\\frac{1+i}{\\sqrt{2}}\\right)^4$ is equal to",
     "options": [
@@ -3521,7 +3521,7 @@
   },
   {
     "id": 221,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "If $\\omega$ is a cube root of unity, then the value of $(1-\\omega)(1-\\omega^2)(1-\\omega^4)(1-\\omega^8)$ is",
     "options": [
@@ -3537,7 +3537,7 @@
   },
   {
     "id": 222,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "The equation $\\frac{dx}{x} + \\frac{dy}{y} = \\alpha$ where $\\alpha$ is constant represents a family of",
     "options": [
@@ -3553,7 +3553,7 @@
   },
   {
     "id": 223,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "The order of the differential equation whose general solution is $y = c_1 \\cos 2x + c_2 \\cos^2 x + c_3 \\sin^2 x + c_4$, is",
     "options": [
@@ -3569,7 +3569,7 @@
   },
   {
     "id": 224,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "If $\\int \\frac{x+3}{\\sqrt{5-4x+x^2}} dx = A \\int \\frac{(-4+2x)}{\\sqrt{5-4x+x^2}} dx + B \\int \\frac{dx}{\\sqrt{5-4x+x^2}}$, then $2A + B$ is",
     "options": [
@@ -3585,7 +3585,7 @@
   },
   {
     "id": 225,
-    "subject": "mathematics",
+    "subject": "maths",
     "difficulty": "medium",
     "question": "Let a function $f: \\mathbb{N} \\to \\mathbb{N}$ be defined by $f(n) = \\begin{cases} \\frac{n}{2} & \\text{if } n = 2, 4, 6, 8, ... \\\\ \\frac{n-1}{2} & \\text{if } n = 1, 5, 9, 13, ... \\\\ \\frac{n+1}{2} & \\text{if } n = 3, 7, 11, 15, ... \\end{cases}$ then $f$ is",
     "options": [
