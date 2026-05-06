@@ -3,7 +3,50 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>CUSAT CAT Exam</title>
+<title>CUSAT Free Mock Test 2025 – Practice CUSAT CAT Online | cusatpyq.zenvx.in</title>
+<meta name="description" content="Take free CUSAT CAT mock tests online. Practice Physics, Chemistry and Mathematics with real previous year questions, instant scoring, and detailed analysis. Best free mock test for CUSAT 2025.">
+<meta name="keywords" content="CUSAT free mock test, CUSAT CAT mock test, CUSAT CAT online test, CUSAT previous year questions, CUSAT CAT practice test, free mock test CUSAT, CUSAT CAT 2025 mock test">
+<meta name="robots" content="index, follow">
+<meta name="author" content="cusatpyq.zenvx.in">
+<link rel="canonical" href="https://cusatpyq.zenvx.in/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="CUSAT Free Mock Test 2025 – Practice CUSAT CAT Online">
+<meta property="og:description" content="Free CUSAT CAT mock tests with real previous year questions. Instant scoring, timer, and full analysis. Start your CUSAT preparation now!">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cusatpyq.zenvx.in/">
+<meta property="og:site_name" content="CUSAT PYQ – Free Mock Test">
+
+<!-- Structured Data (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "CUSAT Free Mock Test",
+  "url": "https://cusatpyq.zenvx.in/",
+  "description": "Free CUSAT CAT mock tests online with previous year questions, instant scoring, and analysis for Physics, Chemistry, and Mathematics.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://cusatpyq.zenvx.in/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "CUSAT PYQ – Free Mock Test",
+  "url": "https://cusatpyq.zenvx.in/",
+  "description": "Providing free CUSAT CAT mock tests based on previous year question papers for Physics, Chemistry, and Mathematics.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR",
+    "description": "Free CUSAT CAT mock test series"
+  }
+}
+</script>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <script>MathJax={tex:{inlineMath:[['\\(','\\)'],['$','$']],displayMath:[['\\[','\\]'],['$$','$$']]},options:{skipHtmlTags:['script','noscript','style','textarea']}}</script>
 <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
@@ -317,6 +360,16 @@ textarea.report-extra:focus{border-color:var(--accent)}
   .stats-grid{grid-template-columns:repeat(2,1fr);gap:8px}
   .stat-num{font-size:22px}
 }
+
+/* ── FAQ ── */
+.faq-item{border:1px solid var(--border);border-radius:9px;margin-bottom:8px;overflow:hidden;background:var(--surface)}
+.faq-q{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;cursor:pointer;font-size:13px;font-weight:600;color:var(--text);gap:10px;-webkit-tap-highlight-color:transparent;transition:background .15s}
+.faq-q:hover{background:var(--surface2)}
+.faq-arrow{font-size:11px;color:var(--text3);flex-shrink:0;transition:transform .25s}
+.faq-item.open .faq-arrow{transform:rotate(180deg)}
+.faq-a{display:none;padding:0 14px 13px;font-size:12.5px;color:var(--text2);line-height:1.75;border-top:1px solid var(--border)}
+.faq-a p{padding-top:11px}
+.faq-item.open .faq-a{display:block}
 </style>
 </head>
 <body>
@@ -324,6 +377,9 @@ textarea.report-extra:focus{border-color:var(--accent)}
 <!-- LANDING -->
 <div id="landing">
   <div class="brand">CUSAT<span>·CAT</span></div>
+  <h1 style="font-size:15px;font-weight:500;color:var(--text2);text-align:center;max-width:440px;line-height:1.6;margin-top:-14px">
+    Free CUSAT CAT Mock Test — Practice Physics, Chemistry &amp; Mathematics with real previous year questions
+  </h1>
 
   <!-- RESUME BANNER (shown if saved session exists) -->
   <div class="resume-banner" id="resume-banner">
@@ -358,12 +414,31 @@ textarea.report-extra:focus{border-color:var(--accent)}
       ⏱ Duration: <b>3 Hours</b><br>
       📋 Marking: <b>+4</b> Correct &nbsp;·&nbsp; <b>−1</b> Wrong &nbsp;·&nbsp; <b>0</b> Unattempted<br>
     </div>
+    <div class="info-box" style="font-size:11px;color:var(--text3);background:none;border-color:rgba(79,142,247,.15)">
+      🆓 100% Free · No login required · Real CUSAT CAT previous year questions · Instant score &amp; analysis
+    </div>
     <div class="err" id="err-msg">⚠ Cannot load file. Check JSON &amp; try again.</div>
     <button class="btn-start" id="btn-start" onclick="startExam()">Start Exam →</button>
   </div>
-</div>
+  <!-- FAQ SECTION -->
+  <div style="max-width:440px;width:100%;margin-top:10px">
+    <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);margin-bottom:12px;text-align:center">Frequently Asked Questions</div>
+    <div id="faq-list"></div>
+  </div>
 
-<!-- EXAM -->
+  <!-- SITE FOOTER -->
+  <footer style="width:100%;background:var(--surface);border-top:1px solid var(--border);margin-top:24px;padding:20px 16px;text-align:center;display:flex;flex-direction:column;gap:8px">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);font-weight:600">CUSAT<span style="color:var(--text2);font-weight:400">·CAT</span> Free Mock Test</div>
+    <div style="font-size:11px;color:var(--text3)">© <span id="footer-year"></span> cusatpyq.zenvx.in — All rights reserved</div>
+    <div style="font-size:11px;color:var(--text2)">
+      Contact us:
+      <a href="mailto:abhi@zenvx.in" style="color:var(--accent);text-decoration:none">abhi@zenvx.in</a>
+      &nbsp;·&nbsp;
+      <a href="mailto:sk@zenvx.in" style="color:var(--accent);text-decoration:none">sk@zenvx.in</a>
+    </div>
+    <div style="font-size:10px;color:var(--text3)">Unofficial practice portal. Not affiliated with Cochin University of Science and Technology.</div>
+  </footer>
+</div>
 <div id="exam">
   <header class="hdr">
     <div class="hdr-logo">CUSAT<span>·CAT</span></div>
@@ -680,7 +755,8 @@ function cancelDiscard(){
 // ── LANDING ──
 function updatePreview(){
   const y=document.getElementById('sel-year').value, s=document.getElementById('sel-sess').value;
-  document.getElementById('jprev').textContent = y&&s ? `${y}${s}.json` : 'e.g. 2025s1.json';
+  const el=document.getElementById('jprev');
+  if(el) el.textContent = y&&s ? `${y}${s}.json` : 'e.g. 2025s1.json';
 }
 
 async function startExam(){
@@ -1222,6 +1298,76 @@ document.addEventListener('click',e=>{
     closePalSheet();
   }
 });
+
+// ── FAQ ──
+const FAQS = [
+  {
+    q: "Is the CUSAT CAT mock test really free?",
+    a: "Yes, 100% free. No registration, no login, no payment required. Just select a year and session and start practising immediately."
+  },
+  {
+    q: "Which subjects does the CUSAT free mock test cover?",
+    a: "The mock test covers all three subjects of the CUSAT CAT exam — Physics (75 questions), Chemistry (60 questions), and Mathematics (90 questions) — for a total of 225 questions per session."
+  },
+  {
+    q: "What is the marking scheme used in this mock test?",
+    a: "We follow the official CUSAT CAT marking scheme: +4 marks for every correct answer, −1 mark for every wrong answer, and 0 marks for unattempted questions."
+  },
+  {
+    q: "How long is the CUSAT CAT mock test?",
+    a: "Each mock test session is 3 hours (180 minutes), exactly matching the duration of the actual CUSAT CAT examination."
+  },
+  {
+    q: "Are these real CUSAT previous year questions?",
+    a: "Yes. All questions are sourced from actual CUSAT CAT previous year question papers (PYQs). Practising these gives you the most accurate feel for the real exam."
+  },
+  {
+    q: "Can I pause and resume the mock test?",
+    a: "Yes! You can pause the test at any time using the pause button. Your progress and remaining time are automatically saved and you can resume exactly where you left off — even if you close the browser."
+  },
+  {
+    q: "Will I get an analysis after the test?",
+    a: "Absolutely. After submitting, you get a full analysis including your total score, subject-wise breakdown, accuracy percentage, time used, and a response distribution chart."
+  },
+  {
+    q: "How many mock test sessions are available?",
+    a: "Currently we have CUSAT CAT 2025 Sessions 1 to 4 available. More years and sessions are being added regularly."
+  },
+  {
+    q: "Do I need to install anything to take this mock test?",
+    a: "No installation needed. The CUSAT free mock test runs entirely in your web browser on both mobile and desktop devices."
+  },
+  {
+    q: "How is this different from other CUSAT mock test sites?",
+    a: "Unlike other platforms, this site requires no login, charges no fee, and uses real CUSAT previous year questions — not synthetic ones. You also get a full exam environment with a live timer, pause feature, and detailed post-test analysis."
+  }
+];
+
+function buildFAQ(){
+  const list=document.getElementById('faq-list');
+  if(!list) return;
+  list.innerHTML = FAQS.map((f,i)=>`
+    <div class="faq-item" id="faq${i}">
+      <div class="faq-q" onclick="toggleFAQ(${i})">
+        <span>${f.q}</span>
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-a"><p>${f.a}</p></div>
+    </div>`).join('');
+}
+
+function toggleFAQ(i){
+  const el=document.getElementById('faq'+i);
+  const wasOpen=el.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(x=>x.classList.remove('open'));
+  if(!wasOpen) el.classList.add('open');
+}
+
+buildFAQ();
+
+// Footer year
+const fy=document.getElementById('footer-year');
+if(fy) fy.textContent=new Date().getFullYear();
 
 // Save on page hide/unload
 window.addEventListener('pagehide', ()=>{ if(!submitted) saveProgress(); });
