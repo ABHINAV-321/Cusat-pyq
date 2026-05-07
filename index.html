@@ -510,6 +510,8 @@ textarea.report-extra:focus{border-color:var(--accent)}
       <div class="timer" id="timer">03:00:00</div>
       <button class="btn-pause" id="btn-pause" onclick="togglePause()" title="Pause / Resume">⏸</button>
       <button class="btn-sub" onclick="confirmSubmit()">Submit</button>
+      <button class="btn-sub" id="btn-back-analysis" style="display:none;background:var(--surface2);color:var(--text2);border:1px solid var(--border)" onclick="backToAnalysis()">← Results</button>
+      <button class="btn-sub" id="btn-new-exam-review" style="display:none;background:var(--accent)" onclick="location.reload()">New Exam</button>
     </div>
   </header>
 
@@ -773,11 +775,22 @@ function saveResult(result){
 }
 
 function clearHistory(){
-  deleteCookie(HIST_KEY);
-  renderHistory(null);
-  toast('History cleared');
+  document.getElementById('clear-hist-modal').classList.add('show');
 }
 
+function clearHistoryFromPage(){
+  document.getElementById('clear-hist-modal').classList.add('show');
+}
+
+function confirmClearHistory(){
+  deleteCookie(HIST_KEY);
+  document.getElementById('clear-hist-modal').classList.remove('show');
+  updateHistBadge();
+  renderHistory(null);
+  toast('History cleared');
+  // If history page is open, refresh it
+  if(document.getElementById('history-page').classList.contains('show')) openHistoryPage();
+}
 function renderHistory(currentResult){
   const hist = loadHistory();
   const el = document.getElementById('hist-list');
@@ -1338,8 +1351,26 @@ function showAnalysis(){
 function reviewMode(){
   document.getElementById('analysis').style.display='none';
   document.getElementById('exam').style.display='flex';
+  // Hide exam controls, show review controls
+  document.getElementById('timer').style.display='none';
+  document.getElementById('btn-pause').style.display='none';
+  document.querySelector('.btn-sub').style.display='none';
+  document.getElementById('btn-back-analysis').style.display='';
+  document.getElementById('btn-new-exam-review').style.display='';
   const first=QS[0]?.subject||'physics';
   showSec(first); window.scrollTo(0,0);
+}
+
+function backToAnalysis(){
+  document.getElementById('exam').style.display='none';
+  // Restore exam controls
+  document.getElementById('timer').style.display='';
+  document.getElementById('btn-pause').style.display='';
+  document.querySelector('.btn-sub').style.display='';
+  document.getElementById('btn-back-analysis').style.display='none';
+  document.getElementById('btn-new-exam-review').style.display='none';
+  document.getElementById('analysis').style.display='flex';
+  window.scrollTo(0,0);
 }
 
 // ── TOAST ──
@@ -1379,7 +1410,7 @@ function openHistoryPage(){
       ? '—' : '—';
     const tu = r.timeUsed||0;
     const timeStr2 = `${pad(Math.floor(tu/3600))}:${pad(Math.floor((tu%3600)/60))}:${pad(tu%60)}`;
-    return `<div class="hist-entry">
+    return `<div class="hist-entry" style="cursor:pointer" onclick="showHistoryAnalysis(${JSON.stringify(r)})">
       <div class="hist-entry-top">
         <div>
           <div class="hist-entry-sess">${r.session}</div>
@@ -1414,11 +1445,78 @@ function closeHistoryPage(){
   document.getElementById('history-page').classList.remove('show');
 }
 
-function clearHistoryFromPage(){
-  deleteCookie(HIST_KEY);
-  toast('History cleared');
-  updateHistBadge();
+function showHistoryAnalysis(r){
   closeHistoryPage();
+  const total=225, maxScore=total*4;
+  const cor=r.correct, wrg=r.wrong, ans=r.attempted;
+  const skipped=total-ans;
+  const score=r.score;
+  const pct=Math.round((score/maxScore)*100);
+
+  document.getElementById('an-sess-lbl').textContent=r.session;
+  document.getElementById('an-sess-hdr').textContent=r.session;
+  document.getElementById('an-score').textContent=score;
+  document.getElementById('an-score-of').textContent=`out of ${maxScore} possible`;
+
+  let grade,gcls;
+  if(pct>=75){grade='Excellent 🎯';gcls='a';}
+  else if(pct>=50){grade='Good 👍';gcls='b';}
+  else if(pct>=25){grade='Average 📈';gcls='c';}
+  else{grade='Needs Work 💪';gcls='d';}
+  const gradeEl=document.getElementById('an-grade');
+  gradeEl.textContent=grade; gradeEl.className=`score-grade ${gcls}`;
+
+  document.getElementById('an-sc').textContent=score;
+  document.getElementById('an-co').textContent=cor;
+  document.getElementById('an-wr').textContent=wrg;
+  document.getElementById('an-sk').textContent=skipped;
+
+  // Clear subject cards — no per-subject data in history
+  document.getElementById('an-sub-cards').innerHTML=`<div style="font-size:12px;color:var(--text3);padding:8px 0;grid-column:1/-1">Subject breakdown not available for historical results.</div>`;
+  document.getElementById('an-perf-bars').innerHTML='';
+
+  // Donut
+  const circ=251.2;
+  const corLen=(cor/total)*circ, wrgLen=(wrg/total)*circ, skpLen=(skipped/total)*circ;
+  const corOff=62.8, wrgOff=corOff-corLen, skpOff=wrgOff-wrgLen;
+  setTimeout(()=>{
+    document.getElementById('donut-cor').setAttribute('stroke-dasharray',`${corLen} ${circ}`);
+    document.getElementById('donut-cor').setAttribute('stroke-dashoffset',corOff);
+    document.getElementById('donut-wrg').setAttribute('stroke-dasharray',`${wrgLen} ${circ}`);
+    document.getElementById('donut-wrg').setAttribute('stroke-dashoffset',wrgOff);
+    document.getElementById('donut-skp').setAttribute('stroke-dasharray',`${skpLen} ${circ}`);
+    document.getElementById('donut-skp').setAttribute('stroke-dashoffset',skpOff);
+  },100);
+  document.getElementById('dl-cor').textContent=cor;
+  document.getElementById('dl-wrg').textContent=wrg;
+  document.getElementById('dl-skp').textContent=skipped;
+  document.getElementById('dl-tot').textContent=total;
+
+  // Time
+  const tu=r.timeUsed||0, tl=10800-tu;
+  document.getElementById('an-time-used').textContent=`${pad(Math.floor(tu/3600))}:${pad(Math.floor((tu%3600)/60))}:${pad(tu%60)}`;
+  document.getElementById('an-time-left').textContent=`${pad(Math.floor(tl/3600))}:${pad(Math.floor((tl%3600)/60))}:${pad(tl%60)}`;
+
+  // Show/hide hist panel & back button
+  const histBox=document.getElementById('hist-box'); if(histBox) histBox.style.display='none';
+  let backBtn=document.getElementById('an-hist-back');
+  if(!backBtn){
+    backBtn=document.createElement('button');
+    backBtn.id='an-hist-back';
+    backBtn.className='an-btn secondary';
+    backBtn.textContent='← Back to History';
+    backBtn.onclick=()=>{
+      document.getElementById('analysis').style.display='none';
+      document.getElementById('history-page').classList.add('show');  // reopen history
+      if(histBox) histBox.style.display='';
+      backBtn.remove();
+    };
+    document.querySelector('.an-actions').prepend(backBtn);
+  }
+
+  document.getElementById('exam').style.display='none';
+  document.getElementById('analysis').style.display='flex';
+  window.scrollTo(0,0);
 }
 
 function updateHistBadge(){
@@ -1580,6 +1678,18 @@ window.addEventListener('beforeunload', ()=>{ if(!submitted) saveProgress(); });
 checkResumeBanner();
 updateHistBadge();
 </script>
+<!-- CLEAR HISTORY CONFIRM MODAL -->
+<div class="mbg" id="clear-hist-modal">
+  <div class="modal">
+    <h3>Clear All History?</h3>
+    <p>This will permanently delete all your past results. This cannot be undone.</p>
+    <div class="mbtns">
+      <button class="mcancel" onclick="document.getElementById('clear-hist-modal').classList.remove('show')">Cancel</button>
+      <button style="background:var(--red);color:#fff;flex:1;padding:10px;border-radius:7px;font-family:'Outfit',sans-serif;font-size:13px;font-weight:600;cursor:pointer;border:none" onclick="confirmClearHistory()">Yes, Clear All</button>
+    </div>
+  </div>
+</div>
+
 <!-- HISTORY PAGE -->
 <div id="history-page">
   <div class="hist-page-hdr">
