@@ -423,6 +423,123 @@ textarea.report-extra:focus{border-color:var(--accent)}
 .faq-a{display:none;padding:0 14px 13px;font-size:12.5px;color:var(--text2);line-height:1.75;border-top:1px solid var(--border)}
 .faq-a p{padding-top:11px}
 .faq-item.open .faq-a{display:block}
+
+/* ── PRACTICE MODE ── */
+#practice-page{display:none;position:fixed;inset:0;background:var(--bg);z-index:300;flex-direction:column;overflow:hidden}
+#practice-page.show{display:flex}
+.prac-hdr{background:var(--surface);border-bottom:1px solid var(--border);padding:0 16px;height:var(--hdr-h);display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:10;flex-shrink:0}
+.prac-hdr-logo{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:var(--accent)}
+.prac-hdr-logo span{color:var(--text2);font-weight:400}
+.prac-hdr-title{font-size:13px;font-weight:600;color:var(--text);display:flex;align-items:center;gap:8px}
+.prac-hdr-badge{font-size:10px;padding:2px 8px;border-radius:10px;background:rgba(240,180,41,.15);color:#f0b429;border:1px solid rgba(240,180,41,.3);font-weight:600}
+.btn-prac-back{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 12px;border-radius:6px;font-family:'Outfit',sans-serif;font-size:12px;cursor:pointer;margin-left:auto;transition:all .2s}
+.btn-prac-back:hover{border-color:var(--accent);color:var(--accent)}
+
+/* Setup screen */
+.prac-setup{display:flex;flex-direction:column;align-items:center;justify-content:center;flex:1;gap:20px;padding:24px;overflow-y:auto}
+.prac-setup-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:28px 24px;width:100%;max-width:420px;display:flex;flex-direction:column;gap:18px}
+.prac-setup-card h2{font-size:16px;font-weight:700;display:flex;align-items:center;gap:8px}
+.prac-subject-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.prac-subject-btn{padding:12px 8px;border-radius:8px;border:1px solid var(--border);background:var(--surface2);color:var(--text2);font-family:'Outfit',sans-serif;font-size:12px;font-weight:600;cursor:pointer;text-align:center;transition:all .2s;display:flex;flex-direction:column;align-items:center;gap:5px}
+.prac-subject-btn .prac-sub-icon{font-size:20px}
+.prac-subject-btn:hover{border-color:#3a4055;color:var(--text)}
+.prac-subject-btn.sel-ph{border-color:#4f8ef7;background:rgba(79,142,247,.12);color:#4f8ef7}
+.prac-subject-btn.sel-ch{border-color:#22c77a;background:rgba(34,199,122,.12);color:#22c77a}
+.prac-subject-btn.sel-ma{border-color:#f0b429;background:rgba(240,180,41,.12);color:#f0b429}
+.prac-subject-btn.sel-all{border-color:var(--text2);background:rgba(138,144,168,.1);color:var(--text)}
+.btn-prac-start{background:var(--gold);color:#000;border:none;padding:13px;border-radius:8px;font-family:'Outfit',sans-serif;font-size:15px;font-weight:700;cursor:pointer;width:100%;transition:opacity .2s}
+.btn-prac-start:hover{opacity:.85}
+.btn-prac-start:disabled{opacity:.4;cursor:not-allowed}
+
+/* Quiz screen */
+.prac-quiz{display:none;flex-direction:column;flex:1;min-height:0}
+.prac-quiz.show{display:flex}
+.prac-progress-bar{height:3px;background:var(--border);flex-shrink:0}
+.prac-progress-fill{height:100%;background:var(--gold);border-radius:2px;transition:width .4s ease}
+.prac-body{flex:1;overflow-y:auto;padding:20px 16px;display:flex;flex-direction:column;align-items:center}
+.prac-body::-webkit-scrollbar{width:4px}.prac-body::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+.prac-counter{font-size:11px;color:var(--text3);font-family:'JetBrains Mono',monospace;margin-bottom:14px;text-align:center}
+.prac-qcard{background:var(--surface);border:1px solid var(--border);border-radius:12px;width:100%;max-width:640px;overflow:hidden;transition:border-color .3s}
+.prac-qcard.answered-ok{border-color:rgba(34,199,122,.5)}
+.prac-qcard.answered-bad{border-color:rgba(240,90,90,.5)}
+.prac-qtop{padding:16px 18px 12px;display:flex;align-items:flex-start;gap:10px}
+.prac-qnum{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;color:var(--text3);padding-top:2px;min-width:28px}
+.prac-qtext{font-size:14px;color:var(--text);line-height:1.7;flex:1;word-break:break-word}
+.prac-subj-tag{flex-shrink:0;font-size:9px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;padding:3px 8px;border-radius:10px}
+.prac-subj-tag.ph{background:rgba(79,142,247,.15);color:#4f8ef7}
+.prac-subj-tag.ch{background:rgba(34,199,122,.15);color:#22c77a}
+.prac-subj-tag.ma{background:rgba(240,180,41,.15);color:#f0b429}
+.prac-qimg{padding:0 18px 12px;max-width:100%}
+.prac-qimg img{max-width:100%;max-height:280px;border-radius:7px;border:1px solid var(--border);object-fit:contain;display:block}
+.prac-opts{padding:0 18px 14px;display:grid;gap:7px}
+.prac-opt{display:flex;align-items:flex-start;gap:10px;padding:11px 13px;border-radius:8px;border:1px solid var(--border);cursor:pointer;transition:all .18s;font-size:13.5px;color:var(--text2);background:var(--surface2);-webkit-tap-highlight-color:transparent;user-select:none}
+.prac-opt:hover:not(.locked){border-color:#3a4055;color:var(--text);background:#222635}
+.prac-opt:active:not(.locked){transform:scale(.99)}
+.prac-opt.sel{border-color:#4f8ef7;color:var(--text);background:rgba(79,142,247,.1)}
+.prac-opt.cor{border-color:#22c77a;color:#22c77a;background:rgba(34,199,122,.09);font-weight:500}
+.prac-opt.wrg{border-color:#f05a5a;color:#f05a5a;background:rgba(240,90,90,.09)}
+.prac-opt.show-cor{border-color:#22c77a;color:#22c77a;background:rgba(34,199,122,.09)}
+.prac-opt.locked{cursor:default}
+.prac-olbl{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;min-width:16px;flex-shrink:0;padding-top:1px}
+
+/* Result banner */
+.prac-result-banner{margin:0 18px 14px;border-radius:8px;padding:12px 14px;display:none;align-items:flex-start;gap:10px;animation:slideIn .25s ease}
+@keyframes slideIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+.prac-result-banner.show{display:flex}
+.prac-result-banner.ok{background:rgba(34,199,122,.08);border:1px solid rgba(34,199,122,.3)}
+.prac-result-banner.bad{background:rgba(240,90,90,.08);border:1px solid rgba(240,90,90,.3)}
+.prac-result-icon{font-size:20px;flex-shrink:0;line-height:1}
+.prac-result-body{flex:1;display:flex;flex-direction:column;gap:4px}
+.prac-result-label{font-size:13px;font-weight:700}
+.prac-result-banner.ok .prac-result-label{color:#22c77a}
+.prac-result-banner.bad .prac-result-label{color:#f05a5a}
+.prac-result-correct{font-size:12px;color:var(--text2)}
+.prac-result-correct b{color:var(--text)}
+
+/* Solution box */
+.prac-sol-box{margin:0 18px 16px;background:rgba(240,180,41,.06);border:1px solid rgba(240,180,41,.2);border-radius:8px;padding:12px 14px;display:none}
+.prac-sol-box.show{display:block}
+.prac-sol-ttl{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#f0b429;margin-bottom:6px}
+.prac-sol-text{font-size:12.5px;color:var(--text2);line-height:1.75}
+.prac-sol-toggle{margin:0 18px 14px;background:none;border:1px solid var(--border);color:var(--text3);padding:6px 14px;border-radius:6px;font-family:'Outfit',sans-serif;font-size:12px;cursor:pointer;transition:all .2s;display:none}
+.prac-sol-toggle:hover{color:#f0b429;border-color:rgba(240,180,41,.4)}
+.prac-sol-toggle.show{display:inline-flex;align-items:center;gap:5px}
+
+/* Nav footer */
+.prac-nav{padding:14px 18px 20px;display:flex;align-items:center;gap:10px;width:100%;max-width:640px;margin:0 auto}
+.btn-prac-prev{background:none;border:1px solid var(--border);color:var(--text2);padding:10px 18px;border-radius:8px;font-family:'Outfit',sans-serif;font-size:13px;font-weight:600;cursor:pointer;transition:all .2s;flex-shrink:0}
+.btn-prac-prev:hover:not(:disabled){border-color:var(--accent);color:var(--accent)}
+.btn-prac-prev:disabled{opacity:.35;cursor:not-allowed}
+.btn-prac-next{flex:1;background:var(--accent);color:#fff;border:none;padding:11px;border-radius:8px;font-family:'Outfit',sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:opacity .2s}
+.btn-prac-next:hover{opacity:.85}
+.btn-prac-next.finish{background:var(--green);color:#000}
+
+/* Score summary */
+.prac-summary{display:none;flex-direction:column;align-items:center;justify-content:center;flex:1;gap:20px;padding:24px;overflow-y:auto}
+.prac-summary.show{display:flex}
+.prac-summary-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:28px 24px;width:100%;max-width:420px;display:flex;flex-direction:column;align-items:center;gap:16px}
+.prac-sum-icon{font-size:44px}
+.prac-sum-title{font-size:18px;font-weight:700;text-align:center}
+.prac-sum-score{font-family:'JetBrains Mono',monospace;font-size:52px;font-weight:700;color:var(--accent);line-height:1}
+.prac-sum-of{font-size:13px;color:var(--text2)}
+.prac-sum-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;width:100%}
+.prac-sum-stat{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:10px;text-align:center}
+.prac-sum-stat-n{font-family:'JetBrains Mono',monospace;font-size:20px;font-weight:700}
+.prac-sum-stat-n.cor{color:#22c77a}.prac-sum-stat-n.wrg{color:#f05a5a}.prac-sum-stat-n.skp{color:var(--text3)}
+.prac-sum-stat-l{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.7px;margin-top:2px}
+.prac-sum-btns{display:flex;flex-direction:column;gap:8px;width:100%}
+.btn-prac-again{background:var(--gold);color:#000;border:none;padding:12px;border-radius:8px;font-family:'Outfit',sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:opacity .2s;width:100%}
+.btn-prac-again:hover{opacity:.85}
+.btn-prac-home{background:none;border:1px solid var(--border);color:var(--text2);padding:11px;border-radius:8px;font-family:'Outfit',sans-serif;font-size:13px;font-weight:600;cursor:pointer;width:100%;transition:all .2s}
+.btn-prac-home:hover{border-color:var(--accent);color:var(--accent)}
+
+/* Landing button */
+.btn-practice{background:linear-gradient(135deg,rgba(240,180,41,.15),rgba(240,180,41,.06));border:1px solid rgba(240,180,41,.35);color:#f0b429;padding:11px;border-radius:8px;font-family:'Outfit',sans-serif;font-size:14px;font-weight:700;cursor:pointer;width:100%;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:7px}
+.btn-practice:hover{background:linear-gradient(135deg,rgba(240,180,41,.22),rgba(240,180,41,.1));border-color:rgba(240,180,41,.6)}
+@media(max-width:480px){
+  .prac-subject-grid{grid-template-columns:repeat(2,1fr)}
+  .prac-nav{padding:12px 14px 18px}
+}
 </style>
 </head>
 <body>
@@ -474,6 +591,9 @@ textarea.report-extra:focus{border-color:var(--accent)}
     <button class="btn-start" id="btn-start" onclick="startExam()">Start Exam →</button>
     <button class="btn-history" id="btn-history" onclick="openHistoryPage()">
       📊 View Past Results <span class="hist-btn-count" id="hist-btn-count" style="display:none">0</span>
+    </button>
+    <button class="btn-practice" onclick="openPractice()">
+      🎯 Practice Mode — Instant Feedback
     </button>
   </div>
   <!-- FAQ SECTION -->
@@ -1699,6 +1819,240 @@ function toggleFAQ(i){
   if(!wasOpen) el.classList.add('open');
 }
 
+// ══ PRACTICE MODE ══
+let PRAC_QS = [], PRAC_IDX = 0, PRAC_SEL = {}, PRAC_SUB = 'all';
+const PRAC_OL = ['A','B','C','D'];
+
+function openPractice(){
+  document.getElementById('practice-page').classList.add('show');
+  showPracSetup();
+}
+
+function closePractice(){
+  document.getElementById('practice-page').classList.remove('show');
+}
+
+function showPracSetup(){
+  document.getElementById('prac-setup').style.display = 'flex';
+  document.getElementById('prac-quiz').classList.remove('show');
+  document.getElementById('prac-summary').classList.remove('show');
+}
+
+function selectPracSub(sub){
+  PRAC_SUB = sub;
+  ['all','physics','chemistry','maths'].forEach(s=>{
+    const el = document.getElementById(`prac-sub-${s}`);
+    if(!el) return;
+    el.className = 'prac-subject-btn';
+    if(s === sub){
+      if(s==='all') el.classList.add('sel-all');
+      else if(s==='physics') el.classList.add('sel-ph');
+      else if(s==='chemistry') el.classList.add('sel-ch');
+      else if(s==='maths') el.classList.add('sel-ma');
+    }
+  });
+}
+
+function pracUpdateSession(){}
+
+async function startPractice(){
+  const y = document.getElementById('prac-sel-year').value;
+  const s = document.getElementById('prac-sel-sess').value;
+  if(!y||!s){ toast('Please select year and session'); return; }
+  const btn = document.getElementById('btn-prac-start');
+  const err = document.getElementById('prac-err');
+  btn.disabled = true; btn.textContent = 'Loading…'; err.style.display = 'none';
+  try{
+    const r = await fetch(`https://raw.githubusercontent.com/ABHINAV-321/Cusat-pyq/refs/heads/master/${y}${s}.json`);
+    if(!r.ok) throw 0;
+    const data = await r.json();
+    let qs = PRAC_SUB === 'all' ? data : data.filter(q => q.subject === PRAC_SUB);
+    if(!qs.length){ toast('No questions found for this subject'); btn.disabled=false; btn.textContent='Start Practising →'; return; }
+    const order = document.getElementById('prac-order').value;
+    if(order === 'random') qs = qs.slice().sort(()=>Math.random()-.5);
+    PRAC_QS = qs;
+    PRAC_IDX = 0;
+    PRAC_SEL = {};
+    btn.disabled=false; btn.textContent='Start Practising →';
+    document.getElementById('prac-setup').style.display = 'none';
+    document.getElementById('prac-quiz').classList.add('show');
+    renderPracQ();
+    if(window.MathJax) MathJax.typesetPromise();
+  } catch(e){
+    err.style.display='block';
+    btn.disabled=false; btn.textContent='Start Practising →';
+  }
+}
+
+function renderPracQ(){
+  const q = PRAC_QS[PRAC_IDX];
+  if(!q) return;
+  const total = PRAC_QS.length;
+  const answered = PRAC_SEL[PRAC_IDX] !== undefined;
+  const correctLbl = PRAC_OL[q.correct];
+
+  // Progress
+  document.getElementById('prac-prog-fill').style.width = `${((PRAC_IDX+1)/total)*100}%`;
+  document.getElementById('prac-counter').textContent = `Question ${PRAC_IDX+1} of ${total}`;
+
+  // Question
+  document.getElementById('prac-qnum').textContent = `Q${q.id}`;
+  document.getElementById('prac-qtext').textContent = q.question;
+
+  // Subject tag
+  const tag = document.getElementById('prac-subj-tag');
+  const subMap = {physics:'ph',chemistry:'ch',maths:'ma'};
+  tag.className = 'prac-subj-tag ' + (subMap[q.subject]||'');
+  tag.textContent = q.subject ? q.subject.charAt(0).toUpperCase()+q.subject.slice(1) : '';
+
+  // Image
+  const imgWrap = document.getElementById('prac-qimg');
+  const imgEl = document.getElementById('prac-qimg-el');
+  if(q.image_url){ imgEl.src=q.image_url; imgWrap.style.display='block'; }
+  else imgWrap.style.display='none';
+
+  // Options
+  const optsEl = document.getElementById('prac-opts');
+  if(q.option_images){
+    optsEl.innerHTML = PRAC_OL.map(l=>`
+      <div class="prac-opt${answered?' locked':''}" id="prac-opt-${l}" onclick="pracPick('${l}')">
+        <span class="prac-olbl">${l}</span>
+        <img src="${q.option_images[l]}" alt="Option ${l}" style="max-width:100%;max-height:180px;border-radius:5px;object-fit:contain;display:block;margin-top:4px"
+          onerror="this.outerHTML='<span style=\'font-size:11px;color:var(--red)\'>⚠ Image failed</span>'">
+      </div>`).join('');
+  } else {
+    optsEl.innerHTML = (q.options||[]).map((o,i)=>`
+      <div class="prac-opt${answered?' locked':''}" id="prac-opt-${PRAC_OL[i]}" onclick="pracPick('${PRAC_OL[i]}')">
+        <span class="prac-olbl">${PRAC_OL[i]}</span><span>${o}</span>
+      </div>`).join('');
+  }
+
+  // Restore state if already answered
+  const card = document.getElementById('prac-qcard');
+  const banner = document.getElementById('prac-result-banner');
+  const solBox = document.getElementById('prac-sol-box');
+  const solToggle = document.getElementById('prac-sol-toggle');
+  banner.className = 'prac-result-banner';
+  solBox.classList.remove('show');
+  solToggle.textContent = '💡 Show Solution';
+  solToggle.classList.remove('show');
+  card.className = 'prac-qcard';
+
+  if(answered){
+    const picked = PRAC_SEL[PRAC_IDX];
+    const ok = picked === correctLbl;
+    applyPracResult(picked, correctLbl, ok, q.explanation);
+  }
+
+  // Solution text always ready
+  document.getElementById('prac-sol-text').innerHTML = q.explanation || 'Solution not provided.';
+
+  // Nav
+  document.getElementById('btn-prac-prev').disabled = (PRAC_IDX === 0);
+  const nextBtn = document.getElementById('btn-prac-next');
+  if(PRAC_IDX === total-1){
+    nextBtn.textContent = 'Finish ✓';
+    nextBtn.className = 'btn-prac-next finish';
+  } else {
+    nextBtn.textContent = 'Next →';
+    nextBtn.className = 'btn-prac-next';
+  }
+
+  if(window.MathJax) MathJax.typesetPromise([document.getElementById('prac-qcard')]);
+}
+
+function pracPick(lbl){
+  if(PRAC_SEL[PRAC_IDX] !== undefined) return; // already answered
+  PRAC_SEL[PRAC_IDX] = lbl;
+  const q = PRAC_QS[PRAC_IDX];
+  const correctLbl = PRAC_OL[q.correct];
+  const ok = lbl === correctLbl;
+  // Lock all options
+  PRAC_OL.forEach(l=>{
+    const el = document.getElementById(`prac-opt-${l}`);
+    if(el) el.classList.add('locked');
+  });
+  applyPracResult(lbl, correctLbl, ok, q.explanation);
+}
+
+function applyPracResult(picked, correctLbl, ok, explanation){
+  // Color options
+  PRAC_OL.forEach(l=>{
+    const el = document.getElementById(`prac-opt-${l}`);
+    if(!el) return;
+    if(l === correctLbl) el.classList.add('cor');
+    if(l === picked && !ok) el.classList.add('wrg');
+  });
+
+  // Card border
+  const card = document.getElementById('prac-qcard');
+  card.className = 'prac-qcard ' + (ok ? 'answered-ok' : 'answered-bad');
+
+  // Banner
+  const banner = document.getElementById('prac-result-banner');
+  document.getElementById('prac-result-icon').textContent = ok ? '✅' : '❌';
+  document.getElementById('prac-result-label').textContent = ok ? 'Correct!' : 'Wrong!';
+  document.getElementById('prac-result-correct').innerHTML = ok
+    ? `Great job — <b>${correctLbl}</b> is the right answer.`
+    : `The correct answer is <b>${correctLbl}</b>.`;
+  banner.className = 'prac-result-banner show ' + (ok ? 'ok' : 'bad');
+
+  // Solution toggle
+  const solToggle = document.getElementById('prac-sol-toggle');
+  if(explanation){ solToggle.classList.add('show'); }
+  document.getElementById('prac-sol-text').innerHTML = explanation || 'Solution not provided.';
+
+  // Scroll banner into view
+  setTimeout(()=> banner.scrollIntoView({behavior:'smooth', block:'nearest'}), 80);
+}
+
+function togglePracSol(){
+  const box = document.getElementById('prac-sol-box');
+  const btn = document.getElementById('prac-sol-toggle');
+  const show = box.classList.toggle('show');
+  btn.textContent = show ? '💡 Hide Solution' : '💡 Show Solution';
+  if(show) setTimeout(()=>box.scrollIntoView({behavior:'smooth',block:'nearest'}),80);
+}
+
+function pracNav(dir){
+  const next = PRAC_IDX + dir;
+  if(next < 0) return;
+  if(next >= PRAC_QS.length){
+    showPracSummary();
+    return;
+  }
+  PRAC_IDX = next;
+  document.getElementById('prac-body').scrollTo({top:0, behavior:'smooth'});
+  renderPracQ();
+}
+
+function showPracSummary(){
+  document.getElementById('prac-quiz').classList.remove('show');
+  const total = PRAC_QS.length;
+  let cor=0, wrg=0, skp=0;
+  for(let i=0;i<total;i++){
+    const picked = PRAC_SEL[i];
+    if(picked === undefined){ skp++; }
+    else if(picked === PRAC_OL[PRAC_QS[i].correct]) cor++;
+    else wrg++;
+  }
+  const pct = total > 0 ? Math.round((cor/total)*100) : 0;
+  document.getElementById('prac-sum-icon').textContent = pct>=70 ? '🎉' : pct>=40 ? '👍' : '💪';
+  document.getElementById('prac-sum-score').textContent = cor;
+  document.getElementById('prac-sum-of').textContent = `correct out of ${total} questions (${pct}%)`;
+  document.getElementById('psum-cor').textContent = cor;
+  document.getElementById('psum-wrg').textContent = wrg;
+  document.getElementById('psum-skp').textContent = skp;
+  document.getElementById('prac-summary').classList.add('show');
+}
+
+function restartPractice(){
+  document.getElementById('prac-summary').classList.remove('show');
+  showPracSetup();
+}
+
+// ── END PRACTICE MODE ──
+
 buildFAQ();
 
 // Footer year
@@ -1713,6 +2067,140 @@ window.addEventListener('beforeunload', ()=>{ if(!submitted) saveProgress(); });
 checkResumeBanner();
 updateHistBadge();
 </script>
+<!-- ══ PRACTICE MODE PAGE ══ -->
+<div id="practice-page">
+  <div class="prac-hdr">
+    <div class="prac-hdr-logo">CUSAT<span>·CAT</span></div>
+    <div class="prac-hdr-title">Practice Mode <span class="prac-hdr-badge">INSTANT FEEDBACK</span></div>
+    <button class="btn-prac-back" onclick="closePractice()">← Back</button>
+  </div>
+
+  <!-- SETUP SCREEN -->
+  <div class="prac-setup" id="prac-setup">
+    <div class="prac-setup-card">
+      <h2>🎯 Choose Your Practice</h2>
+      <div class="frow">
+        <label>Year</label>
+        <select id="prac-sel-year" onchange="pracUpdateSession()">
+          <option value="">-- Select Year --</option>
+          <option value="2025">2025</option>
+        </select>
+      </div>
+      <div class="frow">
+        <label>Session</label>
+        <select id="prac-sel-sess" onchange="pracUpdateSession()">
+          <option value="">-- Select Session --</option>
+          <option value="s1">Session 1</option>
+          <option value="s2">Session 2</option>
+          <option value="s3">Session 3</option>
+          <option value="s4">Session 4</option>
+        </select>
+      </div>
+      <div class="frow">
+        <label>Subject</label>
+        <div class="prac-subject-grid">
+          <button class="prac-subject-btn sel-all" id="prac-sub-all" onclick="selectPracSub('all')">
+            <span class="prac-sub-icon">📚</span>All
+          </button>
+          <button class="prac-subject-btn" id="prac-sub-physics" onclick="selectPracSub('physics')">
+            <span class="prac-sub-icon">⚛️</span>Physics
+          </button>
+          <button class="prac-subject-btn" id="prac-sub-chemistry" onclick="selectPracSub('chemistry')">
+            <span class="prac-sub-icon">🧪</span>Chemistry
+          </button>
+          <button class="prac-subject-btn" id="prac-sub-maths" onclick="selectPracSub('maths')">
+            <span class="prac-sub-icon">📐</span>Maths
+          </button>
+        </div>
+      </div>
+      <div class="frow">
+        <label>Question Order</label>
+        <select id="prac-order">
+          <option value="sequential">Sequential (Q1 → Q225)</option>
+          <option value="random">Random Shuffle</option>
+        </select>
+      </div>
+      <div class="info-box" style="font-size:12px">
+        ✅ Pick an option → see <b style="color:var(--green)">Correct</b> / <b style="color:var(--red)">Wrong</b> instantly<br>
+        💡 Solution revealed after each answer<br>
+        ⏱ No timer — go at your own pace
+      </div>
+      <div class="err" id="prac-err">⚠ Cannot load file. Check selection and try again.</div>
+      <button class="btn-prac-start" id="btn-prac-start" onclick="startPractice()">Start Practising →</button>
+    </div>
+  </div>
+
+  <!-- QUIZ SCREEN -->
+  <div class="prac-quiz" id="prac-quiz">
+    <div class="prac-progress-bar"><div class="prac-progress-fill" id="prac-prog-fill" style="width:0%"></div></div>
+    <div class="prac-body" id="prac-body">
+      <div class="prac-counter" id="prac-counter">Question 1 of 1</div>
+      <div class="prac-qcard" id="prac-qcard">
+        <!-- QUESTION HEADER -->
+        <div class="prac-qtop">
+          <span class="prac-qnum" id="prac-qnum">Q1</span>
+          <span class="prac-qtext" id="prac-qtext"></span>
+          <span class="prac-subj-tag" id="prac-subj-tag"></span>
+        </div>
+        <!-- QUESTION IMAGE -->
+        <div class="prac-qimg" id="prac-qimg" style="display:none">
+          <img id="prac-qimg-el" src="" alt="Question image" style="max-width:100%;max-height:280px;border-radius:7px;border:1px solid var(--border);object-fit:contain;display:block">
+        </div>
+        <!-- OPTIONS -->
+        <div class="prac-opts" id="prac-opts"></div>
+        <!-- RESULT BANNER -->
+        <div class="prac-result-banner" id="prac-result-banner">
+          <div class="prac-result-icon" id="prac-result-icon"></div>
+          <div class="prac-result-body">
+            <div class="prac-result-label" id="prac-result-label"></div>
+            <div class="prac-result-correct" id="prac-result-correct"></div>
+          </div>
+        </div>
+        <!-- SOLUTION TOGGLE -->
+        <button class="prac-sol-toggle" id="prac-sol-toggle" onclick="togglePracSol()">💡 Show Solution</button>
+        <!-- SOLUTION BOX -->
+        <div class="prac-sol-box" id="prac-sol-box">
+          <div class="prac-sol-ttl">💡 Solution</div>
+          <div class="prac-sol-text" id="prac-sol-text"></div>
+        </div>
+      </div>
+      <!-- NAV BUTTONS -->
+      <div class="prac-nav">
+        <button class="btn-prac-prev" id="btn-prac-prev" onclick="pracNav(-1)" disabled>← Prev</button>
+        <button class="btn-prac-next" id="btn-prac-next" onclick="pracNav(1)">Next →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUMMARY SCREEN -->
+  <div class="prac-summary" id="prac-summary">
+    <div class="prac-summary-card">
+      <div class="prac-sum-icon" id="prac-sum-icon">🎉</div>
+      <div class="prac-sum-title">Practice Complete!</div>
+      <div class="prac-sum-score" id="prac-sum-score">0</div>
+      <div class="prac-sum-of" id="prac-sum-of">correct out of 0</div>
+      <div class="prac-sum-stats">
+        <div class="prac-sum-stat">
+          <div class="prac-sum-stat-n cor" id="psum-cor">0</div>
+          <div class="prac-sum-stat-l">Correct</div>
+        </div>
+        <div class="prac-sum-stat">
+          <div class="prac-sum-stat-n wrg" id="psum-wrg">0</div>
+          <div class="prac-sum-stat-l">Wrong</div>
+        </div>
+        <div class="prac-sum-stat">
+          <div class="prac-sum-stat-n skp" id="psum-skp">0</div>
+          <div class="prac-sum-stat-l">Skipped</div>
+        </div>
+      </div>
+      <div class="prac-sum-btns">
+        <button class="btn-prac-again" onclick="restartPractice()">🔄 Practice Again</button>
+        <button class="btn-prac-home" onclick="closePractice()">← Back to Home</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- CLEAR HISTORY CONFIRM MODAL -->
 <div class="mbg" id="clear-hist-modal">
   <div class="modal">
