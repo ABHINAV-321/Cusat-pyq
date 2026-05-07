@@ -1227,7 +1227,15 @@ function submitExam(){
   deleteCookie('cusat_progress');
   // Save result to history
   const{cor:hCor,wrg:hWrg,ans:hAns,score:hScore}=calcStats();
-  saveResult({session:sessLabel,score:hScore,correct:hCor,wrong:hWrg,attempted:hAns,timeUsed,ts:Date.now()});
+  // Compute per-subject stats to store
+  const hSubs={};
+  ['physics','chemistry','maths'].forEach(sub=>{
+    const qs=QS.filter(q=>q.subject===sub); if(!qs.length) return;
+    let c=0,w=0;
+    qs.forEach(q=>{const s=sel[q.id];if(s){const cor2=ANS[String(q.id)]||ANS[q.id];if(s===cor2)c++;else w++;}});
+    hSubs[sub]={c,w,total:qs.length};
+  });
+  saveResult({session:sessLabel,score:hScore,correct:hCor,wrong:hWrg,attempted:hAns,timeUsed,subs:hSubs,ts:Date.now()});
   updateHistBadge();
   QS.forEach(q=>render(q.id));
   updateStats(); updatePalette();
@@ -1240,29 +1248,24 @@ function submitExam(){
 }
 
 // ── ANALYSIS ──
-function showAnalysis(){
-  const{ans,cor,wrg,score}=calcStats();
-  const total=QS.length;
+function renderAnalysisPage({session, score, cor, wrg, ans, subs, tu}){
+  const total=225, maxScore=total*4;
   const skipped=total-ans;
-  const maxScore=total*4;
+  const pct=Math.round((score/maxScore)*100);
 
-  // header
-  document.getElementById('an-sess-lbl').textContent=sessLabel;
-  document.getElementById('an-sess-hdr').textContent=sessLabel;
-
-  // score hero
+  document.getElementById('an-sess-lbl').textContent=session;
+  document.getElementById('an-sess-hdr').textContent=session;
   document.getElementById('an-score').textContent=score;
   document.getElementById('an-score-of').textContent=`out of ${maxScore} possible`;
-  const pct=Math.round((score/maxScore)*100);
-  const gradeEl=document.getElementById('an-grade');
+
   let grade,gcls;
   if(pct>=75){grade='Excellent 🎯';gcls='a';}
   else if(pct>=50){grade='Good 👍';gcls='b';}
   else if(pct>=25){grade='Average 📈';gcls='c';}
   else{grade='Needs Work 💪';gcls='d';}
+  const gradeEl=document.getElementById('an-grade');
   gradeEl.textContent=grade; gradeEl.className=`score-grade ${gcls}`;
 
-  // stat boxes
   document.getElementById('an-sc').textContent=score;
   document.getElementById('an-co').textContent=cor;
   document.getElementById('an-wr').textContent=wrg;
@@ -1272,19 +1275,14 @@ function showAnalysis(){
   const sc=document.getElementById('an-sub-cards'); sc.innerHTML='';
   const pb=document.getElementById('an-perf-bars'); pb.innerHTML='';
   ['physics','chemistry','maths'].forEach(sub=>{
-    const qs=QS.filter(q=>q.subject===sub); if(!qs.length) return;
-    let c=0,w=0;
-    qs.forEach(q=>{const s=sel[q.id];if(s){const cor2=ANS[String(q.id)]||ANS[q.id];if(s===cor2)c++;else w++;}});
-    const skp=qs.length-c-w;
-    const subScore=c*4-w;
-    const acc=qs.length-skp>0?Math.round((c/(c+w))*100):0;
-    const col=SCOL[sub];
-    const subName=sub.charAt(0).toUpperCase()+sub.slice(1);
-
-    // subject card
+    const d=subs[sub]; if(!d) return;
+    const{c,w,total:qt}=d;
+    const skp=qt-c-w, subScore=c*4-w;
+    const acc=c+w>0?Math.round((c/(c+w))*100):0;
+    const col=SCOL[sub], subName=sub.charAt(0).toUpperCase()+sub.slice(1);
+    const progPct=qt?Math.round((c/qt)*100):0;
     const card=document.createElement('div');
     card.className='sub-card';
-    const progPct=qs.length?Math.round((c/qs.length)*100):0;
     card.innerHTML=`
       <div class="sub-card-hdr">
         <div class="sub-card-dot" style="background:${col}"></div>
@@ -1295,32 +1293,22 @@ function showAnalysis(){
         <span style="color:#22c77a"><b>${c}</b> ✓</span>
         <span style="color:#f05a5a"><b>${w}</b> ✗</span>
         <span style="color:var(--text3)"><b>${skp}</b> —</span>
-        <span style="color:var(--text2)">${qs.length}Q</span>
+        <span style="color:var(--text2)">${qt}Q</span>
       </div>
       <div class="sub-bar-wrap"><div class="sub-bar-inner" style="background:${col};width:${progPct}%"></div></div>
-      <div class="sub-accuracy">Accuracy: ${acc}% · Attempted: ${c+w}/${qs.length}</div>`;
+      <div class="sub-accuracy">Accuracy: ${acc}% · Attempted: ${c+w}/${qt}</div>`;
     sc.appendChild(card);
-
-    // perf bar
-    const accFill=c+w>0?acc:0;
     pb.innerHTML+=`<div class="perf-row">
       <span class="perf-label">${subName}</span>
-      <div class="perf-track"><div class="perf-fill" style="background:${col};width:${accFill}%"></div></div>
+      <div class="perf-track"><div class="perf-fill" style="background:${col};width:${c+w>0?acc:0}%"></div></div>
       <span class="perf-pct">${acc}%</span>
     </div>`;
   });
 
-  // donut chart
+  // donut
   const circ=251.2;
-  const corFrac=total>0?cor/total:0;
-  const wrgFrac=total>0?wrg/total:0;
-  const skpFrac=total>0?skipped/total:0;
-  const corLen=corFrac*circ;
-  const wrgLen=wrgFrac*circ;
-  const skpLen=skpFrac*circ;
-  const corOff=62.8;
-  const wrgOff=corOff-corLen;
-  const skpOff=wrgOff-wrgLen;
+  const corLen=(cor/total)*circ, wrgLen=(wrg/total)*circ, skpLen=(skipped/total)*circ;
+  const corOff=62.8, wrgOff=corOff-corLen, skpOff=wrgOff-wrgLen;
   setTimeout(()=>{
     document.getElementById('donut-cor').setAttribute('stroke-dasharray',`${corLen} ${circ}`);
     document.getElementById('donut-cor').setAttribute('stroke-dashoffset',corOff);
@@ -1335,15 +1323,26 @@ function showAnalysis(){
   document.getElementById('dl-tot').textContent=total;
 
   // time
-  const tu=timeUsed;
   const tl=10800-tu;
   document.getElementById('an-time-used').textContent=`${pad(Math.floor(tu/3600))}:${pad(Math.floor((tu%3600)/60))}:${pad(tu%60)}`;
   document.getElementById('an-time-left').textContent=`${pad(Math.floor(tl/3600))}:${pad(Math.floor((tl%3600)/60))}:${pad(tl%60)}`;
+}
+
+function showAnalysis(){
+  const{ans,cor,wrg,score}=calcStats();
+  // Build subs from live QS/sel/ANS
+  const subs={};
+  ['physics','chemistry','maths'].forEach(sub=>{
+    const qs=QS.filter(q=>q.subject===sub); if(!qs.length) return;
+    let c=0,w=0;
+    qs.forEach(q=>{const s=sel[q.id];if(s){const cor2=ANS[String(q.id)]||ANS[q.id];if(s===cor2)c++;else w++;}});
+    subs[sub]={c,w,total:qs.length};
+  });
+  renderAnalysisPage({session:sessLabel, score, cor, wrg, ans, subs, tu:timeUsed});
 
   document.getElementById('exam').style.display='none';
   document.getElementById('analysis').style.display='flex';
   window.scrollTo(0,0);
-  // Render past results (current result is the first entry saved just before this)
   const histNow=loadHistory();
   renderHistory(histNow[0]||null);
 }
@@ -1447,57 +1446,10 @@ function closeHistoryPage(){
 
 function showHistoryAnalysis(r){
   closeHistoryPage();
-  const total=225, maxScore=total*4;
-  const cor=r.correct, wrg=r.wrong, ans=r.attempted;
-  const skipped=total-ans;
-  const score=r.score;
-  const pct=Math.round((score/maxScore)*100);
+  const subs=r.subs||{};
+  renderAnalysisPage({session:r.session, score:r.score, cor:r.correct, wrg:r.wrong, ans:r.attempted, subs, tu:r.timeUsed||0});
 
-  document.getElementById('an-sess-lbl').textContent=r.session;
-  document.getElementById('an-sess-hdr').textContent=r.session;
-  document.getElementById('an-score').textContent=score;
-  document.getElementById('an-score-of').textContent=`out of ${maxScore} possible`;
-
-  let grade,gcls;
-  if(pct>=75){grade='Excellent 🎯';gcls='a';}
-  else if(pct>=50){grade='Good 👍';gcls='b';}
-  else if(pct>=25){grade='Average 📈';gcls='c';}
-  else{grade='Needs Work 💪';gcls='d';}
-  const gradeEl=document.getElementById('an-grade');
-  gradeEl.textContent=grade; gradeEl.className=`score-grade ${gcls}`;
-
-  document.getElementById('an-sc').textContent=score;
-  document.getElementById('an-co').textContent=cor;
-  document.getElementById('an-wr').textContent=wrg;
-  document.getElementById('an-sk').textContent=skipped;
-
-  // Clear subject cards — no per-subject data in history
-  document.getElementById('an-sub-cards').innerHTML=`<div style="font-size:12px;color:var(--text3);padding:8px 0;grid-column:1/-1">Subject breakdown not available for historical results.</div>`;
-  document.getElementById('an-perf-bars').innerHTML='';
-
-  // Donut
-  const circ=251.2;
-  const corLen=(cor/total)*circ, wrgLen=(wrg/total)*circ, skpLen=(skipped/total)*circ;
-  const corOff=62.8, wrgOff=corOff-corLen, skpOff=wrgOff-wrgLen;
-  setTimeout(()=>{
-    document.getElementById('donut-cor').setAttribute('stroke-dasharray',`${corLen} ${circ}`);
-    document.getElementById('donut-cor').setAttribute('stroke-dashoffset',corOff);
-    document.getElementById('donut-wrg').setAttribute('stroke-dasharray',`${wrgLen} ${circ}`);
-    document.getElementById('donut-wrg').setAttribute('stroke-dashoffset',wrgOff);
-    document.getElementById('donut-skp').setAttribute('stroke-dasharray',`${skpLen} ${circ}`);
-    document.getElementById('donut-skp').setAttribute('stroke-dashoffset',skpOff);
-  },100);
-  document.getElementById('dl-cor').textContent=cor;
-  document.getElementById('dl-wrg').textContent=wrg;
-  document.getElementById('dl-skp').textContent=skipped;
-  document.getElementById('dl-tot').textContent=total;
-
-  // Time
-  const tu=r.timeUsed||0, tl=10800-tu;
-  document.getElementById('an-time-used').textContent=`${pad(Math.floor(tu/3600))}:${pad(Math.floor((tu%3600)/60))}:${pad(tu%60)}`;
-  document.getElementById('an-time-left').textContent=`${pad(Math.floor(tl/3600))}:${pad(Math.floor((tl%3600)/60))}:${pad(tl%60)}`;
-
-  // Show/hide hist panel & back button
+  // Hide hist-box in analysis, add back button
   const histBox=document.getElementById('hist-box'); if(histBox) histBox.style.display='none';
   let backBtn=document.getElementById('an-hist-back');
   if(!backBtn){
@@ -1507,9 +1459,9 @@ function showHistoryAnalysis(r){
     backBtn.textContent='← Back to History';
     backBtn.onclick=()=>{
       document.getElementById('analysis').style.display='none';
-      document.getElementById('history-page').classList.add('show');  // reopen history
       if(histBox) histBox.style.display='';
       backBtn.remove();
+      openHistoryPage();
     };
     document.querySelector('.an-actions').prepend(backBtn);
   }
