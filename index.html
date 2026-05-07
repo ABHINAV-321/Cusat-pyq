@@ -1434,6 +1434,7 @@ function updateHistBadge(){
 }
 
 
+function openReport(id){
   reportQid = id;
   const q = QS.find(q=>q.id===id);
   const qtext = q ? q.question.replace(/<[^>]*>/g,'').slice(0,80) : '';
