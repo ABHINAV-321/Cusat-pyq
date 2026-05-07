@@ -1235,7 +1235,7 @@ function submitExam(){
     qs.forEach(q=>{const s=sel[q.id];if(s){const cor2=ANS[String(q.id)]||ANS[q.id];if(s===cor2)c++;else w++;}});
     hSubs[sub]={c,w,total:qs.length};
   });
-  saveResult({session:sessLabel,score:hScore,correct:hCor,wrong:hWrg,attempted:hAns,timeUsed,subs:hSubs,ts:Date.now()});
+  saveResult({session:sessLabel,sessKey,score:hScore,correct:hCor,wrong:hWrg,attempted:hAns,timeUsed,subs:hSubs,sel:JSON.parse(JSON.stringify(sel)),ts:Date.now()});
   updateHistBadge();
   QS.forEach(q=>render(q.id));
   updateStats(); updatePalette();
@@ -1400,7 +1400,7 @@ function openHistoryPage(){
   const avgAcc = hist.length ? Math.round(hist.reduce((a,r)=>a+(r.attempted>0?Math.round((r.correct/r.attempted)*100):0),0)/hist.length) : 0;
 
   // Build entries HTML
-  const entriesHtml = hist.map(r=>{
+  const entriesHtml = hist.map((r,i)=>{
     const d = new Date(r.ts);
     const dateStr = d.toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'});
     const timeStr = d.toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit',hour12:true});
@@ -1409,7 +1409,7 @@ function openHistoryPage(){
       ? '—' : '—';
     const tu = r.timeUsed||0;
     const timeStr2 = `${pad(Math.floor(tu/3600))}:${pad(Math.floor((tu%3600)/60))}:${pad(tu%60)}`;
-    return `<div class="hist-entry" style="cursor:pointer" onclick="showHistoryAnalysis(${JSON.stringify(r)})">
+    return `<div class="hist-entry" style="cursor:pointer" onclick="showHistoryAnalysis(${i})">
       <div class="hist-entry-top">
         <div>
           <div class="hist-entry-sess">${r.session}</div>
@@ -1444,31 +1444,114 @@ function closeHistoryPage(){
   document.getElementById('history-page').classList.remove('show');
 }
 
-function showHistoryAnalysis(r){
+function showHistoryAnalysis(idx){
+  const hist=loadHistory();
+  const r=hist[idx];
+  if(!r){toast('Result not found');return;}
   closeHistoryPage();
-  const subs=r.subs||{};
-  renderAnalysisPage({session:r.session, score:r.score, cor:r.correct, wrg:r.wrong, ans:r.attempted, subs, tu:r.timeUsed||0});
 
-  // Hide hist-box in analysis, add back button
-  const histBox=document.getElementById('hist-box'); if(histBox) histBox.style.display='none';
-  let backBtn=document.getElementById('an-hist-back');
-  if(!backBtn){
-    backBtn=document.createElement('button');
+  const addBackBtn=()=>{
+    const histBox=document.getElementById('hist-box'); if(histBox) histBox.style.display='none';
+    const old=document.getElementById('an-hist-back'); if(old) old.remove();
+    const backBtn=document.createElement('button');
     backBtn.id='an-hist-back';
     backBtn.className='an-btn secondary';
     backBtn.textContent='← Back to History';
     backBtn.onclick=()=>{
+      submitted=false; QS=[]; sel={};
+      // restore exam header controls
+      document.getElementById('timer').style.display='';
+      document.getElementById('btn-pause').style.display='';
+      document.querySelector('.btn-sub').style.display='';
+      document.getElementById('btn-back-analysis').style.display='none';
+      document.getElementById('btn-new-exam-review').style.display='none';
+      document.getElementById('exam').style.display='none';
       document.getElementById('analysis').style.display='none';
+      document.getElementById('landing').style.display='flex';
       if(histBox) histBox.style.display='';
       backBtn.remove();
       openHistoryPage();
     };
     document.querySelector('.an-actions').prepend(backBtn);
-  }
+  };
 
-  document.getElementById('exam').style.display='none';
-  document.getElementById('analysis').style.display='flex';
-  window.scrollTo(0,0);
+  const showSummaryOnly=()=>{
+    renderAnalysisPage({session:r.session,score:r.score,cor:r.correct,wrg:r.wrong,ans:r.attempted,subs:r.subs||{},tu:r.timeUsed||0});
+    addBackBtn();
+    document.getElementById('exam').style.display='none';
+    document.getElementById('analysis').style.display='flex';
+    window.scrollTo(0,0);
+  };
+
+  if(!r.sessKey){showSummaryOnly();return;}
+
+  toast('Loading…');
+  fetch(`https://raw.githubusercontent.com/ABHINAV-321/Cusat-pyq/refs/heads/master/${r.sessKey}.json`)
+    .then(res=>{if(!res.ok)throw 0;return res.json();})
+    .then(data=>{
+      // Restore full exam state
+      QS=data;
+      ANS=Object.fromEntries(data.map(q=>[q.id,OL[q.correct]]));
+      SOLS=Object.fromEntries(data.map(q=>[q.id,q.explanation||'']));
+      SUBS={};
+      QS.forEach(q=>{
+        if(!SUBS[q.subject])SUBS[q.subject]={start:q.id,end:q.id,count:0};
+        SUBS[q.subject].end=q.id;SUBS[q.subject].count++;
+      });
+      sel=r.sel||{};
+      sessLabel=r.session; sessKey=r.sessKey;
+      timeUsed=r.timeUsed||0; secsLeft=10800-timeUsed;
+      submitted=true; paused=false;
+
+      buildAllQs();
+      QS.forEach(q=>render(q.id));
+      buildPalette(); updateStats(); updatePalette(); updateProgress(); updateMobCounts();
+
+      const map={physics:['ph','rng-ph','cnt-ph','nav-physics','mcnt-ph'],chemistry:['ch','rng-ch','cnt-ch','nav-chemistry','mcnt-ch'],maths:['ma','rng-ma','cnt-ma','nav-maths','mcnt-ma']};
+      Object.entries(map).forEach(([sub,[cls,rng,cnt,nav,mcnt]])=>{
+        const info=SUBS[sub];if(!info)return;
+        document.getElementById(cnt).textContent=`(${info.count})`;
+        document.getElementById(rng).textContent=`Q${info.start} – Q${info.end}`;
+        document.getElementById(mcnt).textContent=`0/${info.count}`;
+      });
+      document.getElementById('hdr-sess').textContent=sessLabel;
+      const cw=document.getElementById('hdr-cor-wrap');const ww=document.getElementById('hdr-wrg-wrap');
+      if(cw)cw.style.display='';if(ww)ww.style.display='';
+
+      // Compute subs if missing
+      const subs=r.subs&&Object.keys(r.subs).length?r.subs:{};
+      if(!Object.keys(subs).length){
+        ['physics','chemistry','maths'].forEach(sub=>{
+          const qs=QS.filter(q=>q.subject===sub);if(!qs.length)return;
+          let c=0,w=0;
+          qs.forEach(q=>{const s=sel[q.id];if(s){const c2=ANS[String(q.id)]||ANS[q.id];if(s===c2)c++;else w++;}});
+          subs[sub]={c,w,total:qs.length};
+        });
+      }
+
+      renderAnalysisPage({session:r.session,score:r.score,cor:r.correct,wrg:r.wrong,ans:r.attempted,subs,tu:r.timeUsed||0});
+      addBackBtn();
+
+      // Wire up Review Answers button for history view
+      const reviewBtn=document.querySelector('.an-actions .an-btn.primary');
+      if(reviewBtn){reviewBtn.onclick=()=>{
+        document.getElementById('analysis').style.display='none';
+        document.getElementById('exam').style.display='flex';
+        document.getElementById('timer').style.display='none';
+        document.getElementById('btn-pause').style.display='none';
+        document.querySelector('.btn-sub').style.display='none';
+        document.getElementById('btn-back-analysis').style.display='';
+        document.getElementById('btn-new-exam-review').style.display='';
+        document.getElementById('btn-back-analysis').onclick=backToAnalysis;
+        showSec(QS[0]?.subject||'physics');window.scrollTo(0,0);
+      };}
+
+      document.getElementById('landing').style.display='none';
+      document.getElementById('exam').style.display='none';
+      document.getElementById('analysis').style.display='flex';
+      window.scrollTo(0,0);
+    })
+    .catch(()=>{toast('Could not load questions — showing summary');showSummaryOnly();});
 }
 
 function updateHistBadge(){
