@@ -1034,6 +1034,7 @@ function closePalSheet(){
 
 // ── TIMER ──
 function startTimer(){
+  if(timerID) return;  // ← prevent double interval if startTimer is called again
   renderTimer();
   timerID=setInterval(()=>{
     if(paused) return;
@@ -1042,7 +1043,10 @@ function startTimer(){
     renderTimer();
     // Auto-save every 15 seconds
     if(timeUsed%15===0) saveProgress();
-    if(secsLeft<=0){clearInterval(timerID);toast('⏰ Time Up!');setTimeout(submitExam,1000);}
+    if(secsLeft<=0){
+      clearInterval(timerID); timerID=null;
+      if(!submitted){toast('⏰ Time Up!');setTimeout(submitExam,1000);}
+    }
   },1000);
 }
 
@@ -1091,7 +1095,8 @@ function confirmSubmit(){
 function closeModal(){document.getElementById('modal').classList.remove('show');}
 
 function submitExam(){
-  closeModal(); clearInterval(timerID);
+  if(submitted) return;  // ← prevent double-submit
+  closeModal(); clearInterval(timerID); timerID=null;
   timeUsed=10800-secsLeft;
   submitted=true;
   paused=false;
