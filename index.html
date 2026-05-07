@@ -215,6 +215,59 @@ select:focus{border-color:var(--accent)}
 /* FAB palette button on mobile */
 .fab-pal{display:none;position:fixed;bottom:calc(var(--mob-nav-h) + 12px);right:14px;width:42px;height:42px;background:var(--surface2);border:1px solid var(--border);border-radius:50%;z-index:191;align-items:center;justify-content:center;font-size:16px;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.4);-webkit-tap-highlight-color:transparent}
 
+/* ── HISTORY PAGE ── */
+#history-page{display:none;position:fixed;inset:0;background:var(--bg);z-index:300;flex-direction:column;overflow-y:auto}
+#history-page.show{display:flex}
+.hist-page-hdr{background:var(--surface);border-bottom:1px solid var(--border);padding:0 16px;height:var(--hdr-h);display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:10;flex-shrink:0}
+.hist-page-logo{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:var(--accent)}
+.hist-page-logo span{color:var(--text2);font-weight:400}
+.hist-page-title{font-size:14px;font-weight:600;color:var(--text)}
+.btn-hist-back{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 12px;border-radius:6px;font-family:'Outfit',sans-serif;font-size:12px;cursor:pointer;margin-left:auto;transition:all .2s}
+.btn-hist-back:hover{border-color:var(--accent);color:var(--accent)}
+.hist-page-body{max-width:600px;width:100%;margin:0 auto;padding:24px 16px 48px;display:flex;flex-direction:column;gap:16px}
+.hist-page-empty{text-align:center;padding:60px 20px;display:flex;flex-direction:column;gap:10px;align-items:center}
+.hist-page-empty-icon{font-size:40px;opacity:.4}
+.hist-page-empty-text{font-size:14px;color:var(--text2)}
+.hist-page-empty-sub{font-size:12px;color:var(--text3)}
+.hist-summary{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 16px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center}
+.hist-sum-val{font-family:'JetBrains Mono',monospace;font-size:20px;font-weight:700;color:var(--accent)}
+.hist-sum-lbl{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.7px;margin-top:2px}
+.hist-entry{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:10px;transition:border-color .2s}
+.hist-entry:hover{border-color:#3a3f52}
+.hist-entry-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+.hist-entry-sess{font-size:13px;font-weight:600;color:var(--text)}
+.hist-entry-date{font-size:10px;color:var(--text3);font-family:'JetBrains Mono',monospace;margin-top:2px}
+.hist-entry-score{font-family:'JetBrains Mono',monospace;font-size:22px;font-weight:700;color:var(--accent);white-space:nowrap}
+.hist-entry-chips{display:flex;gap:6px;flex-wrap:wrap}
+.hist-chip{font-size:10px;font-weight:600;padding:3px 8px;border-radius:12px;white-space:nowrap}
+.hist-chip.cor{background:rgba(34,199,122,.12);color:#22c77a;border:1px solid rgba(34,199,122,.25)}
+.hist-chip.wrg{background:rgba(240,90,90,.12);color:#f05a5a;border:1px solid rgba(240,90,90,.25)}
+.hist-chip.skp{background:rgba(90,96,112,.12);color:var(--text3);border:1px solid var(--border)}
+.hist-chip.acc{background:rgba(79,142,247,.12);color:#4f8ef7;border:1px solid rgba(79,142,247,.25)}
+.hist-chip.time{background:rgba(240,180,41,.08);color:#f0b429;border:1px solid rgba(240,180,41,.2)}
+.hist-page-actions{display:flex;justify-content:center}
+.btn-hist-clear-all{background:none;border:1px solid rgba(240,90,90,.35);color:var(--red);padding:9px 20px;border-radius:7px;font-family:'Outfit',sans-serif;font-size:13px;font-weight:600;cursor:pointer;transition:all .2s}
+.btn-hist-clear-all:hover{background:rgba(240,90,90,.08);border-color:var(--red)}
+
+/* landing history btn */
+.btn-history{background:none;border:1px solid var(--border);color:var(--text2);padding:10px;border-radius:8px;font-family:'Outfit',sans-serif;font-size:13px;font-weight:500;cursor:pointer;width:100%;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:6px}
+.btn-history:hover{border-color:var(--accent);color:var(--accent);background:rgba(79,142,247,.05)}
+.btn-history .hist-btn-count{background:var(--accent);color:#fff;font-size:10px;font-weight:700;padding:1px 6px;border-radius:10px;font-family:'JetBrains Mono',monospace}
+
+.hist-box{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px}
+.hist-title{font-size:12px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:.8px;margin-bottom:12px;display:flex;align-items:center;justify-content:space-between}
+.hist-clear{font-size:10px;font-weight:500;color:var(--red);background:none;border:1px solid rgba(240,90,90,.3);padding:3px 9px;border-radius:5px;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .2s}
+.hist-clear:hover{background:rgba(240,90,90,.08);border-color:var(--red)}
+.hist-empty{font-size:12px;color:var(--text3);text-align:center;padding:12px 0}
+.hist-row{display:grid;grid-template-columns:1fr auto auto auto;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--border);font-size:12px}
+.hist-row:last-child{border-bottom:none}
+.hist-row.current{background:rgba(79,142,247,.04);border-radius:6px;padding:9px 8px;margin:0 -8px}
+.hist-sess{color:var(--text);font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hist-date{color:var(--text3);font-size:10px;font-family:'JetBrains Mono',monospace;white-space:nowrap}
+.hist-score{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;color:var(--accent);white-space:nowrap}
+.hist-acc{font-size:10px;color:var(--text3);white-space:nowrap}
+.hist-badge{font-size:9px;padding:2px 6px;border-radius:10px;background:rgba(79,142,247,.15);color:var(--accent);font-weight:600;white-space:nowrap}
+
 /* ── ANALYSIS PAGE ── */
 #analysis{display:none;flex-direction:column;min-height:100vh;background:var(--bg)}
 .an-hdr{background:var(--surface);border-bottom:1px solid var(--border);padding:0 20px;height:var(--hdr-h);display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:100;flex-shrink:0}
@@ -419,6 +472,9 @@ textarea.report-extra:focus{border-color:var(--accent)}
     </div>
     <div class="err" id="err-msg">⚠ Cannot load file. Check JSON &amp; try again.</div>
     <button class="btn-start" id="btn-start" onclick="startExam()">Start Exam →</button>
+    <button class="btn-history" id="btn-history" onclick="openHistoryPage()">
+      📊 View Past Results <span class="hist-btn-count" id="hist-btn-count" style="display:none">0</span>
+    </button>
   </div>
   <!-- FAQ SECTION -->
   <div style="max-width:440px;width:100%;margin-top:10px">
@@ -605,6 +661,15 @@ textarea.report-extra:focus{border-color:var(--accent)}
       <div class="time-stat-row"><span style="color:var(--text2)">Total Duration</span><span class="time-val">3:00:00</span></div>
     </div>
 
+    <!-- Past Results History -->
+    <div class="hist-box" id="hist-box">
+      <div class="hist-title">
+        📊 Past Results
+        <button class="hist-clear" onclick="clearHistory()">Clear All</button>
+      </div>
+      <div id="hist-list"><div class="hist-empty">No past results yet.</div></div>
+    </div>
+
     <!-- Actions -->
     <div class="an-actions">
       <button class="an-btn primary" onclick="reviewMode()">📝 Review Answers</button>
@@ -692,7 +757,51 @@ function deleteCookie(name){
   document.cookie=`${name}=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;SameSite=Lax`;
 }
 
-// ── SAVE / LOAD PROGRESS ──
+// ── RESULT HISTORY ──
+const HIST_KEY = 'cusat_results';
+const HIST_MAX = 20;
+
+function loadHistory(){
+  try{ return JSON.parse(getCookie(HIST_KEY)||'[]'); }catch(e){ return []; }
+}
+
+function saveResult(result){
+  const hist = loadHistory();
+  hist.unshift(result);           // newest first
+  if(hist.length > HIST_MAX) hist.length = HIST_MAX;
+  try{ setCookie(HIST_KEY, JSON.stringify(hist), 365); }catch(e){}
+}
+
+function clearHistory(){
+  deleteCookie(HIST_KEY);
+  renderHistory(null);
+  toast('History cleared');
+}
+
+function renderHistory(currentResult){
+  const hist = loadHistory();
+  const el = document.getElementById('hist-list');
+  if(!el) return;
+  if(!hist.length){ el.innerHTML='<div class="hist-empty">No past results yet.</div>'; return; }
+  el.innerHTML = hist.map((r,i)=>{
+    const isCurrent = currentResult && i===0 && r.ts===currentResult.ts;
+    const d = new Date(r.ts);
+    const dateStr = d.toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'2-digit'});
+    const timeStr = d.toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit',hour12:true});
+    const acc = r.attempted>0 ? Math.round((r.correct/r.attempted)*100) : 0;
+    return `<div class="hist-row${isCurrent?' current':''}">
+      <div>
+        <div class="hist-sess">${r.session}</div>
+        <div class="hist-date">${dateStr} · ${timeStr}</div>
+      </div>
+      <div class="hist-acc">${acc}% acc</div>
+      <div class="hist-score">${r.score>=0?'+':''}${r.score}</div>
+      ${isCurrent?'<div class="hist-badge">NOW</div>':'<div></div>'}
+    </div>`;
+  }).join('');
+}
+
+
 function saveProgress(){
   if(!sessKey||submitted) return;
   const state={sessKey,sessLabel,sel,secsLeft,timeUsed,ts:Date.now()};
@@ -1103,6 +1212,10 @@ function submitExam(){
   document.getElementById('pause-overlay').classList.remove('show');
   // Clear saved progress — exam done
   deleteCookie('cusat_progress');
+  // Save result to history
+  const{cor:hCor,wrg:hWrg,ans:hAns,score:hScore}=calcStats();
+  saveResult({session:sessLabel,score:hScore,correct:hCor,wrong:hWrg,attempted:hAns,timeUsed,ts:Date.now()});
+  updateHistBadge();
   QS.forEach(q=>render(q.id));
   updateStats(); updatePalette();
   // reveal correct/wrong counts in header
@@ -1217,7 +1330,9 @@ function showAnalysis(){
   document.getElementById('exam').style.display='none';
   document.getElementById('analysis').style.display='flex';
   window.scrollTo(0,0);
-}
+  // Render past results (current result is the first entry saved just before this)
+  const histNow=loadHistory();
+  renderHistory(histNow[0]||null);
 
 function reviewMode(){
   document.getElementById('analysis').style.display='none';
@@ -1236,7 +1351,88 @@ function toast(msg){
 // ── REPORT ──
 let reportQid = null;
 
-function openReport(id){
+function openHistoryPage(){
+  const hist = loadHistory();
+  const body = document.getElementById('hist-page-body');
+  if(!hist.length){
+    body.innerHTML=`<div class="hist-page-empty">
+      <div class="hist-page-empty-icon">📭</div>
+      <div class="hist-page-empty-text">No past results yet</div>
+      <div class="hist-page-empty-sub">Complete an exam to see your results here</div>
+    </div>`;
+    document.getElementById('history-page').classList.add('show');
+    return;
+  }
+  // Summary stats
+  const best = Math.max(...hist.map(r=>r.score));
+  const avg  = Math.round(hist.reduce((a,r)=>a+r.score,0)/hist.length);
+  const avgAcc = hist.length ? Math.round(hist.reduce((a,r)=>a+(r.attempted>0?Math.round((r.correct/r.attempted)*100):0),0)/hist.length) : 0;
+
+  // Build entries HTML
+  const entriesHtml = hist.map(r=>{
+    const d = new Date(r.ts);
+    const dateStr = d.toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'});
+    const timeStr = d.toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit',hour12:true});
+    const acc = r.attempted>0 ? Math.round((r.correct/r.attempted)*100) : 0;
+    const skp = (r.attempted !== undefined && r.correct !== undefined && r.wrong !== undefined)
+      ? '—' : '—';
+    const tu = r.timeUsed||0;
+    const timeStr2 = `${pad(Math.floor(tu/3600))}:${pad(Math.floor((tu%3600)/60))}:${pad(tu%60)}`;
+    return `<div class="hist-entry">
+      <div class="hist-entry-top">
+        <div>
+          <div class="hist-entry-sess">${r.session}</div>
+          <div class="hist-entry-date">${dateStr} · ${timeStr}</div>
+        </div>
+        <div class="hist-entry-score">${r.score>=0?'+':''}${r.score}</div>
+      </div>
+      <div class="hist-entry-chips">
+        <span class="hist-chip cor">✓ ${r.correct} Correct</span>
+        <span class="hist-chip wrg">✗ ${r.wrong} Wrong</span>
+        <span class="hist-chip skp">— ${(r.attempted!==undefined?(225-r.attempted):0)} Skipped</span>
+        <span class="hist-chip acc">${acc}% Accuracy</span>
+        <span class="hist-chip time">⏱ ${timeStr2}</span>
+      </div>
+    </div>`;
+  }).join('');
+
+  body.innerHTML=`
+    <div class="hist-summary">
+      <div><div class="hist-sum-val">${hist.length}</div><div class="hist-sum-lbl">Attempts</div></div>
+      <div><div class="hist-sum-val">${best>=0?'+':''}${best}</div><div class="hist-sum-lbl">Best Score</div></div>
+      <div><div class="hist-sum-val">${avg>=0?'+':''}${avg}</div><div class="hist-sum-lbl">Avg Score</div></div>
+    </div>
+    ${entriesHtml}
+    <div class="hist-page-actions">
+      <button class="btn-hist-clear-all" onclick="clearHistoryFromPage()">🗑 Clear All History</button>
+    </div>`;
+  document.getElementById('history-page').classList.add('show');
+}
+
+function closeHistoryPage(){
+  document.getElementById('history-page').classList.remove('show');
+}
+
+function clearHistoryFromPage(){
+  deleteCookie(HIST_KEY);
+  toast('History cleared');
+  updateHistBadge();
+  closeHistoryPage();
+}
+
+function updateHistBadge(){
+  const hist = loadHistory();
+  const badge = document.getElementById('hist-btn-count');
+  if(!badge) return;
+  if(hist.length){
+    badge.textContent = hist.length;
+    badge.style.display = '';
+  } else {
+    badge.style.display = 'none';
+  }
+}
+
+
   reportQid = id;
   const q = QS.find(q=>q.id===id);
   const qtext = q ? q.question.replace(/<[^>]*>/g,'').slice(0,80) : '';
@@ -1380,6 +1576,17 @@ window.addEventListener('beforeunload', ()=>{ if(!submitted) saveProgress(); });
 
 // Check for saved session on load
 checkResumeBanner();
+updateHistBadge();
 </script>
+<!-- HISTORY PAGE -->
+<div id="history-page">
+  <div class="hist-page-hdr">
+    <div class="hist-page-logo">CUSAT<span>·CAT</span></div>
+    <div class="hist-page-title">Past Results</div>
+    <button class="btn-hist-back" onclick="closeHistoryPage()">← Back</button>
+  </div>
+  <div class="hist-page-body" id="hist-page-body"></div>
+</div>
+
 </body>
 </html>
