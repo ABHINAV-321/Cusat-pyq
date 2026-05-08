@@ -582,111 +582,330 @@ textarea.report-extra:focus{border-color:var(--accent)}
   .prac-subject-grid{grid-template-columns:repeat(2,1fr)}
   .prac-nav{padding:12px 14px 18px}
 }
+
+/* ── SCROLL-TO-SOLUTION PILL (Practice & Analysis) ── */
+.sol-scroll-pill{
+  position:fixed;
+  bottom:80px;
+  left:50%;
+  transform:translateX(-50%) translateY(16px);
+  background:rgba(240,180,41,.95);
+  color:#000;
+  border:none;
+  padding:9px 20px;
+  border-radius:99px;
+  font-family:'Outfit',sans-serif;
+  font-size:13px;
+  font-weight:700;
+  cursor:pointer;
+  z-index:600;
+  display:flex;
+  align-items:center;
+  gap:7px;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .25s, transform .25s;
+  box-shadow:0 4px 18px rgba(0,0,0,.45);
+  white-space:nowrap;
+}
+.sol-scroll-pill.show{
+  opacity:1;
+  pointer-events:all;
+  transform:translateX(-50%) translateY(0);
+}
+/* On mobile with bottom nav, lift it higher */
+@media(max-width:800px){
+  .sol-scroll-pill{ bottom:calc(var(--mob-nav-h) + 14px); }
+}
+
+/* ── LANDING NAV BAR ── */
+.land-nav{
+  position:sticky;top:0;z-index:400;
+  background:rgba(13,15,20,.92);
+  border-bottom:1px solid var(--border);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  display:flex;align-items:center;
+  padding:0 24px;height:52px;gap:0;
+  width:100%;
+}
+.land-nav-logo{
+  font-family:'JetBrains Mono',monospace;font-size:15px;font-weight:700;
+  color:var(--accent);letter-spacing:1px;margin-right:auto;white-space:nowrap;flex-shrink:0;
+}
+.land-nav-logo span{color:var(--text2);font-weight:400}
+.land-nav-links{display:flex;align-items:center;gap:2px}
+.land-nav-link{
+  color:var(--text2);font-size:13px;font-weight:500;
+  padding:6px 14px;border-radius:7px;cursor:pointer;
+  transition:all .18s;white-space:nowrap;background:none;border:none;
+  font-family:'Outfit',sans-serif;letter-spacing:.2px;
+}
+.land-nav-link:hover{color:var(--text);background:var(--surface2)}
+.land-nav-link.active{color:var(--accent);background:rgba(79,142,247,.1)}
+.land-nav-cta{
+  background:var(--accent);color:#fff;border:none;
+  padding:7px 18px;border-radius:7px;font-family:'Outfit',sans-serif;
+  font-size:13px;font-weight:700;cursor:pointer;transition:opacity .2s;
+  margin-left:10px;white-space:nowrap;flex-shrink:0;
+}
+.land-nav-cta:hover{opacity:.85}
+
+/* ── DESKTOP LANDING LAYOUT ── */
+#landing{
+  display:block; /* override flex — use block so nav is full-width */
+  min-height:100vh;
+  align-items:unset;
+  justify-content:unset;
+  gap:unset;
+  padding:0;
+}
+.land-hero{
+  display:flex;flex-direction:column;align-items:center;
+  padding:48px 24px 0;gap:8px;
+}
+.land-hero .brand{font-size:32px;letter-spacing:3px}
+.land-hero h1{
+  font-size:17px;font-weight:400;color:var(--text2);
+  text-align:center;max-width:560px;line-height:1.7;margin-top:4px;
+}
+
+/* Two-column grid for desktop */
+.land-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+  max-width:1080px;
+  margin:32px auto 0;
+  padding:0 32px 48px;
+  align-items:start;
+}
+.land-left{display:flex;flex-direction:column;gap:16px}
+.land-right{display:flex;flex-direction:column;gap:20px}
+
+/* Upgrade card styles for desktop */
+.lcard{max-width:unset;width:100%}
+
+/* Feature highlights strip (desktop only) */
+.land-features{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:12px;
+}
+.land-feat{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:10px;padding:16px 14px;display:flex;flex-direction:column;gap:7px;
+}
+.land-feat-icon{font-size:22px}
+.land-feat-title{font-size:13px;font-weight:700;color:var(--text)}
+.land-feat-desc{font-size:12px;color:var(--text2);line-height:1.6}
+
+/* Section anchors */
+.land-section-label{
+  font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--text3);margin-bottom:14px;text-align:left;
+}
+.land-section-label.centered{text-align:center}
+
+/* Widen FAQ and comments in desktop right column */
+.land-right .faq-item{margin-bottom:8px}
+.land-right .comments-section{max-width:unset;margin-top:0}
+
+/* Resume banner full width on desktop */
+.resume-banner{max-width:unset}
+
+/* Scroll offset for anchored sections */
+.land-anchor{scroll-margin-top:64px}
+
+/* ── OVERRIDE: mobile keeps original column layout ── */
+@media(max-width:860px){
+  #landing{display:flex;flex-direction:column;align-items:center;padding:20px;gap:20px}
+  .land-nav{display:none}          /* hide desktop nav on mobile */
+  .land-hero{padding:0;width:100%}
+  .land-hero .brand{font-size:26px}
+  .land-hero h1{font-size:15px;max-width:440px}
+  .land-grid{display:contents}    /* collapse grid — children flow into flex column */
+  .land-left,.land-right{display:contents}
+  .land-features{display:none}
+  .lcard{max-width:440px;width:100%}
+  .comments-section{max-width:440px;width:100%}
+  .land-section-label{display:none} /* use original section labels on mobile */
+  #faq-wrapper{max-width:440px;width:100%;margin-top:10px}
+  .land-anchor{scroll-margin-top:0}
+}
 </style>
 </head>
 <body>
 
+<!-- SCROLL-TO-SOLUTION PILL (shared by Practice + Analysis) -->
+<button class="sol-scroll-pill" id="sol-scroll-pill" onclick="solPillClick()">
+  ↓ Scroll to Solution
+</button>
+
 <!-- LANDING -->
 <div id="landing">
-  <div class="brand">CUSAT<span>·CAT</span></div>
-  <h1 style="font-size:15px;font-weight:500;color:var(--text2);text-align:center;max-width:440px;line-height:1.6;margin-top:-14px">
-    Free CUSAT CAT Mock Test — Practice Physics, Chemistry &amp; Mathematics with real previous year questions
-  </h1>
 
-  <!-- RESUME BANNER (shown if saved session exists) -->
-  <div class="resume-banner" id="resume-banner">
-    <div class="resume-banner-title">📂 Saved Session Found</div>
-    <div class="resume-banner-info" id="resume-banner-info">Loading…</div>
-    <div class="resume-banner-btns">
-      <button class="btn-resume-save" onclick="resumeSavedExam()">▶ Resume</button>
-      <button class="btn-discard" onclick="discardSave()">🗑 Discard</button>
+  <!-- ── DESKTOP STICKY NAV ── -->
+  <nav class="land-nav" id="land-nav">
+    <div class="land-nav-logo">CUSAT<span>·CAT</span></div>
+    <div class="land-nav-links">
+      <button class="land-nav-link active" onclick="landScrollTo('exam-anchor')">🎓 Mock Exam</button>
+      <button class="land-nav-link" onclick="landScrollTo('practice-anchor')">🎯 Practice</button>
+      <button class="land-nav-link" onclick="landScrollTo('faq-anchor')">❓ FAQ</button>
+      <button class="land-nav-link" onclick="landScrollTo('comments-anchor')">💬 Comments</button>
+      <button class="land-nav-link" onclick="openHistoryPage()">📊 History <span id="hist-nav-count" style="display:none;background:var(--accent);color:#fff;font-size:9px;font-weight:700;padding:1px 5px;border-radius:8px;font-family:'JetBrains Mono',monospace;margin-left:2px">0</span></button>
     </div>
+    <button class="land-nav-cta" onclick="landScrollTo('exam-anchor')">Start Exam →</button>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <div class="land-hero">
+    <div class="brand">CUSAT<span>·CAT</span></div>
+    <h1>
+      Free CUSAT CAT Mock Test — Practice Physics, Chemistry &amp; Mathematics with real previous year questions
+    </h1>
   </div>
 
-  <div class="lcard">
-    <h2>Select Exam Session</h2>
-    <div class="frow">
-      <label>Year</label>
-      <select id="sel-year" onchange="updatePreview()">
-        <option value="">-- Select Year --</option>
-        <option value="2025">2025</option>
-      </select>
-    </div>
-    <div class="frow">
-      <label>Session</label>
-      <select id="sel-sess" onchange="updatePreview()">
-        <option value="">-- Select Session --</option>
-        <option value="s1">Session 1</option>
-        <option value="s2">Session 2</option>
-        <option value="s3">Session 3</option>
-	<option value="s4">Session 4</option>
-      </select>
-    </div>
-    <div class="info-box">
-      ⏱ Duration: <b>3 Hours</b><br>
-      📋 Marking: <b>+4</b> Correct &nbsp;·&nbsp; <b>−1</b> Wrong &nbsp;·&nbsp; <b>0</b> Unattempted<br>
-    </div>
-    <div class="info-box" style="font-size:11px;color:var(--text3);background:none;border-color:rgba(79,142,247,.15)">
-      🆓 100% Free · No login required · Real CUSAT CAT previous year questions · Instant score &amp; analysis
-    </div>
-    <div class="err" id="err-msg">⚠ Cannot load file. Check JSON &amp; try again.</div>
-    <button class="btn-start" id="btn-start" onclick="startExam()">Start Exam →</button>
-    <button class="btn-history" id="btn-history" onclick="openHistoryPage()">
-      📊 View Past Results <span class="hist-btn-count" id="hist-btn-count" style="display:none">0</span>
-    </button>
-    <button class="btn-practice" onclick="openPractice()">
-      🎯 Practice Mode — Instant Feedback
-    </button>
-  </div>
-  <!-- FAQ SECTION -->
-  <div style="max-width:440px;width:100%;margin-top:10px">
-    <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);margin-bottom:12px;text-align:center">Frequently Asked Questions</div>
-    <div id="faq-list"></div>
-  </div>
+  <!-- ── DESKTOP TWO-COLUMN GRID ── -->
+  <div class="land-grid">
 
-  <!-- COMMENT SECTION -->
-  <div class="comments-section" id="comments-section">
-    <div class="comments-section-label">💬 Comments &amp; Feedback</div>
+    <!-- LEFT COLUMN: Exam card + features -->
+    <div class="land-left">
 
-    <!-- Form -->
-    <div class="comment-form" id="comment-form">
-      <div class="comment-form-title">✍️ Share your feedback</div>
-      <div class="cf-row">
-        <div class="cf-label">Your Name</div>
-        <input class="cf-input" id="cf-name" type="text" placeholder="e.g. User" maxlength="50" autocomplete="off"/>
+      <!-- Feature highlights -->
+      <div class="land-features">
+        <div class="land-feat">
+          <div class="land-feat-icon">⚡</div>
+          <div class="land-feat-title">Real PYQs</div>
+          <div class="land-feat-desc">Actual CUSAT CAT previous year questions — not synthetic ones</div>
+        </div>
+        <div class="land-feat">
+          <div class="land-feat-icon">📊</div>
+          <div class="land-feat-title">Full Analysis</div>
+          <div class="land-feat-desc">Score, accuracy, subject-wise breakdown after every attempt</div>
+        </div>
+        <div class="land-feat">
+          <div class="land-feat-icon">🆓</div>
+          <div class="land-feat-title">100% Free</div>
+          <div class="land-feat-desc">No login, no payment, no ads — just start practising</div>
+        </div>
       </div>
-      <div class="cf-row">
-        <div class="cf-label">Comment</div>
-        <textarea class="cf-textarea" id="cf-comment" placeholder="Suggestions, feedback, or anything about this site…" maxlength="500"></textarea>
-      </div>
-      <div class="cf-bottom">
-        <button class="btn-cf-submit" id="btn-cf-submit">Post Comment</button>
-        <span class="cf-status" id="cf-status"></span>
-        <span class="cf-char" id="cf-char">0/500</span>
-      </div>
-    </div>
 
-    <!-- List -->
-    <div class="cmt-list-hdr">
-      <span class="cmt-list-title">Recent Comments</span>
-      <span class="cmt-count-pill" id="cmt-count">0</span>
-    </div>
-    <div class="comments-list" id="comments-list">
-      <div class="cmt-loading"><div class="cmt-spinner"></div>Loading…</div>
-    </div>
-  </div>
+      <!-- Resume banner -->
+      <div class="resume-banner" id="resume-banner">
+        <div class="resume-banner-title">📂 Saved Session Found</div>
+        <div class="resume-banner-info" id="resume-banner-info">Loading…</div>
+        <div class="resume-banner-btns">
+          <button class="btn-resume-save" onclick="resumeSavedExam()">▶ Resume</button>
+          <button class="btn-discard" onclick="discardSave()">🗑 Discard</button>
+        </div>
+      </div>
+
+      <!-- Exam card -->
+      <div class="land-anchor" id="exam-anchor">
+        <div class="land-section-label">Mock Exam</div>
+        <div class="lcard">
+          <h2 style="font-size:19px">Select Exam Session</h2>
+          <div class="frow">
+            <label>Year</label>
+            <select id="sel-year" onchange="updatePreview()">
+              <option value="">-- Select Year --</option>
+              <option value="2025">2025</option>
+            </select>
+          </div>
+          <div class="frow">
+            <label>Session</label>
+            <select id="sel-sess" onchange="updatePreview()">
+              <option value="">-- Select Session --</option>
+              <option value="s1">Session 1</option>
+              <option value="s2">Session 2</option>
+              <option value="s3">Session 3</option>
+              <option value="s4">Session 4</option>
+            </select>
+          </div>
+          <div class="info-box" style="font-size:13px;line-height:2">
+            ⏱ Duration: <b>3 Hours</b><br>
+            📋 Marking: <b>+4</b> Correct &nbsp;·&nbsp; <b>−1</b> Wrong &nbsp;·&nbsp; <b>0</b> Unattempted
+          </div>
+          <div class="info-box" style="font-size:12px;color:var(--text3);background:none;border-color:rgba(79,142,247,.15)">
+            🆓 100% Free · No login required · Real CUSAT CAT previous year questions · Instant score &amp; analysis
+          </div>
+          <div class="err" id="err-msg">⚠ Cannot load file. Check JSON &amp; try again.</div>
+          <button class="btn-start" id="btn-start" onclick="startExam()" style="font-size:16px;padding:15px">Start Exam →</button>
+          <button class="btn-history" id="btn-history" onclick="openHistoryPage()">
+            📊 View Past Results <span class="hist-btn-count" id="hist-btn-count" style="display:none">0</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Practice card -->
+      <div class="land-anchor" id="practice-anchor">
+        <div class="land-section-label">Practice Mode</div>
+        <div class="lcard" style="gap:14px">
+          <h2 style="font-size:18px;display:flex;align-items:center;gap:8px">🎯 Practice Mode</h2>
+          <p style="font-size:13px;color:var(--text2);line-height:1.7">
+            Answer questions one at a time and get <b style="color:var(--green)">instant feedback</b> after each answer. Choose any subject or mix them all — no timer, go at your own pace.
+          </p>
+          <button class="btn-practice" onclick="openPractice()" style="font-size:15px;padding:14px">
+            🎯 Start Practising — Instant Feedback
+          </button>
+        </div>
+      </div>
+
+    </div><!-- /land-left -->
+
+    <!-- RIGHT COLUMN: FAQ + Comments -->
+    <div class="land-right">
+
+      <!-- FAQ -->
+      <div class="land-anchor" id="faq-anchor">
+        <div class="land-section-label">Frequently Asked Questions</div>
+        <div id="faq-list"></div>
+      </div>
+
+      <!-- Comments -->
+      <div class="land-anchor" id="comments-anchor">
+        <div class="comments-section" id="comments-section" style="max-width:unset;margin-top:0">
+          <div class="comments-section-label" style="text-align:left">💬 Comments &amp; Feedback</div>
+
+          <div class="comment-form" id="comment-form">
+            <div class="comment-form-title">✍️ Share your feedback</div>
+            <div class="cf-row">
+              <div class="cf-label">Your Name</div>
+              <input class="cf-input" id="cf-name" type="text" placeholder="e.g. User" maxlength="50" autocomplete="off"/>
+            </div>
+            <div class="cf-row">
+              <div class="cf-label">Comment</div>
+              <textarea class="cf-textarea" id="cf-comment" placeholder="Suggestions, feedback, or anything about this site…" maxlength="500"></textarea>
+            </div>
+            <div class="cf-bottom">
+              <button class="btn-cf-submit" id="btn-cf-submit">Post Comment</button>
+              <span class="cf-status" id="cf-status"></span>
+              <span class="cf-char" id="cf-char">0/500</span>
+            </div>
+          </div>
+
+          <div class="cmt-list-hdr">
+            <span class="cmt-list-title">Recent Comments</span>
+            <span class="cmt-count-pill" id="cmt-count">0</span>
+          </div>
+          <div class="comments-list" id="comments-list">
+            <div class="cmt-loading"><div class="cmt-spinner"></div>Loading…</div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /land-right -->
+  </div><!-- /land-grid -->
 
   <!-- SITE FOOTER -->
-  <footer style="width:100%;background:var(--surface);border-top:1px solid var(--border);margin-top:24px;padding:20px 16px;text-align:center;display:flex;flex-direction:column;gap:8px">
-    <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);font-weight:600">CUSAT<span style="color:var(--text2);font-weight:400">·CAT</span> Free Mock Test</div>
-    <div style="font-size:11px;color:var(--text3)">© <span id="footer-year"></span> cusatpyq.zenvx.in — All rights reserved</div>
-    <div style="font-size:11px;color:var(--text2)">
-      Contact us:
-      <a href="mailto:abhi@zenvx.in" style="color:var(--accent);text-decoration:none">abhi@zenvx.in</a>
-      &nbsp;·&nbsp;
-      <a href="mailto:sk@zenvx.in" style="color:var(--accent);text-decoration:none">sk@zenvx.in</a>
+  <footer style="width:100%;background:var(--surface);border-top:1px solid var(--border);margin-top:24px;padding:22px 32px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px">
+    <div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--accent);font-weight:600">CUSAT<span style="color:var(--text2);font-weight:400">·CAT</span> Free Mock Test</div>
+      <div style="font-size:11px;color:var(--text3);margin-top:3px">© <span id="footer-year"></span> cusatpyq.zenvx.in — All rights reserved</div>
     </div>
-    <div style="font-size:10px;color:var(--text3)">Unofficial practice portal. Not affiliated with Cochin University of Science and Technology.</div>
+    <div style="font-size:12px;color:var(--text2);display:flex;flex-direction:column;gap:4px;text-align:right">
+      <span>Contact: <a href="mailto:abhi@zenvx.in" style="color:var(--accent);text-decoration:none">abhi@zenvx.in</a> · <a href="mailto:sk@zenvx.in" style="color:var(--accent);text-decoration:none">sk@zenvx.in</a></span>
+      <span style="font-size:10px;color:var(--text3)">Unofficial practice portal. Not affiliated with Cochin University of Science and Technology.</span>
+    </div>
   </footer>
 </div>
 <div id="exam">
@@ -1215,6 +1434,20 @@ function toggleSol(id){
   const btn=document.getElementById(`bsol-${id}`);
   const s=el.classList.toggle('show');
   btn.textContent=s?'Hide Solution':'Show Solution';
+  if(s){
+    // Try smooth scroll first; show pill only if solution is off-screen
+    setTimeout(()=>{
+      const rect=el.getBoundingClientRect();
+      const inView=rect.top>=0 && rect.bottom<=(window.innerHeight||document.documentElement.clientHeight);
+      if(!inView){
+        solPillTarget=el;
+        showSolPill('↓ Scroll to Solution');
+        el.scrollIntoView({behavior:'smooth',block:'nearest'});
+      }
+    },60);
+  } else {
+    hideSolPill();
+  }
 }
 
 function render(id){
@@ -1751,14 +1984,53 @@ function showHistoryAnalysis(idx){
 function updateHistBadge(){
   const hist = loadHistory();
   const badge = document.getElementById('hist-btn-count');
+  const navBadge = document.getElementById('hist-nav-count');
   if(!badge) return;
   if(hist.length){
     badge.textContent = hist.length;
     badge.style.display = '';
+    if(navBadge){ navBadge.textContent = hist.length; navBadge.style.display = ''; }
   } else {
     badge.style.display = 'none';
+    if(navBadge) navBadge.style.display = 'none';
   }
 }
+
+// Smooth scroll for landing nav links
+function landScrollTo(id){
+  const el = document.getElementById(id);
+  if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+  // Update active nav link
+  document.querySelectorAll('.land-nav-link').forEach(l=>l.classList.remove('active'));
+  // find which link was clicked
+  const linkMap = {
+    'exam-anchor':0,'practice-anchor':1,'faq-anchor':2,'comments-anchor':3
+  };
+  const idx = linkMap[id];
+  if(idx !== undefined){
+    const links = document.querySelectorAll('.land-nav-link');
+    if(links[idx]) links[idx].classList.add('active');
+  }
+}
+
+// Highlight active nav link on scroll
+(function(){
+  function onScroll(){
+    const ids = ['exam-anchor','practice-anchor','faq-anchor','comments-anchor'];
+    const links = document.querySelectorAll('.land-nav-link');
+    let active = 0;
+    ids.forEach((id,i)=>{
+      const el = document.getElementById(id);
+      if(el && el.getBoundingClientRect().top < 120) active = i;
+    });
+    links.forEach((l,i)=>l.classList.toggle('active', i===active));
+  }
+  // Attach only when landing is visible
+  const landing = document.getElementById('landing');
+  if(landing){
+    window.addEventListener('scroll', onScroll, {passive:true});
+  }
+})();
 
 
 function openReport(id){
@@ -2084,11 +2356,24 @@ function togglePracSol(){
   const box = document.getElementById('prac-sol-box');
   const btn = document.getElementById('prac-sol-toggle');
   const show = box.classList.toggle('show');
-  btn.textContent = show ? '💡 Hide Solution' : '💡 Show Solution';
-  if(show) setTimeout(()=>box.scrollIntoView({behavior:'smooth',block:'nearest'}),80);
+  btn.innerHTML = show ? '💡 Hide Solution' : '💡 Show Solution';
+  if(show){
+    setTimeout(()=>{
+      const rect=box.getBoundingClientRect();
+      const inView=rect.top>=0 && rect.bottom<=(window.innerHeight||document.documentElement.clientHeight);
+      if(!inView){
+        solPillTarget=box;
+        showSolPill('↓ Scroll to Solution');
+        box.scrollIntoView({behavior:'smooth',block:'nearest'});
+      }
+    },60);
+  } else {
+    hideSolPill();
+  }
 }
 
 function pracNav(dir){
+  hideSolPill();
   const next = PRAC_IDX + dir;
   if(next < 0) return;
   if(next >= PRAC_QS.length){
@@ -2235,6 +2520,46 @@ function cmtEsc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/
 // Footer year
 const fy=document.getElementById('footer-year');
 if(fy) fy.textContent=new Date().getFullYear();
+
+// ── SCROLL-TO-SOLUTION PILL ──────────────────────────
+let solPillTarget = null;
+let solPillTimer  = null;
+
+function showSolPill(label){
+  const pill = document.getElementById('sol-scroll-pill');
+  if(!pill) return;
+  pill.textContent = label || '↓ Scroll to Solution';
+  pill.classList.add('show');
+  // Auto-hide after 6 s
+  clearTimeout(solPillTimer);
+  solPillTimer = setTimeout(hideSolPill, 6000);
+  // Watch scroll: hide pill once the target is visible
+  window.addEventListener('scroll', solPillScrollWatch, {passive:true});
+}
+
+function hideSolPill(){
+  const pill = document.getElementById('sol-scroll-pill');
+  if(pill) pill.classList.remove('show');
+  clearTimeout(solPillTimer);
+  window.removeEventListener('scroll', solPillScrollWatch);
+  solPillTarget = null;
+}
+
+function solPillScrollWatch(){
+  if(!solPillTarget) return;
+  const rect = solPillTarget.getBoundingClientRect();
+  const inView = rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
+  if(inView) hideSolPill();
+}
+
+function solPillClick(){
+  if(solPillTarget){
+    solPillTarget.scrollIntoView({behavior:'smooth', block:'center'});
+    // Hide after scrolling
+    setTimeout(hideSolPill, 900);
+  }
+}
+// ─────────────────────────────────────────────────────
 
 // Save on page hide/unload
 window.addEventListener('pagehide', ()=>{ if(!submitted) saveProgress(); });
