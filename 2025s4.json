@@ -60,7 +60,7 @@
     ],
     "correct": 3,
     "answer": "$50$ cal",
-    "explanation": "At constant pressure: $Q_p = nC_p\\Delta T = 70$ cal. For 2 moles and $\\Delta T = 5^\\circ C$: $2 \\times C_p \\times 5 = 70$, so $C_p = 7$ cal/mol\u00b7K. For an ideal gas, $C_p - C_v = R = 2$ cal/mol\u00b7K. So $C_v = 5$ cal/mol\u00b7K. At constant volume: $Q_v = nC_v\\Delta T = 2 \\times 5 \\times 5 = 50$ cal.",
+    "explanation": "At constant pressure: $Q_p = nC_p\\Delta T = 70$ cal. For 2 moles and $\\Delta T = 5^\\circ C$: $2 \\times C_p \\times 5 = 70$, so $C_p = 7$ cal/mol·K. For an ideal gas, $C_p - C_v = R = 2$ cal/mol·K. So $C_v = 5$ cal/mol·K. At constant volume: $Q_v = nC_v\\Delta T = 2 \\times 5 \\times 5 = 50$ cal.",
     "image_url": null
   },
   {
@@ -124,7 +124,7 @@
     ],
     "correct": 0,
     "answer": "$0.8$",
-    "explanation": "Since mercury levels are same, pressure due to water column = pressure due to spirit column. $h_w \\rho_w g = h_s \\rho_s g$. So $\\rho_s = \\frac{h_w \\rho_w}{h_s} = \\frac{10 \\times 1}{12.5} = 0.8$ g/cm\u00b3. Relative density = $0.8$.",
+    "explanation": "Since mercury levels are same, pressure due to water column = pressure due to spirit column. $h_w \\rho_w g = h_s \\rho_s g$. So $\\rho_s = \\frac{h_w \\rho_w}{h_s} = \\frac{10 \\times 1}{12.5} = 0.8$ g/cm³. Relative density = $0.8$.",
     "image_url": null
   },
   {
@@ -252,7 +252,7 @@
     ],
     "correct": 0,
     "answer": "$0.1$ A",
-    "explanation": "The circuit shows a 2V battery with three 30\u03a9 resistors forming a triangle network between points A, B, C. The equivalent resistance: two 30\u03a9 in series (A to C via B) = 60\u03a9, in parallel with 30\u03a9 (direct A to C). $R_{eq} = \\frac{60 \\times 30}{60 + 30} = 20$ \u03a9. Current $I = \\frac{2}{20} = 0.1$ A.",
+    "explanation": "The circuit shows a 2V battery with three 30Ω resistors forming a triangle network between points A, B, C. The equivalent resistance: two 30Ω in series (A to C via B) = 60Ω, in parallel with 30Ω (direct A to C). $R_{eq} = \\frac{60 \\times 30}{60 + 30} = 20$ Ω. Current $I = \\frac{2}{20} = 0.1$ A.",
     "image_url": "https://i.postimg.cc/NGT1WYTR/S1-16.png"
   },
   {
@@ -339,16 +339,16 @@
     "id": 22,
     "subject": "physics",
     "difficulty": "medium",
-    "question": "The $K_\\alpha$ line from molybdenum (atomic number = $42$) has a wavelength of $0.7078$ \u00c5. The wavelength of $K_\\alpha$ line of zinc (atomic number = $30$) will be",
+    "question": "The $K_\\alpha$ line from molybdenum (atomic number = $42$) has a wavelength of $0.7078$ Å. The wavelength of $K_\\alpha$ line of zinc (atomic number = $30$) will be",
     "options": [
-      "$1$ \u00c5",
-      "$1.3872$ \u00c5",
-      "$0.3541$ \u00c5",
-      "$0.5$ \u00c5"
+      "$1$ Å",
+      "$1.3872$ Å",
+      "$0.3541$ Å",
+      "$0.5$ Å"
     ],
     "correct": 1,
-    "answer": "$1.3872$ \u00c5",
-    "explanation": "Using Moseley's law: $\\sqrt{\\nu} = a(Z - b)$, so $\\lambda \\propto \\frac{1}{(Z - 1)^2}$. $\\frac{\\lambda_{Zn}}{\\lambda_{Mo}} = \\frac{(42 - 1)^2}{(30 - 1)^2} = \\frac{41^2}{29^2} = \\frac{1681}{841} \\approx 2$. So $\\lambda_{Zn} = 0.7078 \\times \\frac{1681}{841} \\approx 1.3872$ \u00c5.",
+    "answer": "$1.3872$ Å",
+    "explanation": "Using Moseley's law: $\\sqrt{\\nu} = a(Z - b)$, so $\\lambda \\propto \\frac{1}{(Z - 1)^2}$. $\\frac{\\lambda_{Zn}}{\\lambda_{Mo}} = \\frac{(42 - 1)^2}{(30 - 1)^2} = \\frac{41^2}{29^2} = \\frac{1681}{841} \\approx 2$. So $\\lambda_{Zn} = 0.7078 \\times \\frac{1681}{841} \\approx 1.3872$ Å.",
     "image_url": null
   },
   {
@@ -387,7 +387,7 @@
     "id": 25,
     "subject": "physics",
     "difficulty": "medium",
-    "question": "The ratio of resolving powers of an optical microscope for two wavelengths $\\lambda_1 = 4000$ \u00c5 and $\\lambda_2 = 6000$ \u00c5 is",
+    "question": "The ratio of resolving powers of an optical microscope for two wavelengths $\\lambda_1 = 4000$ Å and $\\lambda_2 = 6000$ Å is",
     "options": [
       "$8:27$",
       "$9:4$",
@@ -755,7 +755,7 @@
     "id": 48,
     "subject": "physics",
     "difficulty": "medium",
-    "question": "Light with an average flux of $20$ W/cm\u00b2 falls on a non-reflecting surface at normal incidence having surface area $20$ cm\u00b2. The energy received by the surface during time span of $1$ minute is",
+    "question": "Light with an average flux of $20$ W/cm² falls on a non-reflecting surface at normal incidence having surface area $20$ cm². The energy received by the surface during time span of $1$ minute is",
     "options": [
       "$16 \\times 10^3$ J",
       "$24 \\times 10^3$ J",
@@ -835,7 +835,7 @@
     "id": 53,
     "subject": "physics",
     "difficulty": "easy",
-    "question": "A bicycle starts from rest and accelerates at $1.5$ m/s\u00b2 for $4$ seconds. Find the total distance covered by the bicycle.",
+    "question": "A bicycle starts from rest and accelerates at $1.5$ m/s² for $4$ seconds. Find the total distance covered by the bicycle.",
     "options": [
       "$6$ m",
       "$8$ m",
@@ -931,7 +931,7 @@
     "id": 59,
     "subject": "physics",
     "difficulty": "medium",
-    "question": "A hydrogen atom, initially in the ground state is excited by absorbing a photon of wavelength $980$ \u00c5. The radius of the atom in the excited state, in terms of Bohr radius $a_0$, will be ($hc = 12500$ eV\u00b7\u00c5)",
+    "question": "A hydrogen atom, initially in the ground state is excited by absorbing a photon of wavelength $980$ Å. The radius of the atom in the excited state, in terms of Bohr radius $a_0$, will be ($hc = 12500$ eV·Å)",
     "options": [
       "$9a_0$",
       "$25a_0$",
@@ -1027,7 +1027,7 @@
     "id": 65,
     "subject": "physics",
     "difficulty": "medium",
-    "question": "A moving coil galvanometer has a coil with $175$ turns and area $1$ cm\u00b2. It uses a torsion band of torsion constant $10^{-6}$ N\u00b7m/rad. The coil is placed in a magnetic field $B$ parallel to its plane. The coil deflects by $1^\\circ$ for a current of $1$ mA. The value of $B$ (in Tesla) is approximately",
+    "question": "A moving coil galvanometer has a coil with $175$ turns and area $1$ cm². It uses a torsion band of torsion constant $10^{-6}$ N·m/rad. The coil is placed in a magnetic field $B$ parallel to its plane. The coil deflects by $1^\\circ$ for a current of $1$ mA. The value of $B$ (in Tesla) is approximately",
     "options": [
       "$10^{-3}$",
       "$10^{-1}$",
@@ -1068,7 +1068,7 @@
     ],
     "correct": 2,
     "answer": "$0.50$",
-    "explanation": "Using $s = ut + \\frac{1}{2}at^2$: $50 = 0 + \\frac{1}{2} \\times a \\times 100$, so $a = 1$ m/s\u00b2. Net force = $ma = 5 \\times 1 = 5$ N. Friction force = $30 - 5 = 25$ N. $\\mu_k = \\frac{f}{N} = \\frac{25}{5 \\times 10} = \\frac{25}{50} = 0.50$.",
+    "explanation": "Using $s = ut + \\frac{1}{2}at^2$: $50 = 0 + \\frac{1}{2} \\times a \\times 100$, so $a = 1$ m/s². Net force = $ma = 5 \\times 1 = 5$ N. Friction force = $30 - 5 = 25$ N. $\\mu_k = \\frac{f}{N} = \\frac{25}{5 \\times 10} = \\frac{25}{50} = 0.50$.",
     "image_url": null
   },
   {
@@ -1093,14 +1093,14 @@
     "difficulty": "medium",
     "question": "A system consists of two identical spheres each of mass $1.5$ kg and radius $50$ cm at the ends of a light rod. The distance between the centres of the two spheres is $5$ m. What will be the moment of inertia of the system about an axis perpendicular to the rod passing through its midpoint?",
     "options": [
-      "$1.905 \\times 10^{-5}$ kg m\u00b2",
-      "$18.75 \\times 10^{-5}$ kg m\u00b2",
-      "$19.05$ kg m\u00b2",
-      "$1.875 \\times 10^{-5}$ kg m\u00b2"
+      "$1.905 \\times 10^{-5}$ kg m²",
+      "$18.75 \\times 10^{-5}$ kg m²",
+      "$19.05$ kg m²",
+      "$1.875 \\times 10^{-5}$ kg m²"
     ],
     "correct": 2,
-    "answer": "$19.05$ kg m\u00b2",
-    "explanation": "Moment of inertia of each sphere about its own center = $\\frac{2}{5}MR^2 = \\frac{2}{5} \\times 1.5 \\times (0.5)^2 = 0.15$ kg m\u00b2. Distance from midpoint to each center = $2.5$ m. Using parallel axis theorem: $I = 2 \\times \\left(\\frac{2}{5}MR^2 + M(2.5)^2\\right) = 2 \\times (0.15 + 1.5 \\times 6.25) = 2 \\times (0.15 + 9.375) = 2 \\times 9.525 = 19.05$ kg m\u00b2.",
+    "answer": "$19.05$ kg m²",
+    "explanation": "Moment of inertia of each sphere about its own center = $\\frac{2}{5}MR^2 = \\frac{2}{5} \\times 1.5 \\times (0.5)^2 = 0.15$ kg m². Distance from midpoint to each center = $2.5$ m. Using parallel axis theorem: $I = 2 \\times \\left(\\frac{2}{5}MR^2 + M(2.5)^2\\right) = 2 \\times (0.15 + 1.5 \\times 6.25) = 2 \\times (0.15 + 9.375) = 2 \\times 9.525 = 19.05$ kg m².",
     "image_url": null
   },
   {
@@ -1116,7 +1116,7 @@
     ],
     "correct": 3,
     "answer": "$3.1 \\times 10^6$ Nm$^{-2}$",
-    "explanation": "Tensile stress = $\\frac{F}{A} = \\frac{mg}{\\pi r^2} = \\frac{4 \\times 3.1\\pi}{\\pi \\times (2 \\times 10^{-3})^2} = \\frac{4 \\times 3.1}{4 \\times 10^{-6}} = 3.1 \\times 10^6$ N/m\u00b2.",
+    "explanation": "Tensile stress = $\\frac{F}{A} = \\frac{mg}{\\pi r^2} = \\frac{4 \\times 3.1\\pi}{\\pi \\times (2 \\times 10^{-3})^2} = \\frac{4 \\times 3.1}{4 \\times 10^{-6}} = 3.1 \\times 10^6$ N/m².",
     "image_url": null
   },
   {
@@ -1173,14 +1173,14 @@
     "difficulty": "medium",
     "question": "A string is wound around a hollow cylinder of mass $5$ kg and radius $0.5$ m. If the string is now pulled with a horizontal force of $40$ N, and the cylinder is rolling without slipping on a horizontal surface then the angular acceleration of the cylinder will be (neglect the mass and thickness of the string)",
     "options": [
-      "$12$ rad/s\u00b2",
-      "$16$ rad/s\u00b2",
-      "$10$ rad/s\u00b2",
-      "$20$ rad/s\u00b2"
+      "$12$ rad/s²",
+      "$16$ rad/s²",
+      "$10$ rad/s²",
+      "$20$ rad/s²"
     ],
     "correct": 1,
-    "answer": "$16$ rad/s\u00b2",
-    "explanation": "For rolling without slipping: $F - f = ma$ and $fR + FR = I\\alpha$. For hollow cylinder, $I = MR^2$. Also $a = R\\alpha$. From torque equation: $(f + F)R = MR^2 \\times \\frac{a}{R} = MRa$. So $f + F = Ma$. From force equation: $F - f = Ma$. Adding: $2F = 2Ma$, so $a = \\frac{F}{M} = \\frac{40}{5} = 8$ m/s\u00b2. $\\alpha = \\frac{a}{R} = \\frac{8}{0.5} = 16$ rad/s\u00b2.",
+    "answer": "$16$ rad/s²",
+    "explanation": "For rolling without slipping: $F - f = ma$ and $fR + FR = I\\alpha$. For hollow cylinder, $I = MR^2$. Also $a = R\\alpha$. From torque equation: $(f + F)R = MR^2 \\times \\frac{a}{R} = MRa$. So $f + F = Ma$. From force equation: $F - f = Ma$. Adding: $2F = 2Ma$, so $a = \\frac{F}{M} = \\frac{40}{5} = 8$ m/s². $\\alpha = \\frac{a}{R} = \\frac{8}{0.5} = 16$ rad/s².",
     "image_url": "https://i.postimg.cc/BZDxdsDS/S4-74.png"
   },
   {
@@ -1315,16 +1315,16 @@
     "id": 83,
     "subject": "chemistry",
     "difficulty": "medium",
-    "question": "The molar conductivities at infinite dilution for the strong electrolytes $NH_4Cl$, $NaOH$ and $NaCl$ are respectively $149.7$ $\\Omega^{-1}$cm\u00b2mol$^{-1}$, $248.1$ $\\Omega^{-1}$cm\u00b2mol$^{-1}$ and $126.5$ $\\Omega^{-1}$cm\u00b2mol$^{-1}$. The molar conductivity of $NH_4OH$ at infinite dilution is",
+    "question": "The molar conductivities at infinite dilution for the strong electrolytes $NH_4Cl$, $NaOH$ and $NaCl$ are respectively $149.7$ $\\Omega^{-1}$cm²mol$^{-1}$, $248.1$ $\\Omega^{-1}$cm²mol$^{-1}$ and $126.5$ $\\Omega^{-1}$cm²mol$^{-1}$. The molar conductivity of $NH_4OH$ at infinite dilution is",
     "options": [
-      "$271.3$ $\\Omega^{-1}$cm\u00b2mol$^{-1}$",
-      "$224.9$ $\\Omega^{-1}$cm\u00b2mol$^{-1}$",
-      "$177.8$ $\\Omega^{-1}$cm\u00b2mol$^{-1}$",
-      "$28.1$ $\\Omega^{-1}$cm\u00b2mol$^{-1}$"
+      "$271.3$ $\\Omega^{-1}$cm²mol$^{-1}$",
+      "$224.9$ $\\Omega^{-1}$cm²mol$^{-1}$",
+      "$177.8$ $\\Omega^{-1}$cm²mol$^{-1}$",
+      "$28.1$ $\\Omega^{-1}$cm²mol$^{-1}$"
     ],
     "correct": 0,
-    "answer": "$271.3$ $\\Omega^{-1}$cm\u00b2mol$^{-1}$",
-    "explanation": "Using Kohlrausch's law: $\\Lambda^0_{NH_4OH} = \\Lambda^0_{NH_4Cl} + \\Lambda^0_{NaOH} - \\Lambda^0_{NaCl} = 149.7 + 248.1 - 126.5 = 271.3$ $\\Omega^{-1}$cm\u00b2mol$^{-1}$.",
+    "answer": "$271.3$ $\\Omega^{-1}$cm²mol$^{-1}$",
+    "explanation": "Using Kohlrausch's law: $\\Lambda^0_{NH_4OH} = \\Lambda^0_{NH_4Cl} + \\Lambda^0_{NaOH} - \\Lambda^0_{NaCl} = 149.7 + 248.1 - 126.5 = 271.3$ $\\Omega^{-1}$cm²mol$^{-1}$.",
     "image_url": null
   },
   {
@@ -2211,7 +2211,7 @@
     "id": 139,
     "subject": "maths",
     "difficulty": "medium",
-    "question": "The possible values of $x$ that satisfies the equation $\\begin{vmatrix} x & 0 & 3 \\ 3 & x & 0 \\ 0 & 5 & x \\end{vmatrix} = 0$ are",
+    "question": "The possible values of $x$ that satisfies the equation $\\begin{vmatrix} x & 0 & 3 \\\\ 3 & x & 0 \\\\ 0 & 5 & x \\end{vmatrix} = 0$ are",
     "options": [
       "1, 2, 3",
       "3, 4, 6",
@@ -2339,16 +2339,16 @@
     "id": 147,
     "subject": "maths",
     "difficulty": "medium",
-    "question": "Let $M$ denote set of all matrices of form $\\begin{pmatrix} x & x \\ 0 & x \\end{pmatrix}$, $x \\in \\mathbb{R} \\setminus \\{0\\}$. Then the identity element of $M$ under matrix multiplication is",
+    "question": "Let $M$ denote set of all matrices of form $\\begin{pmatrix} x & x \\\\ 0 & x \\end{pmatrix}$, $x \\in \\mathbb{R} \\setminus \\{0\\}$. Then the identity element of $M$ under matrix multiplication is",
     "options": [
-      "$\\begin{pmatrix} 1 & 0 \\ 0 & 1 \\end{pmatrix}$",
-      "$\\begin{pmatrix} 1 & 1 \\ 1 & 1 \\end{pmatrix}$",
-      "$\\begin{pmatrix} \\frac{1}{2} & \\frac{1}{2} \\ 0 & \\frac{1}{2} \\end{pmatrix}$",
-      "$\\begin{pmatrix} 1 & 1 \\ 0 & 1 \\end{pmatrix}$"
+      "$\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$",
+      "$\\begin{pmatrix} 1 & 1 \\\\ 1 & 1 \\end{pmatrix}$",
+      "$\\begin{pmatrix} \\frac{1}{2} & \\frac{1}{2} \\\\ 0 & \\frac{1}{2} \\end{pmatrix}$",
+      "$\\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\end{pmatrix}$"
     ],
     "correct": 2,
-    "answer": "$\\begin{pmatrix} \\frac{1}{2} & \\frac{1}{2} \\ 0 & \\frac{1}{2} \\end{pmatrix}$",
-    "explanation": "For identity $E$, we need $\\begin{pmatrix} x & x \\ 0 & x \\end{pmatrix} \\begin{pmatrix} e_{11} & e_{12} \\ e_{21} & e_{22} \\end{pmatrix} = \\begin{pmatrix} x & x \\ 0 & x \\end{pmatrix}$. This gives: $xe_{11} + xe_{21} = x$, $xe_{12} + xe_{22} = x$, $xe_{21} = 0$, $xe_{22} = x$. So $e_{21} = 0$, $e_{22} = 1$, $e_{11} = 1$, $e_{12} + 1 = 1$ so $e_{12} = 0$. But this doesn't match the form. Actually for the set to be closed, identity should be in the set: $\\begin{pmatrix} 1 & 1 \\ 0 & 1 \\end{pmatrix}$? No wait. Let me check: $\\begin{pmatrix} x & x \\ 0 & x \\end{pmatrix} \\begin{pmatrix} 1/2 & 1/2 \\ 0 & 1/2 \\end{pmatrix} = \\begin{pmatrix} x/2 & x/2+x/2 \\ 0 & x/2 \\end{pmatrix} = \\begin{pmatrix} x/2 & x \\ 0 & x/2 \\end{pmatrix}$. This doesn't work. Based on answer key C.",
+    "answer": "$\\begin{pmatrix} \\frac{1}{2} & \\frac{1}{2} \\\\ 0 & \\frac{1}{2} \\end{pmatrix}$",
+    "explanation": "For identity $E$, we need $\\begin{pmatrix} x & x \\\\ 0 & x \\end{pmatrix} \\begin{pmatrix} e_{11} & e_{12} \\\\ e_{21} & e_{22} \\end{pmatrix} = \\begin{pmatrix} x & x \\\\ 0 & x \\end{pmatrix}$. This gives: $xe_{11} + xe_{21} = x$, $xe_{12} + xe_{22} = x$, $xe_{21} = 0$, $xe_{22} = x$. So $e_{21} = 0$, $e_{22} = 1$, $e_{11} = 1$, $e_{12} + 1 = 1$ so $e_{12} = 0$. But this doesn't match the form. Actually for the set to be closed, identity should be in the set: $\\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\end{pmatrix}$? No wait. Let me check: $\\begin{pmatrix} x & x \\\\ 0 & x \\end{pmatrix} \\begin{pmatrix} 1/2 & 1/2 \\\\ 0 & 1/2 \\end{pmatrix} = \\begin{pmatrix} x/2 & x/2+x/2 \\\\ 0 & x/2 \\end{pmatrix} = \\begin{pmatrix} x/2 & x \\\\ 0 & x/2 \\end{pmatrix}$. This doesn't work. Based on answer key C.",
     "image_url": null
   },
   {
@@ -2380,7 +2380,7 @@
     ],
     "correct": 3,
     "answer": "$\\frac{54}{91}$",
-    "explanation": "Ways to select 4 bowlers from 5: $C(5,4) = 5$. Ways to select 7 non-bowlers from 10: $C(10,7) = 120$. Total favorable = 5 \u00d7 120 = 600. Total ways to select 11 from 15: $C(15,11) = 1365$. Probability = $\\frac{600}{1365} = \\frac{40}{91}$. Wait, answer key says D ($\\frac{54}{91}$). Let me recheck: $C(15,11) = C(15,4) = \\frac{15\u00d714\u00d713\u00d712}{24} = 1365$. $C(5,4)\u00d7C(10,7) = 5\u00d7120 = 600$. $\\frac{600}{1365} = \\frac{40}{91}$. Hmm, but answer key says D. Perhaps the question means at least 4 bowlers? Or maybe I misread. Following answer key.",
+    "explanation": "Ways to select 4 bowlers from 5: $C(5,4) = 5$. Ways to select 7 non-bowlers from 10: $C(10,7) = 120$. Total favorable = 5 × 120 = 600. Total ways to select 11 from 15: $C(15,11) = 1365$. Probability = $\\frac{600}{1365} = \\frac{40}{91}$. Wait, answer key says D ($\\frac{54}{91}$). Let me recheck: $C(15,11) = C(15,4) = \\frac{15×14×13×12}{24} = 1365$. $C(5,4)×C(10,7) = 5×120 = 600$. $\\frac{600}{1365} = \\frac{40}{91}$. Hmm, but answer key says D. Perhaps the question means at least 4 bowlers? Or maybe I misread. Following answer key.",
     "image_url": null
   },
   {
@@ -2428,7 +2428,7 @@
     ],
     "correct": 0,
     "answer": "$\\frac{2}{45}$",
-    "explanation": "3-digit palindromes have form $aba$ where $a \\in \\{1,...,9\\}$ and $b \\in \\{0,...,9\\}$. Total = 9\u00d710 = 90. For divisibility by 2, $a$ must be even (2,4,6,8). So favorable = 4\u00d710 = 40. Probability = $\\frac{40}{90} = \\frac{4}{9}$. Wait, answer key says A ($\\frac{2}{45}$). Let me recheck. Actually if $a$ is even: 4 choices, and $b$ has 10 choices, so 40. $\\frac{40}{90} = \\frac{4}{9}$. This doesn't match. Maybe the question is about palindromes with specific constraints. Following answer key.",
+    "explanation": "3-digit palindromes have form $aba$ where $a \\in \\{1,...,9\\}$ and $b \\in \\{0,...,9\\}$. Total = 9×10 = 90. For divisibility by 2, $a$ must be even (2,4,6,8). So favorable = 4×10 = 40. Probability = $\\frac{40}{90} = \\frac{4}{9}$. Wait, answer key says A ($\\frac{2}{45}$). Let me recheck. Actually if $a$ is even: 4 choices, and $b$ has 10 choices, so 40. $\\frac{40}{90} = \\frac{4}{9}$. This doesn't match. Maybe the question is about palindromes with specific constraints. Following answer key.",
     "image_url": null
   },
   {
@@ -2460,7 +2460,7 @@
     ],
     "correct": 3,
     "answer": "$\\frac{3\\sqrt{2}}{2}$",
-    "explanation": "Common ratio $r = \\frac{3/2\\sqrt{2}}{3/2} = \\sqrt{2}$. Check: $3/2 \u00d7 \\sqrt{2} = 3\\sqrt{2}/2$. Next term = $3 \u00d7 \\sqrt{2} = 3\\sqrt{2}$. Wait, answer key says D. Let me recheck: First term $a = 3/2$, second = $3\\sqrt{2}/2$, third = 3. Ratio = $\\sqrt{2}$. Next term = $3\\sqrt{2}$. But answer key says D ($3\\sqrt{2}/2$). Following answer key.",
+    "explanation": "Common ratio $r = \\frac{3/2\\sqrt{2}}{3/2} = \\sqrt{2}$. Check: $3/2 × \\sqrt{2} = 3\\sqrt{2}/2$. Next term = $3 × \\sqrt{2} = 3\\sqrt{2}$. Wait, answer key says D. Let me recheck: First term $a = 3/2$, second = $3\\sqrt{2}/2$, third = 3. Ratio = $\\sqrt{2}$. Next term = $3\\sqrt{2}$. But answer key says D ($3\\sqrt{2}/2$). Following answer key.",
     "image_url": null
   },
   {
@@ -2492,14 +2492,14 @@
     ],
     "correct": 2,
     "answer": "$45^\\circ$",
-    "explanation": "$\\cos \\gamma = \\frac{\\sqrt{2}}{\\sqrt{4+1+2}} = \\frac{\\sqrt{2}}{\\sqrt{7}}$. Hmm, this doesn't give 45\u00b0. Let me check: if vector is $2\\hat{i} + \\hat{j} + \\sqrt{2}\\hat{k}$, magnitude = $\\sqrt{4+1+2} = \\sqrt{7}$. $\\cos \\gamma = \\sqrt{2}/\\sqrt{7} \u2248 0.5345$, so $\\gamma \u2248 57.7\u00b0$. But answer key says C (45\u00b0). Perhaps the vector is $\\hat{i} + \\hat{j} + \\sqrt{2}\\hat{k}$ with magnitude $\\sqrt{1+1+2} = 2$, then $\\cos \\gamma = \\sqrt{2}/2$, so $\\gamma = 45\u00b0$. Following answer key.",
+    "explanation": "$\\cos \\gamma = \\frac{\\sqrt{2}}{\\sqrt{4+1+2}} = \\frac{\\sqrt{2}}{\\sqrt{7}}$. Hmm, this doesn't give 45°. Let me check: if vector is $2\\hat{i} + \\hat{j} + \\sqrt{2}\\hat{k}$, magnitude = $\\sqrt{4+1+2} = \\sqrt{7}$. $\\cos \\gamma = \\sqrt{2}/\\sqrt{7} ≈ 0.5345$, so $\\gamma ≈ 57.7°$. But answer key says C (45°). Perhaps the vector is $\\hat{i} + \\hat{j} + \\sqrt{2}\\hat{k}$ with magnitude $\\sqrt{1+1+2} = 2$, then $\\cos \\gamma = \\sqrt{2}/2$, so $\\gamma = 45°$. Following answer key.",
     "image_url": null
   },
   {
     "id": 157,
     "subject": "maths",
     "difficulty": "medium",
-    "question": "Let $S$ be the set of all points at which the function $f(x) = \\begin{cases} x & \\text{if } x \\text{ is rational} \\ -x & \\text{if } x \\text{ is irrational} \\end{cases}$ is continuous. Then $S$ is equal to",
+    "question": "Let $S$ be the set of all points at which the function $f(x) = \\begin{cases} x & \\text{if } x \\text{ is rational} \\\\ -x & \\text{if } x \\text{ is irrational} \\end{cases}$ is continuous. Then $S$ is equal to",
     "options": [
       "$\\mathbb{R}$",
       "$[-1, 1]$",
@@ -2540,7 +2540,7 @@
     ],
     "correct": 1,
     "answer": "$x - 2y = 0$",
-    "explanation": "Lines $3x+y=0$ and $3x-y=0$ make angles with x-axis. For equilateral triangle with vertex at origin, the line through (2,2) must make 60\u00b0 with these lines. The slope calculations lead to $x - 2y = 0$ as one valid solution. Following answer key.",
+    "explanation": "Lines $3x+y=0$ and $3x-y=0$ make angles with x-axis. For equilateral triangle with vertex at origin, the line through (2,2) must make 60° with these lines. The slope calculations lead to $x - 2y = 0$ as one valid solution. Following answer key.",
     "image_url": null
   },
   {
@@ -2604,7 +2604,7 @@
     ],
     "correct": 1,
     "answer": "64",
-    "explanation": "From $x^2 = 2x - 2$, we get recurrence: $\\alpha^{n+2} = 2\\alpha^{n+1} - 2\\alpha^n$. Starting with $\\alpha^0 = 1, \\alpha^1 = \\alpha$, we compute powers. Or use $\\alpha = 1+i, \\beta = 1-i$ (roots of $x^2-2x+2=0$). Then $\\alpha^5 = (1+i)^5 = 1 + 5i + 10i^2 + 10i^3 + 5i^4 + i^5 = 1 + 5i - 10 - 10i + 5 + i = -4 - 4i$. Similarly $\\beta^5 = -4 + 4i$. Sum = -8. Wait, this doesn't match. Let me recheck: $x^2 - 2x + 2 = 0$ gives $x = \\frac{2 \u00b1 \\sqrt{4-8}}{2} = 1 \u00b1 i$. $\\alpha = 1+i = \\sqrt{2}e^{i\\pi/4}$. $\\alpha^5 = (\\sqrt{2})^5 e^{i5\\pi/4} = 4\\sqrt{2}(-\\frac{1}{\\sqrt{2}} - \\frac{i}{\\sqrt{2}}) = -4 - 4i$. Sum = -8. But answer key says B (64). Maybe equation is $x^2 - 2x - 2 = 0$? Following answer key.",
+    "explanation": "From $x^2 = 2x - 2$, we get recurrence: $\\alpha^{n+2} = 2\\alpha^{n+1} - 2\\alpha^n$. Starting with $\\alpha^0 = 1, \\alpha^1 = \\alpha$, we compute powers. Or use $\\alpha = 1+i, \\beta = 1-i$ (roots of $x^2-2x+2=0$). Then $\\alpha^5 = (1+i)^5 = 1 + 5i + 10i^2 + 10i^3 + 5i^4 + i^5 = 1 + 5i - 10 - 10i + 5 + i = -4 - 4i$. Similarly $\\beta^5 = -4 + 4i$. Sum = -8. Wait, this doesn't match. Let me recheck: $x^2 - 2x + 2 = 0$ gives $x = \\frac{2 ± \\sqrt{4-8}}{2} = 1 ± i$. $\\alpha = 1+i = \\sqrt{2}e^{i\\pi/4}$. $\\alpha^5 = (\\sqrt{2})^5 e^{i5\\pi/4} = 4\\sqrt{2}(-\\frac{1}{\\sqrt{2}} - \\frac{i}{\\sqrt{2}}) = -4 - 4i$. Sum = -8. But answer key says B (64). Maybe equation is $x^2 - 2x - 2 = 0$? Following answer key.",
     "image_url": null
   },
   {
@@ -2684,7 +2684,7 @@
     ],
     "correct": 3,
     "answer": "12",
-    "explanation": "$x = 3 + 1 + \\frac{1}{3} + ... = 3 + \\frac{1}{1-1/3} = 3 + \\frac{3}{2} = \\frac{9}{2}$. Then $x^3 - 9x^2 + 18x = x(x^2 - 9x + 18) = x(x-3)(x-6) = \\frac{9}{2}(\\frac{9}{2}-3)(\\frac{9}{2}-6) = \\frac{9}{2} \u00d7 \\frac{3}{2} \u00d7 (-\\frac{3}{2}) = -\\frac{81}{8}$. This doesn't match. Following answer key D.",
+    "explanation": "$x = 3 + 1 + \\frac{1}{3} + ... = 3 + \\frac{1}{1-1/3} = 3 + \\frac{3}{2} = \\frac{9}{2}$. Then $x^3 - 9x^2 + 18x = x(x^2 - 9x + 18) = x(x-3)(x-6) = \\frac{9}{2}(\\frac{9}{2}-3)(\\frac{9}{2}-6) = \\frac{9}{2} × \\frac{3}{2} × (-\\frac{3}{2}) = -\\frac{81}{8}$. This doesn't match. Following answer key D.",
     "image_url": null
   },
   {
@@ -2700,7 +2700,7 @@
     ],
     "correct": 0,
     "answer": "3",
-    "explanation": "$280 = 2^3 \u00d7 5 \u00d7 7$. Divisors of form $4n+2 = 2(2n+1)$, i.e., exactly one factor of 2 and odd remainder. Such divisors: $2\u00d71=2$, $2\u00d75=10$, $2\u00d77=14$, $2\u00d735=70$. That's 4 divisors. But answer key says A (3). Following answer key.",
+    "explanation": "$280 = 2^3 × 5 × 7$. Divisors of form $4n+2 = 2(2n+1)$, i.e., exactly one factor of 2 and odd remainder. Such divisors: $2×1=2$, $2×5=10$, $2×7=14$, $2×35=70$. That's 4 divisors. But answer key says A (3). Following answer key.",
     "image_url": null
   },
   {
@@ -2739,7 +2739,7 @@
     "id": 172,
     "subject": "maths",
     "difficulty": "medium",
-    "question": "The value of $\\begin{vmatrix} 1 & 1 & 1 \\ bc & ca & ab \\ b+c & c+a & a+b \\end{vmatrix}$ is",
+    "question": "The value of $\\begin{vmatrix} 1 & 1 & 1 \\\\ bc & ca & ab \\\\ b+c & c+a & a+b \\end{vmatrix}$ is",
     "options": [
       "1",
       "0",
@@ -2837,21 +2837,21 @@
     "difficulty": "medium",
     "question": "An example of a rational number is",
     "options": [
-      "$\\sin 15\u00b0$",
-      "$\\cos 15\u00b0$",
-      "$\\sin 15\u00b0 \\cos 15\u00b0$",
-      "$\\sin 15\u00b0 \\cos 75\u00b0$"
+      "$\\sin 15°$",
+      "$\\cos 15°$",
+      "$\\sin 15° \\cos 15°$",
+      "$\\sin 15° \\cos 75°$"
     ],
     "correct": 2,
-    "answer": "$\\sin 15\u00b0 \\cos 15\u00b0$",
-    "explanation": "$\\sin 15\u00b0 \\cos 15\u00b0 = \\frac{1}{2} \\sin 30\u00b0 = \\frac{1}{2} \\times \\frac{1}{2} = \\frac{1}{4}$, which is rational. $\\sin 15\u00b0 = \\frac{\\sqrt{6}-\\sqrt{2}}{4}$ is irrational. $\\cos 15\u00b0 = \\frac{\\sqrt{6}+\\sqrt{2}}{4}$ is irrational. $\\sin 15\u00b0 \\cos 75\u00b0 = \\sin 15\u00b0 \\sin 15\u00b0 = \\sin^2 15\u00b0 = \\frac{1-\\cos 30\u00b0}{2} = \\frac{1-\\sqrt{3}/2}{2}$ is irrational.",
+    "answer": "$\\sin 15° \\cos 15°$",
+    "explanation": "$\\sin 15° \\cos 15° = \\frac{1}{2} \\sin 30° = \\frac{1}{2} \\times \\frac{1}{2} = \\frac{1}{4}$, which is rational. $\\sin 15° = \\frac{\\sqrt{6}-\\sqrt{2}}{4}$ is irrational. $\\cos 15° = \\frac{\\sqrt{6}+\\sqrt{2}}{4}$ is irrational. $\\sin 15° \\cos 75° = \\sin 15° \\sin 15° = \\sin^2 15° = \\frac{1-\\cos 30°}{2} = \\frac{1-\\sqrt{3}/2}{2}$ is irrational.",
     "image_url": null
   },
   {
     "id": 179,
     "subject": "maths",
     "difficulty": "medium",
-    "question": "The quadratic equation whose roots are $\\sin^2 18\u00b0$ and $\\cos^2 36\u00b0$ is",
+    "question": "The quadratic equation whose roots are $\\sin^2 18°$ and $\\cos^2 36°$ is",
     "options": [
       "$x^2 - \\frac{21}{6}x + \\frac{1}{2} = 0$",
       "$x^2 + \\frac{21}{6}x + \\frac{1}{2} = 0$",
@@ -2860,7 +2860,7 @@
     ],
     "correct": 0,
     "answer": "$x^2 - \\frac{21}{6}x + \\frac{1}{2} = 0$",
-    "explanation": "$\\sin 18\u00b0 = \\frac{\\sqrt{5}-1}{4}$, so $\\sin^2 18\u00b0 = \\frac{6-2\\sqrt{5}}{16} = \\frac{3-\\sqrt{5}}{8}$. $\\cos 36\u00b0 = \\frac{\\sqrt{5}+1}{4}$, so $\\cos^2 36\u00b0 = \\frac{6+2\\sqrt{5}}{16} = \\frac{3+\\sqrt{5}}{8}$. Sum = $\\frac{6}{8} = \\frac{3}{4}$. Product = $\\frac{9-5}{64} = \\frac{4}{64} = \\frac{1}{16}$. Equation: $x^2 - \\frac{3}{4}x + \\frac{1}{16} = 0$, i.e., $16x^2 - 12x + 1 = 0$. Following answer key.",
+    "explanation": "$\\sin 18° = \\frac{\\sqrt{5}-1}{4}$, so $\\sin^2 18° = \\frac{6-2\\sqrt{5}}{16} = \\frac{3-\\sqrt{5}}{8}$. $\\cos 36° = \\frac{\\sqrt{5}+1}{4}$, so $\\cos^2 36° = \\frac{6+2\\sqrt{5}}{16} = \\frac{3+\\sqrt{5}}{8}$. Sum = $\\frac{6}{8} = \\frac{3}{4}$. Product = $\\frac{9-5}{64} = \\frac{4}{64} = \\frac{1}{16}$. Equation: $x^2 - \\frac{3}{4}x + \\frac{1}{16} = 0$, i.e., $16x^2 - 12x + 1 = 0$. Following answer key.",
     "image_url": null
   },
   {
@@ -2876,7 +2876,7 @@
     ],
     "correct": 1,
     "answer": "1",
-    "explanation": "Since $A + C = 90\u00b0$, we have $C = 90\u00b0 - A$. So $\\cos^2 C = \\cos^2(90\u00b0-A) = \\sin^2 A$. Thus $\\cos^2 A + \\cos^2 C = \\cos^2 A + \\sin^2 A = 1$.",
+    "explanation": "Since $A + C = 90°$, we have $C = 90° - A$. So $\\cos^2 C = \\cos^2(90°-A) = \\sin^2 A$. Thus $\\cos^2 A + \\cos^2 C = \\cos^2 A + \\sin^2 A = 1$.",
     "image_url": null
   },
   {

@@ -48,6 +48,9 @@
 }
 </script>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Firebase (for comments) -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
 <script>MathJax={tex:{inlineMath:[['\\(','\\)'],['$','$']],displayMath:[['\\[','\\]'],['$$','$$']]},options:{skipHtmlTags:['script','noscript','style','textarea']}}</script>
 <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <style>
@@ -424,6 +427,42 @@ textarea.report-extra:focus{border-color:var(--accent)}
 .faq-a p{padding-top:11px}
 .faq-item.open .faq-a{display:block}
 
+/* ── COMMENTS ── */
+.comments-section{max-width:440px;width:100%;margin-top:28px}
+.comments-section-label{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);margin-bottom:16px;text-align:center}
+.comment-form{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px 16px;display:flex;flex-direction:column;gap:12px;margin-bottom:18px}
+.comment-form-title{font-size:13px;font-weight:700;color:var(--text);display:flex;align-items:center;gap:6px}
+.cf-row{display:flex;flex-direction:column;gap:4px}
+.cf-label{font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--text3)}
+.cf-input,.cf-textarea{background:var(--bg);border:1px solid var(--border);border-radius:7px;color:var(--text);font-family:'Outfit',sans-serif;font-size:13px;padding:9px 12px;outline:none;transition:border-color .2s,box-shadow .2s;width:100%}
+.cf-input:focus,.cf-textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(79,142,247,.12)}
+.cf-textarea{resize:vertical;min-height:80px;line-height:1.55}
+.cf-bottom{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.cf-char{font-size:10px;color:var(--text3);font-family:'JetBrains Mono',monospace;margin-left:auto}
+.cf-char.warn{color:var(--red)}
+.btn-cf-submit{background:var(--accent);color:#fff;border:none;border-radius:7px;font-family:'Outfit',sans-serif;font-size:13px;font-weight:700;padding:9px 20px;cursor:pointer;transition:opacity .2s,transform .15s}
+.btn-cf-submit:hover{opacity:.85;transform:translateY(-1px)}
+.btn-cf-submit:disabled{opacity:.35;cursor:not-allowed;transform:none}
+.cf-status{font-size:11px;padding:4px 10px;border-radius:5px;display:none}
+.cf-status.ok{background:rgba(34,199,122,.1);color:var(--green);border:1px solid rgba(34,199,122,.25);display:block}
+.cf-status.err{background:rgba(240,90,90,.1);color:var(--red);border:1px solid rgba(240,90,90,.25);display:block}
+
+.comments-list{display:flex;flex-direction:column;gap:8px}
+.comment-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 14px;animation:cmtIn .3s ease both}
+@keyframes cmtIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.cmt-top{display:flex;align-items:center;gap:9px;margin-bottom:8px}
+.cmt-avatar{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:#fff;flex-shrink:0}
+.cmt-meta{flex:1;min-width:0}
+.cmt-name{font-size:12px;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cmt-time{font-size:10px;color:var(--text3);font-family:'JetBrains Mono',monospace;margin-top:1px}
+.cmt-body{font-size:12.5px;color:var(--text2);line-height:1.65;word-break:break-word;white-space:pre-wrap}
+.cmt-list-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.cmt-list-title{font-size:12px;font-weight:600;color:var(--text2)}
+.cmt-count-pill{background:rgba(79,142,247,.12);color:var(--accent);font-size:10px;font-weight:700;padding:2px 9px;border-radius:99px;font-family:'JetBrains Mono',monospace}
+.cmt-loading,.cmt-empty,.cmt-err{text-align:center;padding:20px;color:var(--text3);font-size:12px}
+.cmt-spinner{width:20px;height:20px;border:2px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin .7s linear infinite;margin:0 auto 8px}
+@keyframes spin{to{transform:rotate(360deg)}}
+
 /* ── PRACTICE MODE ── */
 #practice-page{display:none;position:fixed;inset:0;background:var(--bg);z-index:300;flex-direction:column;overflow:hidden}
 #practice-page.show{display:flex}
@@ -600,6 +639,38 @@ textarea.report-extra:focus{border-color:var(--accent)}
   <div style="max-width:440px;width:100%;margin-top:10px">
     <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);margin-bottom:12px;text-align:center">Frequently Asked Questions</div>
     <div id="faq-list"></div>
+  </div>
+
+  <!-- COMMENT SECTION -->
+  <div class="comments-section" id="comments-section">
+    <div class="comments-section-label">💬 Comments &amp; Feedback</div>
+
+    <!-- Form -->
+    <div class="comment-form" id="comment-form">
+      <div class="comment-form-title">✍️ Share your feedback</div>
+      <div class="cf-row">
+        <div class="cf-label">Your Name</div>
+        <input class="cf-input" id="cf-name" type="text" placeholder="e.g. Arjun K." maxlength="50" autocomplete="off"/>
+      </div>
+      <div class="cf-row">
+        <div class="cf-label">Comment</div>
+        <textarea class="cf-textarea" id="cf-comment" placeholder="Suggestions, feedback, or anything about this site…" maxlength="500"></textarea>
+      </div>
+      <div class="cf-bottom">
+        <button class="btn-cf-submit" id="btn-cf-submit">Post Comment</button>
+        <span class="cf-status" id="cf-status"></span>
+        <span class="cf-char" id="cf-char">0/500</span>
+      </div>
+    </div>
+
+    <!-- List -->
+    <div class="cmt-list-hdr">
+      <span class="cmt-list-title">Recent Comments</span>
+      <span class="cmt-count-pill" id="cmt-count">0</span>
+    </div>
+    <div class="comments-list" id="comments-list">
+      <div class="cmt-loading"><div class="cmt-spinner"></div>Loading…</div>
+    </div>
   </div>
 
   <!-- SITE FOOTER -->
@@ -2054,6 +2125,109 @@ function restartPractice(){
 // ── END PRACTICE MODE ──
 
 buildFAQ();
+
+// ══ COMMENTS — Firebase ══════════════════════════════
+// 🔧 STEP 1: Replace with your Firebase config values
+const FIREBASE_CONFIG = {
+    apiKey: "AIzaSyA3TAwxM7svMxxyMlAcML6hph5a5lcXRcc",
+    authDomain: "cusat-pyq.firebaseapp.com",
+    projectId: "cusat-pyq",
+    storageBucket: "cusat-pyq.firebasestorage.app",
+    messagingSenderId: "131113197848",
+    appId: "1:131113197848:web:2e0240efe588fae7a6fe6d",
+    measurementId: "G-72CE2KLCD1"
+};
+// ══════════════════════════════════════════════════════
+
+const CMT_COLORS=['#4f8ef7','#22c77a','#f0b429','#f05a5a','#bc8cff','#39d3f2','#ff7b72','#ffa657'];
+function cmtColor(name){let h=0;for(let i=0;i<name.length;i++)h=name.charCodeAt(i)+((h<<5)-h);return CMT_COLORS[Math.abs(h)%CMT_COLORS.length];}
+function cmtInitials(name){return name.trim().split(' ').map(w=>w[0]).join('').toUpperCase().slice(0,2)||'?';}
+function cmtTimeAgo(ts){
+  if(!ts)return '';
+  const diff=Math.floor((Date.now()-ts.toMillis())/1000);
+  if(diff<60)return 'just now';
+  if(diff<3600)return Math.floor(diff/60)+'m ago';
+  if(diff<86400)return Math.floor(diff/3600)+'h ago';
+  if(diff<604800)return Math.floor(diff/86400)+'d ago';
+  return ts.toDate().toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'});
+}
+function cmtEsc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');}
+
+(function initComments(){
+  const configured = FIREBASE_CONFIG.apiKey !== 'YOUR_API_KEY';
+  const list = document.getElementById('comments-list');
+  const pill = document.getElementById('cmt-count');
+  const btn  = document.getElementById('btn-cf-submit');
+  const statusEl = document.getElementById('cf-status');
+
+  if(!configured){
+    list.innerHTML='<div class="cmt-empty">⚙️ Configure Firebase to enable comments.</div>';
+    btn.disabled=true; btn.title='Firebase not configured';
+    return;
+  }
+
+  firebase.initializeApp(FIREBASE_CONFIG);
+  const db = firebase.firestore();
+  const COL = 'comments';
+
+  // Real-time listener
+  db.collection(COL).orderBy('createdAt','desc').limit(50)
+    .onSnapshot(snap=>{
+      pill.textContent = snap.size;
+      if(snap.empty){list.innerHTML='<div class="cmt-empty">🌱 No comments yet — be the first!</div>';return;}
+      list.innerHTML='';
+      snap.forEach(doc=>{
+        const d=doc.data();
+        const color=cmtColor(d.name||'A');
+        const card=document.createElement('div');
+        card.className='comment-card';
+        card.innerHTML=`
+          <div class="cmt-top">
+            <div class="cmt-avatar" style="background:${color}">${cmtInitials(d.name||'?')}</div>
+            <div class="cmt-meta">
+              <div class="cmt-name">${cmtEsc(d.name||'Anonymous')}</div>
+              <div class="cmt-time">${cmtTimeAgo(d.createdAt)}</div>
+            </div>
+          </div>
+          <div class="cmt-body">${cmtEsc(d.comment||'')}</div>`;
+        list.appendChild(card);
+      });
+    }, ()=>{
+      list.innerHTML='<div class="cmt-err">⚠️ Could not load. Check Firestore rules.</div>';
+    });
+
+  // Char counter
+  document.getElementById('cf-comment').addEventListener('input',function(){
+    const len=this.value.length;
+    const el=document.getElementById('cf-char');
+    el.textContent=len+'/500';
+    el.className='cf-char'+(len>450?' warn':'');
+  });
+
+  // Submit
+  btn.addEventListener('click', async()=>{
+    const name=document.getElementById('cf-name').value.trim();
+    const comment=document.getElementById('cf-comment').value.trim();
+    statusEl.className='cf-status';
+    const showStatus=(type,msg)=>{statusEl.className='cf-status '+type;statusEl.textContent=msg;setTimeout(()=>{statusEl.className='cf-status';},4000);};
+    if(!name)return showStatus('err','⚠️ Please enter your name.');
+    if(!comment||comment.length<4)return showStatus('err','⚠️ Comment is too short.');
+    btn.disabled=true; btn.textContent='Posting…';
+    try{
+      await db.collection(COL).add({
+        name:name.slice(0,50),comment:comment.slice(0,500),
+        createdAt:firebase.firestore.FieldValue.serverTimestamp(),
+        page:window.location.pathname
+      });
+      document.getElementById('cf-name').value='';
+      document.getElementById('cf-comment').value='';
+      document.getElementById('cf-char').textContent='0/500';
+      showStatus('ok','✅ Comment posted!');
+    }catch(e){showStatus('err','❌ Failed. Check Firestore rules.');}
+    finally{btn.disabled=false;btn.textContent='Post Comment';}
+  });
+})();
+// ══ END COMMENTS ══════════════════════════════════════
 
 // Footer year
 const fy=document.getElementById('footer-year');

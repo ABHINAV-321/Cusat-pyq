@@ -1,4 +1,4 @@
-[
+[ 
   {
     "id": 1,
     "subject": "physics",
@@ -12,7 +12,7 @@
     ],
     "correct": 3,
     "answer": "\\(M^{0}L^{2}T^{-2} and M^{-1}L^{3}T^{-2}\\)",
-    "explanation": "Latent heat = Energy/mass = [M^{0}L^{2}T^{-2}]. Gravitational constant G from F = Gm1m2/r^{2} gives G = Fr^{2}/(m1m2) = [MLT^{-2}][L^{2}]/[M^{2}] = [M^{-1}L^{3}T^{-2}].",
+    "explanation": "Latent heat = Energy/mass = \\([M^{0}L^{2}T^{-2}]\\) Gravitational constant G from F = \\(Gm1m2/r^{2}\\) gives G = \\(Fr^{2}/(m1m2)\\) = \\([MLT^{-2}][L^{2}]/[M^{2}]\\) = \\([M^{-1}L^{3}T^{-2}]\\)",
     "image_url": null
   },
   {
@@ -28,7 +28,7 @@
     ],
     "correct": 3,
     "answer": "5%",
-    "explanation": "For simple pendulum, T = 2\\pi \\sqrt(l/g), so g = 4\\pi 2l/T^{2}. Percentage error in g = (\\Delta l/l)×100 + 2×(\\Delta T/T)×100. \\Delta l/l = 0.1/10 = 1%. For 100 oscillations, time = 100×0.5 = 50 sec. Resolution = 1 sec, so \\Delta T = 1/100 = 0.01 sec for one period. \\Delta T/T = 0.01/0.5 = 2%. Total error = 1% + 2×2% = 5%.",
+    "explanation": "For simple pendulum, T = \\(2\\pi \\sqrt{l/g}\\) so g = \\(4\\pi 2l/T^{2}\\) Percentage error in g = \\((\\Delta\\) l/l)×100 + \\(2×(\\Delta\\) T/T)×100. \\(\\Delta\\) l/l = 0.1/10 = 1%. For 100 oscillations, time = 100×0.5 = 50 sec. Resolution = 1 sec, so \\(\\Delta\\) T = 1/100 = 0.01 sec for one period. \\(\\Delta\\) T/T = 0.01/0.5 = 2%. Total error = 1% + 2×2% = 5%.",
     "image_url": null
   },
   {
@@ -44,14 +44,14 @@
     ],
     "correct": 0,
     "answer": "vₚ = 2vₑ",
-    "explanation": "Escape velocity v = \\sqrt(^{2}GM/R). Since density \\rho  is same, M = (4/3)\\pi R^{3}\\rho . So v = \\sqrt(^{2}G×(4/3)\\pi R^{3}\\rho /R) = \\sqrt(8\\pi G\\rho R^{2}/3) \\propto  R. If Rₚ = ^{2}Rₑ, then vₚ = 2vₑ.",
+    "explanation": "Escape velocity v = \\(\\sqrt{^{2}GM/R}\\) Since density \\(\\rho\\)  is same, M = \\((4/3)\\pi R^{3}\\rho\\) . So v = \\(\\sqrt{^{2}G×(4/3}\\pi R^{3}\\rho\\) /R) = \\(\\sqrt{8\\pi G\\rho R^{2}/3} \\propto\\)  R. If Rₚ = \\(^{2}Rₑ\\) then vₚ = 2vₑ.",
     "image_url": null
   },
   {
     "id": 4,
     "subject": "physics",
     "difficulty": "medium",
-    "question": "A particle is projected at 60^{\\circ} to the horizontal with a kinetic energy K. The kinetic energy at highest point is",
+    "question": "A particle is projected at \\(60^{\\circ}\\) to the horizontal with a kinetic energy K. The kinetic energy at highest point is",
     "options": [
       "Zero",
       "K/4",
@@ -60,7 +60,7 @@
     ],
     "correct": 1,
     "answer": "K/4",
-    "explanation": "At highest point, only horizontal velocity remains. Initial velocity v0, horizontal component = v0cos(60^{\\circ}) = v0/2. KE at top = \\frac{1}{2}m(v0/2)2 = \\frac{1}{2}mv02/4 = K/4.",
+    "explanation": "At highest point, only horizontal velocity remains. Initial velocity v0, horizontal component = \\(v0cos(60^{\\circ})\\) = v0/2. KE at top = \\(\\frac{1}{2}m(v0/2)2\\) = \\(\\frac{1}{2}mv02/4\\) = K/4.",
     "image_url": null
   },
   {
@@ -76,7 +76,7 @@
     ],
     "correct": 3,
     "answer": "\\(180^{\\circ}\\)",
-    "explanation": "Frictional force opposes the motion of the vehicle, so it acts opposite to the instantaneous velocity, making the angle 180^{\\circ}.",
+    "explanation": "Frictional force opposes the motion of the vehicle, so it acts opposite to the instantaneous velocity, making the angle \\(180^{\\circ}\\)",
     "image_url": null
   },
   {
@@ -92,7 +92,7 @@
     ],
     "correct": 0,
     "answer": "2 times",
-    "explanation": "KE = p^{2}/(2m). If KE becomes 4 times, then p^{2} becomes 4 times, so p becomes 2 times. Momentum increases by 2 times.",
+    "explanation": "KE = \\(p^{2}/(2m)\\) If KE becomes 4 times, then \\(p^{2}\\) becomes 4 times, so p becomes 2 times. Momentum increases by 2 times.",
     "image_url": null
   },
   {
@@ -108,14 +108,14 @@
     ],
     "correct": 3,
     "answer": "g/4",
-    "explanation": "At height h = R (6000 km = R), g^{\\prime} = g(R/(R+h))2 = g(R/^{2}R)2 = g/4. Weight = mg/4.",
+    "explanation": "At height h = R (6000 km = R), \\(g^{\\prime}\\) = g(R/(R+h))2 = \\(g(R/^{2}R)2\\) = g/4. Weight = mg/4.",
     "image_url": null
   },
   {
     "id": 8,
     "subject": "physics",
     "difficulty": "medium",
-    "question": "The acceleration due to gravity on the moon's surface is 1.7 m/s^{2} and acceleration due to gravity on earth is 9.8 m/s^{2}. If time period of a simple pendulum on the earth is 3.5 sec, its time period on the moon is",
+    "question": "The acceleration due to gravity on the moon's surface is 1.7 \\(m/s^{2}\\) and acceleration due to gravity on earth is 9.8 \\(m/s^{2}\\) If time period of a simple pendulum on the earth is 3.5 sec, its time period on the moon is",
     "options": [
       "7 sec",
       "8.4 sec",
@@ -124,7 +124,7 @@
     ],
     "correct": 1,
     "answer": "8.4 sec",
-    "explanation": "T \\propto  1/\\sqrtg. T_moon/T_earth = \\sqrt(g_earth/g_moon) = \\sqrt(9.8/1.7) = \\sqrt5.76 = 2.4. T_moon = 3.5 × 2.4 = 8.4 sec.",
+    "explanation": "T \\(\\propto  1/\\sqrtg\\) T_moon/T_earth = \\(\\sqrt{g_earth/g_moon}\\) = \\(\\sqrt{9.8/1.7}\\) = \\(\\sqrt5.76\\) = 2.4. T_moon = 3.5 × 2.4 = 8.4 sec.",
     "image_url": null
   },
   {
@@ -140,7 +140,7 @@
     ],
     "correct": 3,
     "answer": "\\(T^{4}\\)",
-    "explanation": "Stefan's law states that E = \\sigma T^{4}, where \\sigma  is Stefan-Boltzmann constant. The radiant energy is proportional to T^{4}.",
+    "explanation": "Stefan's law states that E = \\(\\sigma T^{4}\\) where \\(\\sigma\\)  is Stefan-Boltzmann constant. The radiant energy is proportional to \\(T^{4}\\)",
     "image_url": null
   },
   {
@@ -156,14 +156,14 @@
     ],
     "correct": 1,
     "answer": "B/4",
-    "explanation": "For a long straight wire, B = \\mu 0I/(2\\pi r), so B \\propto  1/r. B2/B1 = r1/r2 = 5/20 = 1/4. Therefore B2 = B/4.",
+    "explanation": "For a long straight wire, B = \\(\\mu 0I/(2\\pi\\) r), so B \\(\\propto\\)  1/r. B2/B1 = r1/r2 = 5/20 = 1/4. Therefore B2 = B/4.",
     "image_url": null
   },
   {
     "id": 11,
     "subject": "physics",
     "difficulty": "medium",
-    "question": "The ratio of specific heats Cₚ/Cᵥ = \\gamma  in terms of degrees of freedom (f) is given by",
+    "question": "The ratio of specific heats Cₚ/Cᵥ = \\(\\gamma\\)  in terms of degrees of freedom (f) is given by",
     "options": [
       "1 + 2/f",
       "1 + f/2",
@@ -172,7 +172,7 @@
     ],
     "correct": 0,
     "answer": "1 + 2/f",
-    "explanation": "\\gamma  = Cₚ/Cᵥ = 1 + 2/f, where f is the degree of freedom. For a monoatomic gas, f = 3, so \\gamma  = 5/3.",
+    "explanation": "\\(\\gamma\\)  = Cₚ/Cᵥ = 1 + 2/f, where f is the degree of freedom. For a monoatomic gas, f = 3, so \\(\\gamma\\)  = 5/3.",
     "image_url": null
   },
   {
@@ -188,7 +188,7 @@
     ],
     "correct": 0,
     "answer": "0.6 m",
-    "explanation": "\\lambda  = c/f = (3×10^{8} m/s)/(500×10^{6} Hz) = 3×10^{8}/(5×10^{8}) = 0.6 m.",
+    "explanation": "\\(\\lambda\\)  = c/f = \\((3×10^{8} m/s)/(500×10^{6}\\) Hz) = \\(3×10^{8}/(5×10^{8})\\) = 0.6 m.",
     "image_url": null
   },
   {
@@ -211,7 +211,7 @@
     "id": 14,
     "subject": "physics",
     "difficulty": "medium",
-    "question": "Two capacitors have a capacitance of 5 \\mu F when connected in parallel and 1.2 \\mu F when connected in series. Then the capacitances are",
+    "question": "Two capacitors have a capacitance of 5 \\(\\mu\\) F when connected in parallel and 1.2 \\(\\mu\\) F when connected in series. Then the capacitances are",
     "options": [
       "\\(2 \\mu F and 3 \\mu F\\)",
       "\\(3 \\mu F and 5 \\mu F\\)",
@@ -220,14 +220,14 @@
     ],
     "correct": 0,
     "answer": "\\(2 \\mu F and 3 \\mu F\\)",
-    "explanation": "C1 + C2 = 5 (parallel) and C1C2/(C1+C2) = 1.2 (series). So C1C2/5 = 1.2, thus C1C2 = 6. Solving: C1 = 2 \\mu F, C2 = 3 \\mu F (or vice versa).",
+    "explanation": "C1 + C2 = 5 (parallel) and C1C2/(C1+C2) = 1.2 (series). So C1C2/5 = 1.2, thus C1C2 = 6. Solving: C1 = 2 \\(\\mu\\) F, C2 = 3 \\(\\mu\\) F (or vice versa).",
     "image_url": null
   },
   {
     "id": 15,
     "subject": "physics",
     "difficulty": "easy",
-    "question": "In the capacitor of capacitance C, charge Q and energy W is stored. If charge is increased up to ^{2}Q, the energy stored will be",
+    "question": "In the capacitor of capacitance C, charge Q and energy W is stored. If charge is increased up to \\(^{2}Q\\) the energy stored will be",
     "options": [
       "W/4",
       "W/2",
@@ -236,14 +236,14 @@
     ],
     "correct": 3,
     "answer": "\\(^{4}W\\)",
-    "explanation": "Energy W = Q^{2}/(^{2}C). If charge becomes ^{2}Q, new energy = (^{2}Q)2/(^{2}C) = ^{4}Q^{2}/(^{2}C) = ^{4}W.",
+    "explanation": "Energy W = \\(Q^{2}/(^{2}C)\\) If charge becomes \\(^{2}Q\\) new energy = \\((^{2}Q)2/(^{2}C)\\) = \\(^{4}Q^{2}/(^{2}C)\\) = \\(^{4}W\\)",
     "image_url": null
   },
   {
     "id": 16,
     "subject": "physics",
     "difficulty": "medium",
-    "question": "At room temperature (27^{\\circ}C), the resistance of a heating element is 100 \\Omega . At temperature T^{\\circ}C, the resistance is found to be 117 \\Omega . Given that temperature coefficient of the resistor material is 1.7×10^{-4}/^{\\circ}C, then the temperature T is",
+    "question": "At room temperature \\((27^{\\circ}C)\\) the resistance of a heating element is 100 \\(\\Omega\\) . At temperature \\(T^{\\circ}C\\) the resistance is found to be 117 \\(\\Omega\\) . Given that temperature coefficient of the resistor material is \\(1.7×10^{-4}/^{\\circ}C\\) then the temperature T is",
     "options": [
       "\\(1027^{\\circ}C\\)",
       "\\(820^{\\circ}C\\)",
@@ -252,14 +252,14 @@
     ],
     "correct": 0,
     "answer": "\\(1027^{\\circ}C\\)",
-    "explanation": "R = R0(1 + \\alpha \\Delta T). 117 = 100(1 + 1.7×10^{-4} × (T-27)). 1.17 = 1 + 1.7×10^{-4}(T-27). 0.17 = 1.7×10^{-4}(T-27). T-27 = 1000, so T = 1027^{\\circ}C.",
+    "explanation": "R = R0(1 + \\(\\alpha \\Delta\\) T). 117 = 100(1 + \\(1.7×10^{-4}\\) × (T-27)). 1.17 = 1 + \\(1.7×10^{-4}(T-27)\\) 0.17 = \\(1.7×10^{-4}(T-27)\\) T-27 = 1000, so T = \\(1027^{\\circ}C\\)",
     "image_url": null
   },
   {
     "id": 17,
     "subject": "physics",
     "difficulty": "medium",
-    "question": "An ideal gas is filled in a closed rigid and thermally insulated container. A coil of 100 \\Omega  resistor carrying current 1 A for 5 minutes supplies heat to the gas. The change in internal energy of the gas is",
+    "question": "An ideal gas is filled in a closed rigid and thermally insulated container. A coil of 100 \\(\\Omega\\)  resistor carrying current 1 A for 5 minutes supplies heat to the gas. The change in internal energy of the gas is",
     "options": [
       "10 kJ",
       "20 kJ",
@@ -268,14 +268,14 @@
     ],
     "correct": 2,
     "answer": "30 kJ",
-    "explanation": "For rigid container, W = 0 (no volume change). From first law, \\Delta U = Q. Heat supplied = I^{2}Rt = (1)2 × 100 × (5 × 60) = 100 × 300 = 30000 J = 30 kJ.",
+    "explanation": "For rigid container, W = 0 (no volume change). From first law, \\(\\Delta\\) U = Q. Heat supplied = \\(I^{2}Rt\\) = (1)2 × 100 × (5 × 60) = 100 × 300 = 30000 J = 30 kJ.",
     "image_url": null
   },
   {
     "id": 18,
     "subject": "physics",
     "difficulty": "medium",
-    "question": "Si and Cu are cooled from ^{300}K to a temperature of ^{60}K. Then resistivity",
+    "question": "Si and Cu are cooled from \\(^{300}K\\) to a temperature of \\(^{60}K\\) Then resistivity",
     "options": [
       "for Si increases and for Cu decreases",
       "for Cu increases and for Si decreases",
@@ -300,7 +300,7 @@
     ],
     "correct": 2,
     "answer": "Biot-Savart's law",
-    "explanation": "Biot-Savart's law gives the magnetic field due to a current element. dB = (\\mu 0/4\\pi ) × (Idl×r̂)/r^{2}.",
+    "explanation": "Biot-Savart's law gives the magnetic field due to a current element. dB = \\((\\mu 0/4\\pi\\) ) × \\((Idl×r̂)/r^{2}\\)",
     "image_url": null
   },
   {
@@ -323,7 +323,7 @@
     "id": 21,
     "subject": "physics",
     "difficulty": "medium",
-    "question": "In a common base mode of a transistor, the collector current is 5.488 mA for an emitter current of 5.6 mA. The value of the base current amplification factor (\\beta ) will be",
+    "question": "In a common base mode of a transistor, the collector current is 5.488 mA for an emitter current of 5.6 mA. The value of the base current amplification factor \\((\\beta\\) ) will be",
     "options": [
       "49",
       "50",
@@ -332,7 +332,7 @@
     ],
     "correct": 0,
     "answer": "49",
-    "explanation": "I_E = I_C + I_B, so I_B = 5.6 - 5.488 = 0.112 mA. \\alpha  = I_C/I_E = 5.488/5.6 = 0.98. \\beta  = \\alpha /(1-\\alpha ) = 0.98/0.02 = 49.",
+    "explanation": "I_E = I_C + I_B, so I_B = 5.6 - 5.488 = 0.112 mA. \\(\\alpha\\)  = I_C/I_E = 5.488/5.6 = 0.98. \\(\\beta\\)  = \\(\\alpha /(1-\\alpha\\) ) = 0.98/0.02 = 49.",
     "image_url": null
   },
   {
@@ -348,7 +348,7 @@
     ],
     "correct": 0,
     "answer": "Focal length is increased",
-    "explanation": "Red light has longer wavelength and lower refractive index in glass than violet light. Since 1/f = (\\mu -1)(1/R1 - 1/R2), lower \\mu  means larger f. Focal length increases for red light.",
+    "explanation": "Red light has longer wavelength and lower refractive index in glass than violet light. Since 1/f = \\((\\mu\\) -1)(1/R1 - 1/R2), lower \\(\\mu\\)  means larger f. Focal length increases for red light.",
     "image_url": null
   },
   {
@@ -364,7 +364,7 @@
     ],
     "correct": 0,
     "answer": "\\(\\sqrt(2eV/m)\\)",
-    "explanation": "eV = \\frac{1}{2}mv^{2}, so v^{2} = 2eV/m, thus v = \\sqrt(2eV/m).",
+    "explanation": "eV = \\(\\frac{1}{2}mv^{2}\\) so \\(v^{2}\\) = 2eV/m, thus v = \\(\\sqrt{2eV/m}\\)",
     "image_url": null
   },
   {
@@ -403,7 +403,7 @@
     "id": 26,
     "subject": "physics",
     "difficulty": "medium",
-    "question": "In an ac circuit, the voltage applied is E = E0sin(\\omega t). The resulting current in the circuit is I = I0sin(\\omega t - \\pi /2). The power consumption in the circuit is given by",
+    "question": "In an ac circuit, the voltage applied is E = \\(E0sin(\\omega\\) t). The resulting current in the circuit is I = \\(I0sin(\\omega\\) t - \\(\\pi\\) /2). The power consumption in the circuit is given by",
     "options": [
       "\\(P = \\sqrt2 E0I0\\)",
       "P = E0I0/2",
@@ -412,7 +412,7 @@
     ],
     "correct": 3,
     "answer": "P = 0",
-    "explanation": "Current lags voltage by \\pi /2, indicating a purely inductive or capacitive circuit. The power factor cos(\\phi ) = cos(\\pi /2) = 0. Therefore, average power P = E_rms × I_rms × cos(\\phi ) = 0.",
+    "explanation": "Current lags voltage by \\(\\pi\\) /2, indicating a purely inductive or capacitive circuit. The power factor \\(cos(\\phi\\) ) = \\(cos(\\pi\\) /2) = 0. Therefore, average power P = E_rms × I_rms × \\(cos(\\phi\\) ) = 0.",
     "image_url": null
   },
   {
@@ -428,7 +428,7 @@
     ],
     "correct": 1,
     "answer": "\\(^{25}V\\)",
-    "explanation": "Potential energy of spring = \\frac{1}{2}kx^{2}. If x becomes 5 times (10/2 = 5), PE becomes 5^{2} = 25 times. So PE = ^{25}V.",
+    "explanation": "Potential energy of spring = \\(\\frac{1}{2}kx^{2}\\) If x becomes 5 times (10/2 = 5), PE becomes \\(5^{2}\\) = 25 times. So PE = \\(^{25}V\\)",
     "image_url": null
   },
   {
@@ -444,7 +444,7 @@
     ],
     "correct": 0,
     "answer": "\\(mv^{2}/r\\)",
-    "explanation": "Centripetal force F = mv^{2}/r = m\\omega 2r. This is the standard formula for force directed towards the center of circular path.",
+    "explanation": "Centripetal force F = \\(mv^{2}/r\\) = \\(m\\omega\\) 2r. This is the standard formula for force directed towards the center of circular path.",
     "image_url": null
   },
   {
@@ -460,7 +460,7 @@
     ],
     "correct": 1,
     "answer": "1.2 kW",
-    "explanation": "Power = work/time = (mgh + \\frac{1}{2}mv^{2})/t. For vertical upward velocity, h = v^{2}/(2g) = 9/20 = 0.45 m. Or simply using rate of kinetic energy: P = \\frac{1}{2} × (dm/dt) × v^{2} = \\frac{1}{2} × 40 × 9 = 180 W. But more accurately for pumping: P = (dm/dt) × g × h_avg. Using P = 40 × 9.8 × (3^{2}/(2×9.8)) = 40 × 4.5 = 180 W. The answer 1.2 kW seems to use a different approach. Actually P = mgh/t where h = v^{2}/2g, so P = mg(v^{2}/2g)/t = mv^{2}/2t = 40×9/2 = 180 W. There may be an error in the question or answer key.",
+    "explanation": "Power = work/time = (mgh + \\(\\frac{1}{2}mv^{2})/t\\) For vertical upward velocity, h = \\(v^{2}/(2g)\\) = 9/20 = 0.45 m. Or simply using rate of kinetic energy: P = \\(\\frac{1}{2}\\) × (dm/dt) × \\(v^{2}\\) = \\(\\frac{1}{2}\\) × 40 × 9 = 180 W. But more accurately for pumping: P = (dm/dt) × g × h_avg. Using P = 40 × 9.8 × \\((3^{2}/(2×9.8))\\) = 40 × 4.5 = 180 W. The answer 1.2 kW seems to use a different approach. Actually P = mgh/t where h = \\(v^{2}/2g\\) so P = \\(mg(v^{2}/2g)/t\\) = \\(mv^{2}/2t\\) = 40×9/2 = 180 W. There may be an error in the question or answer key.",
     "image_url": null
   },
   {
@@ -492,7 +492,7 @@
     ],
     "correct": 1,
     "answer": "b/a",
-    "explanation": "For a sphere, V = kQ/r = k(4\\pi r^{2}\\sigma )/r = 4\\pi k\\sigma r. Since V is same, \\sigma 1a = \\sigma 2b, so \\sigma _A/\\sigma _B = b/a.",
+    "explanation": "For a sphere, V = kQ/r = \\(k(4\\pi r^{2}\\sigma\\) )/r = \\(4\\pi k\\sigma\\) r. Since V is same, \\(\\sigma\\) 1a = \\(\\sigma\\) 2b, so \\(\\sigma _A/\\sigma\\) _B = b/a.",
     "image_url": null
   },
   {
@@ -515,7 +515,7 @@
     "id": 33,
     "subject": "physics",
     "difficulty": "medium",
-    "question": "If a magnetic material is having magnetic susceptibility (\\chi ) = -1, then the relative magnetic permeability (\\mu ᵣ) and type of magnetic material are",
+    "question": "If a magnetic material is having magnetic susceptibility \\((\\chi\\) ) = -1, then the relative magnetic permeability \\((\\mu\\) ᵣ) and type of magnetic material are",
     "options": [
       "0, diamagnetic",
       "2, ferromagnetic",
@@ -524,14 +524,14 @@
     ],
     "correct": 0,
     "answer": "0, diamagnetic",
-    "explanation": "\\mu ᵣ = 1 + \\chi  = 1 + (-1) = 0. \\chi  = -1 indicates perfect diamagnetism (superconductor).",
+    "explanation": "\\(\\mu\\) ᵣ = 1 + \\(\\chi\\)  = 1 + (-1) = 0. \\(\\chi\\)  = -1 indicates perfect diamagnetism (superconductor).",
     "image_url": null
   },
   {
     "id": 34,
     "subject": "physics",
     "difficulty": "medium",
-    "question": "In an LCR circuit, the capacitance is changed from C to ^{2}C. For the resonant frequency to remain unchanged, the inductance should be changed from L to",
+    "question": "In an LCR circuit, the capacitance is changed from C to \\(^{2}C\\) For the resonant frequency to remain unchanged, the inductance should be changed from L to",
     "options": [
       "\\(^{4}L\\)",
       "\\(^{2}L\\)",
@@ -540,7 +540,7 @@
     ],
     "correct": 2,
     "answer": "L/2",
-    "explanation": "Resonant frequency \\omega 0 = 1/\\sqrt(LC). For \\omega 0 to remain same when C becomes ^{2}C, L must become L/2, so that LC remains constant.",
+    "explanation": "Resonant frequency \\(\\omega\\) 0 = \\(1/\\sqrt{LC}\\) For \\(\\omega\\) 0 to remain same when C becomes \\(^{2}C\\) L must become L/2, so that LC remains constant.",
     "image_url": null
   },
   {
@@ -579,7 +579,7 @@
     "id": 37,
     "subject": "physics",
     "difficulty": "medium",
-    "question": "In the circuit given below, the value of the current is [Circuit: +^{4}V \\rightarrow  p-n diode \\rightarrow  300\\Omega  \\rightarrow  +^{1}V] [Image: Circuit diagram showing: +^{4}V source \\rightarrow  p-n junction diode (forward biased) \\rightarrow  300\\Omega  resistor \\rightarrow  +^{1}V terminal]",
+    "question": "In the circuit given below, the value of the current is [Circuit: \\(+^{4}V \\rightarrow\\)  p-n diode \\(\\rightarrow  300\\Omega  \\rightarrow  +^{1}V]\\) [Image: Circuit diagram showing: \\(+^{4}V\\) source \\(\\rightarrow\\)  p-n junction diode (forward biased) \\(\\rightarrow  300\\Omega\\)  resistor \\(\\rightarrow  +^{1}V\\) terminal]",
     "options": [
       "Zero",
       "\\(10^{-2} A\\)",
@@ -588,14 +588,14 @@
     ],
     "correct": 1,
     "answer": "\\(10^{-2} A\\)",
-    "explanation": "The diode is forward biased (^{4}V > ^{1}V). Net voltage across resistor = 4 - 1 = ^{3}V (assuming ideal diode). Current I = V/R = 3/300 = 0.01 A = 10^{-2} A.",
+    "explanation": "The diode is forward biased \\((^{4}V\\) > \\(^{1}V)\\) Net voltage across resistor = 4 - 1 = \\(^{3}V\\) (assuming ideal diode). Current I = V/R = 3/300 = 0.01 A = \\(10^{-2}\\) A.",
     "image_url": "PLACEHOLDER_UPLOAD_IMAGE"
   },
   {
     "id": 38,
     "subject": "physics",
     "difficulty": "medium",
-    "question": "A strip of Copper and another of Germanium are cooled to a temperature of ^{80}K. The resistance of",
+    "question": "A strip of Copper and another of Germanium are cooled to a temperature of \\(^{80}K\\) The resistance of",
     "options": [
       "each of these decreases",
       "each of these increases",
@@ -620,7 +620,7 @@
     ],
     "correct": 1,
     "answer": "5 kg",
-    "explanation": "Using conservation of momentum. The two parts move at right angles. Momentum of first = 12 kg\\cdot m/s, second = 16 kg\\cdot m/s. Resultant of these two = \\sqrt(12^{2} + 16^{2}) = \\sqrt(144 + 256) = \\sqrt400 = 20 kg\\cdot m/s. For third part: m3 × 4 = 20, so m3 = 5 kg.",
+    "explanation": "Using conservation of momentum. The two parts move at right angles. Momentum of first = 12 \\(kg\\cdot\\) m/s, second = 16 \\(kg\\cdot\\) m/s. Resultant of these two = \\(\\sqrt{12^{2}\\) + \\(16^{2}}\\) = \\(\\sqrt{144\\) + 256} = \\(\\sqrt400\\) = 20 \\(kg\\cdot\\) m/s. For third part: m3 × 4 = 20, so m3 = 5 kg.",
     "image_url": null
   },
   {
@@ -636,7 +636,7 @@
     ],
     "correct": 3,
     "answer": "Coefficient of sliding friction has dimensions of length",
-    "explanation": "Coefficient of friction (\\mu ) is dimensionless. It is the ratio of frictional force to normal reaction, both having same dimensions [MLT^{-2}].",
+    "explanation": "Coefficient of friction \\((\\mu\\) ) is dimensionless. It is the ratio of frictional force to normal reaction, both having same dimensions \\([MLT^{-2}]\\)",
     "image_url": null
   },
   {
@@ -652,7 +652,7 @@
     ],
     "correct": 0,
     "answer": "5 m/s",
-    "explanation": "Using energy conservation: mgh_max = mgh_min + \\frac{1}{2}mv^{2}. v^{2} = 2g(h_max - h_min) = 2×10×(2-0.75) = 2×10×1.25 = 25. v = 5 m/s.",
+    "explanation": "Using energy conservation: mgh_max = mgh_min + \\(\\frac{1}{2}mv^{2}. v^{2}\\) = 2g(h_max - h_min) = 2×10×(2-0.75) = 2×10×1.25 = 25. v = 5 m/s.",
     "image_url": null
   },
   {
@@ -668,7 +668,7 @@
     ],
     "correct": 1,
     "answer": "Wien's displacement law",
-    "explanation": "Wien's displacement law states that \\lambda _max × T = constant. As temperature increases, the wavelength of maximum emission shifts from red (longer \\lambda ) to yellow to white (shorter \\lambda ).",
+    "explanation": "Wien's displacement law states that \\(\\lambda\\) _max × T = constant. As temperature increases, the wavelength of maximum emission shifts from red (longer \\(\\lambda\\) ) to yellow to white (shorter \\(\\lambda\\) ).",
     "image_url": null
   },
   {
@@ -700,7 +700,7 @@
     ],
     "correct": 2,
     "answer": "26.8%",
-    "explanation": "Carnot efficiency η = 1 - T_cold/T_hot = 1 - 273/373 = 1 - 0.732 = 0.268 = 26.8%. Freezing point = ^{273}K, boiling point = ^{373}K.",
+    "explanation": "Carnot efficiency η = 1 - T_cold/T_hot = 1 - 273/373 = 1 - 0.732 = 0.268 = 26.8%. Freezing point = \\(^{273}K\\) boiling point = \\(^{373}K\\)",
     "image_url": null
   },
   {
@@ -723,7 +723,7 @@
     "id": 46,
     "subject": "physics",
     "difficulty": "medium",
-    "question": "A magnetic field of 2×10^{-2} T acts at right angles to a coil of area 100 cm^{2}, with 50 turns. The average emf induced in the coil is 0.1 V when it is removed from the field in t second. The value of t is",
+    "question": "A magnetic field of \\(2×10^{-2}\\) T acts at right angles to a coil of area 100 \\(cm^{2}\\) with 50 turns. The average emf induced in the coil is 0.1 V when it is removed from the field in t second. The value of t is",
     "options": [
       "10 s",
       "0.1 s",
@@ -732,7 +732,7 @@
     ],
     "correct": 1,
     "answer": "0.1 s",
-    "explanation": "emf = N × d\\Phi /dt = N × BA/t. 0.1 = 50 × (2×10^{-2}) × (100×10^{-4})/t. 0.1 = 50 × 2×10^{-2} × 10^{-2}/t = 10^{-2}/t. So t = 10^{-2}/0.1 = 0.1 s.",
+    "explanation": "emf = N × \\(d\\Phi\\) /dt = N × BA/t. 0.1 = 50 × \\((2×10^{-2})\\) × \\((100×10^{-4})/t\\) 0.1 = 50 × \\(2×10^{-2}\\) × \\(10^{-2}/t\\) = \\(10^{-2}/t\\) So t = \\(10^{-2}/0.1\\) = 0.1 s.",
     "image_url": null
   },
   {
@@ -764,7 +764,7 @@
     ],
     "correct": 1,
     "answer": "\\(45^{\\circ} < i_b < 90^{\\circ}\\)",
-    "explanation": "Brewster's angle i_b = tan^{-1}(n2/n1). For most common interfaces (air to glass, water, etc.), n2/n1 > 1, so i_b > 45^{\\circ}. Also i_b < 90^{\\circ} since tan(90^{\\circ}) = \\infty .",
+    "explanation": "Brewster's angle i_b = \\(tan^{-1}(n2/n1)\\) For most common interfaces (air to glass, water, etc.), n2/n1 > 1, so i_b > \\(45^{\\circ}\\) Also i_b < \\(90^{\\circ}\\) since \\(tan(90^{\\circ})\\) = \\(\\infty\\) .",
     "image_url": null
   },
   {
@@ -780,14 +780,14 @@
     ],
     "correct": 3,
     "answer": "isotope of parent",
-    "explanation": "Each \\alpha  emission decreases mass number by 4 and atomic number by 2. Each \\beta  emission increases atomic number by 1 (mass number unchanged). For 1\\alpha  + 2\\beta : mass number change = -4, atomic number change = -2 + 2 = 0. Same atomic number means isotope.",
+    "explanation": "Each \\(\\alpha\\)  emission decreases mass number by 4 and atomic number by 2. Each \\(\\beta\\)  emission increases atomic number by 1 (mass number unchanged). For \\(1\\alpha\\)  + \\(2\\beta\\) : mass number change = -4, atomic number change = -2 + 2 = 0. Same atomic number means isotope.",
     "image_url": null
   },
   {
     "id": 50,
     "subject": "physics",
     "difficulty": "medium",
-    "question": "In a fission reaction, 236U \\rightarrow  117X + 117Y + n + n, the binding energy per nucleon of X and Y is 8.5 MeV whereas of 236U is 7.6 MeV. The total energy liberated will be about",
+    "question": "In a fission reaction, 236U \\(\\rightarrow\\)  117X + 117Y + n + n, the binding energy per nucleon of X and Y is 8.5 MeV whereas of 236U is 7.6 MeV. The total energy liberated will be about",
     "options": [
       "2000 MeV",
       "200 MeV",
@@ -796,7 +796,7 @@
     ],
     "correct": 1,
     "answer": "200 MeV",
-    "explanation": "Energy released = (Binding energy of products) - (Binding energy of reactant) = 2×117×8.5 - 236×7.6 = 1989 - 1793.6 \\approx  195.4 MeV \\approx  200 MeV.",
+    "explanation": "Energy released = (Binding energy of products) - (Binding energy of reactant) = 2×117×8.5 - 236×7.6 = 1989 - 1793.6 \\(\\approx\\)  195.4 MeV \\(\\approx\\)  200 MeV.",
     "image_url": null
   },
   {
@@ -844,14 +844,14 @@
     ],
     "correct": 1,
     "answer": "Radius of the capillary tube",
-    "explanation": "Capillary rise h = ^{2}Tcos\\theta /(\\rho gr). It depends on surface tension T, contact angle \\theta , density \\rho , g, and radius r of the tube.",
+    "explanation": "Capillary rise h = \\(^{2}Tcos\\theta /(\\rho\\) gr). It depends on surface tension T, contact angle \\(\\theta\\) , density \\(\\rho\\) , g, and radius r of the tube.",
     "image_url": null
   },
   {
     "id": 54,
     "subject": "physics",
     "difficulty": "easy",
-    "question": "A gas expands from an initial volume of 2 m^{3} to a final volume of 5 m^{3} at a constant pressure of 100 Pa. Calculate the work done by the gas.",
+    "question": "A gas expands from an initial volume of 2 \\(m^{3}\\) to a final volume of 5 \\(m^{3}\\) at a constant pressure of 100 Pa. Calculate the work done by the gas.",
     "options": [
       "100 J",
       "200 J",
@@ -860,14 +860,14 @@
     ],
     "correct": 2,
     "answer": "300 J",
-    "explanation": "Work done at constant pressure W = P\\Delta V = 100 × (5-2) = 100 × 3 = 300 J.",
+    "explanation": "Work done at constant pressure W = \\(P\\Delta\\) V = 100 × (5-2) = 100 × 3 = 300 J.",
     "image_url": null
   },
   {
     "id": 55,
     "subject": "physics",
     "difficulty": "hard",
-    "question": "An electromagnetic wave is represented by the electric field E = E0sin(\\omega t + 6y - 8z). Taking unit vectors in x, y and z directions to be i, j, k, the direction of propagation is",
+    "question": "An electromagnetic wave is represented by the electric field E = \\(E0sin(\\omega\\) t + 6y - 8z). Taking unit vectors in x, y and z directions to be i, j, k, the direction of propagation is",
     "options": [
       "s = (-4j + 3k)/5",
       "s = (3i - 4j)/5",
@@ -876,7 +876,7 @@
     ],
     "correct": 2,
     "answer": "s = (-3j + 3k)/5",
-    "explanation": "The wave equation is E = E0sin(\\omega t - k\\cdot r). Here k\\cdot r = -6y + 8z, so k vector is proportional to (0, -6, 8) or normalized: (0, -3, 4)/5. But looking at the options, the direction of propagation is along (0, -3, 3) normalized. The wave vector k = (0, 6, -8) from the argument (\\omega t + 6y - 8z), so propagation direction is -k/|k| = (0, -6, 8)/10 = (0, -3, 4)/5. However, option C matches the closest pattern.",
+    "explanation": "The wave equation is E = \\(E0sin(\\omega\\) t - \\(k\\cdot\\) r). Here \\(k\\cdot\\) r = -6y + 8z, so k vector is proportional to (0, -6, 8) or normalized: (0, -3, 4)/5. But looking at the options, the direction of propagation is along (0, -3, 3) normalized. The wave vector k = (0, 6, -8) from the argument \\((\\omega\\) t + 6y - 8z), so propagation direction is -k/|k| = (0, -6, 8)/10 = (0, -3, 4)/5. However, option C matches the closest pattern.",
     "image_url": null
   },
   {
@@ -899,7 +899,7 @@
     "id": 57,
     "subject": "physics",
     "difficulty": "hard",
-    "question": "In an electron microscope, the resolution that can be achieved is of the order of the wavelength of electrons used. To resolve a width of 7.5×10^{-12} m, the minimum electron energy required is close to",
+    "question": "In an electron microscope, the resolution that can be achieved is of the order of the wavelength of electrons used. To resolve a width of \\(7.5×10^{-12}\\) m, the minimum electron energy required is close to",
     "options": [
       "100 KeV",
       "500 KeV",
@@ -908,14 +908,14 @@
     ],
     "correct": 2,
     "answer": "25 KeV",
-    "explanation": "\\lambda  = h/p = h/\\sqrt(2mE). E = h^{2}/(2m\\lambda 2) = (6.63×10^{-34})2/(2×9.11×10^{-31}×(7.5×10^{-12})2) \\approx  4.4×10^{-15} J \\approx  27.5 keV \\approx  25 keV.",
+    "explanation": "\\(\\lambda\\)  = h/p = \\(h/\\sqrt{2mE}\\) E = \\(h^{2}/(2m\\lambda\\) 2) = \\((6.63×10^{-34})2/(2×9.11×10^{-31}×(7.5×10^{-12})2) \\approx  4.4×10^{-15}\\) J \\(\\approx\\)  27.5 keV \\(\\approx\\)  25 keV.",
     "image_url": null
   },
   {
     "id": 58,
     "subject": "physics",
     "difficulty": "hard",
-    "question": "An excited He+ ion emits two photons in succession, with wavelengths 108.5 nm and 30.4 nm, in making a transition to ground state. The quantum number n, corresponding to its initial excited state is (for photon of wavelength \\lambda , energy E = 124 eV/\\lambda  in nm)",
+    "question": "An excited He+ ion emits two photons in succession, with wavelengths 108.5 nm and 30.4 nm, in making a transition to ground state. The quantum number n, corresponding to its initial excited state is (for photon of wavelength \\(\\lambda\\) , energy E = 124 \\(eV/\\lambda\\)  in nm)",
     "options": [
       "n = 5",
       "n = 4",
@@ -924,7 +924,7 @@
     ],
     "correct": 0,
     "answer": "n = 5",
-    "explanation": "For He+ (Z=2), energy levels E_n = -54.4/n^{2} eV. Total energy emitted = 124/108.5 + 124/30.4 \\approx  1.14 + 4.08 \\approx  5.22 eV. This equals E_n - E_1 = -54.4/n^{2} + 54.4 = 54.4(1 - 1/n^{2}). Solving: 54.4(1 - 1/n^{2}) \\approx  5.22 gives n \\approx  5.",
+    "explanation": "For He+ (Z=2), energy levels E_n = \\(-54.4/n^{2}\\) eV. Total energy emitted = 124/108.5 + 124/30.4 \\(\\approx\\)  1.14 + 4.08 \\(\\approx\\)  5.22 eV. This equals E_n - E_1 = \\(-54.4/n^{2}\\) + 54.4 = 54.4(1 - \\(1/n^{2})\\) Solving: 54.4(1 - \\(1/n^{2}) \\approx\\)  5.22 gives n \\(\\approx\\)  5.",
     "image_url": null
   },
   {
@@ -940,7 +940,7 @@
     ],
     "correct": 2,
     "answer": "3.1 eV",
-    "explanation": "E_g = hc/\\lambda  = (6.63×10^{-34} × 3×10^{8})/(400×10^{-9}) = 4.97×10^{-19} J = 3.1 eV.",
+    "explanation": "E_g = \\(hc/\\lambda\\)  = \\((6.63×10^{-34}\\) × \\(3×10^{8})/(400×10^{-9})\\) = \\(4.97×10^{-19}\\) J = 3.1 eV.",
     "image_url": null
   },
   {
@@ -963,7 +963,7 @@
     "id": 61,
     "subject": "physics",
     "difficulty": "medium",
-    "question": "A wire of 1 \\Omega  has a length of 1 m. It is stretched till its length increases by 25%. The percentage change in resistance to the nearest integer is",
+    "question": "A wire of 1 \\(\\Omega\\)  has a length of 1 m. It is stretched till its length increases by 25%. The percentage change in resistance to the nearest integer is",
     "options": [
       "56%",
       "25%",
@@ -972,7 +972,7 @@
     ],
     "correct": 0,
     "answer": "56%",
-    "explanation": "When stretched, volume remains constant. A1L1 = A2L2. L2 = 1.^{25}L1, so A2 = A1/1.25 = 0.^{8}A1. R = \\rho L/A, so R2/R1 = (L2/L1) × (A1/A2) = 1.25 × 1.25 = 1.5625. Percentage increase = 56.25% \\approx  56%.",
+    "explanation": "When stretched, volume remains constant. A1L1 = A2L2. L2 = \\(1.^{25}L1\\) so A2 = A1/1.25 = \\(0.^{8}A1\\) R = \\(\\rho\\) L/A, so R2/R1 = (L2/L1) × (A1/A2) = 1.25 × 1.25 = 1.5625. Percentage increase = 56.25% \\(\\approx\\)  56%.",
     "image_url": null
   },
   {
@@ -988,14 +988,14 @@
     ],
     "correct": 3,
     "answer": "0%",
-    "explanation": "Current sensitivity = NBA/k. Voltage sensitivity = NBA/(kR). When N increases by 50%, current sensitivity increases by 50%. But R also increases (R \\propto  N), so voltage sensitivity = NBA/(k × N × constant) = BA/(k × constant), which is independent of N. So voltage sensitivity remains unchanged (0% change).",
+    "explanation": "Current sensitivity = NBA/k. Voltage sensitivity = NBA/(kR). When N increases by 50%, current sensitivity increases by 50%. But R also increases (R \\(\\propto\\)  N), so voltage sensitivity = NBA/(k × N × constant) = BA/(k × constant), which is independent of N. So voltage sensitivity remains unchanged (0% change).",
     "image_url": null
   },
   {
     "id": 63,
     "subject": "physics",
     "difficulty": "medium",
-    "question": "A proton and an \\alpha  particle (with their masses in the ratio of 1:4 and charges in the ratio of 1:2) are accelerated from rest through a potential difference V. If a uniform magnetic field (B) is set up perpendicular to their velocities, the ratio of their radii r_p : r_\\alpha  of the circular paths described by them will be",
+    "question": "A proton and an \\(\\alpha\\)  particle (with their masses in the ratio of 1:4 and charges in the ratio of 1:2) are accelerated from rest through a potential difference V. If a uniform magnetic field (B) is set up perpendicular to their velocities, the ratio of their radii r_p : \\(r_\\alpha\\)  of the circular paths described by them will be",
     "options": [
       "1:1",
       "1:2",
@@ -1004,14 +1004,14 @@
     ],
     "correct": 0,
     "answer": "1:1",
-    "explanation": "After acceleration through V: \\frac{1}{2}mv^{2} = qV, so v = \\sqrt(2qV/m). In magnetic field: r = mv/(qB) = m\\sqrt(2qV/m)/(qB) = \\sqrt(2mV/q)/B. r \\propto  \\sqrt(m/q). For proton: \\sqrt(1/1) = 1. For \\alpha : \\sqrt(4/2) = \\sqrt2. Wait - let me recheck: r_p/r_\\alpha  = \\sqrt(m_p/q_p) / \\sqrt(m_\\alpha /q_\\alpha ) = \\sqrt(1/1) / \\sqrt(4/2) = 1/\\sqrt2. But the answer key says 1:1. Let me verify: r = \\sqrt(2mV/q)/B. r_p = \\sqrt(2mV/e)/B, r_\\alpha  = \\sqrt(2×4mV/2e)/B = \\sqrt(4mV/e)/B = 2\\sqrt(mV/e)/B. Ratio = 1:2. Hmm, but answer key says A (1:1).",
+    "explanation": "After acceleration through V: \\(\\frac{1}{2}mv^{2}\\) = qV, so v = \\(\\sqrt{2qV/m}\\) In magnetic field: r = mv/(qB) = \\(m\\sqrt{2qV/m}/(qB)\\) = \\(\\sqrt{2mV/q}/B\\) r \\(\\propto  \\sqrt{m/q}\\) For proton: \\(\\sqrt{1/1}\\) = 1. For \\(\\alpha\\) : \\(\\sqrt{4/2}\\) = \\(\\sqrt2\\) Wait - let me recheck: \\(r_p/r_\\alpha\\)  = \\(\\sqrt{m_p/q_p}\\) / \\(\\sqrt{m_\\alpha /q_\\alpha\\) } = \\(\\sqrt{1/1}\\) / \\(\\sqrt{4/2}\\) = \\(1/\\sqrt2\\) But the answer key says 1:1. Let me verify: r = \\(\\sqrt{2mV/q}/B\\) r_p = \\(\\sqrt{2mV/e}/B, r_\\alpha\\)  = \\(\\sqrt{2×4mV/2e}/B\\) = \\(\\sqrt{4mV/e}/B\\) = \\(2\\sqrt{mV/e}/B\\) Ratio = 1:2. Hmm, but answer key says A (1:1).",
     "image_url": null
   },
   {
     "id": 64,
     "subject": "physics",
     "difficulty": "medium",
-    "question": "A ^{12}V battery connected to a coil of resistance 6 \\Omega  through a switch, drives a constant current in the circuit. The switch is opened in 1 ms. The emf induced across the coil is ^{20}V. The inductance of the coil is",
+    "question": "A \\(^{12}V\\) battery connected to a coil of resistance 6 \\(\\Omega\\)  through a switch, drives a constant current in the circuit. The switch is opened in 1 ms. The emf induced across the coil is \\(^{20}V\\) The inductance of the coil is",
     "options": [
       "5 mH",
       "12 mH",
@@ -1020,14 +1020,14 @@
     ],
     "correct": 3,
     "answer": "10 mH",
-    "explanation": "Initial current I = V/R = 12/6 = 2 A. When switch opened, emf = L(di/dt). 20 = L × (2/10^{-3}) = L × 2000. So L = 20/2000 = 0.01 H = 10 mH.",
+    "explanation": "Initial current I = V/R = 12/6 = 2 A. When switch opened, emf = L(di/dt). 20 = L × \\((2/10^{-3})\\) = L × 2000. So L = 20/2000 = 0.01 H = 10 mH.",
     "image_url": null
   },
   {
     "id": 65,
     "subject": "physics",
     "difficulty": "medium",
-    "question": "For an RLC circuit driven with voltage of amplitude v_m and frequency \\omega 0 = 1/\\sqrt(LC), the quality factor Q is given by",
+    "question": "For an RLC circuit driven with voltage of amplitude v_m and frequency \\(\\omega\\) 0 = \\(1/\\sqrt{LC}\\) the quality factor Q is given by",
     "options": [
       "\\(CR/\\omega 0\\)",
       "\\(\\omega 0L/R\\)",
@@ -1036,7 +1036,7 @@
     ],
     "correct": 1,
     "answer": "\\(\\omega 0L/R\\)",
-    "explanation": "Quality factor Q = \\omega 0L/R = 1/(\\omega 0CR) = (1/R)\\sqrt(L/C). At resonance, Q = \\omega 0L/R.",
+    "explanation": "Quality factor Q = \\(\\omega\\) 0L/R = \\(1/(\\omega\\) 0CR) = \\((1/R)\\sqrt{L/C}\\) At resonance, Q = \\(\\omega\\) 0L/R.",
     "image_url": null
   },
   {
@@ -1052,7 +1052,7 @@
     ],
     "correct": 3,
     "answer": "40 N",
-    "explanation": "\\omega  = 2\\pi /T = 2\\pi /3.14 = 2 rad/s. Centrifugal force = m\\omega 2r = 5 × 4 × 2 = 40 N.",
+    "explanation": "\\(\\omega\\)  = \\(2\\pi\\) /T = \\(2\\pi\\) /3.14 = 2 rad/s. Centrifugal force = \\(m\\omega\\) 2r = 5 × 4 × 2 = 40 N.",
     "image_url": null
   },
   {
@@ -1075,7 +1075,7 @@
     "id": 68,
     "subject": "physics",
     "difficulty": "hard",
-    "question": "Two satellites A and B of masses 200 kg and 400 kg are revolving around the earth at height of 600 km and 1600 km respectively. If T_A and T_B are the time periods of A and B respectively then the value of (T_B - T_A)/T_A [Given: radius of earth = 6400 km, mass of earth = 6×10^{24} kg] [Image: Diagram showing Earth at center with two satellites: Satellite A (mass 200kg) at height 600km in inner orbit, Satellite B (mass 400kg) at height 1600km in outer orbit]",
+    "question": "Two satellites A and B of masses 200 kg and 400 kg are revolving around the earth at height of 600 km and 1600 km respectively. If T_A and T_B are the time periods of A and B respectively then the value of (T_B - T_A)/T_A [Given: radius of earth = 6400 km, mass of earth = \\(6×10^{24}\\) kg] [Image: Diagram showing Earth at center with two satellites: Satellite A (mass 200kg) at height 600km in inner orbit, Satellite B (mass 400kg) at height 1600km in outer orbit]",
     "options": [
       "\\(1.33×10^{3} s\\)",
       "\\(3.33×10^{2} s\\)",
@@ -1084,14 +1084,14 @@
     ],
     "correct": 0,
     "answer": "\\(1.33×10^{3} s\\)",
-    "explanation": "Using Kepler's third law: T^{2} \\propto  r^{3}. r_A = 6400+600 = 7000 km, r_B = 6400+1600 = 8000 km. T = 2\\pi \\sqrt(r^{3}/GM). T_A = 2\\pi \\sqrt((7×10^{6})3/(6.67×10^{-11}×6×10^{24})) \\approx  5800 s. T_B = 2\\pi \\sqrt((8×10^{6})3/(6.67×10^{-11}×6×10^{24})) \\approx  7100 s. T_B - T_A \\approx  1300 s \\approx  1.33×10^{3} s.",
+    "explanation": "Using Kepler's third law: \\(T^{2} \\propto  r^{3}\\) r_A = 6400+600 = 7000 km, r_B = 6400+1600 = 8000 km. T = \\(2\\pi \\sqrt{r^{3}/GM}\\) T_A = \\(2\\pi \\sqrt{(7×10^{6}}3/(6.67×10^{-11}×6×10^{24})) \\approx\\)  5800 s. T_B = \\(2\\pi \\sqrt{(8×10^{6}}3/(6.67×10^{-11}×6×10^{24})) \\approx\\)  7100 s. T_B - T_A \\(\\approx\\)  1300 s \\(\\approx  1.33×10^{3}\\) s.",
     "image_url": "PLACEHOLDER_UPLOAD_IMAGE"
   },
   {
     "id": 69,
     "subject": "physics",
     "difficulty": "medium",
-    "question": "A cube of metal is subjected to a hydrostatic pressure of 4 GPa. The percentage change in the length of the side of the cube is close to (Given bulk modulus of metal B = 8×10^{10} Pa)",
+    "question": "A cube of metal is subjected to a hydrostatic pressure of 4 GPa. The percentage change in the length of the side of the cube is close to (Given bulk modulus of metal B = \\(8×10^{10}\\) Pa)",
     "options": [
       "0.6",
       "1.67",
@@ -1100,14 +1100,14 @@
     ],
     "correct": 1,
     "answer": "1.67",
-    "explanation": "Bulk modulus B = P/(\\Delta V/V). \\Delta V/V = P/B = 4×10^{9}/(8×10^{10}) = 0.05 = 5%. For a cube, V = L^{3}, so \\Delta V/V = 3\\Delta L/L. Therefore \\Delta L/L = 5%/3 = 1.67%.",
+    "explanation": "Bulk modulus B = \\(P/(\\Delta\\) V/V). \\(\\Delta\\) V/V = P/B = \\(4×10^{9}/(8×10^{10})\\) = 0.05 = 5%. For a cube, V = \\(L^{3}\\) so \\(\\Delta\\) V/V = \\(3\\Delta\\) L/L. Therefore \\(\\Delta\\) L/L = 5%/3 = 1.67%.",
     "image_url": null
   },
   {
     "id": 70,
     "subject": "physics",
     "difficulty": "medium",
-    "question": "The root mean square speed of molecules of nitrogen gas at 27^{\\circ}C is approximately (given mass of a nitrogen molecule = 4.6×10^{-26} kg and Boltzmann constant k_B = 1.4×10^{-23} J/K)",
+    "question": "The root mean square speed of molecules of nitrogen gas at \\(27^{\\circ}C\\) is approximately (given mass of a nitrogen molecule = \\(4.6×10^{-26}\\) kg and Boltzmann constant k_B = \\(1.4×10^{-23}\\) J/K)",
     "options": [
       "523 m/s",
       "1260 m/s",
@@ -1116,14 +1116,14 @@
     ],
     "correct": 0,
     "answer": "523 m/s",
-    "explanation": "v_rms = \\sqrt(3kT/m) = \\sqrt(3 × 1.4×10^{-23} × 300 / 4.6×10^{-26}) = \\sqrt(1.26×10^{-20} / 4.6×10^{-26}) = \\sqrt(2.74×10^{5}) \\approx  523 m/s.",
+    "explanation": "v_rms = \\(\\sqrt{3kT/m}\\) = \\(\\sqrt{3\\) × \\(1.4×10^{-23}\\) × 300 / \\(4.6×10^{-26}}\\) = \\(\\sqrt{1.26×10^{-20}\\) / \\(4.6×10^{-26}}\\) = \\(\\sqrt{2.74×10^{5}} \\approx\\)  523 m/s.",
     "image_url": null
   },
   {
     "id": 71,
     "subject": "physics",
     "difficulty": "hard",
-    "question": "A granite rod of 60 cm length is clamped at its middle point and is set into latitudinal vibrations. The density of granite is 2.7×10^{3} kg/m^{3} and its Young's modulus is 9.27×10^{10} Pa. What will be the fundamental frequency of the latitudinal vibrations?",
+    "question": "A granite rod of 60 cm length is clamped at its middle point and is set into latitudinal vibrations. The density of granite is \\(2.7×10^{3} kg/m^{3}\\) and its Young's modulus is \\(9.27×10^{10}\\) Pa. What will be the fundamental frequency of the latitudinal vibrations?",
     "options": [
       "7.5 kHz",
       "5 kHz",
@@ -1132,14 +1132,14 @@
     ],
     "correct": 1,
     "answer": "5 kHz",
-    "explanation": "For rod clamped at middle, fundamental frequency f = (1/^{2}L)\\sqrt(Y/\\rho ) = (1/2×0.6)\\sqrt(9.27×10^{10}/2.7×10^{3}) = (1/1.2)\\sqrt(3.43×10^{7}) = 0.833 × 5857 \\approx  4880 Hz \\approx  5 kHz.",
+    "explanation": "For rod clamped at middle, fundamental frequency f = \\((1/^{2}L)\\sqrt{Y/\\rho\\) } = \\((1/2×0.6)\\sqrt{9.27×10^{10}/2.7×10^{3}}\\) = \\((1/1.2)\\sqrt{3.43×10^{7}}\\) = 0.833 × 5857 \\(\\approx\\)  4880 Hz \\(\\approx\\)  5 kHz.",
     "image_url": null
   },
   {
     "id": 72,
     "subject": "physics",
     "difficulty": "medium",
-    "question": "A rod of length 50 cm is pivoted at one end. It is raised such that it makes an angle of 30^{\\circ} from the horizontal and released from rest. Its angular speed when it passes through the horizontal (in rad/s) will be (g = 10 m/s^{2}) [Image: Rod of length 50cm pivoted at one end O, raised at 30^{\\circ} angle from horizontal, shown as an inclined rod with pivot point at bottom left]",
+    "question": "A rod of length 50 cm is pivoted at one end. It is raised such that it makes an angle of \\(30^{\\circ}\\) from the horizontal and released from rest. Its angular speed when it passes through the horizontal (in rad/s) will be (g = 10 \\(m/s^{2})\\) [Image: Rod of length 50cm pivoted at one end O, raised at \\(30^{\\circ}\\) angle from horizontal, shown as an inclined rod with pivot point at bottom left]",
     "options": [
       "\\(\\sqrt30\\)",
       "\\(\\sqrt30/2\\)",
@@ -1148,7 +1148,7 @@
     ],
     "correct": 0,
     "answer": "\\(\\sqrt30\\)",
-    "explanation": "Using energy conservation: mg(L/2)sin(30^{\\circ}) = \\frac{1}{2}I\\omega 2. I = mL^{2}/3. mgL/4 = \\frac{1}{2} × mL^{2}/3 × \\omega 2. \\omega 2 = 3g/(^{2}L) = 3×10/(2×0.5) = 30. \\omega  = \\sqrt30 rad/s.",
+    "explanation": "Using energy conservation: \\(mg(L/2)sin(30^{\\circ})\\) = \\(\\frac{1}{2}I\\omega\\) 2. I = \\(mL^{2}/3\\) mgL/4 = \\(\\frac{1}{2}\\) × \\(mL^{2}/3\\) × \\(\\omega\\) 2. \\(\\omega\\) 2 = \\(3g/(^{2}L)\\) = 3×10/(2×0.5) = 30. \\(\\omega\\)  = \\(\\sqrt30\\) rad/s.",
     "image_url": "PLACEHOLDER_UPLOAD_IMAGE"
   },
   {
@@ -1164,14 +1164,14 @@
     ],
     "correct": 0,
     "answer": "The sphere has the greatest and the ring has the least velocity of the centre of mass at the bottom of the inclined plane",
-    "explanation": "For rolling objects, v = \\sqrt(2gh/(1+I/(mR^{2}))). I/(mR^{2}) values: ring = 1, solid cylinder = 1/2, solid sphere = 2/5. Lower I/(mR^{2}) means higher v. Sphere (2/5 = 0.4) has highest v, ring (1) has lowest v.",
+    "explanation": "For rolling objects, v = \\(\\sqrt{2gh/(1+I/(mR^{2}})). I/(mR^{2})\\) values: ring = 1, solid cylinder = 1/2, solid sphere = 2/5. Lower \\(I/(mR^{2})\\) means higher v. Sphere (2/5 = 0.4) has highest v, ring (1) has lowest v.",
     "image_url": null
   },
   {
     "id": 74,
     "subject": "physics",
     "difficulty": "easy",
-    "question": "If the size of an atom (~1 Å) is enlarged to the size of the earth (~10^{7} m), what would be the size of the nucleus (10^{-15} m)?",
+    "question": "If the size of an atom (~1 Å) is enlarged to the size of the earth \\((~10^{7}\\) m), what would be the size of the nucleus \\((10^{-15}\\) m)?",
     "options": [
       "10 m",
       "100 m",
@@ -1180,7 +1180,7 @@
     ],
     "correct": 1,
     "answer": "100 m",
-    "explanation": "Scale factor = 10^{7}/(10^{-10}) = 10^{17}. Nucleus size = 10^{-15} × 10^{17} = 100 m.",
+    "explanation": "Scale factor = \\(10^{7}/(10^{-10})\\) = \\(10^{17}\\) Nucleus size = \\(10^{-15}\\) × \\(10^{17}\\) = 100 m.",
     "image_url": null
   },
   {
@@ -1196,7 +1196,7 @@
     ],
     "correct": 0,
     "answer": "3",
-    "explanation": "T = 2\\pi \\sqrt(l/g). \\Delta T/T = \\frac{1}{2}(\\Delta l/l) + \\frac{1}{2}(\\Delta g/g) = \\frac{1}{2}(2%) + \\frac{1}{2}(4%) = 1% + 2% = 3%.",
+    "explanation": "T = \\(2\\pi \\sqrt{l/g}. \\Delta\\) T/T = \\(\\frac{1}{2}(\\Delta\\) l/l) + \\(\\frac{1}{2}(\\Delta\\) g/g) = \\(\\frac{1}{2}(2%)\\) + \\(\\frac{1}{2}(4%)\\) = 1% + 2% = 3%.",
     "image_url": null
   },
   {
@@ -1219,7 +1219,7 @@
     "id": 77,
     "subject": "chemistry",
     "difficulty": "medium",
-    "question": "Palmitic acid (Molecular weight = 256.42 g/mol) is one of the major sources of energy in our diet as shown in the chemical reaction: C16H32O2(s) + ^{23}O2(g) \\rightarrow  ^{16}CO2(g) + ^{16}H2O(l). The energy released by the combustion of 1g of palmitic acid is ______ kJ/g (∆H^{\\circ}f(CO2) = -393.5 kJ/mol; ∆H^{\\circ}f(H2O) = -285.8 kJ/mol; ∆H^{\\circ}f(C16H32O2) = -891.5 kJ/mol; ∆H^{\\circ}f(O2) = 0 kJ/mol)",
+    "question": "Palmitic acid (Molecular weight = 256.42 g/mol) is one of the major sources of energy in our diet as shown in the chemical reaction: C16H32O2(s) + \\(^{23}O2(g) \\rightarrow  ^{16}CO2(g)\\) + \\(^{16}H2O(l)\\) The energy released by the combustion of 1g of palmitic acid is ______ kJ/g \\((∆H^{\\circ}f(CO2)\\) = -393.5 kJ/mol; \\(∆H^{\\circ}f(H2O)\\) = -285.8 kJ/mol; \\(∆H^{\\circ}f(C16H32O2)\\) = -891.5 kJ/mol; \\(∆H^{\\circ}f(O2)\\) = 0 kJ/mol)",
     "options": [
       "-19 kJ/g",
       "-29 kJ/g",
@@ -1228,7 +1228,7 @@
     ],
     "correct": 2,
     "answer": "-39 kJ/g",
-    "explanation": "∆H^{\\circ}reaction = [16(-393.5) + 16(-285.8)] - [-891.5 + 0] = [-6296 - 4572.8] + 891.5 = -9977.3 kJ/mol. Per gram: -9977.3/256.42 = -38.9 \\approx  -39 kJ/g.",
+    "explanation": "\\(∆H^{\\circ}reaction\\) = [16(-393.5) + 16(-285.8)] - [-891.5 + 0] = [-6296 - 4572.8] + 891.5 = -9977.3 kJ/mol. Per gram: -9977.3/256.42 = -38.9 \\(\\approx\\)  -39 kJ/g.",
     "image_url": null
   },
   {
@@ -1251,7 +1251,7 @@
     "id": 79,
     "subject": "chemistry",
     "difficulty": "medium",
-    "question": "For a general chemical equilibria AX3 \\rightleftharpoons  AX2(g) + \\frac{1}{2}X2(g), the equilibrium constant is Kc. The equilibrium constant for the reaction ^{2}AX2(g) + X2(g) \\rightleftharpoons  ^{2}AX3(g) will be",
+    "question": "For a general chemical equilibria AX3 \\(\\rightleftharpoons\\)  AX2(g) + \\(\\frac{1}{2}X2(g)\\) the equilibrium constant is Kc. The equilibrium constant for the reaction \\(^{2}AX2(g)\\) + X2(g) \\(\\rightleftharpoons  ^{2}AX3(g)\\) will be",
     "options": [
       "\\(^{2}Kc\\)",
       "Kc/2",
@@ -1260,14 +1260,14 @@
     ],
     "correct": 3,
     "answer": "\\(1/Kc^{2}\\)",
-    "explanation": "The second reaction is the reverse of twice the first reaction. If first reaction has Kc, then reversed reaction has 1/Kc, and doubling the reaction means squaring: (1/Kc)2 = 1/Kc^{2}.",
+    "explanation": "The second reaction is the reverse of twice the first reaction. If first reaction has Kc, then reversed reaction has 1/Kc, and doubling the reaction means squaring: (1/Kc)2 = \\(1/Kc^{2}\\)",
     "image_url": null
   },
   {
     "id": 80,
     "subject": "chemistry",
     "difficulty": "hard",
-    "question": "For the Haber Process, N2(g) + ^{3}H2(g) \\rightleftharpoons  ^{2}NH3(g), the value of Kc at 300^{\\circ}C is 9.60. The value of Kp at same temperature will be (The value of R is 0.08206 L\\cdot atm\\cdot mol^{-1}\\cdot K^{-1})",
+    "question": "For the Haber Process, N2(g) + \\(^{3}H2(g) \\rightleftharpoons  ^{2}NH3(g)\\) the value of Kc at \\(300^{\\circ}C\\) is 9.60. The value of Kp at same temperature will be (The value of R is 0.08206 \\(L\\cdot atm\\cdot mol^{-1}\\cdot K^{-1})\\)",
     "options": [
       "\\(4.34×10^{-3}\\)",
       "\\(2.17×10^{4}\\)",
@@ -1276,14 +1276,14 @@
     ],
     "correct": 0,
     "answer": "\\(4.34×10^{-3}\\)",
-    "explanation": "Kp = Kc(RT)^{∆n. ∆n = 2 - 4 = -2. T = 573 K. Kp = 9.60 × (0.08206 × 573)-2 = 9.60 / (47.02)2 = 9.60/2211 = 4.34×10^{-3}.",
+    "explanation": "Kp = Kc(RT)^{∆n. ∆n = 2 - 4 = -2. T = 573 K. Kp = 9.60 × (0.08206 × 573)-2 = 9.60 / (47.02)2 = 9.60/2211 = \\(4.34×10^{-3}\\)",
     "image_url": null
   },
   {
     "id": 81,
     "subject": "chemistry",
     "difficulty": "medium",
-    "question": "The standard EMF for the cell reaction Zn + Cu^{2}+ \\rightarrow  Zn^{2}+ + Cu is 1.10 V at 25^{\\circ}C. The EMF of the cell when 0.1 M Zn^{2}+ and 0.1 M Cu^{2}+ solutions are used at 25^{\\circ}C is",
+    "question": "The standard EMF for the cell reaction Zn + \\(Cu^{2}+ \\rightarrow  Zn^{2}+\\) + Cu is 1.10 V at \\(25^{\\circ}C\\) The EMF of the cell when 0.1 M \\(Zn^{2}+\\) and 0.1 M \\(Cu^{2}+\\) solutions are used at \\(25^{\\circ}C\\) is",
     "options": [
       "1.10 V",
       "0.55 V",
@@ -1292,14 +1292,14 @@
     ],
     "correct": 0,
     "answer": "1.10 V",
-    "explanation": "Using Nernst equation: E = E^{\\circ} - (0.059/n)log(Q). Q = [Zn^{2}+]/[Cu^{2}+] = 0.1/0.1 = 1. log(1) = 0. So E = E^{\\circ} = 1.10 V.",
+    "explanation": "Using Nernst equation: E = \\(E^{\\circ}\\) - (0.059/n)log(Q). Q = \\([Zn^{2}+]/[Cu^{2}+]\\) = 0.1/0.1 = 1. log(1) = 0. So E = \\(E^{\\circ}\\) = 1.10 V.",
     "image_url": null
   },
   {
     "id": 82,
     "subject": "chemistry",
     "difficulty": "medium",
-    "question": "The equilibrium constant for a cell reaction, Cu(s) + ^{2}Ag+(aq) \\rightarrow  Cu^{2}+(aq) + ^{2}Ag(s) is 4×10^{16}. E^{\\circ}(cell) for the cell reaction is",
+    "question": "The equilibrium constant for a cell reaction, Cu(s) + \\(^{2}Ag+(aq) \\rightarrow  Cu^{2}+(aq)\\) + \\(^{2}Ag(s)\\) is \\(4×10^{16}. E^{\\circ}(cell)\\) for the cell reaction is",
     "options": [
       "0.63 V",
       "0.49 V",
@@ -1308,7 +1308,7 @@
     ],
     "correct": 1,
     "answer": "0.49 V",
-    "explanation": "E^{\\circ} = (RT/nF)lnK = (0.059/n)logK at 25^{\\circ}C. n = 2. E^{\\circ} = (0.059/2)log(4×10^{16}) = 0.0295 × 16.6 = 0.49 V.",
+    "explanation": "\\(E^{\\circ}\\) = (RT/nF)lnK = (0.059/n)logK at \\(25^{\\circ}C\\) n = 2. \\(E^{\\circ}\\) = \\((0.059/2)log(4×10^{16})\\) = 0.0295 × 16.6 = 0.49 V.",
     "image_url": null
   },
   {
@@ -1340,14 +1340,14 @@
     ],
     "correct": 1,
     "answer": "Double dumb-bell",
-    "explanation": "l = 2 corresponds to d orbital. The d orbital with m = 0 is dz^{2} which has a double dumb-bell shape (along z-axis with a torus in xy plane).",
+    "explanation": "l = 2 corresponds to d orbital. The d orbital with m = 0 is \\(dz^{2}\\) which has a double dumb-bell shape (along z-axis with a torus in xy plane).",
     "image_url": null
   },
   {
     "id": 85,
     "subject": "chemistry",
     "difficulty": "easy",
-    "question": "The vapour pressure of water at ^{300}K in a closed container is 0.4 atm. If the volume of container is doubled, its vapour pressure at ^{300}K will be",
+    "question": "The vapour pressure of water at \\(^{300}K\\) in a closed container is 0.4 atm. If the volume of container is doubled, its vapour pressure at \\(^{300}K\\) will be",
     "options": [
       "0.8 atm",
       "0.2 atm",
@@ -1395,7 +1395,7 @@
     "id": 88,
     "subject": "chemistry",
     "difficulty": "medium",
-    "question": "In the reaction ^{2}A + B \\rightarrow  A2B, if the concentration of A is doubled and that of B is halved, then the rate of the reaction will",
+    "question": "In the reaction \\(^{2}A\\) + B \\(\\rightarrow\\)  A2B, if the concentration of A is doubled and that of B is halved, then the rate of the reaction will",
     "options": [
       "increase 2 times",
       "increase 4 times",
@@ -1404,14 +1404,14 @@
     ],
     "correct": 0,
     "answer": "increase 2 times",
-    "explanation": "Rate = k[A]2[B]. New rate = k[^{2}A]2[B/2] = k × 4[A]2 × [B]/2 = 2 × k[A]2[B] = 2 × original rate. Rate increases 2 times.",
+    "explanation": "Rate = k[A]2[B]. New rate = \\(k[^{2}A]2[B/2]\\) = k × 4[A]2 × [B]/2 = 2 × k[A]2[B] = 2 × original rate. Rate increases 2 times.",
     "image_url": null
   },
   {
     "id": 89,
     "subject": "chemistry",
     "difficulty": "easy",
-    "question": "Hess^{\\prime} law is applicable for the determination of heat of",
+    "question": "\\(Hess^{\\prime}\\) law is applicable for the determination of heat of",
     "options": [
       "Transition",
       "Formation",
@@ -1443,7 +1443,7 @@
     "id": 91,
     "subject": "chemistry",
     "difficulty": "medium",
-    "question": "The E^{\\circ}(M^{2}+/M^{3}+) values for Cr, Mn, Fe and Co are -0.41, +1.57, +0.77 and +1.97 V respectively. For which one of the metals, the change in oxidation state from +2 to +3 is easiest?",
+    "question": "The \\(E^{\\circ}(M^{2}+/M^{3}+)\\) values for Cr, Mn, Fe and Co are -0.41, +1.57, +0.77 and +1.97 V respectively. For which one of the metals, the change in oxidation state from +2 to +3 is easiest?",
     "options": [
       "Cr",
       "Mn",
@@ -1452,14 +1452,14 @@
     ],
     "correct": 0,
     "answer": "Cr",
-    "explanation": "The most negative E^{\\circ} value indicates that the oxidation from +2 to +3 is most favorable (easiest). Cr has the most negative value (-0.41 V), making it easiest to oxidize.",
+    "explanation": "The most negative \\(E^{\\circ}\\) value indicates that the oxidation from +2 to +3 is most favorable (easiest). Cr has the most negative value (-0.41 V), making it easiest to oxidize.",
     "image_url": null
   },
   {
     "id": 92,
     "subject": "chemistry",
     "difficulty": "medium",
-    "question": "Glucose of 18g was dissolved in 170g of water. The vapour pressure of water for this aqueous solution at 37^{\\circ}C is [Given: vapour pressure of water as solvent is 760 torr]",
+    "question": "Glucose of 18g was dissolved in 170g of water. The vapour pressure of water for this aqueous solution at \\(37^{\\circ}C\\) is [Given: vapour pressure of water as solvent is 760 torr]",
     "options": [
       "652 torr",
       "752 torr",
@@ -1468,14 +1468,14 @@
     ],
     "correct": 1,
     "answer": "752 torr",
-    "explanation": "Moles of glucose = 18/180 = 0.1 mol. Moles of water = 170/18 = 9.44 mol. Mole fraction of water = 9.44/(9.44+0.1) = 0.989. Vapour pressure = 760 × 0.989 = 751.6 \\approx  752 torr.",
+    "explanation": "Moles of glucose = 18/180 = 0.1 mol. Moles of water = 170/18 = 9.44 mol. Mole fraction of water = 9.44/(9.44+0.1) = 0.989. Vapour pressure = 760 × 0.989 = 751.6 \\(\\approx\\)  752 torr.",
     "image_url": null
   },
   {
     "id": 93,
     "subject": "chemistry",
     "difficulty": "hard",
-    "question": "A mixed oxide has ccp arrangement in which the cations 'X^{\\prime} occupy 1/3rd of octahedral voids and the cations 'Y^{\\prime} occupy 1/3rd of tetrahedral voids. The formula of oxide is",
+    "question": "A mixed oxide has ccp arrangement in which the cations \\('X^{\\prime}\\) occupy 1/3rd of octahedral voids and the cations \\('Y^{\\prime}\\) occupy 1/3rd of tetrahedral voids. The formula of oxide is",
     "options": [
       "X2Y3O2",
       "XY3O",
@@ -1484,14 +1484,14 @@
     ],
     "correct": 3,
     "answer": "XYO3",
-    "explanation": "In ccp, O^{2}- = 4 per unit cell. Octahedral voids = 4, tetrahedral voids = 8. X occupies 1/3 of 4 = 4/3 octahedral voids. Y occupies 1/3 of 8 = 8/3 tetrahedral voids. Ratio X:Y:O = 4/3 : 8/3 : 4 = 1:2:3. But checking stoichiometry with charges: formula is XYO3.",
+    "explanation": "In ccp, \\(O^{2}-\\) = 4 per unit cell. Octahedral voids = 4, tetrahedral voids = 8. X occupies 1/3 of 4 = 4/3 octahedral voids. Y occupies 1/3 of 8 = 8/3 tetrahedral voids. Ratio X:Y:O = 4/3 : 8/3 : 4 = 1:2:3. But checking stoichiometry with charges: formula is XYO3.",
     "image_url": null
   },
   {
     "id": 94,
     "subject": "chemistry",
     "difficulty": "hard",
-    "question": "Calculate the energy associated with the second orbital of Li^{2}+. What is the radius of this orbit?",
+    "question": "Calculate the energy associated with the second orbital of \\(Li^{2}+\\) What is the radius of this orbit?",
     "options": [
       "\\(-3.27×10^{-18} J, 0.0793 nm\\)",
       "\\(-4.905×10^{-18} J, 0.0705 nm\\)",
@@ -1500,7 +1500,7 @@
     ],
     "correct": 1,
     "answer": "\\(-4.905×10^{-18} J, 0.0705 nm\\)",
-    "explanation": "For Li^{2}+ (Z=3), n=2: E = -13.6×Z^{2}/n^{2} eV = -13.6×9/4 = -30.6 eV = -4.9×10^{-18} J. Radius r = 0.529×n^{2}/Z = 0.529×4/3 = 0.705 Å = 0.0705 nm.",
+    "explanation": "For \\(Li^{2}+\\) (Z=3), n=2: E = \\(-13.6×Z^{2}/n^{2}\\) eV = -13.6×9/4 = -30.6 eV = \\(-4.9×10^{-18}\\) J. Radius r = \\(0.529×n^{2}/Z\\) = 0.529×4/3 = 0.705 Å = 0.0705 nm.",
     "image_url": null
   },
   {
@@ -1596,7 +1596,7 @@
     ],
     "correct": 1,
     "answer": "butenone",
-    "explanation": "1,4-addition occurs in \\alpha ,\\beta -unsaturated carbonyl compounds. Butenone (CH3COCH=CH2) is an \\alpha ,\\beta -unsaturated ketone where NH3 can add in 1,4-fashion (Michael addition).",
+    "explanation": "1,4-addition occurs in \\(\\alpha ,\\beta\\) -unsaturated carbonyl compounds. Butenone (CH3COCH=CH2) is an \\(\\alpha ,\\beta\\) -unsaturated ketone where NH3 can add in 1,4-fashion (Michael addition).",
     "image_url": null
   },
   {
@@ -1651,7 +1651,7 @@
     "id": 104,
     "subject": "chemistry",
     "difficulty": "easy",
-    "question": "Which one of the following does not have sp^{2} hybridized carbon?",
+    "question": "Which one of the following does not have \\(sp^{2}\\) hybridized carbon?",
     "options": [
       "Acetonitrile",
       "Acetic acid",
@@ -1660,7 +1660,7 @@
     ],
     "correct": 0,
     "answer": "Acetonitrile",
-    "explanation": "Acetonitrile (CH3CN) has sp hybridized carbon in the C≡N group. Acetic acid, acetone, and acetamide all have carbonyl carbons that are sp^{2} hybridized.",
+    "explanation": "Acetonitrile (CH3CN) has sp hybridized carbon in the C≡N group. Acetic acid, acetone, and acetamide all have carbonyl carbons that are \\(sp^{2}\\) hybridized.",
     "image_url": null
   },
   {
@@ -1826,14 +1826,14 @@
     ],
     "correct": 2,
     "answer": "1,3,5-tribromobenzene",
-    "explanation": "Step 1: Aniline + excess Br2 \\rightarrow  2,4,6-tribromoaniline. Step 2: Diazotization with NaNO2/HCl. Step 3: H3PO2 reduces diazonium group to H. Final product: 1,3,5-tribromobenzene.",
+    "explanation": "Step 1: Aniline + excess Br2 \\(\\rightarrow\\)  2,4,6-tribromoaniline. Step 2: Diazotization with NaNO2/HCl. Step 3: H3PO2 reduces diazonium group to H. Final product: 1,3,5-tribromobenzene.",
     "image_url": null
   },
   {
     "id": 115,
     "subject": "chemistry",
     "difficulty": "medium",
-    "question": "Ozonolysis of an organic compound 'A^{\\prime} gave a 1:1 mixture of propanone and propanal. Identify 'A^{\\prime} from the following compounds",
+    "question": "Ozonolysis of an organic compound \\('A^{\\prime}\\) gave a 1:1 mixture of propanone and propanal. Identify \\('A^{\\prime}\\) from the following compounds",
     "options": [
       "hex-1-ene",
       "hex-2-ene",
@@ -1874,7 +1874,7 @@
     ],
     "correct": 2,
     "answer": "Na2CO3 + CO2 + H2O",
-    "explanation": "^{2}NaHCO3 \\rightarrow  Na2CO3 + CO2 + H2O. This is the thermal decomposition reaction of sodium bicarbonate.",
+    "explanation": "\\(^{2}NaHCO3 \\rightarrow\\)  Na2CO3 + CO2 + H2O. This is the thermal decomposition reaction of sodium bicarbonate.",
     "image_url": null
   },
   {
@@ -1906,7 +1906,7 @@
     ],
     "correct": 1,
     "answer": "This mixture has a lower melting point than NaCl",
-    "explanation": "Pure NaCl melts at 801^{\\circ}C. Adding CaCl2 lowers the melting point to about 600^{\\circ}C, making the process more economical and reducing corrosion.",
+    "explanation": "Pure NaCl melts at \\(801^{\\circ}C\\) Adding CaCl2 lowers the melting point to about \\(600^{\\circ}C\\) making the process more economical and reducing corrosion.",
     "image_url": null
   },
   {
@@ -1986,7 +1986,7 @@
     ],
     "correct": 1,
     "answer": "Metaborate",
-    "explanation": "In borax bead test, borax (Na2B4O7\\cdot ^{10}H2O) first converts to metaborate when heated: Na2B4O7 \\rightarrow  ^{2}NaBO2 + B2O3. The metal oxide then reacts with B2O3 to form colored metaborate bead.",
+    "explanation": "In borax bead test, borax \\((Na2B4O7\\cdot ^{10}H2O)\\) first converts to metaborate when heated: Na2B4O7 \\(\\rightarrow  ^{2}NaBO2\\) + B2O3. The metal oxide then reacts with B2O3 to form colored metaborate bead.",
     "image_url": null
   },
   {
@@ -2018,7 +2018,7 @@
     ],
     "correct": 1,
     "answer": "\\(p\\pi -p\\pi  bonding is weak\\)",
-    "explanation": "In phosphorus, p\\pi -p\\pi  bonding is weak due to larger atomic size and poor overlap. P-P single bonds are stronger than P≡P triple bonds, so P4 (tetrahedral) is more stable than P2.",
+    "explanation": "In phosphorus, \\(p\\pi -p\\pi\\)  bonding is weak due to larger atomic size and poor overlap. P-P single bonds are stronger than P≡P triple bonds, so P4 (tetrahedral) is more stable than P2.",
     "image_url": null
   },
   {
@@ -2050,7 +2050,7 @@
     ],
     "correct": 3,
     "answer": "2",
-    "explanation": "In alkaline medium: MnO4- + e- \\rightarrow  MnO42- (1 electron change). I- \\rightarrow  IO3- (6 electron change). For 1 mole KI (6 electrons), moles of KMnO4 needed = 6/1 = 6? Wait - checking answer key says D (2). Actually in alkaline medium: ^{2}MnO4- + I- + H2O \\rightarrow  ^{2}MnO2 + IO3- + ^{2}OH-. So 2 moles KMnO4 per mole KI.",
+    "explanation": "In alkaline medium: MnO4- + e- \\(\\rightarrow\\)  MnO42- (1 electron change). I- \\(\\rightarrow\\)  IO3- (6 electron change). For 1 mole KI (6 electrons), moles of KMnO4 needed = 6/1 = 6? Wait - checking answer key says D (2). Actually in alkaline medium: \\(^{2}MnO4-\\) + I- + H2O \\(\\rightarrow  ^{2}MnO2\\) + IO3- + \\(^{2}OH-\\) So 2 moles KMnO4 per mole KI.",
     "image_url": null
   },
   {
@@ -2066,7 +2066,7 @@
     ],
     "correct": 3,
     "answer": "[Fe(CN)6]4-",
-    "explanation": "[Fe(CN)6]4- has Fe^{2}+ (d^{6}) with strong field CN- ligand causing low spin t2g^{6}eg^{0} configuration. All electrons paired \\rightarrow  diamagnetic. Others have unpaired electrons.",
+    "explanation": "[Fe(CN)6]4- has \\(Fe^{2}+ (d^{6})\\) with strong field CN- ligand causing low spin \\(t2g^{6}eg^{0}\\) configuration. All electrons paired \\(\\rightarrow\\)  diamagnetic. Others have unpaired electrons.",
     "image_url": null
   },
   {
@@ -2082,7 +2082,7 @@
     ],
     "correct": 3,
     "answer": "[Cu(NH3)4]2+",
-    "explanation": "\\mu  = \\sqrt(n(n+2)) BM. For \\mu  = 1.73, n = 1 (one unpaired electron). [Cu(NH3)4]2+ has Cu^{2}+ (d^{9}) with one unpaired electron. [Ni(CN)4]2- is diamagnetic (square planar d^{8}). TiCl4 is diamagnetic (d^{0}).",
+    "explanation": "\\(\\mu\\)  = \\(\\sqrt{n(n+2})\\) BM. For \\(\\mu\\)  = 1.73, n = 1 (one unpaired electron). [Cu(NH3)4]2+ has \\(Cu^{2}+ (d^{9})\\) with one unpaired electron. [Ni(CN)4]2- is diamagnetic (square planar \\(d^{8})\\) TiCl4 is diamagnetic \\((d^{0})\\)",
     "image_url": null
   },
   {
@@ -2098,7 +2098,7 @@
     ],
     "correct": 0,
     "answer": "[Ni(CN)4]2-",
-    "explanation": "[Ni(CN)4]2- is square planar with d^{8} configuration. Strong field CN- causes large splitting, and all transitions require UV energy. It appears colorless (no visible light absorption).",
+    "explanation": "[Ni(CN)4]2- is square planar with \\(d^{8}\\) configuration. Strong field CN- causes large splitting, and all transitions require UV energy. It appears colorless (no visible light absorption).",
     "image_url": null
   },
   {
@@ -2114,7 +2114,7 @@
     ],
     "correct": 1,
     "answer": "[TiF6]2- and Cu2Cl2",
-    "explanation": "[TiF6]2- has Ti^{4}+ (d^{0}) - no d-d transitions possible, colorless. Cu2Cl2 has Cu+ (d^{10}) - no d-d transitions, colorless. Others have partially filled d-orbitals and are colored.",
+    "explanation": "[TiF6]2- has \\(Ti^{4}+ (d^{0})\\) - no d-d transitions possible, colorless. Cu2Cl2 has Cu+ \\((d^{10})\\) - no d-d transitions, colorless. Others have partially filled d-orbitals and are colored.",
     "image_url": null
   },
   {
@@ -2130,7 +2130,7 @@
     ],
     "correct": 2,
     "answer": "4",
-    "explanation": "[CoF6]3- has Co^{3}+ (d^{6}). F- is a weak field ligand. High spin configuration: t2g^{4}eg^{2}. Unpaired electrons = 4 (t2g has 3+1, eg has 1+1).",
+    "explanation": "[CoF6]3- has \\(Co^{3}+ (d^{6})\\) F- is a weak field ligand. High spin configuration: \\(t2g^{4}eg^{2}\\) Unpaired electrons = 4 (t2g has 3+1, eg has 1+1).",
     "image_url": null
   },
   {
@@ -2146,7 +2146,7 @@
     ],
     "correct": 1,
     "answer": "\\([Ar] 3d^{6}\\)",
-    "explanation": "\\mu  = \\sqrt(n(n+2)) = 4.89 BM. Solving: n = 4 unpaired electrons. [Ar]3d^{6} in high spin (weak field) has t2g^{4}eg^{2} = 4 unpaired electrons.",
+    "explanation": "\\(\\mu\\)  = \\(\\sqrt{n(n+2})\\) = 4.89 BM. Solving: n = 4 unpaired electrons. \\([Ar]3d^{6}\\) in high spin (weak field) has \\(t2g^{4}eg^{2}\\) = 4 unpaired electrons.",
     "image_url": null
   },
   {
@@ -2162,14 +2162,14 @@
     ],
     "correct": 1,
     "answer": "32",
-    "explanation": "For n = 4, completely filled subshells are 4s, 4p, 4d. 4s^{2} = 2, 4p^{6} = 6, 4d^{10} = 10. Total = 2+6+10 = 18? Wait - the question asks about all completely filled subshells up to n=4 including lower shells: 1s^{2}, 2s^{2}, 2p^{6}, 3s^{2}, 3p^{6}, 3d^{10}, 4s^{2} = 2+2+6+2+6+10+2 = 30. But answer key says 32. Actually including 4p^{6}: 30+6 = 36? Hmm. The answer key says B (32).",
+    "explanation": "For n = 4, completely filled subshells are 4s, 4p, 4d. \\(4s^{2}\\) = 2, \\(4p^{6}\\) = 6, \\(4d^{10}\\) = 10. Total = 2+6+10 = 18? Wait - the question asks about all completely filled subshells up to n=4 including lower shells: \\(1s^{2}, 2s^{2}, 2p^{6}, 3s^{2}, 3p^{6}, 3d^{10}, 4s^{2}\\) = 2+2+6+2+6+10+2 = 30. But answer key says 32. Actually including \\(4p^{6}\\) 30+6 = 36? Hmm. The answer key says B (32).",
     "image_url": null
   },
   {
     "id": 136,
     "subject": "maths",
     "difficulty": "medium",
-    "question": "The function f: ℝ \\rightarrow  ℝ, defined by f(x) = sin x + cos x, is",
+    "question": "The function f: ℝ \\(\\rightarrow\\)  ℝ, defined by f(x) = sin x + cos x, is",
     "options": [
       "one-one",
       "onto",
@@ -2178,14 +2178,14 @@
     ],
     "correct": 3,
     "answer": "neither one-one nor onto",
-    "explanation": "f(x) = sin x + cos x = \\sqrt2 sin(x + \\pi /4). Range is [-\\sqrt2, \\sqrt2], not all of ℝ, so not onto. Also f(x) is periodic with period 2\\pi , so not one-one.",
+    "explanation": "f(x) = sin x + cos x = \\(\\sqrt2\\) sin(x + \\(\\pi\\) /4). Range is \\([-\\sqrt2, \\sqrt2]\\) not all of ℝ, so not onto. Also f(x) is periodic with period \\(2\\pi\\) , so not one-one.",
     "image_url": null
   },
   {
     "id": 137,
     "subject": "maths",
     "difficulty": "easy",
-    "question": "The value of sec^{-1}(-2) is",
+    "question": "The value of \\(sec^{-1}(-2)\\) is",
     "options": [
       "\\(\\pi /3\\)",
       "\\(2\\pi /3\\)",
@@ -2194,14 +2194,14 @@
     ],
     "correct": 1,
     "answer": "\\(2\\pi /3\\)",
-    "explanation": "sec^{-1}(-2) = cos^{-1}(-1/2) = 2\\pi /3 (principal value range of sec^{-1} is [0,\\pi ] - {\\pi /2}).",
+    "explanation": "\\(sec^{-1}(-2)\\) = \\(cos^{-1}(-1/2)\\) = \\(2\\pi\\) /3 (principal value range of \\(sec^{-1}\\) is \\([0,\\pi\\) ] - \\({\\pi\\) /2}).",
     "image_url": null
   },
   {
     "id": 138,
     "subject": "maths",
     "difficulty": "medium",
-    "question": "If A = [[cos \\theta , sin \\theta ], [-sin \\theta , cos \\theta ]], then the matrix A^{2025} when \\theta  = \\pi /3 is",
+    "question": "If A = [[cos \\(\\theta\\) , sin \\(\\theta\\) ], [-sin \\(\\theta\\) , cos \\(\\theta\\) ]], then the matrix \\(A^{2025}\\) when \\(\\theta\\)  = \\(\\pi\\) /3 is",
     "options": [
       "[[0, 0], [0, 0]]",
       "[[1, 0], [0, 1]]",
@@ -2210,7 +2210,7 @@
     ],
     "correct": 2,
     "answer": "[[-1, 0], [0, 1]]",
-    "explanation": "A is rotation matrix. Aⁿ = [[cos(n\\theta ), sin(n\\theta )], [-sin(n\\theta ), cos(n\\theta )]]. For n=2025, \\theta =\\pi /3: n\\theta  = 675\\pi  = 337×2\\pi  + \\pi . cos(675\\pi ) = -1, sin(675\\pi ) = 0. So A^{2025} = [[-1, 0], [0, -1]] = -I. But answer key says C.",
+    "explanation": "A is rotation matrix. Aⁿ = \\([[cos(n\\theta\\) ), \\(sin(n\\theta\\) )], \\([-sin(n\\theta\\) ), \\(cos(n\\theta\\) )]]. For n=2025, \\(\\theta =\\pi\\) /3: \\(n\\theta\\)  = \\(675\\pi\\)  = \\(337×2\\pi\\)  + \\(\\pi\\) . \\(cos(675\\pi\\) ) = -1, \\(sin(675\\pi\\) ) = 0. So \\(A^{2025}\\) = [[-1, 0], [0, -1]] = -I. But answer key says C.",
     "image_url": null
   },
   {
@@ -2242,7 +2242,7 @@
     ],
     "correct": 3,
     "answer": "f/g is continuous at x0",
-    "explanation": "f/g is continuous only if g(x0) \\neq  0. If g(x0) = 0, then f/g is not defined at x0, hence not continuous.",
+    "explanation": "f/g is continuous only if g(x0) \\(\\neq\\)  0. If g(x0) = 0, then f/g is not defined at x0, hence not continuous.",
     "image_url": null
   },
   {
@@ -2265,7 +2265,7 @@
     "id": 142,
     "subject": "maths",
     "difficulty": "medium",
-    "question": "If f(x) = {x+1, x<2; 2x-1, x\\geq 2}, then f is",
+    "question": "If f(x) = {x+1, x<2; 2x-1, \\(x\\geq\\) 2}, then f is",
     "options": [
       "\\(continuous except x \\neq  2\\)",
       "\\(continuous only at (-\\infty , 2]\\)",
@@ -2290,14 +2290,14 @@
     ],
     "correct": 3,
     "answer": "infinitely many",
-    "explanation": "sin x attains its minimum value of -1 at x = 3\\pi /2 + 2n\\pi  for all integers n. There are infinitely many such points.",
+    "explanation": "sin x attains its minimum value of -1 at x = \\(3\\pi\\) /2 + \\(2n\\pi\\)  for all integers n. There are infinitely many such points.",
     "image_url": null
   },
   {
     "id": 144,
     "subject": "maths",
     "difficulty": "easy",
-    "question": "The value of cosec(1080^{\\circ}) is",
+    "question": "The value of \\(cosec(1080^{\\circ})\\) is",
     "options": [
       "2",
       "1/2",
@@ -2306,7 +2306,7 @@
     ],
     "correct": 0,
     "answer": "\\(\\infty \\)",
-    "explanation": "1080^{\\circ} = 3×360^{\\circ} = 0^{\\circ}. cosec(0^{\\circ}) = 1/sin(0^{\\circ}) = 1/0 = \\infty  (undefined). But answer key says A (2).",
+    "explanation": "\\(1080^{\\circ}\\) = \\(3×360^{\\circ}\\) = \\(0^{\\circ}. cosec(0^{\\circ})\\) = \\(1/sin(0^{\\circ})\\) = 1/0 = \\(\\infty\\)  (undefined). But answer key says A (2).",
     "image_url": null
   },
   {
@@ -2329,7 +2329,7 @@
     "id": 146,
     "subject": "maths",
     "difficulty": "easy",
-    "question": "If a line of slope \\pi  is reflected over y-axis, then the slope of the reflected line is",
+    "question": "If a line of slope \\(\\pi\\)  is reflected over y-axis, then the slope of the reflected line is",
     "options": [
       "\\(\\pi \\)",
       "\\(-\\pi \\)",
@@ -2338,14 +2338,14 @@
     ],
     "correct": 1,
     "answer": "\\(-\\pi \\)",
-    "explanation": "Reflection over y-axis changes (x,y) to (-x,y). Slope dy/dx becomes dy/d(-x) = -dy/dx. So slope changes sign from \\pi  to -\\pi .",
+    "explanation": "Reflection over y-axis changes (x,y) to (-x,y). Slope dy/dx becomes dy/d(-x) = -dy/dx. So slope changes sign from \\(\\pi\\)  to \\(-\\pi\\) .",
     "image_url": null
   },
   {
     "id": 147,
     "subject": "maths",
     "difficulty": "medium",
-    "question": "The largest possible domain of the real valued function f(x) = \\sqrt(x^{2}-4)/\\sqrt(x^{2}-9) is",
+    "question": "The largest possible domain of the real valued function f(x) = \\(\\sqrt{x^{2}-4}/\\sqrt{x^{2}-9}\\) is",
     "options": [
       "[3, 4]",
       "(3, 4]",
@@ -2354,7 +2354,7 @@
     ],
     "correct": 1,
     "answer": "(3, 4]",
-    "explanation": "Need x^{2}-4 \\geq  0 (so |x| \\geq  2) and x^{2}-9 > 0 (so |x| > 3). Combined: |x| > 3, i.e., x \\in  (-\\infty , -3) \\cup  (3, \\infty ). But looking at options, the answer seems to be about a different function.",
+    "explanation": "Need \\(x^{2}-4 \\geq\\)  0 (so |x| \\(\\geq\\)  2) and \\(x^{2}-9\\) > 0 (so |x| > 3). Combined: |x| > 3, i.e., x \\(\\in  (-\\infty\\) , -3) \\(\\cup\\)  (3, \\(\\infty\\) ). But looking at options, the answer seems to be about a different function.",
     "image_url": null
   },
   {
@@ -2370,14 +2370,14 @@
     ],
     "correct": 0,
     "answer": "127",
-    "explanation": "Each bulb can be on or off: 2^{7} total states. Subtract 1 for the case where all are off (room not illuminated). So 2^{7} - 1 = 128 - 1 = 127.",
+    "explanation": "Each bulb can be on or off: \\(2^{7}\\) total states. Subtract 1 for the case where all are off (room not illuminated). So \\(2^{7}\\) - 1 = 128 - 1 = 127.",
     "image_url": null
   },
   {
     "id": 149,
     "subject": "maths",
     "difficulty": "medium",
-    "question": "cosec^{-1}(cosec x) = x holds if x belongs to",
+    "question": "\\(cosec^{-1}(cosec\\) x) = x holds if x belongs to",
     "options": [
       "ℝ",
       "\\([-\\pi /2, \\pi /2] - {0}\\)",
@@ -2386,14 +2386,14 @@
     ],
     "correct": 2,
     "answer": "\\([-\\pi /2, \\pi /2] - {0}\\)",
-    "explanation": "cosec^{-1}(cosec x) = x only when x is in the principal value range of cosec^{-1}, which is [-\\pi /2, \\pi /2] - {0}.",
+    "explanation": "\\(cosec^{-1}(cosec\\) x) = x only when x is in the principal value range of \\(cosec^{-1}\\) which is \\([-\\pi\\) /2, \\(\\pi\\) /2] - {0}.",
     "image_url": null
   },
   {
     "id": 150,
     "subject": "maths",
     "difficulty": "medium",
-    "question": "Sum of n terms of the series \\sqrt3 + \\sqrt27 + \\sqrt75 + \\sqrt147 + ... is",
+    "question": "Sum of n terms of the series \\(\\sqrt3\\) + \\(\\sqrt27\\) + \\(\\sqrt75\\) + \\(\\sqrt147\\) + ... is",
     "options": [
       "\\(n(n+1)(2n+1)/(2\\sqrt3)\\)",
       "\\(\\sqrt3 n(n+1)/2\\)",
@@ -2402,14 +2402,14 @@
     ],
     "correct": 0,
     "answer": "\\(n(n+1)(2n+1)/(2\\sqrt3)\\)",
-    "explanation": "Series: \\sqrt3 + 3\\sqrt3 + 5\\sqrt3 + 7\\sqrt3 + ... = \\sqrt3(1 + 3 + 5 + 7 + ...) = \\sqrt3 × n^{2}? Wait: \\sqrt3, \\sqrt27=3\\sqrt3, \\sqrt75=5\\sqrt3, \\sqrt147=7\\sqrt3. Sum = \\sqrt3(1+3+5+...+(2n-1)) = \\sqrt3 × n^{2}. But options don't match. Let me recheck: 1+3+5+...+(2n-1) = n^{2}. But option A is n(n+1)(2n+1)/(2\\sqrt3) = sum of squares/\\sqrt3. Hmm.",
+    "explanation": "Series: \\(\\sqrt3\\) + \\(3\\sqrt3\\) + \\(5\\sqrt3\\) + \\(7\\sqrt3\\) + ... = \\(\\sqrt3(1\\) + 3 + 5 + 7 + ...) = \\(\\sqrt3\\) × \\(n^{2}?\\) Wait: \\(\\sqrt3, \\sqrt27=3\\sqrt3, \\sqrt75=5\\sqrt3, \\sqrt147=7\\sqrt3\\) Sum = \\(\\sqrt3(1+3+5+...+(2n-1))\\) = \\(\\sqrt3\\) × \\(n^{2}\\) But options don't match. Let me recheck: 1+3+5+...+(2n-1) = \\(n^{2}\\) But option A is \\(n(n+1)(2n+1)/(2\\sqrt3)\\) = sum of \\(squares/\\sqrt3\\) Hmm.",
     "image_url": null
   },
   {
     "id": 151,
     "subject": "maths",
     "difficulty": "easy",
-    "question": "Let P(x) be a polynomial in real variable x of degree 5. Then lim(n\\rightarrow \\infty ) P(n)/2ⁿ is",
+    "question": "Let P(x) be a polynomial in real variable x of degree 5. Then \\(lim(n\\rightarrow \\infty\\) ) P(n)/2ⁿ is",
     "options": [
       "5",
       "1",
@@ -2418,14 +2418,14 @@
     ],
     "correct": 2,
     "answer": "0",
-    "explanation": "Exponential functions grow faster than any polynomial. For any polynomial P(n), P(n)/2ⁿ \\rightarrow  0 as n \\rightarrow  \\infty .",
+    "explanation": "Exponential functions grow faster than any polynomial. For any polynomial P(n), P(n)/2ⁿ \\(\\rightarrow\\)  0 as n \\(\\rightarrow  \\infty\\) .",
     "image_url": null
   },
   {
     "id": 152,
     "subject": "maths",
     "difficulty": "medium",
-    "question": "Subject to the conditions 0 \\leq  x \\leq  10; 0 \\leq  y \\leq  5, the minimum value of the function 4x - 5y + 10 is",
+    "question": "Subject to the conditions 0 \\(\\leq\\)  x \\(\\leq\\)  10; 0 \\(\\leq\\)  y \\(\\leq\\)  5, the minimum value of the function 4x - 5y + 10 is",
     "options": [
       "5",
       "-15",
@@ -2441,7 +2441,7 @@
     "id": 153,
     "subject": "maths",
     "difficulty": "medium",
-    "question": "lim(n\\rightarrow \\infty ) [1/2 + 1/4 + 1/8 + ... + 1/2ⁿ] =",
+    "question": "\\(lim(n\\rightarrow \\infty\\) ) [1/2 + 1/4 + 1/8 + ... + 1/2ⁿ] =",
     "options": [
       "0",
       "1",
@@ -2466,14 +2466,14 @@
     ],
     "correct": 2,
     "answer": "integers greater than 3",
-    "explanation": "For composite n, smallest prime factor sum: 4 = 2+2 = 4. But 4 is not in 'greater than 4'. Actually f(4)=4, f(6)=5, f(8)=6, f(9)=6, etc. The range includes all integers \\geq  4, so 'integers greater than 3' is correct.",
+    "explanation": "For composite n, smallest prime factor sum: 4 = 2+2 = 4. But 4 is not in 'greater than 4'. Actually f(4)=4, f(6)=5, f(8)=6, f(9)=6, etc. The range includes all integers \\(\\geq\\)  4, so 'integers greater than 3' is correct.",
     "image_url": null
   },
   {
     "id": 155,
     "subject": "maths",
     "difficulty": "medium",
-    "question": "\\Sigma (n=0 to \\infty ) cosⁿ(\\pi /6) =",
+    "question": "\\(\\Sigma\\) (n=0 to \\(\\infty\\) ) \\(cosⁿ(\\pi\\) /6) =",
     "options": [
       "\\(2/(2-\\sqrt3)\\)",
       "\\(\\sqrt3/2\\)",
@@ -2482,7 +2482,7 @@
     ],
     "correct": 0,
     "answer": "\\(2/(2-\\sqrt3)\\)",
-    "explanation": "Geometric series with r = cos(\\pi /6) = \\sqrt3/2 < 1. Sum = 1/(1-r) = 1/(1-\\sqrt3/2) = 2/(2-\\sqrt3). Rationalizing: 2(2+\\sqrt3)/(4-3) = 2(2+\\sqrt3).",
+    "explanation": "Geometric series with r = \\(cos(\\pi\\) /6) = \\(\\sqrt3/2\\) < 1. Sum = 1/(1-r) = \\(1/(1-\\sqrt3/2)\\) = \\(2/(2-\\sqrt3)\\) Rationalizing: \\(2(2+\\sqrt3)/(4-3)\\) = \\(2(2+\\sqrt3)\\)",
     "image_url": null
   },
   {
@@ -2505,7 +2505,7 @@
     "id": 157,
     "subject": "maths",
     "difficulty": "easy",
-    "question": "An onto function f: {1,2,3,4,5} \\rightarrow  {1,2,3,6,7} is",
+    "question": "An onto function f: {1,2,3,4,5} \\(\\rightarrow\\)  {1,2,3,6,7} is",
     "options": [
       "one-to-one in some cases",
       "always one-to-one",
@@ -2546,7 +2546,7 @@
     ],
     "correct": 1,
     "answer": "8 sq units",
-    "explanation": "|x| + |y| = 2 forms a diamond (square rotated by 45^{\\circ}) with vertices at (2,0), (0,2), (-2,0), (0,-2). Side length = 2\\sqrt2. Area = (2\\sqrt2)2 = 8. Or area = 2×(2×2)/2 × 4 triangles = 8.",
+    "explanation": "|x| + |y| = 2 forms a diamond (square rotated by \\(45^{\\circ})\\) with vertices at (2,0), (0,2), (-2,0), (0,-2). Side length = \\(2\\sqrt2\\) Area = \\((2\\sqrt2)2\\) = 8. Or area = 2×(2×2)/2 × 4 triangles = 8.",
     "image_url": null
   },
   {
@@ -2562,14 +2562,14 @@
     ],
     "correct": 0,
     "answer": "\\(3/(2\\sqrt5)\\)",
-    "explanation": "The two lines are parallel (both can be written as 3x - 6y + 10 = 0 and 3x - 6y - 8 = 0). Distance between parallel lines ax+by+c1=0 and ax+by+c2=0 is |c1-c2|/\\sqrt(a^{2}+b^{2}). Distance = |10-(-8)|/\\sqrt(9+36) = 18/\\sqrt45 = 18/(3\\sqrt5) = 6/\\sqrt5. For circle with parallel tangents, diameter = distance between tangents. Radius = 3/\\sqrt5 = 3\\sqrt5/5. But answer key says A: 3/(2\\sqrt5).",
+    "explanation": "The two lines are parallel (both can be written as 3x - 6y + 10 = 0 and 3x - 6y - 8 = 0). Distance between parallel lines ax+by+c1=0 and ax+by+c2=0 is \\(|c1-c2|/\\sqrt{a^{2}+b^{2}}\\) Distance = \\(|10-(-8)|/\\sqrt{9+36}\\) = \\(18/\\sqrt45\\) = \\(18/(3\\sqrt5)\\) = \\(6/\\sqrt5\\) For circle with parallel tangents, diameter = distance between tangents. Radius = \\(3/\\sqrt5\\) = \\(3\\sqrt5/5\\) But answer key says A: \\(3/(2\\sqrt5)\\)",
     "image_url": null
   },
   {
     "id": 161,
     "subject": "maths",
     "difficulty": "hard",
-    "question": "Three normals are drawn to the parabola y^{2} = x through the point (a, 0). Then",
+    "question": "Three normals are drawn to the parabola \\(y^{2}\\) = x through the point (a, 0). Then",
     "options": [
       "a = 1/2",
       "a = 1/4",
@@ -2578,7 +2578,7 @@
     ],
     "correct": 1,
     "answer": "a = 1/4",
-    "explanation": "For parabola y^{2} = 4ax (here 4a=1, so a=1/4), three real normals can be drawn from a point if it lies inside the evolute. For point (a,0) on axis, three normals exist when a > 1/2 (for standard parabola). But answer key says B (1/4).",
+    "explanation": "For parabola \\(y^{2}\\) = 4ax (here 4a=1, so a=1/4), three real normals can be drawn from a point if it lies inside the evolute. For point (a,0) on axis, three normals exist when a > 1/2 (for standard parabola). But answer key says B (1/4).",
     "image_url": null
   },
   {
@@ -2594,7 +2594,7 @@
     ],
     "correct": 0,
     "answer": "\\(c^{-1} * b * a^{-1}\\)",
-    "explanation": "c * y * a = b. Multiply left by c^{-1}: y * a = c^{-1} * b. Multiply right by a^{-1}: y = c^{-1} * b * a^{-1}.",
+    "explanation": "c * y * a = b. Multiply left by \\(c^{-1}\\) y * a = \\(c^{-1}\\) * b. Multiply right by \\(a^{-1}\\) y = \\(c^{-1}\\) * b * \\(a^{-1}\\)",
     "image_url": null
   },
   {
@@ -2626,7 +2626,7 @@
     ],
     "correct": 1,
     "answer": "40/81",
-    "explanation": "|(z-i)/(z+i)| = 5 means |z-i| = 5|z+i|. Let z = x + iy. Then x^{2} + (y-1)2 = 25(x^{2} + (y+1)2). Expanding: x^{2} + y^{2} - 2y + 1 = 25x^{2} + 25y^{2} + 50y + 25. 24x^{2} + 24y^{2} + 52y + 24 = 0. x^{2} + y^{2} + (13/6)y + 1 = 0. Center: (0, -13/12). Radius^{2} = (13/12)2 - 1 = 169/144 - 1 = 25/144. Hmm, this doesn't match. Let me recheck: |z-i|2 = 25|z+i|2. (x^{2}+(y-1)2) = 25(x^{2}+(y+1)2). x^{2}+y^{2}-2y+1 = 25x^{2}+25y^{2}+50y+25. 24x^{2}+24y^{2}+52y+24=0. Divide by 24: x^{2}+y^{2}+(13/6)y+1=0. r^{2} = (13/12)2-1 = 25/144. r = 5/12. But answer says 40/81.",
+    "explanation": "|(z-i)/(z+i)| = 5 means |z-i| = 5|z+i|. Let z = x + iy. Then \\(x^{2}\\) + (y-1)2 = \\(25(x^{2}\\) + (y+1)2). Expanding: \\(x^{2}\\) + \\(y^{2}\\) - 2y + 1 = \\(25x^{2}\\) + \\(25y^{2}\\) + 50y + 25. \\(24x^{2}\\) + \\(24y^{2}\\) + 52y + 24 = 0. \\(x^{2}\\) + \\(y^{2}\\) + (13/6)y + 1 = 0. Center: (0, -13/12). \\(Radius^{2}\\) = (13/12)2 - 1 = 169/144 - 1 = 25/144. Hmm, this doesn't match. Let me recheck: |z-i|2 = 25|z+i|2. \\((x^{2}+(y-1)2)\\) = \\(25(x^{2}+(y+1)2). x^{2}+y^{2}-2y+1\\) = \\(25x^{2}+25y^{2}+50y+25. 24x^{2}+24y^{2}+52y+24=0\\) Divide by 24: \\(x^{2}+y^{2}+(13/6)y+1=0. r^{2}\\) = (13/12)2-1 = 25/144. r = 5/12. But answer says 40/81.",
     "image_url": null
   },
   {
@@ -2649,7 +2649,7 @@
     "id": 166,
     "subject": "maths",
     "difficulty": "medium",
-    "question": "The positive integer n for which 2^{2} + 3×2^{2} + 4×2^{3} + ... + n×2ⁿ-1 = 2ⁿ+1 is",
+    "question": "The positive integer n for which \\(2^{2}\\) + \\(3×2^{2}\\) + \\(4×2^{3}\\) + ... + n×2ⁿ-1 = 2ⁿ+1 is",
     "options": [
       "17",
       "21",
@@ -2658,7 +2658,7 @@
     ],
     "correct": 3,
     "answer": "33",
-    "explanation": "The sum \\Sigma (k=2 to n) k×2ᵏ-1 = 2ⁿ+1. Using formula for arithmetico-geometric series, we can solve for n. Answer key says D (33).",
+    "explanation": "The sum \\(\\Sigma\\) (k=2 to n) k×2ᵏ-1 = 2ⁿ+1. Using formula for arithmetico-geometric series, we can solve for n. Answer key says D (33).",
     "image_url": null
   },
   {
@@ -2674,14 +2674,14 @@
     ],
     "correct": 2,
     "answer": "136",
-    "explanation": "a + b + c = -12 where a, b, c \\leq  -1. Let a^{\\prime} = -a, b^{\\prime} = -b, c^{\\prime} = -c where a^{\\prime}, b^{\\prime}, c^{\\prime} \\geq  1. Then a^{\\prime} + b^{\\prime} + c^{\\prime} = 12. Number of positive integer solutions = C(12-1, 3-1) = C(11, 2) = 55? But answer says 136. Let me recheck: a+b+c = -12 with a,b,c negative integers. Let a=-a1, b=-b1, c=-c1 where a1,b1,c1 \\geq  1. a1+b1+c1 = 12. Stars and bars: C(12-1, 3-1) = C(11,2) = 55. But answer key says C (136).",
+    "explanation": "a + b + c = -12 where a, b, c \\(\\leq\\)  -1. Let \\(a^{\\prime}\\) = -a, \\(b^{\\prime}\\) = -b, \\(c^{\\prime}\\) = -c where \\(a^{\\prime}, b^{\\prime}, c^{\\prime} \\geq\\)  1. Then \\(a^{\\prime}\\) + \\(b^{\\prime}\\) + \\(c^{\\prime}\\) = 12. Number of positive integer solutions = C(12-1, 3-1) = C(11, 2) = 55? But answer says 136. Let me recheck: a+b+c = -12 with a,b,c negative integers. Let a=-a1, b=-b1, c=-c1 where a1,b1,c1 \\(\\geq\\)  1. a1+b1+c1 = 12. Stars and bars: C(12-1, 3-1) = C(11,2) = 55. But answer key says C (136).",
     "image_url": null
   },
   {
     "id": 168,
     "subject": "maths",
     "difficulty": "medium",
-    "question": "The roots of the equation 4^{2}ˣ+1 + 4^{2} = 4ˣ+3 + 4ˣ are",
+    "question": "The roots of the equation \\(4^{2}ˣ+1\\) + \\(4^{2}\\) = 4ˣ+3 + 4ˣ are",
     "options": [
       "1, -2",
       "1, 2",
@@ -2690,7 +2690,7 @@
     ],
     "correct": 2,
     "answer": "-1, 2",
-    "explanation": "Let 4ˣ = t. Then 4t^{2} + 16 = 64t + t. 4t^{2} - 65t + 16 = 0? Let me recheck: 4^{2}ˣ+1 = 4\\cdot (4ˣ)2 = 4t^{2}. 4ˣ+3 = 64t. So 4t^{2} + 16 = 64t + t = 65t. 4t^{2} - 65t + 16 = 0. Discriminant = 4225 - 256 = 3969 = 63^{2}. t = (65±63)/8. t = 128/8 = 16 or t = 2/8 = 1/4. So 4ˣ = 16 \\rightarrow  x = 2, or 4ˣ = 1/4 \\rightarrow  x = -1.",
+    "explanation": "Let 4ˣ = t. Then \\(4t^{2}\\) + 16 = 64t + t. \\(4t^{2}\\) - 65t + 16 = 0? Let me recheck: \\(4^{2}ˣ+1\\) = \\(4\\cdot\\) (4ˣ)2 = \\(4t^{2}\\) 4ˣ+3 = 64t. So \\(4t^{2}\\) + 16 = 64t + t = 65t. \\(4t^{2}\\) - 65t + 16 = 0. Discriminant = 4225 - 256 = 3969 = \\(63^{2}\\) t = (65±63)/8. t = 128/8 = 16 or t = 2/8 = 1/4. So 4ˣ = 16 \\(\\rightarrow\\)  x = 2, or 4ˣ = 1/4 \\(\\rightarrow\\)  x = -1.",
     "image_url": null
   },
   {
@@ -2713,7 +2713,7 @@
     "id": 170,
     "subject": "maths",
     "difficulty": "hard",
-    "question": "The coefficient of x^{6} in (1+x)(1+x^{2})...(1+x^{6}) is",
+    "question": "The coefficient of \\(x^{6}\\) in \\((1+x)(1+x^{2})...(1+x^{6})\\) is",
     "options": [
       "16C9",
       "16C5 - 6C5",
@@ -2722,14 +2722,14 @@
     ],
     "correct": 0,
     "answer": "16C9",
-    "explanation": "The coefficient of x^{6} in \\prod (1+xᵏ) for k=1 to 6 equals the number of partitions of 6 into distinct parts. Partitions: 6, 5+1, 4+2, 3+2+1. That's 4. But answer says 16C9. Let me recheck the question - it says (1+x)(1+x^{2})...(1+x^{15})?",
+    "explanation": "The coefficient of \\(x^{6}\\) in \\(\\prod\\) (1+xᵏ) for k=1 to 6 equals the number of partitions of 6 into distinct parts. Partitions: 6, 5+1, 4+2, 3+2+1. That's 4. But answer says 16C9. Let me recheck the question - it says \\((1+x)(1+x^{2})...(1+x^{15})?\\)",
     "image_url": null
   },
   {
     "id": 171,
     "subject": "maths",
     "difficulty": "easy",
-    "question": "If the matrix [[\\lambda , 3, 0], [4, 1, 2], [1, 1, 2]] is not invertible, then \\lambda  =",
+    "question": "If the matrix \\([[\\lambda\\) , 3, 0], [4, 1, 2], [1, 1, 2]] is not invertible, then \\(\\lambda\\)  =",
     "options": [
       "10",
       "-10",
@@ -2738,14 +2738,14 @@
     ],
     "correct": 2,
     "answer": "-4",
-    "explanation": "For non-invertible matrix, det = 0. det = \\lambda (2-2) - 3(8-2) + 0 = 0 - 3(6) = -18? Wait, let me recheck: \\lambda (1\\cdot 2 - 2\\cdot 1) - 3(4\\cdot 2 - 2\\cdot 1) + 0 = \\lambda (0) - 3(6) = -18. This is never 0. Hmm, maybe different matrix.",
+    "explanation": "For non-invertible matrix, det = 0. det = \\(\\lambda\\) (2-2) - 3(8-2) + 0 = 0 - 3(6) = -18? Wait, let me recheck: \\(\\lambda (1\\cdot\\) 2 - \\(2\\cdot\\) 1) - \\(3(4\\cdot\\) 2 - \\(2\\cdot\\) 1) + 0 = \\(\\lambda\\) (0) - 3(6) = -18. This is never 0. Hmm, maybe different matrix.",
     "image_url": null
   },
   {
     "id": 172,
     "subject": "maths",
     "difficulty": "medium",
-    "question": "If A = [[cos^{2}\\alpha , cos \\alpha  sin \\alpha ], [cos \\alpha  sin \\alpha , sin^{2}\\alpha ]] and B = [[cos^{2}\\beta , cos \\beta  sin \\beta ], [cos \\beta  sin \\beta , sin^{2}\\beta ]] are two matrices such that AB is a null matrix, then \\alpha  - \\beta  is",
+    "question": "If A = \\([[cos^{2}\\alpha\\) , cos \\(\\alpha\\)  sin \\(\\alpha\\) ], [cos \\(\\alpha\\)  sin \\(\\alpha\\) , \\(sin^{2}\\alpha\\) ]] and B = \\([[cos^{2}\\beta\\) , cos \\(\\beta\\)  sin \\(\\beta\\) ], [cos \\(\\beta\\)  sin \\(\\beta\\) , \\(sin^{2}\\beta\\) ]] are two matrices such that AB is a null matrix, then \\(\\alpha\\)  - \\(\\beta\\)  is",
     "options": [
       "0",
       "\\(an odd multiple of \\pi /2\\)",
@@ -2754,14 +2754,14 @@
     ],
     "correct": 1,
     "answer": "\\(an odd multiple of \\pi /2\\)",
-    "explanation": "A and B are projection matrices. AB = 0 implies the projections are onto orthogonal subspaces, meaning \\alpha  and \\beta  differ by \\pi /2 (odd multiple).",
+    "explanation": "A and B are projection matrices. AB = 0 implies the projections are onto orthogonal subspaces, meaning \\(\\alpha\\)  and \\(\\beta\\)  differ by \\(\\pi\\) /2 (odd multiple).",
     "image_url": null
   },
   {
     "id": 173,
     "subject": "maths",
     "difficulty": "hard",
-    "question": "The sum of the series cos x - (1/2)cos^{2}x + (1/3)cos^{3}x - (1/4)cos^{4}x + ... is",
+    "question": "The sum of the series cos x - \\((1/2)cos^{2}x\\) + \\((1/3)cos^{3}x\\) - \\((1/4)cos^{4}x\\) + ... is",
     "options": [
       "log 2 + log cos(x/2)",
       "log 2 - 2log cos(x/2)",
@@ -2770,14 +2770,14 @@
     ],
     "correct": 3,
     "answer": "log 2 + 2log cos(x/2)",
-    "explanation": "The series is ln(1 + cos x) = cos x - cos^{2}x/2 + cos^{3}x/3 - ... . Using 1 + cos x = 2cos^{2}(x/2), we get ln(2cos^{2}(x/2)) = ln 2 + 2ln(cos(x/2)).",
+    "explanation": "The series is ln(1 + cos x) = cos x - \\(cos^{2}x/2\\) + \\(cos^{3}x/3\\) - ... . Using 1 + cos x = \\(2cos^{2}(x/2)\\) we get \\(ln(2cos^{2}(x/2))\\) = ln 2 + 2ln(cos(x/2)).",
     "image_url": null
   },
   {
     "id": 174,
     "subject": "maths",
     "difficulty": "medium",
-    "question": "Let N be the set of all natural numbers. If {aₙ} : n \\in  N and aₙ \\in  N, and {b, c, d} \\subset  N where b, c, d are coprimes, then",
+    "question": "Let N be the set of all natural numbers. If {aₙ} : n \\(\\in\\)  N and aₙ \\(\\in\\)  N, and {b, c, d} \\(\\subset\\)  N where b, c, d are coprimes, then",
     "options": [
       "b = cd",
       "c = bd",
@@ -2818,7 +2818,7 @@
     ],
     "correct": 2,
     "answer": "3/5",
-    "explanation": "P(>4) = 2/6 = 1/3, P(\\leq 4) = 4/6 = 2/3. P(even tosses) = P(\\leq 4 then >4) + P(\\leq 4, \\leq 4, \\leq 4, >4) + ... = (2/3)(1/3) + (2/3)3(1/3) + ... = (2/9)/(1-4/9) = (2/9)/(5/9) = 2/5? But answer says 3/5.",
+    "explanation": "P(>4) = 2/6 = 1/3, \\(P(\\leq\\) 4) = 4/6 = 2/3. P(even tosses) = \\(P(\\leq\\) 4 then >4) + \\(P(\\leq\\) 4, \\(\\leq\\) 4, \\(\\leq\\) 4, >4) + ... = (2/3)(1/3) + (2/3)3(1/3) + ... = (2/9)/(1-4/9) = (2/9)/(5/9) = 2/5? But answer says 3/5.",
     "image_url": null
   },
   {
@@ -2850,7 +2850,7 @@
     ],
     "correct": 3,
     "answer": "\\(5(\\sqrt2 + 1)\\)",
-    "explanation": "5cos x + 5sin x = 5\\sqrt2 sin(x + \\pi /4). Maximum = 5\\sqrt2. So total maximum = 5\\sqrt2 + 5 = 5(\\sqrt2 + 1).",
+    "explanation": "5cos x + 5sin x = \\(5\\sqrt2\\) sin(x + \\(\\pi\\) /4). Maximum = \\(5\\sqrt2\\) So total maximum = \\(5\\sqrt2\\) + 5 = \\(5(\\sqrt2\\) + 1).",
     "image_url": null
   },
   {
@@ -2866,14 +2866,14 @@
     ],
     "correct": 3,
     "answer": "no solution",
-    "explanation": "Maximum value of 4sin x + 5cos x = \\sqrt(16+25) = \\sqrt41 \\approx  6.4 < 7. Since maximum < 7, no solution exists.",
+    "explanation": "Maximum value of 4sin x + 5cos x = \\(\\sqrt{16+25}\\) = \\(\\sqrt41 \\approx\\)  6.4 < 7. Since maximum < 7, no solution exists.",
     "image_url": null
   },
   {
     "id": 180,
     "subject": "maths",
     "difficulty": "medium",
-    "question": "In a triangle ABC, b = \\sqrt3, c = 2 and sin B = 3/4, then C is equal to",
+    "question": "In a triangle ABC, b = \\(\\sqrt3\\) c = 2 and sin B = 3/4, then C is equal to",
     "options": [
       "\\(30^{\\circ}\\)",
       "\\(60^{\\circ}\\)",
@@ -2882,14 +2882,14 @@
     ],
     "correct": 1,
     "answer": "\\(60^{\\circ}\\)",
-    "explanation": "Using sine rule: b/sin B = c/sin C. \\sqrt3/(3/4) = 2/sin C. sin C = 2 × (3/4)/\\sqrt3 = 3/(2\\sqrt3) = \\sqrt3/2. So C = 60^{\\circ} or 120^{\\circ}. Since c > b, C > B. Check: if C = 120^{\\circ}, then B = 180^{\\circ} - 120^{\\circ} - A = 60^{\\circ} - A. But sin B = 3/4, B \\approx  48.6^{\\circ}. Then A = 60^{\\circ} - 48.6^{\\circ} = 11.4^{\\circ}. This works. But answer key says B (60^{\\circ}).",
+    "explanation": "Using sine rule: b/sin B = c/sin C. \\(\\sqrt3/(3/4)\\) = 2/sin C. sin C = 2 × \\((3/4)/\\sqrt3\\) = \\(3/(2\\sqrt3)\\) = \\(\\sqrt3/2\\) So C = \\(60^{\\circ}\\) or \\(120^{\\circ}\\) Since c > b, C > B. Check: if C = \\(120^{\\circ}\\) then B = \\(180^{\\circ}\\) - \\(120^{\\circ}\\) - A = \\(60^{\\circ}\\) - A. But sin B = 3/4, B \\(\\approx  48.6^{\\circ}\\) Then A = \\(60^{\\circ}\\) - \\(48.6^{\\circ}\\) = \\(11.4^{\\circ}\\) This works. But answer key says B \\((60^{\\circ})\\)",
     "image_url": null
   },
   {
     "id": 181,
     "subject": "maths",
     "difficulty": "medium",
-    "question": "The equation of the straight line which is parallel to x-axis and crosses the curve y = \\sqrtx at an angle of 45^{\\circ}, is",
+    "question": "The equation of the straight line which is parallel to x-axis and crosses the curve y = \\(\\sqrtx\\) at an angle of \\(45^{\\circ}\\) is",
     "options": [
       "x = 1/2",
       "y = 1/4",
@@ -2898,7 +2898,7 @@
     ],
     "correct": 2,
     "answer": "y = 1/2",
-    "explanation": "Line parallel to x-axis is y = k. It crosses y = \\sqrtx at angle 45^{\\circ}. Slope of y = \\sqrtx is 1/(2\\sqrtx). For angle 45^{\\circ} between horizontal and tangent: tan(45^{\\circ}) = 1 = 1/(2\\sqrtx), so x = 1/4. Then y = \\sqrt(1/4) = 1/2.",
+    "explanation": "Line parallel to x-axis is y = k. It crosses y = \\(\\sqrtx\\) at angle \\(45^{\\circ}\\) Slope of y = \\(\\sqrtx\\) is \\(1/(2\\sqrtx)\\) For angle \\(45^{\\circ}\\) between horizontal and tangent: \\(tan(45^{\\circ})\\) = 1 = \\(1/(2\\sqrtx)\\) so x = 1/4. Then y = \\(\\sqrt{1/4}\\) = 1/2.",
     "image_url": null
   },
   {
@@ -2914,14 +2914,14 @@
     ],
     "correct": 1,
     "answer": "(y(y + x ln y))/(x(x + y ln x))",
-    "explanation": "Taking ln: y ln x = x ln y. Differentiate: y^{\\prime}/y \\cdot  ln x + y/x = ln y + x/y \\cdot  y^{\\prime}. Solve for y^{\\prime}.",
+    "explanation": "Taking ln: y ln x = x ln y. Differentiate: \\(y^{\\prime}/y \\cdot\\)  ln x + y/x = ln y + x/y \\(\\cdot  y^{\\prime}\\) Solve for \\(y^{\\prime}\\)",
     "image_url": null
   },
   {
     "id": 183,
     "subject": "maths",
     "difficulty": "medium",
-    "question": "If f: ℝ \\rightarrow  ℝ is defined by f(x) = x - [x] - 1/4 for x \\in  ℝ where [x] is the greatest integer not exceeding x, then {x \\in  ℝ : f(x) = 3/4} is equal to",
+    "question": "If f: ℝ \\(\\rightarrow\\)  ℝ is defined by f(x) = x - [x] - 1/4 for x \\(\\in\\)  ℝ where [x] is the greatest integer not exceeding x, then {x \\(\\in\\)  ℝ : f(x) = 3/4} is equal to",
     "options": [
       "ℤ, the set of all integers",
       "ℕ, the set of all natural numbers",
@@ -2930,14 +2930,14 @@
     ],
     "correct": 2,
     "answer": "\\(\\phi , the empty set\\)",
-    "explanation": "f(x) = {x} - 1/4 where {x} is fractional part, 0 \\leq  {x} < 1. So -1/4 \\leq  f(x) < 3/4. f(x) = 3/4 is never achieved (since {x} < 1, so {x} - 1/4 < 3/4).",
+    "explanation": "f(x) = {x} - 1/4 where {x} is fractional part, 0 \\(\\leq\\)  {x} < 1. So -1/4 \\(\\leq\\)  f(x) < 3/4. f(x) = 3/4 is never achieved (since {x} < 1, so {x} - 1/4 < 3/4).",
     "image_url": null
   },
   {
     "id": 184,
     "subject": "maths",
     "difficulty": "easy",
-    "question": "The value of lim(x\\rightarrow 0) (5ˣ - 5-ˣ)/(2x) is",
+    "question": "The value of \\(lim(x\\rightarrow\\) 0) (5ˣ - 5-ˣ)/(2x) is",
     "options": [
       "log 5",
       "0",
@@ -2946,14 +2946,14 @@
     ],
     "correct": 0,
     "answer": "log 5",
-    "explanation": "Using lim(x\\rightarrow 0) (aˣ - 1)/x = ln a: (5ˣ - 5-ˣ)/(2x) = (5ˣ - 1)/(2x) - (5-ˣ - 1)/(2x) \\rightarrow  (ln 5)/2 - (-ln 5)/2 = ln 5.",
+    "explanation": "Using \\(lim(x\\rightarrow\\) 0) (aˣ - 1)/x = ln a: (5ˣ - 5-ˣ)/(2x) = (5ˣ - 1)/(2x) - (5-ˣ - 1)/(2x) \\(\\rightarrow\\)  (ln 5)/2 - (-ln 5)/2 = ln 5.",
     "image_url": null
   },
   {
     "id": 185,
     "subject": "maths",
     "difficulty": "medium",
-    "question": "The sum of series 1/1! + (1+2)/2! + (1+2+3)/3! + ... + \\infty  equals",
+    "question": "The sum of series 1/1! + (1+2)/2! + (1+2+3)/3! + ... + \\(\\infty\\)  equals",
     "options": [
       "e",
       "2e",
@@ -2962,14 +2962,14 @@
     ],
     "correct": 2,
     "answer": "3e/2",
-    "explanation": "General term: (1+2+...+n)/n! = n(n+1)/(2\\cdot n!) = (n+1)/(2\\cdot (n-1)!). Sum = \\frac{1}{2} \\Sigma (n+1)/(n-1)! = \\frac{1}{2} \\Sigma (n-1+2)/(n-1)! = \\frac{1}{2}[\\Sigma  1/(n-2)! + 2\\Sigma  1/(n-1)!] = \\frac{1}{2}[e + 2e] = 3e/2.",
+    "explanation": "General term: (1+2+...+n)/n! = \\(n(n+1)/(2\\cdot\\) n!) = \\((n+1)/(2\\cdot\\) (n-1)!). Sum = \\(\\frac{1}{2} \\Sigma\\) (n+1)/(n-1)! = \\(\\frac{1}{2} \\Sigma\\) (n-1+2)/(n-1)! = \\(\\frac{1}{2}[\\Sigma\\)  1/(n-2)! + \\(2\\Sigma\\)  1/(n-1)!] = \\(\\frac{1}{2}[e\\) + 2e] = 3e/2.",
     "image_url": null
   },
   {
     "id": 186,
     "subject": "maths",
     "difficulty": "easy",
-    "question": "\\int [-2 to 2] [x] dx is equal to",
+    "question": "\\(\\int\\) [-2 to 2] [x] dx is equal to",
     "options": [
       "1",
       "2",
@@ -2985,7 +2985,7 @@
     "id": 187,
     "subject": "maths",
     "difficulty": "medium",
-    "question": "A curve through (1, 0) and satisfying the differential equation (1+y^{2})dx - xydy = 0 represents a/an",
+    "question": "A curve through (1, 0) and satisfying the differential equation \\((1+y^{2})dx\\) - xydy = 0 represents a/an",
     "options": [
       "circle",
       "parabola",
@@ -2994,14 +2994,14 @@
     ],
     "correct": 3,
     "answer": "hyperbola",
-    "explanation": "(1+y^{2})dx = xydy. dy/dx = (1+y^{2})/(xy). Separate: ydy/(1+y^{2}) = dx/x. \\frac{1}{2}ln(1+y^{2}) = ln|x| + C. 1+y^{2} = cx^{2}. Through (1,0): 1 = c. So x^{2} - y^{2} = 1, a hyperbola.",
+    "explanation": "\\((1+y^{2})dx\\) = xydy. dy/dx = \\((1+y^{2})/(xy)\\) Separate: \\(ydy/(1+y^{2})\\) = dx/x. \\(\\frac{1}{2}ln(1+y^{2})\\) = ln|x| + C. \\(1+y^{2}\\) = \\(cx^{2}\\) Through (1,0): 1 = c. So \\(x^{2}\\) - \\(y^{2}\\) = 1, a hyperbola.",
     "image_url": null
   },
   {
     "id": 188,
     "subject": "maths",
     "difficulty": "easy",
-    "question": "If \\vec{a}, \\vec{b}, \\vec{c} are three non-coplanar mutually perpendicular unit vectors, then [\\vec{a} \\vec{b} \\vec{c}] is",
+    "question": "If \\(\\vec{a}, \\vec{b}, \\vec{c}\\) are three non-coplanar mutually perpendicular unit vectors, then \\([\\vec{a} \\vec{b} \\vec{c}]\\) is",
     "options": [
       "2",
       "0",
@@ -3010,7 +3010,7 @@
     ],
     "correct": 2,
     "answer": "1",
-    "explanation": "[\\vec{a} \\vec{b} \\vec{c}] = \\vec{a} \\cdot  (\\vec{b} × \\vec{c}). For mutually perpendicular unit vectors, \\vec{b} × \\vec{c} = \\vec{a} (assuming right-handed system). So \\vec{a} \\cdot  \\vec{a} = |\\vec{a}|2 = 1.",
+    "explanation": "\\([\\vec{a} \\vec{b} \\vec{c}]\\) = \\(\\vec{a} \\cdot  (\\vec{b}\\) × \\(\\vec{c})\\) For mutually perpendicular unit vectors, \\(\\vec{b}\\) × \\(\\vec{c}\\) = \\(\\vec{a}\\) (assuming right-handed system). So \\(\\vec{a} \\cdot  \\vec{a}\\) = \\(|\\vec{a}|2\\) = 1.",
     "image_url": null
   },
   {
@@ -3026,7 +3026,7 @@
     ],
     "correct": 1,
     "answer": "\\(\\sqrt3 + 1\\)",
-    "explanation": "Let z = re^{(i\\theta ). |z + 2/z|2 = |re^(i\\theta ) + 2/r e^(-i\\theta )|2 = r^{2} + 4/r^{2} + 4cos(2\\theta ) = 4. For maximum |z| = r, we need to maximize r subject to constraint. Using calculus, maximum r = \\sqrt3 + 1.",
+    "explanation": "Let z = \\(re^{(i\\theta\\) ). |z + 2/z|2 = \\(|re^(i\\theta\\) ) + 2/r \\(e^(-i\\theta\\) )|2 = \\(r^{2}\\) + \\(4/r^{2}\\) + \\(4cos(2\\theta\\) ) = 4. For maximum |z| = r, we need to maximize r subject to constraint. Using calculus, maximum r = \\(\\sqrt3\\) + 1.",
     "image_url": null
   },
   {
@@ -3042,7 +3042,7 @@
     ],
     "correct": 0,
     "answer": "15/8",
-    "explanation": "Odd natural numbers not divisible by primes > 5 are of form 3^{a \\cdot  5^b. The sum of reciprocals of all such numbers is (1 + 1/3 + 1/9 + ...)(1 + 1/5 + 1/25 + ...) - 1 = (3/2)(5/4) - 1 = 15/8 - 1 = 7/8? But for odd only, multiply by 1/2: (1/2)(3/2)(5/4) = 15/16? Hmm. Answer key says A (15/8).}",
+    "explanation": "Odd natural numbers not divisible by primes > 5 are of form \\(3^{a \\cdot  5^b\\) The sum of reciprocals of all such numbers is (1 + 1/3 + 1/9 + ...)(1 + 1/5 + 1/25 + ...) - 1 = (3/2)(5/4) - 1 = 15/8 - 1 = 7/8? But for odd only, multiply by 1/2: (1/2)(3/2)(5/4) = 15/16? Hmm. Answer key says A (15/8).}",
     "image_url": null
   },
   {
@@ -3058,14 +3058,14 @@
     ],
     "correct": 0,
     "answer": "0",
-    "explanation": "eˣ > 0 for all x, and eˣ > x for all real x (since eˣ grows faster than x and e^{0} = 1 > 0). Therefore no real solutions.",
+    "explanation": "eˣ > 0 for all x, and eˣ > x for all real x (since eˣ grows faster than x and \\(e^{0}\\) = 1 > 0). Therefore no real solutions.",
     "image_url": null
   },
   {
     "id": 192,
     "subject": "maths",
     "difficulty": "medium",
-    "question": "If f(\\lambda , x) = x + \\lambda x + \\lambda 2x, then f(3x) - f(x) is equal to",
+    "question": "If \\(f(\\lambda\\) , x) = x + \\(\\lambda\\) x + \\(\\lambda\\) 2x, then f(3x) - f(x) is equal to",
     "options": [
       "\\(2x\\lambda 2\\)",
       "\\(3x\\lambda 2\\)",
@@ -3074,14 +3074,14 @@
     ],
     "correct": 1,
     "answer": "\\(3x\\lambda 2\\)",
-    "explanation": "f(\\lambda , x) = x(1 + \\lambda  + \\lambda 2). f(3x) - f(x) = 3x(1+\\lambda +\\lambda 2) - x(1+\\lambda +\\lambda 2) = 2x(1+\\lambda +\\lambda 2)? But answer says 3x\\lambda 2. Let me recheck the question.",
+    "explanation": "\\(f(\\lambda\\) , x) = x(1 + \\(\\lambda\\)  + \\(\\lambda\\) 2). f(3x) - f(x) = \\(3x(1+\\lambda +\\lambda\\) 2) - \\(x(1+\\lambda +\\lambda\\) 2) = \\(2x(1+\\lambda +\\lambda\\) 2)? But answer says \\(3x\\lambda\\) 2. Let me recheck the question.",
     "image_url": null
   },
   {
     "id": 193,
     "subject": "maths",
     "difficulty": "hard",
-    "question": "If \\alpha  and \\beta  are solutions of sin^{2}x + ax + b = 0 as well as cos^{2}x + cx + d = 0, then \\alpha  + \\beta  is equal to",
+    "question": "If \\(\\alpha\\)  and \\(\\beta\\)  are solutions of \\(sin^{2}x\\) + ax + b = 0 as well as \\(cos^{2}x\\) + cx + d = 0, then \\(\\alpha\\)  + \\(\\beta\\)  is equal to",
     "options": [
       "\\(2bd/(b^{2}+d^{2})\\)",
       "\\(2ac/(a^{2}+c^{2})\\)",
@@ -3090,7 +3090,7 @@
     ],
     "correct": 3,
     "answer": "\\((a^{2}+c^{2})/(2ac)\\)",
-    "explanation": "From both equations at roots: sin^{2}\\alpha  + a\\alpha  + b = 0 and cos^{2}\\alpha  + c\\alpha  + d = 0. Adding: 1 + (a+c)\\alpha  + (b+d) = 0. This gives \\alpha  = -(1+b+d)/(a+c). Similarly for \\beta . The sum \\alpha +\\beta  can be derived using Vieta's formulas.",
+    "explanation": "From both equations at roots: \\(sin^{2}\\alpha\\)  + \\(a\\alpha\\)  + b = 0 and \\(cos^{2}\\alpha\\)  + \\(c\\alpha\\)  + d = 0. Adding: 1 + \\((a+c)\\alpha\\)  + (b+d) = 0. This gives \\(\\alpha\\)  = -(1+b+d)/(a+c). Similarly for \\(\\beta\\) . The sum \\(\\alpha +\\beta\\)  can be derived using Vieta's formulas.",
     "image_url": null
   },
   {
@@ -3106,7 +3106,7 @@
     ],
     "correct": 0,
     "answer": "7",
-    "explanation": "GP with a=1, r=3. Sum = (3ⁿ - 1)/2 > 1000. 3ⁿ > 2001. 3^{6} = 729, 3^{7} = 2187. So n = 7.",
+    "explanation": "GP with a=1, r=3. Sum = (3ⁿ - 1)/2 > 1000. 3ⁿ > 2001. \\(3^{6}\\) = 729, \\(3^{7}\\) = 2187. So n = 7.",
     "image_url": null
   },
   {
@@ -3122,7 +3122,7 @@
     ],
     "correct": 1,
     "answer": "b = 0",
-    "explanation": "f(x) = (a+b)|x| + cx^{2}. |x| is not differentiable at 0. x^{2} is differentiable. So f is differentiable at 0 iff coefficient of |x| is 0, i.e., a + b = 0? But answer says b = 0. Maybe f(x) = a + b|x| + cx^{2}.",
+    "explanation": "f(x) = (a+b)|x| + \\(cx^{2}\\) |x| is not differentiable at 0. \\(x^{2}\\) is differentiable. So f is differentiable at 0 iff coefficient of |x| is 0, i.e., a + b = 0? But answer says b = 0. Maybe f(x) = a + b|x| + \\(cx^{2}\\)",
     "image_url": null
   },
   {
@@ -3145,7 +3145,7 @@
     "id": 197,
     "subject": "maths",
     "difficulty": "easy",
-    "question": "For each n \\in  ℕ, 2^{3}ⁿ - 1 is divisible by",
+    "question": "For each n \\(\\in\\)  ℕ, \\(2^{3}ⁿ\\) - 1 is divisible by",
     "options": [
       "6",
       "16",
@@ -3154,14 +3154,14 @@
     ],
     "correct": 3,
     "answer": "7",
-    "explanation": "2^{3} = 8 ≡ 1 (mod 7). So 2^{3}ⁿ = (2^{3})ⁿ ≡ 1ⁿ = 1 (mod 7). Thus 2^{3}ⁿ - 1 ≡ 0 (mod 7), divisible by 7.",
+    "explanation": "\\(2^{3}\\) = 8 ≡ 1 (mod 7). So \\(2^{3}ⁿ\\) = \\((2^{3})ⁿ\\) ≡ 1ⁿ = 1 (mod 7). Thus \\(2^{3}ⁿ\\) - 1 ≡ 0 (mod 7), divisible by 7.",
     "image_url": null
   },
   {
     "id": 198,
     "subject": "maths",
     "difficulty": "medium",
-    "question": "The sum of all possible values of k for which the polynomials x^{2} - 3x + 2 and x^{2} - 5x + k have a root in common is",
+    "question": "The sum of all possible values of k for which the polynomials \\(x^{2}\\) - 3x + 2 and \\(x^{2}\\) - 5x + k have a root in common is",
     "options": [
       "7",
       "8",
@@ -3170,14 +3170,14 @@
     ],
     "correct": 3,
     "answer": "10",
-    "explanation": "Roots of first: x^{2} - 3x + 2 = (x-1)(x-2) = 0, so roots are 1 and 2. If x=1 is common: 1 - 5 + k = 0, k = 4. If x=2 is common: 4 - 10 + k = 0, k = 6. Sum = 4 + 6 = 10.",
+    "explanation": "Roots of first: \\(x^{2}\\) - 3x + 2 = (x-1)(x-2) = 0, so roots are 1 and 2. If x=1 is common: 1 - 5 + k = 0, k = 4. If x=2 is common: 4 - 10 + k = 0, k = 6. Sum = 4 + 6 = 10.",
     "image_url": null
   },
   {
     "id": 199,
     "subject": "maths",
     "difficulty": "hard",
-    "question": "If a, b, c \\in  ℝ and quadratic equation x^{2} + (a+b)x + c = 0 has no real roots, then",
+    "question": "If a, b, c \\(\\in\\)  ℝ and quadratic equation \\(x^{2}\\) + (a+b)x + c = 0 has no real roots, then",
     "options": [
       "c(a+b+c) > 0",
       "c + c(a+b+c) > 0",
@@ -3193,7 +3193,7 @@
     "id": 200,
     "subject": "maths",
     "difficulty": "medium",
-    "question": "If f(x) = cos x \\cdot  cos 2x \\cdot  cos 4x \\cdot  cos 8x, then f^{\\prime}(\\pi /4) is",
+    "question": "If f(x) = cos x \\(\\cdot\\)  cos 2x \\(\\cdot\\)  cos 4x \\(\\cdot\\)  cos 8x, then \\(f^{\\prime}(\\pi\\) /4) is",
     "options": [
       "-1",
       "2",
@@ -3202,14 +3202,14 @@
     ],
     "correct": 2,
     "answer": "\\(\\sqrt2\\)",
-    "explanation": "Using identity: sin(2ⁿx) = 2ⁿ sin x cos x cos 2x ... cos(2ⁿ-1x). For n=4: sin(16x) = 16 sin x \\cdot  f(x). So f(x) = sin(16x)/(16 sin x). Differentiate and evaluate at x = \\pi /4.",
+    "explanation": "Using identity: sin(2ⁿx) = 2ⁿ sin x cos x cos 2x ... cos(2ⁿ-1x). For n=4: sin(16x) = 16 sin x \\(\\cdot\\)  f(x). So f(x) = sin(16x)/(16 sin x). Differentiate and evaluate at x = \\(\\pi\\) /4.",
     "image_url": null
   },
   {
     "id": 201,
     "subject": "maths",
     "difficulty": "easy",
-    "question": "If \\Sigma (i=1 to n) cos^{-1}(xᵢ) = 0, then \\Sigma (i=1 to n) xᵢ is",
+    "question": "If \\(\\Sigma\\) (i=1 to n) \\(cos^{-1}(xᵢ)\\) = 0, then \\(\\Sigma\\) (i=1 to n) xᵢ is",
     "options": [
       "n",
       "2n",
@@ -3218,14 +3218,14 @@
     ],
     "correct": 1,
     "answer": "2n",
-    "explanation": "cos^{-1}(x) = 0 implies x = 1. So each xᵢ = 1. Sum = n × 1 = n. But answer says 2n. Hmm.",
+    "explanation": "\\(cos^{-1}(x)\\) = 0 implies x = 1. So each xᵢ = 1. Sum = n × 1 = n. But answer says 2n. Hmm.",
     "image_url": null
   },
   {
     "id": 202,
     "subject": "maths",
     "difficulty": "medium",
-    "question": "There is a positive integer n such that (n+1)! + (n+2)! = n! \\cdot  440. The sum of the digits of n is",
+    "question": "There is a positive integer n such that (n+1)! + (n+2)! = n! \\(\\cdot\\)  440. The sum of the digits of n is",
     "options": [
       "3",
       "8",
@@ -3234,14 +3234,14 @@
     ],
     "correct": 2,
     "answer": "10",
-    "explanation": "(n+1)! + (n+2)! = (n+1)! [1 + (n+2)] = (n+1)!(n+3) = n! \\cdot  440. (n+1)(n+3) = 440. n^{2} + 4n + 3 = 440. n^{2} + 4n - 437 = 0. (n+23)(n-19) = 0? 19×23 = 437. So n = 19. Sum of digits = 1 + 9 = 10.",
+    "explanation": "(n+1)! + (n+2)! = (n+1)! [1 + (n+2)] = (n+1)!(n+3) = n! \\(\\cdot\\)  440. (n+1)(n+3) = 440. \\(n^{2}\\) + 4n + 3 = 440. \\(n^{2}\\) + 4n - 437 = 0. (n+23)(n-19) = 0? 19×23 = 437. So n = 19. Sum of digits = 1 + 9 = 10.",
     "image_url": null
   },
   {
     "id": 203,
     "subject": "maths",
     "difficulty": "medium",
-    "question": "If aₙ = \\sqrt(7 + \\sqrt(7 + \\sqrt(7 + ...))) having n radical signs, then by methods of mathematical induction which is true",
+    "question": "If aₙ = \\(\\sqrt{7\\) + \\(\\sqrt(7\\) + \\(\\sqrt(7\\) + ...})) having n radical signs, then by methods of mathematical induction which is true",
     "options": [
       "\\(aₙ < 7, \\forall n \\geq  1\\)",
       "\\(aₙ > 2, \\forall n \\geq  1\\)",
@@ -3250,14 +3250,14 @@
     ],
     "correct": 2,
     "answer": "\\(aₙ < 7, \\forall n \\geq  1\\)",
-    "explanation": "The infinite nested radical converges to L where L = \\sqrt(7+L), giving L^{2} = 7+L, L^{2}-L-7=0, L = (1+\\sqrt29)/2 \\approx  3.19. All finite nested radicals are less than this limit, which is < 7.",
+    "explanation": "The infinite nested radical converges to L where L = \\(\\sqrt{7+L}\\) giving \\(L^{2}\\) = 7+L, \\(L^{2}-L-7=0\\) L = \\((1+\\sqrt29)/2 \\approx\\)  3.19. All finite nested radicals are less than this limit, which is < 7.",
     "image_url": null
   },
   {
     "id": 204,
     "subject": "maths",
     "difficulty": "medium",
-    "question": "The number of solutions of the equation sin x + sin^{-1}x = eˣ + e-ˣ + 3 = 0 in [0, 2\\pi ] is",
+    "question": "The number of solutions of the equation sin x + \\(sin^{-1}x\\) = eˣ + e-ˣ + 3 = 0 in [0, \\(2\\pi\\) ] is",
     "options": [
       "1",
       "2",
@@ -3266,14 +3266,14 @@
     ],
     "correct": 1,
     "answer": "2",
-    "explanation": "The equation seems garbled. Assuming sin x + sin^{-1}x = eˣ + e-ˣ - 3 or similar. sin^{-1}x is defined only for x \\in  [-1,1]. In [0,2\\pi ], sin^{-1}x exists only for x \\in  [0,1]. LHS: sin x + sin^{-1}x ranges from 0 to about 1.84. RHS: eˣ + e-ˣ - 3 ranges. Need to analyze intersection points.",
+    "explanation": "The equation seems garbled. Assuming sin x + \\(sin^{-1}x\\) = eˣ + e-ˣ - 3 or similar. \\(sin^{-1}x\\) is defined only for x \\(\\in\\)  [-1,1]. In \\([0,2\\pi\\) ], \\(sin^{-1}x\\) exists only for x \\(\\in\\)  [0,1]. LHS: sin x + \\(sin^{-1}x\\) ranges from 0 to about 1.84. RHS: eˣ + e-ˣ - 3 ranges. Need to analyze intersection points.",
     "image_url": null
   },
   {
     "id": 205,
     "subject": "maths",
     "difficulty": "easy",
-    "question": "In a 4×4 matrix, sum of each row, column and both the main diagonal is \\alpha , then the sum of four diagonal corner elements",
+    "question": "In a 4×4 matrix, sum of each row, column and both the main diagonal is \\(\\alpha\\) , then the sum of four diagonal corner elements",
     "options": [
       "\\(\\alpha \\)",
       "\\(may not be \\alpha \\)",
@@ -3282,7 +3282,7 @@
     ],
     "correct": 0,
     "answer": "\\(\\alpha \\)",
-    "explanation": "In a magic square, the sum of corner elements equals the magic constant \\alpha . This can be proven by analyzing the row, column, and diagonal sums.",
+    "explanation": "In a magic square, the sum of corner elements equals the magic constant \\(\\alpha\\) . This can be proven by analyzing the row, column, and diagonal sums.",
     "image_url": null
   },
   {
@@ -3305,7 +3305,7 @@
     "id": 207,
     "subject": "maths",
     "difficulty": "medium",
-    "question": "The value of cos^{3}(\\pi /8)cos(3\\pi /8) + sin^{3}(\\pi /8)sin(3\\pi /8) is",
+    "question": "The value of \\(cos^{3}(\\pi /8)cos(3\\pi\\) /8) + \\(sin^{3}(\\pi /8)sin(3\\pi\\) /8) is",
     "options": [
       "1/4",
       "\\(1/\\sqrt2\\)",
@@ -3314,7 +3314,7 @@
     ],
     "correct": 1,
     "answer": "\\(1/\\sqrt2\\)",
-    "explanation": "Using cos(3\\pi /8) = sin(\\pi /8) and sin(3\\pi /8) = cos(\\pi /8): expression = cos^{3}(\\pi /8)sin(\\pi /8) + sin^{3}(\\pi /8)cos(\\pi /8) = sin(\\pi /8)cos(\\pi /8)[cos^{2}(\\pi /8) + sin^{2}(\\pi /8)] = sin(\\pi /8)cos(\\pi /8) = \\frac{1}{2}sin(\\pi /4) = \\frac{1}{2} × 1/\\sqrt2 = 1/(2\\sqrt2). But answer says 1/\\sqrt2.",
+    "explanation": "Using \\(cos(3\\pi\\) /8) = \\(sin(\\pi\\) /8) and \\(sin(3\\pi\\) /8) = \\(cos(\\pi\\) /8): expression = \\(cos^{3}(\\pi /8)sin(\\pi\\) /8) + \\(sin^{3}(\\pi /8)cos(\\pi\\) /8) = \\(sin(\\pi /8)cos(\\pi /8)[cos^{2}(\\pi\\) /8) + \\(sin^{2}(\\pi\\) /8)] = \\(sin(\\pi /8)cos(\\pi\\) /8) = \\(\\frac{1}{2}sin(\\pi\\) /4) = \\(\\frac{1}{2}\\) × \\(1/\\sqrt2\\) = \\(1/(2\\sqrt2)\\) But answer says \\(1/\\sqrt2\\)",
     "image_url": null
   },
   {
@@ -3330,14 +3330,14 @@
     ],
     "correct": 0,
     "answer": "9",
-    "explanation": "(2+i)/(1+i) = (2+i)(1-i)/((1+i)(1-i)) = (2-2i+i-i^{2})/(1+1) = (2-i+1)/2 = (3-i)/2 = 3/2 - i/2. So a = 3/2, b = -1/2. a + b = 1. But answer says 9. Hmm, maybe different question.",
+    "explanation": "(2+i)/(1+i) = (2+i)(1-i)/((1+i)(1-i)) = \\((2-2i+i-i^{2})/(1+1)\\) = (2-i+1)/2 = (3-i)/2 = 3/2 - i/2. So a = 3/2, b = -1/2. a + b = 1. But answer says 9. Hmm, maybe different question.",
     "image_url": null
   },
   {
     "id": 209,
     "subject": "maths",
     "difficulty": "hard",
-    "question": "If the sum of the coefficients of all even powers of x in the product (1+x+x^{2}+...x^{2}ⁿ)(1-x+x^{2}-...x^{2}ⁿ) is 61, then n is equal to",
+    "question": "If the sum of the coefficients of all even powers of x in the product \\((1+x+x^{2}+...x^{2}ⁿ)(1-x+x^{2}-...x^{2}ⁿ)\\) is 61, then n is equal to",
     "options": [
       "30",
       "60",
@@ -3346,14 +3346,14 @@
     ],
     "correct": 0,
     "answer": "30",
-    "explanation": "The product equals (1-x^{2}ⁿ+1)/(1-x) × (1-(-x)2ⁿ+1)/(1+x) = (1-x^{4}ⁿ+2)/(1-x^{2}) = 1 + x^{2} + x^{4} + ... + x^{4}ⁿ. Sum of coefficients of even powers = n+1 = 61? So n = 60? But answer says 30.",
+    "explanation": "The product equals \\((1-x^{2}ⁿ+1)/(1-x)\\) × (1-(-x)2ⁿ+1)/(1+x) = \\((1-x^{4}ⁿ+2)/(1-x^{2})\\) = 1 + \\(x^{2}\\) + \\(x^{4}\\) + ... + \\(x^{4}ⁿ\\) Sum of coefficients of even powers = n+1 = 61? So n = 60? But answer says 30.",
     "image_url": null
   },
   {
     "id": 210,
     "subject": "maths",
     "difficulty": "medium",
-    "question": "If the foci of the ellipse x^{2}/16 + y^{2}/b^{2} = 1 and the hyperbola x^{2}/144 - y^{2}/81 = 1/25 coincide, then the value of b^{2} is",
+    "question": "If the foci of the ellipse \\(x^{2}/16\\) + \\(y^{2}/b^{2}\\) = 1 and the hyperbola \\(x^{2}/144\\) - \\(y^{2}/81\\) = 1/25 coincide, then the value of \\(b^{2}\\) is",
     "options": [
       "9",
       "1",
@@ -3362,14 +3362,14 @@
     ],
     "correct": 3,
     "answer": "7",
-    "explanation": "For hyperbola: a^{2} = 144/25, b^{2} = 81/25. c^{2} = a^{2} + b^{2} = (144+81)/25 = 225/25 = 9. So c = 3. For ellipse: a^{2} = 16, c^{2} = 16 - b^{2} = 9. So b^{2} = 7.",
+    "explanation": "For hyperbola: \\(a^{2}\\) = 144/25, \\(b^{2}\\) = 81/25. \\(c^{2}\\) = \\(a^{2}\\) + \\(b^{2}\\) = (144+81)/25 = 225/25 = 9. So c = 3. For ellipse: \\(a^{2}\\) = 16, \\(c^{2}\\) = 16 - \\(b^{2}\\) = 9. So \\(b^{2}\\) = 7.",
     "image_url": null
   },
   {
     "id": 211,
     "subject": "maths",
     "difficulty": "easy",
-    "question": "If \\omega  \\neq  1 is the complex cube root of unity and matrix H = [[\\omega , 0], [0, \\omega ]], then H^{70} is equal to",
+    "question": "If \\(\\omega  \\neq\\)  1 is the complex cube root of unity and matrix H = \\([[\\omega\\) , 0], [0, \\(\\omega\\) ]], then \\(H^{70}\\) is equal to",
     "options": [
       "0",
       "-H",
@@ -3378,14 +3378,14 @@
     ],
     "correct": 3,
     "answer": "H",
-    "explanation": "H = \\omega I. H^{70} = \\omega 70 I = \\omega 69\\cdot \\omega  I = (\\omega 3)23\\cdot \\omega  I = 1^{23}\\cdot \\omega  I = \\omega I = H.",
+    "explanation": "H = \\(\\omega\\) I. \\(H^{70}\\) = \\(\\omega\\) 70 I = \\(\\omega 69\\cdot \\omega\\)  I = \\((\\omega 3)23\\cdot \\omega\\)  I = \\(1^{23}\\cdot \\omega\\)  I = \\(\\omega\\) I = H.",
     "image_url": null
   },
   {
     "id": 212,
     "subject": "maths",
     "difficulty": "hard",
-    "question": "Let f: ℝ \\rightarrow  ℝ be a differential function with f(2) = 6 and f^{\\prime}(2) = 1/48. Then lim(x\\rightarrow 2) [\\int (0 to f(x)) 4t^{3}/(x-2) dt] =",
+    "question": "Let f: ℝ \\(\\rightarrow\\)  ℝ be a differential function with f(2) = 6 and \\(f^{\\prime}(2)\\) = 1/48. Then \\(lim(x\\rightarrow\\) 2) \\([\\int\\) (0 to f(x)) \\(4t^{3}/(x-2)\\) dt] =",
     "options": [
       "24",
       "36",
@@ -3394,7 +3394,7 @@
     ],
     "correct": 3,
     "answer": "18",
-    "explanation": "Using L'Hopital's rule and Leibniz rule: limit = 4f(2)3 \\cdot  f^{\\prime}(2) = 4 × 216 × (1/48) = 864/48 = 18.",
+    "explanation": "Using L'Hopital's rule and Leibniz rule: limit = 4f(2)3 \\(\\cdot  f^{\\prime}(2)\\) = 4 × 216 × (1/48) = 864/48 = 18.",
     "image_url": null
   },
   {
@@ -3410,14 +3410,14 @@
     ],
     "correct": 2,
     "answer": "\\((2n+1)\\pi /2\\)",
-    "explanation": "tan x = sin x / cos x. tan x is undefined when cos x = 0, i.e., x = (2n+1)\\pi /2 for integer n.",
+    "explanation": "tan x = sin x / cos x. tan x is undefined when cos x = 0, i.e., x = \\((2n+1)\\pi\\) /2 for integer n.",
     "image_url": null
   },
   {
     "id": 214,
     "subject": "maths",
     "difficulty": "easy",
-    "question": "If 2x^{2} - 1 < -2 < x, then the value of x lies in the interval",
+    "question": "If \\(2x^{2}\\) - 1 < -2 < x, then the value of x lies in the interval",
     "options": [
       "(1/2, 3/2)",
       "(-1/2, 3/2)",
@@ -3426,7 +3426,7 @@
     ],
     "correct": 1,
     "answer": "(-1/2, 3/2)",
-    "explanation": "From 2x^{2} - 1 < -2: 2x^{2} < -1, impossible for real x. From -2 < x: x > -2. Hmm, maybe 2x^{2} - 1 < x < -2? Or different interpretation. Answer says (-1/2, 3/2).",
+    "explanation": "From \\(2x^{2}\\) - 1 < -2: \\(2x^{2}\\) < -1, impossible for real x. From -2 < x: x > -2. Hmm, maybe \\(2x^{2}\\) - 1 < x < -2? Or different interpretation. Answer says (-1/2, 3/2).",
     "image_url": null
   },
   {
@@ -3449,7 +3449,7 @@
     "id": 216,
     "subject": "maths",
     "difficulty": "easy",
-    "question": "The value of lim(x\\rightarrow 0) sin^{2}x/x^{2} is",
+    "question": "The value of \\(lim(x\\rightarrow\\) 0) \\(sin^{2}x/x^{2}\\) is",
     "options": [
       "2",
       "1",
@@ -3458,14 +3458,14 @@
     ],
     "correct": 1,
     "answer": "1",
-    "explanation": "lim(x\\rightarrow 0) sin^{2}x/x^{2} = [lim(x\\rightarrow 0) sin x/x]2 = 1^{2} = 1.",
+    "explanation": "\\(lim(x\\rightarrow\\) 0) \\(sin^{2}x/x^{2}\\) = \\([lim(x\\rightarrow\\) 0) sin x/x]2 = \\(1^{2}\\) = 1.",
     "image_url": null
   },
   {
     "id": 217,
     "subject": "maths",
     "difficulty": "easy",
-    "question": "The principal value of cos^{-1}(cos(13\\pi /6)) is",
+    "question": "The principal value of \\(cos^{-1}(cos(13\\pi\\) /6)) is",
     "options": [
       "\\(13\\pi /6\\)",
       "\\(\\pi /2\\)",
@@ -3474,14 +3474,14 @@
     ],
     "correct": 3,
     "answer": "\\(\\pi /6\\)",
-    "explanation": "cos(13\\pi /6) = cos(2\\pi  + \\pi /6) = cos(\\pi /6). Principal value of cos^{-1} is [0,\\pi ]. So cos^{-1}(cos(13\\pi /6)) = cos^{-1}(cos(\\pi /6)) = \\pi /6.",
+    "explanation": "\\(cos(13\\pi\\) /6) = \\(cos(2\\pi\\)  + \\(\\pi\\) /6) = \\(cos(\\pi\\) /6). Principal value of \\(cos^{-1}\\) is \\([0,\\pi\\) ]. So \\(cos^{-1}(cos(13\\pi\\) /6)) = \\(cos^{-1}(cos(\\pi\\) /6)) = \\(\\pi\\) /6.",
     "image_url": null
   },
   {
     "id": 218,
     "subject": "maths",
     "difficulty": "easy",
-    "question": "The value of \\int [-\\pi  to \\pi ] (x^{3} + sin x) dx is",
+    "question": "The value of \\(\\int [-\\pi\\)  to \\(\\pi\\) ] \\((x^{3}\\) + sin x) dx is",
     "options": [
       "0",
       "\\(\\pi \\)",
@@ -3490,7 +3490,7 @@
     ],
     "correct": 0,
     "answer": "0",
-    "explanation": "x^{3} is an odd function, sin x is an odd function. Integral of odd function over symmetric interval [-\\pi , \\pi ] is 0.",
+    "explanation": "\\(x^{3}\\) is an odd function, sin x is an odd function. Integral of odd function over symmetric interval \\([-\\pi\\) , \\(\\pi\\) ] is 0.",
     "image_url": null
   },
   {
@@ -3506,14 +3506,14 @@
     ],
     "correct": 2,
     "answer": "0, 1, 0",
-    "explanation": "Direction cosines of y-axis: the y-axis makes 90^{\\circ} with x-axis, 0^{\\circ} with y-axis, 90^{\\circ} with z-axis. So direction cosines are (cos 90^{\\circ}, cos 0^{\\circ}, cos 90^{\\circ}) = (0, 1, 0).",
+    "explanation": "Direction cosines of y-axis: the y-axis makes \\(90^{\\circ}\\) with x-axis, \\(0^{\\circ}\\) with y-axis, \\(90^{\\circ}\\) with z-axis. So direction cosines are (cos \\(90^{\\circ}\\) cos \\(0^{\\circ}\\) cos \\(90^{\\circ})\\) = (0, 1, 0).",
     "image_url": null
   },
   {
     "id": 220,
     "subject": "maths",
     "difficulty": "easy",
-    "question": "The principal argument of z = -2/(1+\\sqrt3i) is",
+    "question": "The principal argument of z = \\(-2/(1+\\sqrt3i)\\) is",
     "options": [
       "\\(\\pi /3\\)",
       "\\(2\\pi /3\\)",
@@ -3522,7 +3522,7 @@
     ],
     "correct": 1,
     "answer": "\\(2\\pi /3\\)",
-    "explanation": "z = -2/(1+\\sqrt3i) = -2(1-\\sqrt3i)/(1+3) = -2(1-\\sqrt3i)/4 = -(1-\\sqrt3i)/2 = -1/2 + i\\sqrt3/2. This is in second quadrant. arg(z) = \\pi  - \\pi /3 = 2\\pi /3.",
+    "explanation": "z = \\(-2/(1+\\sqrt3i)\\) = \\(-2(1-\\sqrt3i)/(1+3)\\) = \\(-2(1-\\sqrt3i)/4\\) = \\(-(1-\\sqrt3i)/2\\) = -1/2 + \\(i\\sqrt3/2\\) This is in second quadrant. arg(z) = \\(\\pi\\)  - \\(\\pi\\) /3 = \\(2\\pi\\) /3.",
     "image_url": null
   },
   {
@@ -3545,7 +3545,7 @@
     "id": 222,
     "subject": "maths",
     "difficulty": "medium",
-    "question": "The value of definite integral \\int [0 to 1] tan^{-1}x/(1+x^{2}) dx is",
+    "question": "The value of definite integral \\(\\int\\) [0 to 1] \\(tan^{-1}x/(1+x^{2})\\) dx is",
     "options": [
       "\\(\\pi 3/72\\)",
       "\\(\\pi 2/32\\)",
@@ -3554,7 +3554,7 @@
     ],
     "correct": 1,
     "answer": "\\(\\pi 2/32\\)",
-    "explanation": "Let u = tan^{-1}x, du = dx/(1+x^{2}). When x=0, u=0; when x=1, u=\\pi /4. Integral = \\int [0 to \\pi /4] u du = [u^{2}/2]0^{(\\pi /4) = (\\pi /4)2/2 = \\pi 2/32.}",
+    "explanation": "Let u = \\(tan^{-1}x\\) du = \\(dx/(1+x^{2})\\) When x=0, u=0; when x=1, \\(u=\\pi\\) /4. Integral = \\(\\int\\) [0 to \\(\\pi\\) /4] u du = \\([u^{2}/2]0^{(\\pi\\) /4) = \\((\\pi\\) /4)2/2 = \\(\\pi\\) 2/32.}",
     "image_url": null
   },
   {
@@ -3593,7 +3593,7 @@
     "id": 225,
     "subject": "maths",
     "difficulty": "medium",
-    "question": "If x = e^{(y+e^(y+e^(y+...\\infty ))), then dy/dx is}",
+    "question": "If x = \\(e^{(y+e^(y+e^(y+...\\infty\\) ))), then dy/dx is}",
     "options": [
       "1/(1+x)",
       "(1-x)/x",
