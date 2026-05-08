@@ -12,7 +12,7 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<meta property="og:image" content="https://i.ibb.co/fG228pMK/file-00000000d9107206852ba04869392f9f.png">
+<meta property="og:image" content="https://i.ibb.co/fG228pMK/file-00000000d9107206852ba04869392>
 
 <!-- Open Graph -->
 <meta property="og:title" content="CUSAT Free Mock Test 2025 – Practice CUSAT CAT Online">
@@ -652,84 +652,75 @@ textarea.report-extra:focus{border-color:var(--accent)}
 }
 .land-nav-cta:hover{opacity:.85}
 
-/* ── DESKTOP LANDING LAYOUT ── */
-#landing{
-  display:block; /* override flex — use block so nav is full-width */
-  min-height:100vh;
-  align-items:unset;
-  justify-content:unset;
-  gap:unset;
-  padding:0;
-}
-.land-hero{
-  display:flex;flex-direction:column;align-items:center;
-  padding:48px 24px 0;gap:8px;
-}
-.land-hero .brand{font-size:32px;letter-spacing:3px}
-.land-hero h1{
-  font-size:17px;font-weight:400;color:var(--text2);
-  text-align:center;max-width:560px;line-height:1.7;margin-top:4px;
-}
-
-/* Two-column grid for desktop */
-.land-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:28px;
-  max-width:1080px;
-  margin:32px auto 0;
-  padding:0 32px 48px;
-  align-items:start;
-}
-.land-left{display:flex;flex-direction:column;gap:16px}
-.land-right{display:flex;flex-direction:column;gap:20px}
-
-/* Upgrade card styles for desktop */
-.lcard{max-width:unset;width:100%}
-
-/* Feature highlights strip (desktop only) */
-.land-features{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:12px;
-}
-.land-feat{
-  background:var(--surface);border:1px solid var(--border);
-  border-radius:10px;padding:16px 14px;display:flex;flex-direction:column;gap:7px;
-}
-.land-feat-icon{font-size:22px}
-.land-feat-title{font-size:13px;font-weight:700;color:var(--text)}
-.land-feat-desc{font-size:12px;color:var(--text2);line-height:1.6}
-
-/* Section anchors */
-.land-section-label{
-  font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
-  color:var(--text3);margin-bottom:14px;text-align:left;
-}
-.land-section-label.centered{text-align:center}
-
-/* Widen FAQ and comments in desktop right column */
-.land-right .faq-item{margin-bottom:8px}
-.land-right .comments-section{max-width:unset;margin-top:0}
-
-/* Resume banner full width on desktop */
-.resume-banner{max-width:unset}
-
-/* Scroll offset for anchored sections */
+/* Scroll anchors */
 .land-anchor{scroll-margin-top:64px}
 
-/* ── OVERRIDE: mobile keeps original column layout ── */
+/* ── DESKTOP-ONLY OVERRIDES (≥861px) ── */
+@media(min-width:861px){
+  /* Landing becomes block so nav is full-width */
+  #landing{
+    display:block;
+    padding:0;
+    gap:unset;
+    align-items:unset;
+    justify-content:unset;
+  }
+
+  /* Hero */
+  .land-hero{
+    display:flex;flex-direction:column;align-items:center;
+    padding:44px 24px 28px;gap:8px;
+  }
+  .land-hero .brand{font-size:34px;letter-spacing:3px}
+  .land-hero h1{
+    font-size:16px;font-weight:400;color:var(--text2);
+    text-align:center;max-width:560px;line-height:1.7;margin-top:2px;
+  }
+
+  /* Center zone: single card column, wider on desktop */
+  .land-center-zone{
+    display:flex;flex-direction:column;align-items:center;
+    gap:16px;padding:0 24px 40px;
+  }
+  .land-center-zone .resume-banner{max-width:520px;width:100%}
+  .land-center-zone .lcard{max-width:520px;width:100%}
+
+  /* Bigger text/padding in the card on desktop */
+  .land-center-zone .lcard h2{font-size:19px}
+  .land-center-zone select{font-size:15px;padding:11px 14px}
+  .land-center-zone .btn-start{font-size:16px;padding:15px}
+  .land-center-zone .btn-practice{font-size:14px;padding:13px}
+  .land-center-zone .info-box{font-size:13px}
+
+  /* Info row: FAQ left, Comments right */
+  .land-info-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:32px;
+    max-width:1100px;
+    margin:0 auto;
+    padding:36px 40px 52px;
+    align-items:start;
+    border-top:1px solid var(--border);
+  }
+  .land-zone-label{
+    font-size:11px;font-weight:700;letter-spacing:1.5px;
+    text-transform:uppercase;color:var(--text3);
+    margin-bottom:16px;display:block;
+  }
+  .land-info-row .comments-section{max-width:unset;margin-top:0}
+
+  /* Hide mobile-only hero/brand (desktop has its own in land-hero) */
+  .land-mobile-only{display:none}
+}
+
+/* ── MOBILE: 100% original layout ── */
 @media(max-width:860px){
-  #landing{display:flex;flex-direction:column;align-items:center;padding:20px;gap:20px}
-  .land-nav{display:none}          /* hide desktop nav on mobile */
-  .land-hero{padding:0;width:100%}
-  .land-hero .brand{font-size:26px}
-  .land-hero h1{font-size:15px;max-width:440px}
-  .land-grid{display:contents}    /* collapse grid — children flow into flex column */
-  .land-left,.land-right{display:contents}
-  .land-features{display:none}
-  .lcard{max-width:440px;width:100%}
-  .comments-section{max-width:440px;width:100%}
-  .land-section-label{display:none} /* use original section labels on mobile */
-  #faq-wrapper{max-width:440px;width:100%;margin-top:10px}
+  .land-nav{display:none}
+  .land-hero{display:none}          /* mobile uses inline brand/h1 */
+  .land-center-zone{display:contents} /* children flow into flex column */
+  .land-info-row{display:contents}
+  .land-zone-label{display:none}
   .land-anchor{scroll-margin-top:0}
 }
 </style>
@@ -744,169 +735,139 @@ textarea.report-extra:focus{border-color:var(--accent)}
 <!-- LANDING -->
 <div id="landing">
 
-  <!-- ── DESKTOP STICKY NAV ── -->
+  <!-- ── DESKTOP STICKY NAV (hidden on mobile via CSS) ── -->
   <nav class="land-nav" id="land-nav">
     <div class="land-nav-logo">CUSAT<span>·CAT</span></div>
     <div class="land-nav-links">
-      <button class="land-nav-link active" onclick="landScrollTo('exam-anchor')">🎓 Mock Exam</button>
-      <button class="land-nav-link" onclick="landScrollTo('practice-anchor')">🎯 Practice</button>
-      <button class="land-nav-link" onclick="landScrollTo('faq-anchor')">❓ FAQ</button>
-      <button class="land-nav-link" onclick="landScrollTo('comments-anchor')">💬 Comments</button>
-      <button class="land-nav-link" onclick="openHistoryPage()">📊 History <span id="hist-nav-count" style="display:none;background:var(--accent);color:#fff;font-size:9px;font-weight:700;padding:1px 5px;border-radius:8px;font-family:'JetBrains Mono',monospace;margin-left:2px">0</span></button>
+      <button class="land-nav-link active" id="nav-link-exam"     onclick="landScrollTo('exam-anchor','nav-link-exam')">🎓 Mock Exam</button>
+      <button class="land-nav-link"        id="nav-link-faq"      onclick="landScrollTo('faq-anchor','nav-link-faq')">❓ FAQ</button>
+      <button class="land-nav-link"        id="nav-link-comments" onclick="landScrollTo('comments-anchor','nav-link-comments')">💬 Comments</button>
+      <button class="land-nav-link"        id="nav-link-history"  onclick="landNavHistory()">📊 History <span id="hist-nav-count" style="display:none;background:var(--accent);color:#fff;font-size:9px;font-weight:700;padding:1px 5px;border-radius:8px;font-family:'JetBrains Mono',monospace;margin-left:2px">0</span></button>
     </div>
-    <button class="land-nav-cta" onclick="landScrollTo('exam-anchor')">Start Exam →</button>
+    <button class="land-nav-cta" onclick="landScrollTo('exam-anchor','nav-link-exam')">Start Exam →</button>
   </nav>
 
-  <!-- ── HERO ── -->
+  <!-- ── DESKTOP HERO (hidden on mobile via CSS) ── -->
   <div class="land-hero">
     <div class="brand">CUSAT<span>·CAT</span></div>
-    <h1>
-      Free CUSAT CAT Mock Test — Practice Physics, Chemistry &amp; Mathematics with real previous year questions
-    </h1>
+    <h1>Free CUSAT CAT Mock Test — Practice with real previous year questions in Physics, Chemistry &amp; Mathematics</h1>
   </div>
 
-  <!-- ── DESKTOP TWO-COLUMN GRID ── -->
-  <div class="land-grid">
+  <!-- ── CENTER ZONE: single card column (desktop wider, mobile original) ── -->
+  <div class="land-center-zone" id="exam-anchor">
 
-    <!-- LEFT COLUMN: Exam card + features -->
-    <div class="land-left">
+    <!-- Mobile-only brand (hidden on desktop) -->
+    <div class="brand land-mobile-only">CUSAT<span>·CAT</span></div>
+    <h1 class="land-mobile-only" style="font-size:15px;font-weight:500;color:var(--text2);text-align:center;max-width:440px;line-height:1.6;margin-top:-14px">
+      Free CUSAT CAT Mock Test — Practice Physics, Chemistry &amp; Mathematics with real previous year questions
+    </h1>
 
-      <!-- Feature highlights -->
-      <div class="land-features">
-        <div class="land-feat">
-          <div class="land-feat-icon">⚡</div>
-          <div class="land-feat-title">Real PYQs</div>
-          <div class="land-feat-desc">Actual CUSAT CAT previous year questions — not synthetic ones</div>
+    <!-- Resume banner -->
+    <div class="resume-banner" id="resume-banner">
+      <div class="resume-banner-title">📂 Saved Session Found</div>
+      <div class="resume-banner-info" id="resume-banner-info">Loading…</div>
+      <div class="resume-banner-btns">
+        <button class="btn-resume-save" onclick="resumeSavedExam()">▶ Resume</button>
+        <button class="btn-discard" onclick="discardSave()">🗑 Discard</button>
+      </div>
+    </div>
+
+    <!-- Main card: Exam + Practice together -->
+    <div class="lcard">
+      <h2>Select Exam Session</h2>
+      <div class="frow">
+        <label>Year</label>
+        <select id="sel-year" onchange="updatePreview()">
+          <option value="">-- Select Year --</option>
+          <option value="2025">2025</option>
+        </select>
+      </div>
+      <div class="frow">
+        <label>Session</label>
+        <select id="sel-sess" onchange="updatePreview()">
+          <option value="">-- Select Session --</option>
+          <option value="s1">Session 1</option>
+          <option value="s2">Session 2</option>
+          <option value="s3">Session 3</option>
+          <option value="s4">Session 4</option>
+        </select>
+      </div>
+      <div class="info-box">
+        ⏱ Duration: <b>3 Hours</b><br>
+        📋 Marking: <b>+4</b> Correct &nbsp;·&nbsp; <b>−1</b> Wrong &nbsp;·&nbsp; <b>0</b> Unattempted<br>
+      </div>
+      <div class="info-box" style="font-size:11px;color:var(--text3);background:none;border-color:rgba(79,142,247,.15)">
+        🆓 100% Free · No login required · Real CUSAT CAT previous year questions · Instant score &amp; analysis
+      </div>
+      <div class="err" id="err-msg">⚠ Cannot load file. Check JSON &amp; try again.</div>
+      <button class="btn-start" id="btn-start" onclick="startExam()">Start Exam →</button>
+      <button class="btn-history" id="btn-history" onclick="openHistoryPage()">
+        📊 View Past Results <span class="hist-btn-count" id="hist-btn-count" style="display:none">0</span>
+      </button>
+      <button class="btn-practice" onclick="openPractice()">
+        🎯 Practice Mode — Instant Feedback
+      </button>
+    </div>
+
+  </div><!-- /land-center-zone -->
+
+  <!-- ── INFO ROW: FAQ left + Comments right (desktop); stacked (mobile) ── -->
+  <div class="land-info-row">
+
+    <!-- FAQ -->
+    <div class="land-anchor" id="faq-anchor">
+      <div class="land-zone-label">❓ Frequently Asked Questions</div>
+      <!-- mobile original label -->
+      <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);margin-bottom:12px;text-align:center" class="land-mobile-only">Frequently Asked Questions</div>
+      <div id="faq-list"></div>
+    </div>
+
+    <!-- Comments -->
+    <div class="land-anchor" id="comments-anchor">
+      <div class="land-zone-label">💬 Comments &amp; Feedback</div>
+      <div class="comments-section" id="comments-section">
+        <div class="comments-section-label land-mobile-only">💬 Comments &amp; Feedback</div>
+
+        <div class="comment-form" id="comment-form">
+          <div class="comment-form-title">✍️ Share your feedback</div>
+          <div class="cf-row">
+            <div class="cf-label">Your Name</div>
+            <input class="cf-input" id="cf-name" type="text" placeholder="e.g. User" maxlength="50" autocomplete="off"/>
+          </div>
+          <div class="cf-row">
+            <div class="cf-label">Comment</div>
+            <textarea class="cf-textarea" id="cf-comment" placeholder="Suggestions, feedback, or anything about this site…" maxlength="500"></textarea>
+          </div>
+          <div class="cf-bottom">
+            <button class="btn-cf-submit" id="btn-cf-submit">Post Comment</button>
+            <span class="cf-status" id="cf-status"></span>
+            <span class="cf-char" id="cf-char">0/500</span>
+          </div>
         </div>
-        <div class="land-feat">
-          <div class="land-feat-icon">📊</div>
-          <div class="land-feat-title">Full Analysis</div>
-          <div class="land-feat-desc">Score, accuracy, subject-wise breakdown after every attempt</div>
+
+        <div class="cmt-list-hdr">
+          <span class="cmt-list-title">Recent Comments</span>
+          <span class="cmt-count-pill" id="cmt-count">0</span>
         </div>
-        <div class="land-feat">
-          <div class="land-feat-icon">🆓</div>
-          <div class="land-feat-title">100% Free</div>
-          <div class="land-feat-desc">No login, no payment, no ads — just start practising</div>
+        <div class="comments-list" id="comments-list">
+          <div class="cmt-loading"><div class="cmt-spinner"></div>Loading…</div>
         </div>
       </div>
+    </div>
 
-      <!-- Resume banner -->
-      <div class="resume-banner" id="resume-banner">
-        <div class="resume-banner-title">📂 Saved Session Found</div>
-        <div class="resume-banner-info" id="resume-banner-info">Loading…</div>
-        <div class="resume-banner-btns">
-          <button class="btn-resume-save" onclick="resumeSavedExam()">▶ Resume</button>
-          <button class="btn-discard" onclick="discardSave()">🗑 Discard</button>
-        </div>
-      </div>
-
-      <!-- Exam card -->
-      <div class="land-anchor" id="exam-anchor">
-        <div class="land-section-label">Mock Exam</div>
-        <div class="lcard">
-          <h2 style="font-size:19px">Select Exam Session</h2>
-          <div class="frow">
-            <label>Year</label>
-            <select id="sel-year" onchange="updatePreview()">
-              <option value="">-- Select Year --</option>
-              <option value="2025">2025</option>
-            </select>
-          </div>
-          <div class="frow">
-            <label>Session</label>
-            <select id="sel-sess" onchange="updatePreview()">
-              <option value="">-- Select Session --</option>
-              <option value="s1">Session 1</option>
-              <option value="s2">Session 2</option>
-              <option value="s3">Session 3</option>
-              <option value="s4">Session 4</option>
-            </select>
-          </div>
-          <div class="info-box" style="font-size:13px;line-height:2">
-            ⏱ Duration: <b>3 Hours</b><br>
-            📋 Marking: <b>+4</b> Correct &nbsp;·&nbsp; <b>−1</b> Wrong &nbsp;·&nbsp; <b>0</b> Unattempted
-          </div>
-          <div class="info-box" style="font-size:12px;color:var(--text3);background:none;border-color:rgba(79,142,247,.15)">
-            🆓 100% Free · No login required · Real CUSAT CAT previous year questions · Instant score &amp; analysis
-          </div>
-          <div class="err" id="err-msg">⚠ Cannot load file. Check JSON &amp; try again.</div>
-          <button class="btn-start" id="btn-start" onclick="startExam()" style="font-size:16px;padding:15px">Start Exam →</button>
-          <button class="btn-history" id="btn-history" onclick="openHistoryPage()">
-            📊 View Past Results <span class="hist-btn-count" id="hist-btn-count" style="display:none">0</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- Practice card -->
-      <div class="land-anchor" id="practice-anchor">
-        <div class="land-section-label">Practice Mode</div>
-        <div class="lcard" style="gap:14px">
-          <h2 style="font-size:18px;display:flex;align-items:center;gap:8px">🎯 Practice Mode</h2>
-          <p style="font-size:13px;color:var(--text2);line-height:1.7">
-            Answer questions one at a time and get <b style="color:var(--green)">instant feedback</b> after each answer. Choose any subject or mix them all — no timer, go at your own pace.
-          </p>
-          <button class="btn-practice" onclick="openPractice()" style="font-size:15px;padding:14px">
-            🎯 Start Practising — Instant Feedback
-          </button>
-        </div>
-      </div>
-
-    </div><!-- /land-left -->
-
-    <!-- RIGHT COLUMN: FAQ + Comments -->
-    <div class="land-right">
-
-      <!-- FAQ -->
-      <div class="land-anchor" id="faq-anchor">
-        <div class="land-section-label">Frequently Asked Questions</div>
-        <div id="faq-list"></div>
-      </div>
-
-      <!-- Comments -->
-      <div class="land-anchor" id="comments-anchor">
-        <div class="comments-section" id="comments-section" style="max-width:unset;margin-top:0">
-          <div class="comments-section-label" style="text-align:left">💬 Comments &amp; Feedback</div>
-
-          <div class="comment-form" id="comment-form">
-            <div class="comment-form-title">✍️ Share your feedback</div>
-            <div class="cf-row">
-              <div class="cf-label">Your Name</div>
-              <input class="cf-input" id="cf-name" type="text" placeholder="e.g. User" maxlength="50" autocomplete="off"/>
-            </div>
-            <div class="cf-row">
-              <div class="cf-label">Comment</div>
-              <textarea class="cf-textarea" id="cf-comment" placeholder="Suggestions, feedback, or anything about this site…" maxlength="500"></textarea>
-            </div>
-            <div class="cf-bottom">
-              <button class="btn-cf-submit" id="btn-cf-submit">Post Comment</button>
-              <span class="cf-status" id="cf-status"></span>
-              <span class="cf-char" id="cf-char">0/500</span>
-            </div>
-          </div>
-
-          <div class="cmt-list-hdr">
-            <span class="cmt-list-title">Recent Comments</span>
-            <span class="cmt-count-pill" id="cmt-count">0</span>
-          </div>
-          <div class="comments-list" id="comments-list">
-            <div class="cmt-loading"><div class="cmt-spinner"></div>Loading…</div>
-          </div>
-        </div>
-      </div>
-
-    </div><!-- /land-right -->
-  </div><!-- /land-grid -->
+  </div><!-- /land-info-row -->
 
   <!-- SITE FOOTER -->
-  <footer style="width:100%;background:var(--surface);border-top:1px solid var(--border);margin-top:24px;padding:22px 32px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px">
-    <div>
-      <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--accent);font-weight:600">CUSAT<span style="color:var(--text2);font-weight:400">·CAT</span> Free Mock Test</div>
-      <div style="font-size:11px;color:var(--text3);margin-top:3px">© <span id="footer-year"></span> cusatpyq.zenvx.in — All rights reserved</div>
+  <footer style="width:100%;background:var(--surface);border-top:1px solid var(--border);margin-top:24px;padding:20px 16px;text-align:center;display:flex;flex-direction:column;gap:8px">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);font-weight:600">CUSAT<span style="color:var(--text2);font-weight:400">·CAT</span> Free Mock Test</div>
+    <div style="font-size:11px;color:var(--text3)">© <span id="footer-year"></span> cusatpyq.zenvx.in — All rights reserved</div>
+    <div style="font-size:11px;color:var(--text2)">
+      Contact us:
+      <a href="mailto:abhi@zenvx.in" style="color:var(--accent);text-decoration:none">abhi@zenvx.in</a>
+      &nbsp;·&nbsp;
+      <a href="mailto:sk@zenvx.in" style="color:var(--accent);text-decoration:none">sk@zenvx.in</a>
     </div>
-    <div style="font-size:12px;color:var(--text2);display:flex;flex-direction:column;gap:4px;text-align:right">
-      <span>Contact: <a href="mailto:abhi@zenvx.in" style="color:var(--accent);text-decoration:none">abhi@zenvx.in</a> · <a href="mailto:sk@zenvx.in" style="color:var(--accent);text-decoration:none">sk@zenvx.in</a></span>
-      <span style="font-size:10px;color:var(--text3)">Unofficial practice portal. Not affiliated with Cochin University of Science and Technology.</span>
-    </div>
+    <div style="font-size:10px;color:var(--text3)">Unofficial practice portal. Not affiliated with Cochin University of Science and Technology.</div>
   </footer>
 </div>
 <div id="exam">
@@ -1152,7 +1113,8 @@ textarea.report-extra:focus{border-color:var(--accent)}
 
 <div class="toast" id="toast"></div>
 <!-- views tracker -->
-<script defer src="https://cloud.umami.is/script.js" data-website-id="495f8912-3d9a-4e6d-9ce3-8d40351d8a42"></script>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="495f8912-3d9a-4e6d-9ce3-8>
+
 <script>
 // ── STATE ──
 let QS=[], ANS={}, SOLS={}, SUBS={};
@@ -1999,39 +1961,46 @@ function updateHistBadge(){
 }
 
 // Smooth scroll for landing nav links
-function landScrollTo(id){
+function landScrollTo(id, activeLinkId){
   const el = document.getElementById(id);
   if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
-  // Update active nav link
+  setActiveLandNavLink(activeLinkId || null);
+}
+
+function setActiveLandNavLink(id){
   document.querySelectorAll('.land-nav-link').forEach(l=>l.classList.remove('active'));
-  // find which link was clicked
-  const linkMap = {
-    'exam-anchor':0,'practice-anchor':1,'faq-anchor':2,'comments-anchor':3
-  };
-  const idx = linkMap[id];
-  if(idx !== undefined){
-    const links = document.querySelectorAll('.land-nav-link');
-    if(links[idx]) links[idx].classList.add('active');
+  if(id){
+    const el = document.getElementById(id);
+    if(el) el.classList.add('active');
   }
 }
 
-// Highlight active nav link on scroll
+// History nav button — opens page but does NOT mark it as "active" anchor
+function landNavHistory(){
+  openHistoryPage();
+  // Don't steal active from current scroll position — history is an overlay
+}
+
+// Highlight active nav link on scroll (only the 4 scroll anchors)
 (function(){
+  const anchors = [
+    {id:'exam-anchor',    linkId:'nav-link-exam'},
+    {id:'faq-anchor',     linkId:'nav-link-faq'},
+    {id:'comments-anchor',linkId:'nav-link-comments'},
+  ];
   function onScroll(){
-    const ids = ['exam-anchor','practice-anchor','faq-anchor','comments-anchor'];
-    const links = document.querySelectorAll('.land-nav-link');
-    let active = 0;
-    ids.forEach((id,i)=>{
+    // Don't interfere if landing isn't shown
+    if(document.getElementById('landing').style.display==='none') return;
+    let activeLink = 'nav-link-exam'; // default
+    anchors.forEach(({id, linkId})=>{
       const el = document.getElementById(id);
-      if(el && el.getBoundingClientRect().top < 120) active = i;
+      if(el && el.getBoundingClientRect().top < 130) activeLink = linkId;
     });
-    links.forEach((l,i)=>l.classList.toggle('active', i===active));
+    document.querySelectorAll('.land-nav-link').forEach(l=>l.classList.remove('active'));
+    const a = document.getElementById(activeLink);
+    if(a) a.classList.add('active');
   }
-  // Attach only when landing is visible
-  const landing = document.getElementById('landing');
-  if(landing){
-    window.addEventListener('scroll', onScroll, {passive:true});
-  }
+  window.addEventListener('scroll', onScroll, {passive:true});
 })();
 
 
